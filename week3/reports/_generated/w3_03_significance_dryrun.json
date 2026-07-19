@@ -1,0 +1,257 @@
+{
+ "schema_version": "1.0",
+ "day": 17,
+ "seed": 42,
+ "seeds": [
+  42,
+  43,
+  44,
+  45,
+  46
+ ],
+ "metric": "zero_day_auroc",
+ "alpha": 0.05,
+ "family_definition": "all dataset x novelty-head pairs on the headline metric (Holm step-down)",
+ "crosscheck_cells": 78,
+ "sanity_self_tests": [
+  {
+   "dataset": "CICIoT2023",
+   "system": "isolation_forest",
+   "t": 0.0,
+   "p": 1.0,
+   "cohens_d_z": 0.0
+  },
+  {
+   "dataset": "CICIoT2023",
+   "system": "autoencoder",
+   "t": 0.0,
+   "p": 1.0,
+   "cohens_d_z": 0.0
+  },
+  {
+   "dataset": "CICIoT2023",
+   "system": "ocsvm",
+   "t": 0.0,
+   "p": 1.0,
+   "cohens_d_z": 0.0
+  },
+  {
+   "dataset": "BoT-IoT",
+   "system": "isolation_forest",
+   "t": 0.0,
+   "p": 1.0,
+   "cohens_d_z": 0.0
+  },
+  {
+   "dataset": "BoT-IoT",
+   "system": "autoencoder",
+   "t": 0.0,
+   "p": 1.0,
+   "cohens_d_z": 0.0
+  },
+  {
+   "dataset": "BoT-IoT",
+   "system": "ocsvm",
+   "t": 0.0,
+   "p": 1.0,
+   "cohens_d_z": 0.0
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "system": "isolation_forest",
+   "t": 0.0,
+   "p": 1.0,
+   "cohens_d_z": 0.0
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "system": "autoencoder",
+   "t": 0.0,
+   "p": 1.0,
+   "cohens_d_z": 0.0
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "system": "ocsvm",
+   "t": 0.0,
+   "p": 1.0,
+   "cohens_d_z": 0.0
+  }
+ ],
+ "head_pair_tests": [
+  {
+   "dataset": "CICIoT2023",
+   "metric": "zero_day_auroc",
+   "system_a": "autoencoder",
+   "system_b": "isolation_forest",
+   "mean_a": 0.934101,
+   "mean_b": 0.995153,
+   "mean_diff": -0.061052,
+   "t": -4.4509,
+   "df": 4,
+   "p_raw": 0.011239229853561301,
+   "cohens_d_z": -1.9905,
+   "p_holm": 0.05619614926780651,
+   "significant_at_0.05_holm": false
+  },
+  {
+   "dataset": "CICIoT2023",
+   "metric": "zero_day_auroc",
+   "system_a": "autoencoder",
+   "system_b": "ocsvm",
+   "mean_a": 0.934101,
+   "mean_b": 0.940374,
+   "mean_diff": -0.006273,
+   "t": -0.6044,
+   "df": 4,
+   "p_raw": 0.578157000806192,
+   "cohens_d_z": -0.2703,
+   "p_holm": 0.6068993742158659,
+   "significant_at_0.05_holm": false
+  },
+  {
+   "dataset": "CICIoT2023",
+   "metric": "zero_day_auroc",
+   "system_a": "isolation_forest",
+   "system_b": "ocsvm",
+   "mean_a": 0.995153,
+   "mean_b": 0.940374,
+   "mean_diff": 0.054779,
+   "t": 13.2566,
+   "df": 4,
+   "p_raw": 0.00018712162662431765,
+   "cohens_d_z": 5.9285,
+   "p_holm": 0.0013098513863702235,
+   "significant_at_0.05_holm": true
+  },
+  {
+   "dataset": "BoT-IoT",
+   "metric": "zero_day_auroc",
+   "system_a": "autoencoder",
+   "system_b": "isolation_forest",
+   "mean_a": 0.918508,
+   "mean_b": 0.757016,
+   "mean_diff": 0.161492,
+   "t": 11.5345,
+   "df": 4,
+   "p_raw": 0.0003226226414273297,
+   "cohens_d_z": 5.1584,
+   "p_holm": 0.0019357358485639783,
+   "significant_at_0.05_holm": true
+  },
+  {
+   "dataset": "BoT-IoT",
+   "metric": "zero_day_auroc",
+   "system_a": "autoencoder",
+   "system_b": "ocsvm",
+   "mean_a": 0.918508,
+   "mean_b": 0.933805,
+   "mean_diff": -0.015297,
+   "t": -1.5875,
+   "df": 4,
+   "p_raw": 0.18758477823593347,
+   "cohens_d_z": -0.71,
+   "p_holm": 0.5627543347078005,
+   "significant_at_0.05_holm": false
+  },
+  {
+   "dataset": "BoT-IoT",
+   "metric": "zero_day_auroc",
+   "system_a": "isolation_forest",
+   "system_b": "ocsvm",
+   "mean_a": 0.757016,
+   "mean_b": 0.933805,
+   "mean_diff": -0.176789,
+   "t": -36.736,
+   "df": 4,
+   "p_raw": 3.278260831839939e-06,
+   "cohens_d_z": -16.4288,
+   "p_holm": 2.9504347486559452e-05,
+   "significant_at_0.05_holm": true
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "metric": "zero_day_auroc",
+   "system_a": "autoencoder",
+   "system_b": "isolation_forest",
+   "mean_a": 0.336887,
+   "mean_b": 0.382971,
+   "mean_diff": -0.046084,
+   "t": -1.1798,
+   "df": 4,
+   "p_raw": 0.30344968710793296,
+   "cohens_d_z": -0.5276,
+   "p_holm": 0.6068993742158659,
+   "significant_at_0.05_holm": false
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "metric": "zero_day_auroc",
+   "system_a": "autoencoder",
+   "system_b": "ocsvm",
+   "mean_a": 0.336887,
+   "mean_b": 0.478502,
+   "mean_diff": -0.141615,
+   "t": -3.5177,
+   "df": 4,
+   "p_raw": 0.02449996961033277,
+   "cohens_d_z": -1.5732,
+   "p_holm": 0.09799987844133108,
+   "significant_at_0.05_holm": false
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "metric": "zero_day_auroc",
+   "system_a": "isolation_forest",
+   "system_b": "ocsvm",
+   "mean_a": 0.382971,
+   "mean_b": 0.478502,
+   "mean_diff": -0.095531,
+   "t": -31.3292,
+   "df": 4,
+   "p_raw": 6.185996812864525e-06,
+   "cohens_d_z": -14.0108,
+   "p_holm": 4.94879745029162e-05,
+   "significant_at_0.05_holm": true
+  }
+ ],
+ "holm": {
+  "alpha": 0.05,
+  "m": 9
+ },
+ "mcnemar_seed42": [
+  {
+   "dataset": "CICIoT2023",
+   "pair": "isolation_forest vs autoencoder",
+   "n_pairs": 29867,
+   "acc_if": 0.935949,
+   "acc_ae": 0.811263,
+   "n01_ae_only_right": 1038,
+   "n10_if_only_right": 4762,
+   "p_exact": 0.0,
+   "note": null
+  },
+  {
+   "dataset": "BoT-IoT",
+   "pair": "isolation_forest vs autoencoder",
+   "n_pairs": 19274,
+   "acc_if": 0.895818,
+   "acc_ae": 0.89338,
+   "n01_ae_only_right": 1243,
+   "n10_if_only_right": 1290,
+   "p_exact": 0.3607260451268247,
+   "note": null
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "pair": "isolation_forest vs autoencoder",
+   "n_pairs": 11302,
+   "acc_if": 0.810918,
+   "acc_ae": 0.829942,
+   "n01_ae_only_right": 922,
+   "n10_if_only_right": 707,
+   "p_exact": 1.0988705983955198e-07,
+   "note": null
+  }
+ ]
+}

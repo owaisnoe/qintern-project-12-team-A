@@ -16,19 +16,26 @@ mentor-locked trio **CIC-IoT2023 + BoT-IoT + UNSW-NB15**. **Qubit budget = 8 · 
 | Day | Deliverable | Report | Code / data |
 |---|---|---|---|
 | **15** | **CQ-ZDR conformal calibration module + first threshold q (dataset 1 = CIC)** — DONE | [`reports/w3_01_conformal_calibration.md`](reports/w3_01_conformal_calibration.md) | [`scripts/conformal_calibrate.py`](scripts/conformal_calibrate.py) + `reports/_generated/w3_01_conformal_calibration.{json,csv}` + [`tests/test_conformal_calibrate.py`](tests/test_conformal_calibrate.py) |
-| **16** | Coverage-verification harness (false-zero-day ≤ α on held-out known) + α-sweep 0.01–0.20 | _pending_ | `scripts/conformal_calibrate.py --alpha-sweep` hook is in place |
-| **17** | 5-seed statistics protocol (mean±std, 95% CI, paired t-test, McNemar, Holm–Bonferroni, Cohen's d) | _pending_ | reuses [`../week2/scripts/stats_harness.py`](../week2/scripts/stats_harness.py) (Team C also reuses these helpers) |
+| **16** | **Coverage-verification harness (exact finite-sample band) + α-sweep 0.01–0.20** — DONE | [`reports/w3_02_coverage_harness.md`](reports/w3_02_coverage_harness.md) | [`scripts/coverage_harness.py`](scripts/coverage_harness.py) + `_generated/w3_02_*` + [`figures/w3_02_coverage_curve.png`](reports/figures/w3_02_coverage_curve.png) + [`tests/test_coverage_harness.py`](tests/test_coverage_harness.py) |
+| **17** | **5-seed statistics protocol (mean±std, 95% CI, paired t, McNemar, Holm–Bonferroni, d_z) + dry-run** — DONE | [`reports/w3_03_significance_dryrun.md`](reports/w3_03_significance_dryrun.md) | [`scripts/stats_protocol.py`](scripts/stats_protocol.py) + `_generated/w3_03_*` + [`tests/test_stats_protocol.py`](tests/test_stats_protocol.py) (cross-checks all 78 cells of [`../week2/scripts/stats_harness.py`](../week2/scripts/stats_harness.py)'s output) |
 | **18** | Extend calibration + coverage to all three datasets; coverage table v1 | _pending_ | module already runs all three (`--datasets CICIoT2023 BoT-IoT UNSW-NB15`) |
 
 **Day-15 result (dummy interface, α = 0.05): first threshold q (CIC) = 0.300551**, known-test coverage
 0.9514, false-zero-day 0.0486 (≤ α). Placeholder until Team B's real prototypes land.
+**Day-16 result:** all three datasets inside the exact 99% finite-sample coverage band at every α in
+0.01–0.20 (**60/60 PASS**) — including BoT-IoT's 0.0530, which violates the naive bound but is ordinary
+sampling noise (p = 0.090). **Day-17 result:** protocol cross-checks all 78 of Iwo's Day-13 stat cells
+(0 mismatches); Holm-corrected dry-run finds 3 real baseline gaps (|d_z| ≥ 5) and correctly kills a
+spurious raw p = 0.011.
 
 ## Reproduce
 
 ```bash
 source ../.venv/bin/activate                                    # Python 3.12
 python week3/scripts/conformal_calibrate.py --datasets CICIoT2023 --alpha 0.05   # Day 15 -> first q + coverage
-python -m pytest week3/tests -q                                 # 11 tests
+python week3/scripts/coverage_harness.py                        # Day 16 -> exact-band verdicts + sweep + figure
+python week3/scripts/stats_protocol.py                          # Day 17 -> significance dry-run
+python -m pytest week3/tests -q                                 # 28 tests (11 + 9 + 8)
 python week1/scripts/make_manifest.py --verify                 # one manifest pins Weeks 1–3 (0 mismatch)
 ```
 

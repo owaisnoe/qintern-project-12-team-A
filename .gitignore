@@ -1,0 +1,12 @@
+# Python build junk — never deliverables
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# local environments
+.venv/
+venv/
+
+# OS noise
+Thumbs.db
+.DS_Store
