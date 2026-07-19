@@ -1,0 +1,115 @@
+{
+ "ranking_metric": "|pearson r| vs label_binary on train (baseline; Team C refines)",
+ "ranking": [
+  "dns.qry.name.len",
+  "mqtt.topic",
+  "mqtt.protoname",
+  "mqtt.conack.flags",
+  "mqtt.hdrflags",
+  "mqtt.len",
+  "http.request.method",
+  "http.referer",
+  "tcp.dstport",
+  "mqtt.conflag.cleansess",
+  "mqtt.topic_len",
+  "icmp.seq_le",
+  "icmp.checksum",
+  "tcp.flags.ack",
+  "tcp.connection.syn",
+  "http.request.version",
+  "tcp.flags",
+  "tcp.seq",
+  "http.content_length",
+  "mqtt.msg",
+  "http.response",
+  "tcp.ack_raw",
+  "tcp.ack",
+  "tcp.checksum",
+  "http.file_data",
+  "tcp.connection.fin",
+  "arp.dst.proto_ipv4",
+  "arp.src.proto_ipv4",
+  "tcp.connection.synack",
+  "tcp.len",
+  "dns.retransmission",
+  "tcp.connection.rst",
+  "dns.qry.qu",
+  "dns.retransmit_request",
+  "udp.time_delta",
+  "udp.port",
+  "arp.opcode",
+  "icmp.transmit_timestamp"
+ ],
+ "budgets": {
+  "4": [
+   "dns.qry.name.len",
+   "mqtt.topic",
+   "mqtt.protoname",
+   "mqtt.conack.flags"
+  ],
+  "8": [
+   "dns.qry.name.len",
+   "mqtt.topic",
+   "mqtt.protoname",
+   "mqtt.conack.flags",
+   "mqtt.hdrflags",
+   "mqtt.len",
+   "http.request.method",
+   "http.referer"
+  ],
+  "12": [
+   "dns.qry.name.len",
+   "mqtt.topic",
+   "mqtt.protoname",
+   "mqtt.conack.flags",
+   "mqtt.hdrflags",
+   "mqtt.len",
+   "http.request.method",
+   "http.referer",
+   "tcp.dstport",
+   "mqtt.conflag.cleansess",
+   "mqtt.topic_len",
+   "icmp.seq_le"
+  ],
+  "16": [
+   "dns.qry.name.len",
+   "mqtt.topic",
+   "mqtt.protoname",
+   "mqtt.conack.flags",
+   "mqtt.hdrflags",
+   "mqtt.len",
+   "http.request.method",
+   "http.referer",
+   "tcp.dstport",
+   "mqtt.conflag.cleansess",
+   "mqtt.topic_len",
+   "icmp.seq_le",
+   "icmp.checksum",
+   "tcp.flags.ack",
+   "tcp.connection.syn",
+   "http.request.version"
+  ]
+ },
+ "corr_pruned": [
+  {
+   "kept": "arp.dst.proto_ipv4",
+   "dropped": "dns.qry.name",
+   "r": 0.9835
+  },
+  {
+   "kept": "arp.opcode",
+   "dropped": "arp.hw.size",
+   "r": 0.9743
+  },
+  {
+   "kept": "arp.src.proto_ipv4",
+   "dropped": "udp.stream",
+   "r": 0.9684
+  },
+  {
+   "kept": "mqtt.hdrflags",
+   "dropped": "mqtt.msgtype",
+   "r": 0.971
+  }
+ ]
+}

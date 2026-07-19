@@ -1,0 +1,57 @@
+{
+ "timing": [
+  "dur",
+  "sjit",
+  "djit"
+ ],
+ "rate": [
+  "rate",
+  "sload",
+  "dload"
+ ],
+ "volume": [
+  "spkts",
+  "dpkts",
+  "sbytes",
+  "dbytes",
+  "sinpkt",
+  "dinpkt"
+ ],
+ "flags_state": [
+  "state",
+  "ct_state_ttl"
+ ],
+ "protocol": [
+  "proto",
+  "service",
+  "stcpb",
+  "dtcpb",
+  "tcprtt",
+  "ct_flw_http_mthd"
+ ],
+ "connection_ctx": [
+  "ct_srv_src",
+  "ct_dst_ltm",
+  "ct_src_dport_ltm",
+  "ct_dst_sport_ltm",
+  "ct_dst_src_ltm",
+  "ct_src_ltm",
+  "ct_srv_dst"
+ ],
+ "other": [
+  "sttl",
+  "dttl",
+  "sloss",
+  "dloss",
+  "swin",
+  "dwin",
+  "synack",
+  "ackdat",
+  "smean",
+  "dmean",
+  "trans_depth",
+  "response_body_len",
+  "is_ftp_login",
+  "is_sm_ips_ports"
+ ]
+}

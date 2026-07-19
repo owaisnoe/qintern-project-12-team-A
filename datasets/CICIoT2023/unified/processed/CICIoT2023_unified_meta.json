@@ -1,0 +1,36 @@
+{
+  "dataset": "CICIoT2023",
+  "seed": 42,
+  "schema_version": "1.0",
+  "source_checkpoint": "datasets/CICIoT2023/processed/CICIoT2023_clean.parquet",
+  "rows_in": 199799,
+  "rows_after_dedup": 199799,
+  "feature_dupes_removed": 0,
+  "n_features_unified": 17,
+  "columns": [
+    "duration",
+    "n_pkts_total",
+    "n_bytes_total",
+    "src_pkts",
+    "dst_pkts",
+    "src_bytes",
+    "dst_bytes",
+    "rate",
+    "rate_src",
+    "rate_dst",
+    "pkt_size_min",
+    "pkt_size_max",
+    "pkt_size_mean",
+    "pkt_size_std",
+    "iat",
+    "protocol_cat",
+    "conn_state_cat",
+    "label_multiclass",
+    "label_binary"
+  ],
+  "categorical_raw": [
+    "protocol_cat",
+    "conn_state_cat"
+  ],
+  "note": "protocol/conn_state frequency-encoded in qadcp.py --unified (train-fit)"
+}

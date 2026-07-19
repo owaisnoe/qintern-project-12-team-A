@@ -1,0 +1,115 @@
+{
+ "dataset": "UNSW-NB15",
+ "seed": 42,
+ "checkpoint": "datasets/UNSW-NB15/processed/UNSW-NB15_clean.parquet",
+ "mode": "v0.1",
+ "s0_validate": {
+  "rows": 122657,
+  "gates": "pass"
+ },
+ "s2_engineer": {
+  "families": {
+   "benign": 66985,
+   "exploits": 21016,
+   "fuzzers": 15170,
+   "generic": 6840,
+   "recon": 6743,
+   "dos": 3446,
+   "shellcode": 1449,
+   "analysis": 477,
+   "backdoor_malware_ransomware": 365,
+   "worms": 166
+  }
+ },
+ "s3_groups": {
+  "timing": 3,
+  "rate": 3,
+  "volume": 6,
+  "flags_state": 2,
+  "protocol": 6,
+  "connection_ctx": 7,
+  "other": 14
+ },
+ "s7_split": {
+  "train": 84730,
+  "val": 12104,
+  "calibration": 12104,
+  "test": 12104,
+  "zeroday": 1615
+ },
+ "s7_zero_day_labels": [
+  "Shellcode",
+  "Worms"
+ ],
+ "s7b_postprune_dupes_dropped": {
+  "train": 0,
+  "val": 0,
+  "calibration": 0,
+  "test": 0,
+  "zeroday": 0
+ },
+ "s6_quantum": {
+  "corr_pruned": 3,
+  "n_features": 38,
+  "budgets": {
+   "4": 4,
+   "8": 8,
+   "12": 12,
+   "16": 16
+  }
+ },
+ "s5_balance": {
+  "train": 84730,
+  "train_balanced": 57839,
+  "capped_classes": [
+   "Normal"
+  ]
+ },
+ "s8_gates": "pass (disjoint splits, zero-day isolated, rare classes kept, 0 NaN)",
+ "per_class_split": {
+  "train": {
+   "Normal": 46891,
+   "Exploits": 14710,
+   "Fuzzers": 10619,
+   "Generic": 4788,
+   "Reconnaissance": 4721,
+   "DoS": 2411,
+   "Analysis": 333,
+   "Backdoor": 257
+  },
+  "val": {
+   "Normal": 6698,
+   "Exploits": 2102,
+   "Fuzzers": 1517,
+   "Generic": 684,
+   "Reconnaissance": 674,
+   "DoS": 345,
+   "Analysis": 48,
+   "Backdoor": 36
+  },
+  "calibration": {
+   "Normal": 6698,
+   "Exploits": 2102,
+   "Fuzzers": 1517,
+   "Generic": 684,
+   "Reconnaissance": 674,
+   "DoS": 345,
+   "Analysis": 48,
+   "Backdoor": 36
+  },
+  "test": {
+   "Normal": 6698,
+   "Exploits": 2102,
+   "Fuzzers": 1517,
+   "Generic": 684,
+   "Reconnaissance": 674,
+   "DoS": 345,
+   "Analysis": 48,
+   "Backdoor": 36
+  },
+  "zeroday": {
+   "Shellcode": 1449,
+   "Worms": 166
+  }
+ }
+}

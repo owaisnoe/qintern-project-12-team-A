@@ -1,0 +1,247 @@
+{
+ "fit_on": "train split only (leakage-safe)",
+ "robust": {
+  "flow_duration": {
+   "median": 0.0,
+   "iqr": 0.9315672793323836
+  },
+  "Header_Length": {
+   "median": 0.0,
+   "iqr": 0.9293698586648178
+  },
+  "Protocol Type": {
+   "median": 0.0,
+   "iqr": 0.02689133735382879
+  },
+  "Duration": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "Rate": {
+   "median": -0.012770437111934768,
+   "iqr": 0.9649089380089301
+  },
+  "Drate": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "fin_flag_number": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "syn_flag_number": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "psh_flag_number": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "ack_flag_number": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "ece_flag_number": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "cwr_flag_number": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "syn_count": {
+   "median": 0.0,
+   "iqr": 2.9279009581688293
+  },
+  "fin_count": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "urg_count": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "HTTP": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "HTTPS": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "DNS": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "SSH": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "TCP": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "UDP": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "DHCP": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "ARP": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "ICMP": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "IPv": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "Tot sum": {
+   "median": 0.0,
+   "iqr": 0.9784901618675309
+  },
+  "Min": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "Std": {
+   "median": 0.0,
+   "iqr": 0.7462209435759599
+  },
+  "IAT": {
+   "median": -0.0034213346013807896,
+   "iqr": 0.9578586808833028
+  },
+  "Variance": {
+   "median": 0.0,
+   "iqr": 0.8930505744880486
+  }
+ },
+ "angle_[0,pi]": {
+  "urg_count": {
+   "min": 0.0,
+   "max": 8.08268025049941
+  },
+  "Duration": {
+   "min": -4.174387269895637,
+   "max": 1.3707901745839255
+  },
+  "flow_duration": {
+   "min": 0.0,
+   "max": 98.74093743580971
+  },
+  "Variance": {
+   "min": 0.0,
+   "max": 9.006468342000597
+  },
+  "Std": {
+   "min": 0.0,
+   "max": 29.18910128303394
+  },
+  "HTTPS": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "Tot sum": {
+   "min": -30.392892125177852,
+   "max": 59.874389642387186
+  },
+  "Header_Length": {
+   "min": -1.5616376266074457,
+   "max": 4.711066607619621
+  },
+  "ack_flag_number": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "Min": {
+   "min": -3.2597145763975988,
+   "max": 54.032697852599
+  },
+  "syn_count": {
+   "min": 0.0,
+   "max": 3.5758889849181323
+  },
+  "syn_flag_number": {
+   "min": 0.0,
+   "max": 1.0
+  },
+  "TCP": {
+   "min": -1.0,
+   "max": 0.0
+  },
+  "ICMP": {
+   "min": 0.0,
+   "max": 1.0
+  },
+  "UDP": {
+   "min": 0.0,
+   "max": 1.0
+  },
+  "fin_count": {
+   "min": 0.0,
+   "max": 3.0204248861443626
+  },
+  "fin_flag_number": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "psh_flag_number": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "Protocol Type": {
+   "min": -124.80107253245998,
+   "max": 60.57310601226555
+  },
+  "Rate": {
+   "min": -0.7955986202480764,
+   "max": 3.804547810615366
+  },
+  "HTTP": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "IPv": {
+   "min": -1.0,
+   "max": 0.0
+  },
+  "ARP": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "DNS": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "IAT": {
+   "min": -314.86355542751454,
+   "max": 320.13729572667404
+  },
+  "SSH": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "Drate": {
+   "min": 0.0,
+   "max": 0.1627155853364791
+  },
+  "ece_flag_number": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "DHCP": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "cwr_flag_number": {
+   "min": 0.0,
+   "max": 0.0
+  }
+ }
+}

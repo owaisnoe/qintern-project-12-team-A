@@ -1,0 +1,183 @@
+{
+ "fit_on": "train split only (leakage-safe)",
+ "robust": {
+  "proto": {
+   "median": 1.0,
+   "iqr": 1.0
+  },
+  "service": {
+   "median": 4.0,
+   "iqr": 1.0
+  },
+  "duration": {
+   "median": 2.466748124605974,
+   "iqr": 13.559031688281065
+  },
+  "src_bytes": {
+   "median": 0.865505009427084,
+   "iqr": 1.1233316702626421
+  },
+  "dst_bytes": {
+   "median": 1.0405176152218396,
+   "iqr": 1.6800889412878106
+  },
+  "conn_state": {
+   "median": 10.0,
+   "iqr": 4.0
+  },
+  "missed_bytes": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "src_pkts": {
+   "median": 1.1989778467157899,
+   "iqr": 0.9247041696625753
+  },
+  "src_ip_bytes": {
+   "median": 0.7535981377917141,
+   "iqr": 0.8256877405733294
+  },
+  "dst_pkts": {
+   "median": 0.3690702464285425,
+   "iqr": 1.140313995589965
+  },
+  "dst_ip_bytes": {
+   "median": 0.28873543525927536,
+   "iqr": 0.8085462593646315
+  },
+  "dns_query": {
+   "median": 408.0,
+   "iqr": 1.0
+  },
+  "dns_qclass": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "dns_qtype": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "dns_rcode": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "dns_AA": {
+   "median": 2.0,
+   "iqr": 1.0
+  },
+  "dns_RD": {
+   "median": 2.0,
+   "iqr": 1.0
+  },
+  "dns_RA": {
+   "median": 2.0,
+   "iqr": 1.0
+  },
+  "dns_rejected": {
+   "median": 2.0,
+   "iqr": 1.0
+  },
+  "http_request_body_len": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "http_response_body_len": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "http_status_code": {
+   "median": 0.0,
+   "iqr": 1.0
+  }
+ },
+ "angle_[0,pi]": {
+  "dst_ip_bytes": {
+   "min": -1.293422995665746,
+   "max": 3.3141902448889637
+  },
+  "dst_pkts": {
+   "min": -0.8769514395748772,
+   "max": 8.471432329693512
+  },
+  "proto": {
+   "min": -1.0,
+   "max": 1.0
+  },
+  "dns_RD": {
+   "min": -2.0,
+   "max": 0.0
+  },
+  "dns_qtype": {
+   "min": 0.0,
+   "max": 5.545177444479562
+  },
+  "dns_rejected": {
+   "min": -2.0,
+   "max": 0.0
+  },
+  "dns_RA": {
+   "min": -2.0,
+   "max": 0.0
+  },
+  "dst_bytes": {
+   "min": -0.6193229356204613,
+   "max": 2.1517409947315107
+  },
+  "src_pkts": {
+   "min": -2.114674842220473,
+   "max": 9.819117663118616
+  },
+  "service": {
+   "min": -4.0,
+   "max": 4.0
+  },
+  "dns_AA": {
+   "min": -2.0,
+   "max": 0.0
+  },
+  "dns_qclass": {
+   "min": 0.0,
+   "max": 10.39726874169286
+  },
+  "dns_query": {
+   "min": -408.0,
+   "max": 309.0
+  },
+  "src_bytes": {
+   "min": -0.7704803775582356,
+   "max": 3.0548082814017956
+  },
+  "duration": {
+   "min": -0.18216221402441113,
+   "max": 15.77872735390977
+  },
+  "dns_rcode": {
+   "min": 0.0,
+   "max": 1.791759469228055
+  },
+  "http_status_code": {
+   "min": 0.0,
+   "max": 6.003887067106539
+  },
+  "http_response_body_len": {
+   "min": 0.0,
+   "max": 16.412583387254024
+  },
+  "conn_state": {
+   "min": -2.5,
+   "max": 0.5
+  },
+  "src_ip_bytes": {
+   "min": -3.4148172042737395,
+   "max": 5.469939618962936
+  },
+  "missed_bytes": {
+   "min": 0.0,
+   "max": 21.340895539311695
+  },
+  "http_request_body_len": {
+   "min": 0.0,
+   "max": 7.369600720526409
+  }
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "ranking_metric": "|pearson r| vs label_binary on train (baseline; Team C refines)",
+ "ranking": [
+  "sttl",
+  "dttl",
+  "dload",
+  "ct_state_ttl",
+  "state",
+  "dinpkt",
+  "ackdat",
+  "tcprtt",
+  "dbytes",
+  "sinpkt",
+  "ct_dst_sport_ltm",
+  "sjit",
+  "dur",
+  "dpkts",
+  "synack",
+  "ct_dst_ltm",
+  "djit",
+  "dloss",
+  "trans_depth",
+  "ct_flw_http_mthd",
+  "ct_src_ltm",
+  "spkts",
+  "ct_src_dport_ltm",
+  "rate",
+  "ct_dst_src_ltm",
+  "sloss",
+  "smean",
+  "is_sm_ips_ports",
+  "sbytes",
+  "service",
+  "response_body_len",
+  "ct_srv_dst",
+  "ct_srv_src",
+  "swin",
+  "proto",
+  "is_ftp_login",
+  "dtcpb",
+  "stcpb"
+ ],
+ "budgets": {
+  "4": [
+   "sttl",
+   "dttl",
+   "dload",
+   "ct_state_ttl"
+  ],
+  "8": [
+   "sttl",
+   "dttl",
+   "dload",
+   "ct_state_ttl",
+   "state",
+   "dinpkt",
+   "ackdat",
+   "tcprtt"
+  ],
+  "12": [
+   "sttl",
+   "dttl",
+   "dload",
+   "ct_state_ttl",
+   "state",
+   "dinpkt",
+   "ackdat",
+   "tcprtt",
+   "dbytes",
+   "sinpkt",
+   "ct_dst_sport_ltm",
+   "sjit"
+  ],
+  "16": [
+   "sttl",
+   "dttl",
+   "dload",
+   "ct_state_ttl",
+   "state",
+   "dinpkt",
+   "ackdat",
+   "tcprtt",
+   "dbytes",
+   "sinpkt",
+   "ct_dst_sport_ltm",
+   "sjit",
+   "dur",
+   "dpkts",
+   "synack",
+   "ct_dst_ltm"
+  ]
+ },
+ "corr_pruned": [
+  {
+   "kept": "dbytes",
+   "dropped": "dmean",
+   "r": 0.9664
+  },
+  {
+   "kept": "rate",
+   "dropped": "sload",
+   "r": 0.9556
+  },
+  {
+   "kept": "swin",
+   "dropped": "dwin",
+   "r": 0.9694
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "ranking_metric": "|pearson r| vs label_binary on train (baseline; Team C refines)",
+ "ranking": [
+  "rate",
+  "state",
+  "bytes",
+  "srate",
+  "dpkts",
+  "pkts",
+  "dbytes",
+  "dur",
+  "drate",
+  "flgs",
+  "stddev",
+  "max",
+  "mean",
+  "sum",
+  "proto",
+  "min"
+ ],
+ "budgets": {
+  "4": [
+   "rate",
+   "state",
+   "bytes",
+   "srate"
+  ],
+  "8": [
+   "rate",
+   "state",
+   "bytes",
+   "srate",
+   "dpkts",
+   "pkts",
+   "dbytes",
+   "dur"
+  ],
+  "12": [
+   "rate",
+   "state",
+   "bytes",
+   "srate",
+   "dpkts",
+   "pkts",
+   "dbytes",
+   "dur",
+   "drate",
+   "flgs",
+   "stddev",
+   "max"
+  ],
+  "16": [
+   "rate",
+   "state",
+   "bytes",
+   "srate",
+   "dpkts",
+   "pkts",
+   "dbytes",
+   "dur",
+   "drate",
+   "flgs",
+   "stddev",
+   "max",
+   "mean",
+   "sum",
+   "proto",
+   "min"
+  ]
+ },
+ "corr_pruned": [
+  {
+   "kept": "pkts",
+   "dropped": "spkts",
+   "r": 0.9879
+  },
+  {
+   "kept": "bytes",
+   "dropped": "sbytes",
+   "r": 0.9787
+  }
+ ]
+}

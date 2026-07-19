@@ -1,0 +1,311 @@
+{
+ "fit_on": "train split only (leakage-safe)",
+ "robust": {
+  "arp.dst.proto_ipv4": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "arp.opcode": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "arp.src.proto_ipv4": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "icmp.checksum": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "icmp.seq_le": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "icmp.transmit_timestamp": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "http.file_data": {
+   "median": 2.0,
+   "iqr": 1.0
+  },
+  "http.content_length": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "http.request.method": {
+   "median": 1.0,
+   "iqr": 1.0
+  },
+  "http.referer": {
+   "median": 2.0,
+   "iqr": 1.0
+  },
+  "http.request.version": {
+   "median": 3.0,
+   "iqr": 1.0
+  },
+  "http.response": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "tcp.ack": {
+   "median": 0.33681787912373473,
+   "iqr": 0.928920762010213
+  },
+  "tcp.ack_raw": {
+   "median": 0.12066480717681528,
+   "iqr": 1.0014797072388961
+  },
+  "tcp.checksum": {
+   "median": 0.11096740197839573,
+   "iqr": 0.889104452587962
+  },
+  "tcp.connection.fin": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "tcp.connection.rst": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "tcp.connection.syn": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "tcp.connection.synack": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "tcp.dstport": {
+   "median": 0.0,
+   "iqr": 1.0799092790769367
+  },
+  "tcp.flags": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "tcp.flags.ack": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "tcp.len": {
+   "median": 0.0,
+   "iqr": 1.2911531551532385
+  },
+  "tcp.seq": {
+   "median": 0.0,
+   "iqr": 1.1631026856926319
+  },
+  "udp.port": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "udp.time_delta": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "dns.qry.name.len": {
+   "median": 1.0,
+   "iqr": 1.0
+  },
+  "dns.qry.qu": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "dns.retransmission": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "dns.retransmit_request": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "mqtt.conack.flags": {
+   "median": 1.0,
+   "iqr": 1.0
+  },
+  "mqtt.conflag.cleansess": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "mqtt.hdrflags": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "mqtt.len": {
+   "median": 0.0,
+   "iqr": 1.0
+  },
+  "mqtt.msg": {
+   "median": 1.0,
+   "iqr": 1.0
+  },
+  "mqtt.protoname": {
+   "median": 1.0,
+   "iqr": 1.0
+  },
+  "mqtt.topic": {
+   "median": 1.0,
+   "iqr": 1.0
+  },
+  "mqtt.topic_len": {
+   "median": 0.0,
+   "iqr": 1.0
+  }
+ },
+ "angle_[0,pi]": {
+  "dns.qry.name.len": {
+   "min": -1.0,
+   "max": 6.0
+  },
+  "mqtt.topic": {
+   "min": -1.0,
+   "max": 1.0
+  },
+  "mqtt.protoname": {
+   "min": -1.0,
+   "max": 1.0
+  },
+  "mqtt.conack.flags": {
+   "min": -1.0,
+   "max": 1.0
+  },
+  "mqtt.hdrflags": {
+   "min": 0.0,
+   "max": 5.41610040220442
+  },
+  "mqtt.len": {
+   "min": 0.0,
+   "max": 3.6888794541139363
+  },
+  "http.request.method": {
+   "min": -1.0,
+   "max": 4.0
+  },
+  "http.referer": {
+   "min": -2.0,
+   "max": 1.0
+  },
+  "tcp.dstport": {
+   "min": -0.03839487796423547,
+   "max": 1.2978406704320697
+  },
+  "mqtt.conflag.cleansess": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "mqtt.topic_len": {
+   "min": 0.0,
+   "max": 3.2188758248682006
+  },
+  "icmp.seq_le": {
+   "min": 0.0,
+   "max": 11.090187028191608
+  },
+  "icmp.checksum": {
+   "min": 0.0,
+   "max": 11.090293851940155
+  },
+  "tcp.flags.ack": {
+   "min": -1.0,
+   "max": 0.0
+  },
+  "tcp.connection.syn": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "http.request.version": {
+   "min": -3.0,
+   "max": 4.0
+  },
+  "tcp.flags": {
+   "min": -0.8888888888888888,
+   "max": 0.5
+  },
+  "tcp.seq": {
+   "min": -0.12447993835362813,
+   "max": 3.3147298344034706
+  },
+  "http.content_length": {
+   "min": 0.0,
+   "max": 7.290292882446597
+  },
+  "mqtt.msg": {
+   "min": -1.0,
+   "max": 115.0
+  },
+  "http.response": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "tcp.ack_raw": {
+   "min": -0.6087772432632644,
+   "max": 1.1990598697787118
+  },
+  "tcp.ack": {
+   "min": -0.48345405105002426,
+   "max": 3.263302635706876
+  },
+  "tcp.checksum": {
+   "min": -0.7688101074863284,
+   "max": 0.996632633819132
+  },
+  "http.file_data": {
+   "min": -1.0,
+   "max": 493.0
+  },
+  "tcp.connection.fin": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "arp.dst.proto_ipv4": {
+   "min": 0.0,
+   "max": 7.0
+  },
+  "arp.src.proto_ipv4": {
+   "min": 0.0,
+   "max": 7.0
+  },
+  "tcp.connection.synack": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "tcp.len": {
+   "min": 0.0,
+   "max": 3.168254424448088
+  },
+  "dns.retransmission": {
+   "min": 0.0,
+   "max": 3.367295829986474
+  },
+  "tcp.connection.rst": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "dns.qry.qu": {
+   "min": 0.0,
+   "max": 6.9363427358340495
+  },
+  "dns.retransmit_request": {
+   "min": 0.0,
+   "max": 0.6931471805599453
+  },
+  "udp.time_delta": {
+   "min": 0.0,
+   "max": 6.230481447578482
+  },
+  "udp.port": {
+   "min": 0.0,
+   "max": 11.007269787305745
+  },
+  "arp.opcode": {
+   "min": 0.0,
+   "max": 1.0986122886681096
+  },
+  "icmp.transmit_timestamp": {
+   "min": 0.0,
+   "max": 0.0
+  }
+ }
+}

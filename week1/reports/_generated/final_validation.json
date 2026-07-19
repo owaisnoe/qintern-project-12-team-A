@@ -1,0 +1,273 @@
+{
+  "seed": 42,
+  "datasets": {
+    "CICIoT2023": {
+      "clean": {
+        "gate": "clean_checkpoint",
+        "status": "pass",
+        "path": "datasets\\CICIoT2023\\processed\\CICIoT2023_clean.parquet",
+        "rows": 199799
+      },
+      "v01": {
+        "gate": "v01_qadcp",
+        "status": "pass",
+        "n_features": 30,
+        "split_rows": {
+          "train": 132166,
+          "val": 18883,
+          "calibration": 18883,
+          "test": 18883,
+          "zeroday": 10984
+        },
+        "gates": {
+          "files_present": "pass",
+          "no_nan": "pass",
+          "zero_day_isolation": "pass",
+          "q8_angles": "pass",
+          "quantum_labels": "pass"
+        }
+      },
+      "unified": {
+        "gate": "unified_package",
+        "status": "pass",
+        "gates": {
+          "schema_contract": "pass",
+          "no_nan": "pass",
+          "split_disjoint": "pass",
+          "zero_day_isolation": "pass",
+          "label_sanity": "pass",
+          "encoder_leakage_safe": "pass",
+          "scaler_leakage_safe": "pass",
+          "row_conservation": "pass",
+          "q8_angles": "pass",
+          "quantum_labels": "pass"
+        },
+        "split_rows": {
+          "train": 132166,
+          "val": 18883,
+          "calibration": 18883,
+          "test": 18883,
+          "zeroday": 10984
+        }
+      },
+      "passed": true
+    },
+    "TON_IoT": {
+      "clean": {
+        "gate": "clean_checkpoint",
+        "status": "pass",
+        "path": "datasets\\TON_IoT\\processed\\TON_IoT_clean.parquet",
+        "rows": 89136
+      },
+      "v01": {
+        "gate": "v01_qadcp",
+        "status": "pass",
+        "n_features": 22,
+        "split_rows": {
+          "train": 62215,
+          "val": 8889,
+          "calibration": 8889,
+          "test": 8889,
+          "zeroday": 254
+        },
+        "gates": {
+          "files_present": "pass",
+          "no_nan": "pass",
+          "zero_day_isolation": "pass",
+          "q8_angles": "pass",
+          "quantum_labels": "pass"
+        }
+      },
+      "unified": {
+        "gate": "unified_package",
+        "status": "pass",
+        "gates": {
+          "schema_contract": "pass",
+          "no_nan": "pass",
+          "split_disjoint": "pass",
+          "zero_day_isolation": "pass",
+          "label_sanity": "pass",
+          "encoder_leakage_safe": "pass",
+          "scaler_leakage_safe": "pass",
+          "row_conservation": "pass",
+          "q8_angles": "pass",
+          "quantum_labels": "pass"
+        },
+        "split_rows": {
+          "train": 60308,
+          "val": 8505,
+          "calibration": 8492,
+          "test": 8481,
+          "zeroday": 1
+        }
+      },
+      "passed": true
+    },
+    "BoT-IoT": {
+      "clean": {
+        "gate": "clean_checkpoint",
+        "status": "pass",
+        "path": "datasets\\BoT-IoT\\processed\\BoT-IoT_clean.parquet",
+        "rows": 186691
+      },
+      "v01": {
+        "gate": "v01_qadcp",
+        "status": "pass",
+        "n_features": 16,
+        "split_rows": {
+          "train": 130205,
+          "val": 18601,
+          "calibration": 18601,
+          "test": 18601,
+          "zeroday": 683
+        },
+        "gates": {
+          "files_present": "pass",
+          "no_nan": "pass",
+          "zero_day_isolation": "pass",
+          "q8_angles": "pass",
+          "quantum_labels": "pass"
+        }
+      },
+      "unified": {
+        "gate": "unified_package",
+        "status": "pass",
+        "gates": {
+          "schema_contract": "pass",
+          "no_nan": "pass",
+          "split_disjoint": "pass",
+          "zero_day_isolation": "pass",
+          "label_sanity": "pass",
+          "encoder_leakage_safe": "pass",
+          "scaler_leakage_safe": "pass",
+          "row_conservation": "pass",
+          "q8_angles": "pass",
+          "quantum_labels": "pass"
+        },
+        "split_rows": {
+          "train": 130138,
+          "val": 18591,
+          "calibration": 18591,
+          "test": 18591,
+          "zeroday": 683
+        }
+      },
+      "passed": true
+    },
+    "Edge-IIoTset": {
+      "clean": {
+        "gate": "clean_checkpoint",
+        "status": "pass",
+        "path": "datasets\\Edge-IIoTset\\processed\\Edge-IIoTset_clean.parquet",
+        "rows": 152210
+      },
+      "v01": {
+        "gate": "v01_qadcp",
+        "status": "pass",
+        "n_features": 38,
+        "split_rows": {
+          "train": 89971,
+          "val": 12853,
+          "calibration": 12857,
+          "test": 12872,
+          "zeroday": 10548
+        },
+        "gates": {
+          "files_present": "pass",
+          "no_nan": "pass",
+          "zero_day_isolation": "pass",
+          "q8_angles": "pass",
+          "quantum_labels": "pass"
+        }
+      },
+      "unified": {
+        "gate": "unified_package",
+        "status": "pass",
+        "gates": {
+          "schema_contract": "pass",
+          "no_nan": "pass",
+          "split_disjoint": "pass",
+          "zero_day_isolation": "pass",
+          "label_sanity": "pass",
+          "encoder_leakage_safe": "pass",
+          "scaler_leakage_safe": "pass",
+          "row_conservation": "pass",
+          "q8_angles": "pass",
+          "quantum_labels": "pass"
+        },
+        "split_rows": {
+          "train": 11158,
+          "val": 1575,
+          "calibration": 1572,
+          "test": 1570,
+          "zeroday": 2
+        }
+      },
+      "passed": true
+    },
+    "UNSW-NB15": {
+      "clean": {
+        "gate": "clean_checkpoint",
+        "status": "pass",
+        "path": "datasets\\UNSW-NB15\\processed\\UNSW-NB15_clean.parquet",
+        "rows": 122657
+      },
+      "v01": {
+        "gate": "v01_qadcp",
+        "status": "pass",
+        "n_features": 38,
+        "split_rows": {
+          "train": 84730,
+          "val": 12104,
+          "calibration": 12104,
+          "test": 12104,
+          "zeroday": 1615
+        },
+        "gates": {
+          "files_present": "pass",
+          "no_nan": "pass",
+          "zero_day_isolation": "pass",
+          "q8_angles": "pass",
+          "quantum_labels": "pass"
+        }
+      },
+      "unified": {
+        "gate": "unified_package",
+        "status": "pass",
+        "gates": {
+          "schema_contract": "pass",
+          "no_nan": "pass",
+          "split_disjoint": "pass",
+          "zero_day_isolation": "pass",
+          "label_sanity": "pass",
+          "encoder_leakage_safe": "pass",
+          "scaler_leakage_safe": "pass",
+          "row_conservation": "pass",
+          "q8_angles": "pass",
+          "quantum_labels": "pass"
+        },
+        "split_rows": {
+          "train": 71094,
+          "val": 10121,
+          "calibration": 10112,
+          "test": 10086,
+          "zeroday": 1216
+        }
+      },
+      "passed": true
+    }
+  },
+  "week1_success_criteria": {
+    "reproducible_qadcp": true,
+    "standardized_datasets": true,
+    "clean_checkpoints": true,
+    "manifest_pinned": true
+  },
+  "passed": true,
+  "manifest": {
+    "gate": "manifest_verify",
+    "status": "pass",
+    "exit_code": 0,
+    "tail": "[22:41:39] verify: 434 OK, 0 mismatch, 0 missing"
+  }
+}

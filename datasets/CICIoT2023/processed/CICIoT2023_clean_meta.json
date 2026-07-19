@@ -1,0 +1,93 @@
+{
+  "dataset": "CICIoT2023",
+  "seed": 42,
+  "raw_rows": 1176851,
+  "raw_cols": 47,
+  "capped_rows": 200000,
+  "cap": 200000,
+  "rows_after_dedup": 199799,
+  "feature_dupes_removed": 201,
+  "feature_space_dup_raw": 201,
+  "n_features_final": 37,
+  "label_multiclass_classes": 34,
+  "label_binary_pos_frac": 0.9771,
+  "dropped_structural": [
+    "IRC",
+    "SMTP",
+    "Telnet"
+  ],
+  "dropped_high_missing": [],
+  "dropped_high_cardinality": [],
+  "dropped_perfect_corr": [
+    {
+      "kept": "Rate",
+      "dropped": "Srate",
+      "r": 1.0
+    },
+    {
+      "kept": "IPv",
+      "dropped": "LLC",
+      "r": 1.0
+    },
+    {
+      "kept": "Tot sum",
+      "dropped": "AVG",
+      "r": 0.9903
+    },
+    {
+      "kept": "Std",
+      "dropped": "Radius",
+      "r": 0.9992
+    },
+    {
+      "kept": "IAT",
+      "dropped": "Number",
+      "r": 0.9954
+    },
+    {
+      "kept": "IAT",
+      "dropped": "Weight",
+      "r": 0.9969
+    }
+  ],
+  "encoded_categoricals": {},
+  "log1p_scaled": [
+    "ARP",
+    "AVG",
+    "Covariance",
+    "DHCP",
+    "DNS",
+    "Drate",
+    "Duration",
+    "HTTP",
+    "HTTPS",
+    "Header_Length",
+    "Magnitue",
+    "Max",
+    "Min",
+    "Protocol Type",
+    "Radius",
+    "Rate",
+    "SSH",
+    "Srate",
+    "Std",
+    "Tot size",
+    "Tot sum",
+    "Variance",
+    "ack_count",
+    "ack_flag_number",
+    "ece_flag_number",
+    "fin_count",
+    "fin_flag_number",
+    "flow_duration",
+    "psh_flag_number",
+    "rst_count",
+    "rst_flag_number",
+    "syn_count",
+    "urg_count"
+  ],
+  "outputs": {
+    "parquet": "datasets/CICIoT2023/processed/CICIoT2023_clean.parquet",
+    "sample_csv": "datasets/CICIoT2023/processed/CICIoT2023_sample.csv"
+  }
+}

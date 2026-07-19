@@ -1,0 +1,35 @@
+{
+ "timing": [
+  "duration"
+ ],
+ "rate": [],
+ "volume": [
+  "src_bytes",
+  "dst_bytes",
+  "missed_bytes",
+  "src_pkts",
+  "src_ip_bytes",
+  "dst_pkts",
+  "dst_ip_bytes"
+ ],
+ "flags_state": [
+  "conn_state"
+ ],
+ "protocol": [
+  "proto",
+  "service",
+  "dns_query",
+  "dns_qclass",
+  "dns_qtype",
+  "dns_rcode",
+  "dns_AA",
+  "dns_RD",
+  "dns_RA",
+  "dns_rejected",
+  "http_request_body_len",
+  "http_response_body_len",
+  "http_status_code"
+ ],
+ "connection_ctx": [],
+ "other": []
+}

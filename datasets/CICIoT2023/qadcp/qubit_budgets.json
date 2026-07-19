@@ -1,0 +1,122 @@
+{
+ "ranking_metric": "|pearson r| vs label_binary on train (baseline; Team C refines)",
+ "ranking": [
+  "urg_count",
+  "Duration",
+  "flow_duration",
+  "Variance",
+  "Std",
+  "HTTPS",
+  "Tot sum",
+  "Header_Length",
+  "ack_flag_number",
+  "Min",
+  "syn_count",
+  "syn_flag_number",
+  "TCP",
+  "ICMP",
+  "UDP",
+  "fin_count",
+  "fin_flag_number",
+  "psh_flag_number",
+  "Protocol Type",
+  "Rate",
+  "HTTP",
+  "IPv",
+  "ARP",
+  "DNS",
+  "IAT",
+  "SSH",
+  "Drate",
+  "ece_flag_number",
+  "DHCP",
+  "cwr_flag_number"
+ ],
+ "budgets": {
+  "4": [
+   "urg_count",
+   "Duration",
+   "flow_duration",
+   "Variance"
+  ],
+  "8": [
+   "urg_count",
+   "Duration",
+   "flow_duration",
+   "Variance",
+   "Std",
+   "HTTPS",
+   "Tot sum",
+   "Header_Length"
+  ],
+  "12": [
+   "urg_count",
+   "Duration",
+   "flow_duration",
+   "Variance",
+   "Std",
+   "HTTPS",
+   "Tot sum",
+   "Header_Length",
+   "ack_flag_number",
+   "Min",
+   "syn_count",
+   "syn_flag_number"
+  ],
+  "16": [
+   "urg_count",
+   "Duration",
+   "flow_duration",
+   "Variance",
+   "Std",
+   "HTTPS",
+   "Tot sum",
+   "Header_Length",
+   "ack_flag_number",
+   "Min",
+   "syn_count",
+   "syn_flag_number",
+   "TCP",
+   "ICMP",
+   "UDP",
+   "fin_count"
+  ]
+ },
+ "corr_pruned": [
+  {
+   "kept": "fin_flag_number",
+   "dropped": "rst_flag_number",
+   "r": 0.9664
+  },
+  {
+   "kept": "fin_flag_number",
+   "dropped": "ack_count",
+   "r": 0.9785
+  },
+  {
+   "kept": "urg_count",
+   "dropped": "rst_count",
+   "r": 0.9612
+  },
+  {
+   "kept": "Tot sum",
+   "dropped": "Max",
+   "r": 0.9606
+  },
+  {
+   "kept": "Tot sum",
+   "dropped": "Tot size",
+   "r": 0.9623
+  },
+  {
+   "kept": "Tot sum",
+   "dropped": "Magnitue",
+   "r": 0.9839
+  },
+  {
+   "kept": "Std",
+   "dropped": "Covariance",
+   "r": 0.9902
+  }
+ ]
+}

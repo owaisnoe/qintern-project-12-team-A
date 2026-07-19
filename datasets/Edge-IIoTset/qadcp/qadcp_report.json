@@ -1,0 +1,126 @@
+{
+ "dataset": "Edge-IIoTset",
+ "seed": 42,
+ "checkpoint": "datasets/Edge-IIoTset/processed/Edge-IIoTset_clean.parquet",
+ "mode": "v0.1",
+ "s0_validate": {
+  "rows": 152210,
+  "gates": "pass"
+ },
+ "s2_engineer": {
+  "families": {
+   "ddos": 48335,
+   "web_injection": 30011,
+   "benign": 24148,
+   "recon": 19834,
+   "backdoor_malware_ransomware": 19551,
+   "bruteforce_password": 9973,
+   "spoofing_mitm": 358
+  }
+ },
+ "s3_groups": {
+  "timing": 2,
+  "flags_state": 5,
+  "protocol": 35
+ },
+ "s7_split": {
+  "train": 99158,
+  "val": 14168,
+  "calibration": 14168,
+  "test": 14168,
+  "zeroday": 10548
+ },
+ "s7_zero_day_labels": [
+  "Fingerprinting",
+  "Ransomware"
+ ],
+ "s7b_postprune_dupes_dropped": {
+  "train": 9187,
+  "val": 1315,
+  "calibration": 1311,
+  "test": 1296,
+  "zeroday": 0
+ },
+ "s6_quantum": {
+  "corr_pruned": 4,
+  "n_features": 38,
+  "budgets": {
+   "4": 4,
+   "8": 8,
+   "12": 12,
+   "16": 16
+  }
+ },
+ "s5_balance": {
+  "train": 89971,
+  "train_balanced": 89971,
+  "capped_classes": []
+ },
+ "s8_gates": "pass (disjoint splits, zero-day isolated, rare classes kept, 0 NaN)",
+ "per_class_split": {
+  "train": {
+   "Normal": 16903,
+   "DDoS_ICMP": 9165,
+   "DDoS_HTTP": 7345,
+   "SQL_injection": 7193,
+   "DDoS_TCP": 7172,
+   "Uploading": 7155,
+   "Vulnerability_scanner": 7040,
+   "Password": 6982,
+   "Backdoor": 6901,
+   "XSS": 6660,
+   "Port_Scanning": 6244,
+   "DDoS_UDP": 961,
+   "MITM": 250
+  },
+  "val": {
+   "Normal": 2415,
+   "DDoS_ICMP": 1310,
+   "DDoS_HTTP": 1050,
+   "SQL_injection": 1027,
+   "DDoS_TCP": 1025,
+   "Uploading": 1022,
+   "Vulnerability_scanner": 1006,
+   "Password": 997,
+   "Backdoor": 986,
+   "XSS": 952,
+   "Port_Scanning": 892,
+   "DDoS_UDP": 135,
+   "MITM": 36
+  },
+  "calibration": {
+   "Normal": 2415,
+   "DDoS_ICMP": 1310,
+   "DDoS_HTTP": 1050,
+   "SQL_injection": 1027,
+   "DDoS_TCP": 1025,
+   "Uploading": 1022,
+   "Vulnerability_scanner": 1006,
+   "Password": 997,
+   "Backdoor": 986,
+   "XSS": 952,
+   "Port_Scanning": 892,
+   "DDoS_UDP": 139,
+   "MITM": 36
+  },
+  "test": {
+   "Normal": 2415,
+   "DDoS_ICMP": 1310,
+   "DDoS_HTTP": 1050,
+   "SQL_injection": 1027,
+   "DDoS_TCP": 1025,
+   "Uploading": 1022,
+   "Vulnerability_scanner": 1006,
+   "Password": 997,
+   "Backdoor": 986,
+   "XSS": 952,
+   "Port_Scanning": 892,
+   "DDoS_UDP": 154,
+   "MITM": 36
+  },
+  "zeroday": {
+   "Ransomware": 9692,
+   "Fingerprinting": 856
+  }
+ }
+}

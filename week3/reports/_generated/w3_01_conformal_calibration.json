@@ -1,0 +1,138 @@
+{
+ "schema_version": "1.0",
+ "day": 15,
+ "algorithm": "CQ-ZDR (Algorithm 2)",
+ "seed": 42,
+ "mode": "marginal",
+ "source_kind": "dummy",
+ "scores_root": "/home/a-koike/dev/QIntern2026/qi26_12/week2/interface/dummy_scores",
+ "nonconformity_def": "s = 1 - max_c F(rho_x, rho_c)",
+ "q_index_formula": "k = ceil((1-alpha)*(n+1)); q = s_(k)",
+ "datasets": {
+  "CICIoT2023": {
+   "dataset": "CICIoT2023",
+   "alpha": 0.05,
+   "mode": "marginal",
+   "n_known_classes": 31,
+   "calibration_n": 18883,
+   "k": 17940,
+   "threshold_q": 0.300551,
+   "target_coverage": 0.95,
+   "known_test": {
+    "n": 18883,
+    "coverage": 0.9514,
+    "false_zeroday_rate": 0.0486
+   },
+   "zeroday": {
+    "n": 10984,
+    "rejection_rate": 0.9998,
+    "families": [
+     "botnet_mirai"
+    ]
+   },
+   "coverage_ok": true,
+   "nonconformity_crosscheck_max_abs_err": 0.0,
+   "per_class_test_fpr_diagnostic": {
+    "Backdoor_Malware": 0.1111,
+    "BenignTraffic": 0.0502,
+    "BrowserHijacking": 0.0625,
+    "CommandInjection": 0.0,
+    "DDoS-ACK_Fragmentation": 0.0333,
+    "DDoS-HTTP_Flood": 0.0429,
+    "DDoS-ICMP_Flood": 0.0496,
+    "DDoS-ICMP_Fragmentation": 0.0474,
+    "DDoS-PSHACK_Flood": 0.0561,
+    "DDoS-RSTFINFlood": 0.0456,
+    "DDoS-SYN_Flood": 0.0545,
+    "DDoS-SlowLoris": 0.0645,
+    "DDoS-SynonymousIP_Flood": 0.0464,
+    "DDoS-TCP_Flood": 0.0449,
+    "DDoS-UDP_Flood": 0.0498,
+    "DDoS-UDP_Fragmentation": 0.05,
+    "DNS_Spoofing": 0.0789,
+    "DictionaryBruteForce": 0.1034,
+    "DoS-HTTP_Flood": 0.0824,
+    "DoS-SYN_Flood": 0.0376,
+    "DoS-TCP_Flood": 0.0466,
+    "DoS-UDP_Flood": 0.0447,
+    "MITM-ArpSpoofing": 0.0388,
+    "Recon-HostDiscovery": 0.0345,
+    "Recon-OSScan": 0.0238,
+    "Recon-PingSweep": 0.0,
+    "Recon-PortScan": 0.0,
+    "SqlInjection": 0.0,
+    "Uploading_Attack": 0.0,
+    "VulnerabilityScan": 0.0556,
+    "XSS": 0.0
+   },
+   "source_kind": "dummy"
+  },
+  "BoT-IoT": {
+   "dataset": "BoT-IoT",
+   "alpha": 0.05,
+   "mode": "marginal",
+   "n_known_classes": 4,
+   "calibration_n": 18591,
+   "k": 17663,
+   "threshold_q": 0.262934,
+   "target_coverage": 0.95,
+   "known_test": {
+    "n": 18591,
+    "coverage": 0.947,
+    "false_zeroday_rate": 0.053
+   },
+   "zeroday": {
+    "n": 683,
+    "rejection_rate": 0.0952,
+    "families": [
+     "theft_exfiltration"
+    ]
+   },
+   "coverage_ok": false,
+   "nonconformity_crosscheck_max_abs_err": 0.0,
+   "per_class_test_fpr_diagnostic": {
+    "DDoS": 0.0568,
+    "DoS": 0.0495,
+    "Normal": 0.0434,
+    "Reconnaissance": 0.0508
+   },
+   "source_kind": "dummy"
+  },
+  "UNSW-NB15": {
+   "dataset": "UNSW-NB15",
+   "alpha": 0.05,
+   "mode": "marginal",
+   "n_known_classes": 8,
+   "calibration_n": 10112,
+   "k": 9608,
+   "threshold_q": 0.38338,
+   "target_coverage": 0.95,
+   "known_test": {
+    "n": 10086,
+    "coverage": 0.9537,
+    "false_zeroday_rate": 0.0463
+   },
+   "zeroday": {
+    "n": 1216,
+    "rejection_rate": 0.3857,
+    "families": [
+     "shellcode",
+     "worms"
+    ]
+   },
+   "coverage_ok": true,
+   "nonconformity_crosscheck_max_abs_err": 0.0,
+   "per_class_test_fpr_diagnostic": {
+    "Analysis": 0.0556,
+    "Backdoor": 0.1034,
+    "DoS": 0.0523,
+    "Exploits": 0.0444,
+    "Fuzzers": 0.0381,
+    "Generic": 0.0769,
+    "Normal": 0.0492,
+    "Reconnaissance": 0.0295
+   },
+   "source_kind": "dummy"
+  }
+ }
+}

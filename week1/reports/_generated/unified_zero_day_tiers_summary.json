@@ -1,0 +1,549 @@
+{
+ "CICIoT2023": {
+  "dataset": "CICIoT2023",
+  "seed": 42,
+  "mode": "unified",
+  "config": {
+   "weights": {
+    "simA": 0.5,
+    "transferB": 0.3,
+    "isolationC": 0.2
+   },
+   "tier_edges": [
+    0.35,
+    0.6
+   ],
+   "knn_k": 10,
+   "sample_per_family": 5000,
+   "centroid_norm_ref_p95": 68.3879
+  },
+  "families": [
+   {
+    "family": "botnet_mirai",
+    "mode": "holdout",
+    "n_rows": 5000,
+    "nearest_train_family": "spoofing_mitm",
+    "centroid_distance": 54.1285,
+    "knn_overlap": 0.0,
+    "simA": 0.8957,
+    "transfer_recallB": 1.0,
+    "cluster_isolationC": 0.9926,
+    "difficulty_score": 0.6464,
+    "tier": "Hard"
+   },
+   {
+    "family": "backdoor_malware_ransomware",
+    "mode": "loo",
+    "n_rows": 66,
+    "nearest_train_family": "web_injection",
+    "centroid_distance": 17.471,
+    "knn_overlap": 0.0,
+    "simA": 0.6277,
+    "transfer_recallB": 0.8485,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.3593,
+    "tier": "Medium"
+   },
+   {
+    "family": "bruteforce_password",
+    "mode": "loo",
+    "n_rows": 201,
+    "nearest_train_family": "recon",
+    "centroid_distance": 17.3542,
+    "knn_overlap": 0.0,
+    "simA": 0.6269,
+    "transfer_recallB": 0.6269,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.4254,
+    "tier": "Medium"
+   },
+   {
+    "family": "ddos",
+    "mode": "loo",
+    "n_rows": 5000,
+    "nearest_train_family": "dos",
+    "centroid_distance": 6.1387,
+    "knn_overlap": 0.55,
+    "simA": 0.2699,
+    "transfer_recallB": 1.0,
+    "cluster_isolationC": 0.9676,
+    "difficulty_score": 0.3285,
+    "tier": "Easy"
+   },
+   {
+    "family": "dos",
+    "mode": "loo",
+    "n_rows": 5000,
+    "nearest_train_family": "ddos",
+    "centroid_distance": 6.1387,
+    "knn_overlap": 0.224,
+    "simA": 0.4329,
+    "transfer_recallB": 1.0,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.2164,
+    "tier": "Easy"
+   },
+   {
+    "family": "recon",
+    "mode": "loo",
+    "n_rows": 1599,
+    "nearest_train_family": "web_injection",
+    "centroid_distance": 11.9318,
+    "knn_overlap": 0.0,
+    "simA": 0.5872,
+    "transfer_recallB": 0.7749,
+    "cluster_isolationC": 0.3452,
+    "difficulty_score": 0.4302,
+    "tier": "Medium"
+   },
+   {
+    "family": "spoofing_mitm",
+    "mode": "loo",
+    "n_rows": 1431,
+    "nearest_train_family": "web_injection",
+    "centroid_distance": 20.4609,
+    "knn_overlap": 0.0,
+    "simA": 0.6496,
+    "transfer_recallB": 0.6094,
+    "cluster_isolationC": 0.4773,
+    "difficulty_score": 0.5374,
+    "tier": "Medium"
+   },
+   {
+    "family": "web_injection",
+    "mode": "loo",
+    "n_rows": 389,
+    "nearest_train_family": "recon",
+    "centroid_distance": 11.9318,
+    "knn_overlap": 0.0,
+    "simA": 0.5872,
+    "transfer_recallB": 0.617,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.4085,
+    "tier": "Medium"
+   }
+  ]
+ },
+ "TON_IoT": {
+  "dataset": "TON_IoT",
+  "seed": 42,
+  "mode": "unified",
+  "config": {
+   "weights": {
+    "simA": 0.5,
+    "transferB": 0.3,
+    "isolationC": 0.2
+   },
+   "tier_edges": [
+    0.35,
+    0.6
+   ],
+   "knn_k": 10,
+   "sample_per_family": 5000,
+   "centroid_norm_ref_p95": 30.6939
+  },
+  "families": [
+   {
+    "family": "backdoor_malware_ransomware",
+    "mode": "holdout",
+    "n_rows": 1,
+    "nearest_train_family": "bruteforce_password",
+    "centroid_distance": 194.6381,
+    "knn_overlap": 0.0,
+    "simA": 1.0,
+    "transfer_recallB": 1.0,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.5,
+    "tier": "Medium"
+   },
+   {
+    "family": "backdoor_malware_ransomware",
+    "mode": "loo",
+    "n_rows": 994,
+    "nearest_train_family": "recon",
+    "centroid_distance": 2.0962,
+    "knn_overlap": 0.8954,
+    "simA": 0.0865,
+    "transfer_recallB": 0.9869,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.0472,
+    "tier": "Easy"
+   },
+   {
+    "family": "bruteforce_password",
+    "mode": "loo",
+    "n_rows": 5000,
+    "nearest_train_family": "spoofing_mitm",
+    "centroid_distance": 18.5488,
+    "knn_overlap": 0.0548,
+    "simA": 0.7748,
+    "transfer_recallB": 0.6482,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.4929,
+    "tier": "Medium"
+   },
+   {
+    "family": "ddos",
+    "mode": "loo",
+    "n_rows": 5000,
+    "nearest_train_family": "recon",
+    "centroid_distance": 3.2367,
+    "knn_overlap": 0.1296,
+    "simA": 0.4879,
+    "transfer_recallB": 0.7598,
+    "cluster_isolationC": 0.0002,
+    "difficulty_score": 0.3161,
+    "tier": "Easy"
+   },
+   {
+    "family": "dos",
+    "mode": "loo",
+    "n_rows": 3997,
+    "nearest_train_family": "web_injection",
+    "centroid_distance": 13.1881,
+    "knn_overlap": 0.2452,
+    "simA": 0.5922,
+    "transfer_recallB": 0.7608,
+    "cluster_isolationC": 0.027,
+    "difficulty_score": 0.3733,
+    "tier": "Medium"
+   },
+   {
+    "family": "recon",
+    "mode": "loo",
+    "n_rows": 2860,
+    "nearest_train_family": "backdoor_malware_ransomware",
+    "centroid_distance": 2.0962,
+    "knn_overlap": 0.3829,
+    "simA": 0.3427,
+    "transfer_recallB": 0.9976,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.1721,
+    "tier": "Easy"
+   },
+   {
+    "family": "spoofing_mitm",
+    "mode": "loo",
+    "n_rows": 700,
+    "nearest_train_family": "bruteforce_password",
+    "centroid_distance": 18.5488,
+    "knn_overlap": 0.0529,
+    "simA": 0.7757,
+    "transfer_recallB": 0.6886,
+    "cluster_isolationC": 0.0014,
+    "difficulty_score": 0.4816,
+    "tier": "Medium"
+   },
+   {
+    "family": "web_injection",
+    "mode": "loo",
+    "n_rows": 5000,
+    "nearest_train_family": "backdoor_malware_ransomware",
+    "centroid_distance": 2.4424,
+    "knn_overlap": 0.0314,
+    "simA": 0.5241,
+    "transfer_recallB": 0.7526,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.3363,
+    "tier": "Easy"
+   }
+  ]
+ },
+ "BoT-IoT": {
+  "dataset": "BoT-IoT",
+  "seed": 42,
+  "mode": "unified",
+  "config": {
+   "weights": {
+    "simA": 0.5,
+    "transferB": 0.3,
+    "isolationC": 0.2
+   },
+   "tier_edges": [
+    0.35,
+    0.6
+   ],
+   "knn_k": 10,
+   "sample_per_family": 5000,
+   "centroid_norm_ref_p95": 27.5121
+  },
+  "families": [
+   {
+    "family": "theft_exfiltration",
+    "mode": "holdout",
+    "n_rows": 683,
+    "nearest_train_family": "recon",
+    "centroid_distance": 14.7194,
+    "knn_overlap": 0.0,
+    "simA": 0.7675,
+    "transfer_recallB": 0.4114,
+    "cluster_isolationC": 0.3324,
+    "difficulty_score": 0.6268,
+    "tier": "Hard"
+   },
+   {
+    "family": "ddos",
+    "mode": "loo",
+    "n_rows": 5000,
+    "nearest_train_family": "dos",
+    "centroid_distance": 0.685,
+    "knn_overlap": 0.067,
+    "simA": 0.4789,
+    "transfer_recallB": 0.9986,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.2399,
+    "tier": "Easy"
+   },
+   {
+    "family": "dos",
+    "mode": "loo",
+    "n_rows": 5000,
+    "nearest_train_family": "ddos",
+    "centroid_distance": 0.685,
+    "knn_overlap": 0.0416,
+    "simA": 0.4916,
+    "transfer_recallB": 0.9932,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.2479,
+    "tier": "Easy"
+   },
+   {
+    "family": "recon",
+    "mode": "loo",
+    "n_rows": 2478,
+    "nearest_train_family": "ddos",
+    "centroid_distance": 27.3548,
+    "knn_overlap": 0.0,
+    "simA": 0.9971,
+    "transfer_recallB": 0.1255,
+    "cluster_isolationC": 0.9512,
+    "difficulty_score": 0.9512,
+    "tier": "Hard"
+   }
+  ]
+ },
+ "Edge-IIoTset": {
+  "dataset": "Edge-IIoTset",
+  "seed": 42,
+  "mode": "unified",
+  "config": {
+   "weights": {
+    "simA": 0.5,
+    "transferB": 0.3,
+    "isolationC": 0.2
+   },
+   "tier_edges": [
+    0.35,
+    0.6
+   ],
+   "knn_k": 10,
+   "sample_per_family": 5000,
+   "centroid_norm_ref_p95": 8.4016
+  },
+  "families": [
+   {
+    "family": "backdoor_malware_ransomware",
+    "mode": "holdout",
+    "n_rows": 2,
+    "nearest_train_family": "web_injection",
+    "centroid_distance": 0.1926,
+    "knn_overlap": 0.0,
+    "simA": 0.5115,
+    "transfer_recallB": 0.5,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.4057,
+    "tier": "Medium"
+   },
+   {
+    "family": "backdoor_malware_ransomware",
+    "mode": "loo",
+    "n_rows": 65,
+    "nearest_train_family": "web_injection",
+    "centroid_distance": 0.3002,
+    "knn_overlap": 0.0,
+    "simA": 0.5179,
+    "transfer_recallB": 0.2769,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.4759,
+    "tier": "Medium"
+   },
+   {
+    "family": "ddos",
+    "mode": "loo",
+    "n_rows": 5000,
+    "nearest_train_family": "web_injection",
+    "centroid_distance": 6.2289,
+    "knn_overlap": 0.001,
+    "simA": 0.8702,
+    "transfer_recallB": 0.0034,
+    "cluster_isolationC": 0.9912,
+    "difficulty_score": 0.9323,
+    "tier": "Hard"
+   },
+   {
+    "family": "recon",
+    "mode": "loo",
+    "n_rows": 486,
+    "nearest_train_family": "bruteforce_password",
+    "centroid_distance": 0.5447,
+    "knn_overlap": 0.0,
+    "simA": 0.5324,
+    "transfer_recallB": 0.9609,
+    "cluster_isolationC": 0.7531,
+    "difficulty_score": 0.4286,
+    "tier": "Medium"
+   },
+   {
+    "family": "web_injection",
+    "mode": "loo",
+    "n_rows": 142,
+    "nearest_train_family": "backdoor_malware_ransomware",
+    "centroid_distance": 0.3002,
+    "knn_overlap": 0.0,
+    "simA": 0.5179,
+    "transfer_recallB": 0.3099,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.466,
+    "tier": "Medium"
+   }
+  ]
+ },
+ "UNSW-NB15": {
+  "dataset": "UNSW-NB15",
+  "seed": 42,
+  "mode": "unified",
+  "config": {
+   "weights": {
+    "simA": 0.5,
+    "transferB": 0.3,
+    "isolationC": 0.2
+   },
+   "tier_edges": [
+    0.35,
+    0.6
+   ],
+   "knn_k": 10,
+   "sample_per_family": 5000,
+   "centroid_norm_ref_p95": 1.9528
+  },
+  "families": [
+   {
+    "family": "shellcode",
+    "mode": "holdout",
+    "n_rows": 1062,
+    "nearest_train_family": "backdoor_malware_ransomware",
+    "centroid_distance": 1.357,
+    "knn_overlap": 0.467,
+    "simA": 0.6139,
+    "transfer_recallB": 0.7448,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.3835,
+    "tier": "Medium"
+   },
+   {
+    "family": "worms",
+    "mode": "holdout",
+    "n_rows": 154,
+    "nearest_train_family": "dos",
+    "centroid_distance": 0.3385,
+    "knn_overlap": 0.2662,
+    "simA": 0.4536,
+    "transfer_recallB": 0.974,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.2346,
+    "tier": "Easy"
+   },
+   {
+    "family": "analysis",
+    "mode": "loo",
+    "n_rows": 255,
+    "nearest_train_family": "recon",
+    "centroid_distance": 0.751,
+    "knn_overlap": 0.2784,
+    "simA": 0.5531,
+    "transfer_recallB": 0.1373,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.5354,
+    "tier": "Medium"
+   },
+   {
+    "family": "backdoor_malware_ransomware",
+    "mode": "loo",
+    "n_rows": 207,
+    "nearest_train_family": "recon",
+    "centroid_distance": 0.4278,
+    "knn_overlap": 0.2271,
+    "simA": 0.496,
+    "transfer_recallB": 0.9324,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.2683,
+    "tier": "Easy"
+   },
+   {
+    "family": "dos",
+    "mode": "loo",
+    "n_rows": 2061,
+    "nearest_train_family": "generic",
+    "centroid_distance": 0.607,
+    "knn_overlap": 0.1417,
+    "simA": 0.5846,
+    "transfer_recallB": 0.9161,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.3175,
+    "tier": "Easy"
+   },
+   {
+    "family": "exploits",
+    "mode": "loo",
+    "n_rows": 5000,
+    "nearest_train_family": "dos",
+    "centroid_distance": 0.6216,
+    "knn_overlap": 0.076,
+    "simA": 0.6211,
+    "transfer_recallB": 0.9288,
+    "cluster_isolationC": 0.1208,
+    "difficulty_score": 0.3561,
+    "tier": "Medium"
+   },
+   {
+    "family": "fuzzers",
+    "mode": "loo",
+    "n_rows": 5000,
+    "nearest_train_family": "generic",
+    "centroid_distance": 0.8579,
+    "knn_overlap": 0.1708,
+    "simA": 0.6343,
+    "transfer_recallB": 0.2006,
+    "cluster_isolationC": 0.1564,
+    "difficulty_score": 0.5882,
+    "tier": "Medium"
+   },
+   {
+    "family": "generic",
+    "mode": "loo",
+    "n_rows": 674,
+    "nearest_train_family": "dos",
+    "centroid_distance": 0.607,
+    "knn_overlap": 0.1009,
+    "simA": 0.605,
+    "transfer_recallB": 0.9139,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.3283,
+    "tier": "Easy"
+   },
+   {
+    "family": "recon",
+    "mode": "loo",
+    "n_rows": 3823,
+    "nearest_train_family": "backdoor_malware_ransomware",
+    "centroid_distance": 0.4278,
+    "knn_overlap": 0.865,
+    "simA": 0.177,
+    "transfer_recallB": 0.4666,
+    "cluster_isolationC": 0.0,
+    "difficulty_score": 0.2485,
+    "tier": "Easy"
+   }
+  ]
+ }
+}

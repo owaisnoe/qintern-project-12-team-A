@@ -1,0 +1,17 @@
+{
+ "CICIoT2023": {
+  "clean_known": 3473,
+  "true_zeroday": 3000,
+  "adv_source_pool_to_perturb": 3273
+ },
+ "BoT-IoT": {
+  "clean_known": 800,
+  "true_zeroday": 683,
+  "adv_source_pool_to_perturb": 600
+ },
+ "UNSW-NB15": {
+  "clean_known": 1156,
+  "true_zeroday": 1216,
+  "adv_source_pool_to_perturb": 956
+ }
+}

@@ -1,0 +1,4935 @@
+{
+  "note": "Pin source URL + row count + SHA-256 per file so all team members train on byte-identical data. Kaggle mirrors/variants differ \u2192 the SHA-256 is the real pin.",
+  "sha256_algo": "sha256",
+  "datasets": {
+    "CICIoT2023": {
+      "official": "https://www.unb.ca/cic/datasets/iotdataset-2023.html",
+      "source": "Kaggle mirror: himadri07/ciciot2023 (row count is mirror-variant)",
+      "paper": "Neto et al., CICIoT2023, Sensors 2023",
+      "n_files": 105,
+      "total_bytes": 3013872320,
+      "files": [
+        {
+          "path": "datasets/CICIoT2023/raw/CICIOT23/test/test.csv",
+          "bytes": 347958926,
+          "sha256": "15aeb1f47a7bd3e3fc394d18d7b196b3640329abaae65d5220df4def6119bfc6",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1176851
+        },
+        {
+          "path": "datasets/CICIoT2023/raw/CICIOT23/train/train.csv",
+          "bytes": 1623446296,
+          "sha256": "ede08dc57e57369fcf35a2b1ea81b81bad0a9a2ad91bc08eceb646bd89117b04",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 5491971
+        },
+        {
+          "path": "datasets/CICIoT2023/raw/CICIOT23/validation/validation.csv",
+          "bytes": 347921865,
+          "sha256": "b13775e87ef64c8dd66c910d4585323f99b1209f2508c75a0a0a8d584caf20d8",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1176851
+        },
+        {
+          "path": "datasets/CICIoT2023/CICIoT2023.zip",
+          "bytes": 500559747,
+          "sha256": "793b212d1dc40973068d06cec4d0676eaf7f17436a859dfa522303e199c7ea5a",
+          "kind": "zip",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/processed/CICIoT2023_clean.parquet",
+          "bytes": 10629467,
+          "sha256": "ef92b6fcb27c9a60b2d080b51b60acab644eaaa767ae58ee1c0f0a287be8e525",
+          "kind": "processed",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/processed/CICIoT2023_clean_meta.json",
+          "bytes": 1689,
+          "sha256": "cf48b6460363a87f1e7308060cd98fb4759973c8713ed7632d42a13b8a6eebf4",
+          "kind": "processed",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/processed/CICIoT2023_sample.csv",
+          "bytes": 309928,
+          "sha256": "00c09dab06c25578bcd11a6e48b1e12a749beabd37972756655a69a4ba7206ea",
+          "kind": "processed",
+          "used_by_pipeline": false,
+          "data_rows": 1000
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/calibration.parquet",
+          "bytes": 847884,
+          "sha256": "159476209c7a8e0c32ad5c7930124feda1f789a9dd5bf3a03f5dd2ce917b80a7",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/feature_groups.json",
+          "bytes": 640,
+          "sha256": "0460d995a12c58894ebd7aada7c621a22c5955ac594764a04a81ed9d30838973",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/pca_baseline.json",
+          "bytes": 462,
+          "sha256": "69b73f19fd79a6d644592da24df997ed15aebbb79f6aac98385136a3247f854d",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/qadcp_report.json",
+          "bytes": 4787,
+          "sha256": "a97cedc64286ef1c3b3f4d6d962cdcb887945e4716f6a380a1b92921e4f8ddf1",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/pca8_calibration.parquet",
+          "bytes": 1518106,
+          "sha256": "ec828ac68e9a82c2c6ce8bb511851b28c8f7b532de30e340fd41dcb3e0aba4aa",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/pca8_test.parquet",
+          "bytes": 1518306,
+          "sha256": "30f52c05804f947a69ca7cf0361c1864809e649a4a637b039319a9bc46f890f4",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/pca8_train.parquet",
+          "bytes": 10821773,
+          "sha256": "94feb2500fa7a8a79ec2f3104180650fe5fb62e4707fd5567cf6378120a7298f",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/pca8_val.parquet",
+          "bytes": 1518250,
+          "sha256": "4035c0863b1da5d5910844613e2300f2126c867e78e98f0eb0b29fb337656d28",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/pca8_zeroday.parquet",
+          "bytes": 801229,
+          "sha256": "8a1452d1d1ae1f746c5d992f702d1205d8f5a8221fc448e166c61edc32a88dfd",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q12_calibration.parquet",
+          "bytes": 425093,
+          "sha256": "bd4f0ee63cacdb08921149e5297fdc0eed47f92b0a4b55a318eb5ff11fd282e7",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q12_test.parquet",
+          "bytes": 423928,
+          "sha256": "e4a6de05b727073d2df7827a1eb0c66769ac90c8915c6f8583834a3b82c05d4a",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q12_train.parquet",
+          "bytes": 2700803,
+          "sha256": "124c0ee2580e2b68078f0ff1442c8cf2026020402c685e72e54e3f8e29c3a8e8",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q12_val.parquet",
+          "bytes": 426920,
+          "sha256": "bbc114b8b968598e99e141465acb9bb6f015b94a65f6e0f4e78316f1b27bd01c",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q12_zeroday.parquet",
+          "bytes": 322581,
+          "sha256": "995f7ca0365a57dbe47dcadd1b9008c52b1ff47e3cb5b23e14c6c5cd6d91ce99",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q16_calibration.parquet",
+          "bytes": 444071,
+          "sha256": "48992c973493fc4fdc30c2e73a1f0e44f4ac2fae57ba3c69f92c94912dd74c4d",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q16_test.parquet",
+          "bytes": 442968,
+          "sha256": "90309407bfe0177ebbdc6c2eb59042d445128ae582f6dfd4bf1fe328f41ba541",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q16_train.parquet",
+          "bytes": 2820306,
+          "sha256": "ce9f80c980a3569cdd174af12fc29af25e570dc89a52f768c3c1395b5c9d3025",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q16_val.parquet",
+          "bytes": 445844,
+          "sha256": "6a0a0aaf3f643e302c45094ffed5e7f0450efbcce672b0101729373e8bd2ac19",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q16_zeroday.parquet",
+          "bytes": 327344,
+          "sha256": "734daeb4a5b572383f0c339fc7b2253f385a8d089a9fcd8c9e4a59b3e2b9fd77",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q4_calibration.parquet",
+          "bytes": 180179,
+          "sha256": "62b77b7cbb5ae90929af1c4d0e9cd1c05e90d259fccc868206b40265698f3080",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q4_test.parquet",
+          "bytes": 179359,
+          "sha256": "90b42f6b663b5120a59649b00c1c533f343d99f0d9dac5c5cfab19ab839abbb2",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q4_train.parquet",
+          "bytes": 1162460,
+          "sha256": "af4dda4ace25a3090219baeaeb8dee46a63da2f906d778e2226f7e3e9e38b3e3",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q4_val.parquet",
+          "bytes": 180149,
+          "sha256": "20ff36733717aac01bb3aacfde9cf07a45b4a14b9fe132f8fe928fbeb546fd81",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q4_zeroday.parquet",
+          "bytes": 104997,
+          "sha256": "2eac0076ff5ddb6aa5183c883ae77037cbe4ff47c674d806397187400e2c1533",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q8_calibration.parquet",
+          "bytes": 372533,
+          "sha256": "61be55b797b0dc1f291befeee4cb014d2eac004ef918677e629093189cf5e4ba",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q8_test.parquet",
+          "bytes": 371534,
+          "sha256": "4ad0c8e593dfbd85330f3bac2ba4bc7949b2041877b327ac5d4a391de89732bf",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q8_train.parquet",
+          "bytes": 2383538,
+          "sha256": "e4e2b929f6e54cdbd69a13b7f43262fbbbb99b398a5f9e1594af646fea00bb74",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q8_val.parquet",
+          "bytes": 373956,
+          "sha256": "dadb587d294e7c8c7523cb2c989fa4db6b76767668962ddaa1346d61cf81184b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/quantum/q8_zeroday.parquet",
+          "bytes": 271538,
+          "sha256": "ffa4bbcf98e8b592898e0ff70163384e3b50f6dfb02798e205a0f6d93a27a9c2",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/qubit_budgets.json",
+          "bytes": 1752,
+          "sha256": "1edef2694e9a23cef9b80714d82ac4259a61d9bc59cb52beecf1e4e5a57483b0",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/scalers.json",
+          "bytes": 3795,
+          "sha256": "f16906233074fd27c0231e7806b3fb0e331bc70ce1008ea1ba1b19a44a660850",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/test.parquet",
+          "bytes": 846245,
+          "sha256": "f58b08c27b656f419ed9f789afef8c55f0f39f02d67758fdf1611e9c133c926e",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/train.parquet",
+          "bytes": 5642435,
+          "sha256": "b2d8fb081c08c429a514c20d93e1eddfaab82d6bfd5b91b1e46359865c99a412",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/train_balanced.parquet",
+          "bytes": 5569398,
+          "sha256": "2f5d7e3ecb8a34a17b209b73794369f5479f3f57d0845114994867a4ead840ab",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/val.parquet",
+          "bytes": 849279,
+          "sha256": "a8d04fcf100effdbe8ddd3d24adbe221b53cf3fe3f32bf1ee8eeefe468eb26fe",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/zero_day_tiers.json",
+          "bytes": 2692,
+          "sha256": "efb99e576a8bb214eaa1484b597906a7e7a2c26c6a8ce1391bac4b42da447459",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/qadcp/zeroday.parquet",
+          "bytes": 563948,
+          "sha256": "397f4f619adcf2390cbe5aab32de60b267bd0424b7ea57dd7c548e5cdbcb7f90",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/processed/CICIoT2023_unified.parquet",
+          "bytes": 7990618,
+          "sha256": "3ad515bb5e223c520aa94649ea8fd3c5d549fb42da20d92a53578affc9bf6a69",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/processed/CICIoT2023_unified_meta.json",
+          "bytes": 778,
+          "sha256": "507ce5abae26e760f8121ee078017a1fc9b4f4d564aa0adb41660513a35b4d62",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/calibration.parquet",
+          "bytes": 795599,
+          "sha256": "b6efad8437f559ce48ce8fd236d62deee52bdd46aab768dbd789fad2c15910a2",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/encoders.json",
+          "bytes": 1041,
+          "sha256": "32a7293bb5dba99940f35ed9e99e1c0e8e9016918af935aa5809ff0624cc64eb",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/feature_groups.json",
+          "bytes": 382,
+          "sha256": "f66eadb49a19f16e65f0e812af44c6258370a8b7a2145608f655f9725ba77ed5",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/pca_baseline.json",
+          "bytes": 465,
+          "sha256": "e84c0d1f2c30c1f4adff0d3235f5120a401b895dbe963e8d8ea48af19b14a8af",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/qadcp_report.json",
+          "bytes": 4783,
+          "sha256": "66cd47e58553f0da60a5da50ab3a2daac43b59833646a36ba5d5311395b53dbe",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/pca8_calibration.parquet",
+          "bytes": 1518236,
+          "sha256": "9cb11f85e24d6a05345a43f2265a59b5da4f83d76057c467127759ba16e0a5fe",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/pca8_test.parquet",
+          "bytes": 1517469,
+          "sha256": "8f2457ef2f4eeb21975b7904d5c590380ac58549f2dcd0b29688196c580e1e6e",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/pca8_train.parquet",
+          "bytes": 10819356,
+          "sha256": "d2634dba93b2b5c25c1e1c5389a20bfd812e22c66d65d7bab1d0d8a78c21d1e5",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/pca8_val.parquet",
+          "bytes": 1518251,
+          "sha256": "da9272f134b429ea39f448c766ba1d5d316f6fd8d079e4c840e68822fb08073d",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/pca8_zeroday.parquet",
+          "bytes": 866345,
+          "sha256": "66697dedb0ce843d3114b97a78b79ba2f3f8cdd07c2ae2c9461902e0e5d8469f",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q12_calibration.parquet",
+          "bytes": 792745,
+          "sha256": "899ec1aa796fb4d7c1b692b3adb0cfb0a357b86390f3153698a987840a75cd46",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q12_test.parquet",
+          "bytes": 787591,
+          "sha256": "5446bc57c05fcb8f99626fc64120aad2b7215b0f93f2b6b654ac801727311ddc",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q12_train.parquet",
+          "bytes": 5397781,
+          "sha256": "2dbbff0b09447e6a93b6c3be728fe466d424ad8ccaa048d4d8b7e4723e2f7c2d",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q12_val.parquet",
+          "bytes": 791387,
+          "sha256": "e79932a622c8b6cfe9d1bb53daeab0c9f858915dc8fcdb4d9c24de0c1da42972",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q12_zeroday.parquet",
+          "bytes": 517038,
+          "sha256": "8191cf7a251079554f6d0260d0551be12f6f1cb3fcffa718e15d9b78ebdba58f",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q16_calibration.parquet",
+          "bytes": 795021,
+          "sha256": "d8992d652b36a332a6bb7b342a7dee3afe9e2ac773fcfe0e0838e69fb8a0d5f8",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q16_test.parquet",
+          "bytes": 789867,
+          "sha256": "917ca3c4b3d499a771d61ee787e1c62a0901f9489c6e5a7192c475ca3bb81001",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q16_train.parquet",
+          "bytes": 5400065,
+          "sha256": "142678f626af0d8c7d61d8b86e92f87cc067922207f740f5554ecf6ca0256e53",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q16_val.parquet",
+          "bytes": 793663,
+          "sha256": "cf9517af4a6e044f0f5fe8a6f4cf46dc2dfd02af7785f45b428941b8b89cbb93",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q16_zeroday.parquet",
+          "bytes": 519314,
+          "sha256": "4343e648a5b8d74a8b2f0d4820c5495ec47582e21be3a018bdaec8f68d6caa0d",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q4_calibration.parquet",
+          "bytes": 267231,
+          "sha256": "363074f941bcdfbe29357d99346dfe721db0be381db9a8c132e3d8fd3028d50b",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q4_test.parquet",
+          "bytes": 266189,
+          "sha256": "43972eecbfc7fa409402c5fecb2b7e35543299228fc157f1bd29c6335fdafc08",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q4_train.parquet",
+          "bytes": 1780771,
+          "sha256": "4110453b41c0c3b37fe8eb885911227bcea72021d76710b68e002f4f56168af4",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q4_val.parquet",
+          "bytes": 268601,
+          "sha256": "d167e441adf9da3ac2f0041f65e0b2f129ba1c727473c516f89bc10a4d351fca",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q4_zeroday.parquet",
+          "bytes": 155180,
+          "sha256": "2f0c8fd6506836b67e786ddb42154336acd9e2a35570cb2ead93c6bc13fad7c3",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q8_calibration.parquet",
+          "bytes": 416658,
+          "sha256": "433dfb1a2b6d51b074d6a1f745ce948557ee05ea9daa05afe7fc180616666c45",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q8_test.parquet",
+          "bytes": 415628,
+          "sha256": "377741a975cb1f4d447fc1ff3ee363eb5a0f329aa2c69b1fb96612af4c1ce420",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q8_train.parquet",
+          "bytes": 2744452,
+          "sha256": "26bad7ed7b2eebd154646db782336330844ae3ca5c6a14631a85fe7830a4eb52",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q8_val.parquet",
+          "bytes": 418806,
+          "sha256": "1c0a330991e672c191cd35701b6da193f22270765721e10723ecab2d7ff98ad7",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/quantum/q8_zeroday.parquet",
+          "bytes": 311851,
+          "sha256": "1059880877c8d793371dc99aa601aaa7df43dae7115119e29f23f206c25a84a4",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/qubit_budgets.json",
+          "bytes": 1133,
+          "sha256": "9920d8bdd923fb2fbd290db1eee9911d9868d98b0b1b5aaa0f5fc800a9eebcc1",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/scalers.json",
+          "bytes": 2392,
+          "sha256": "93f11026ac1651fb18ad66f8dc3e33149b0fe5df432e564087dc67c93c6e84b9",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/test.parquet",
+          "bytes": 794659,
+          "sha256": "647f638ae9151af3e12749cb88a3f2bdae08be6795ba62a9529f92e0f617c753",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/train.parquet",
+          "bytes": 5420425,
+          "sha256": "2633ad7ba40195e3ca5e32ad27ea4e56db14399726a1563bd4c8be856079649f",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/train_balanced.parquet",
+          "bytes": 5348065,
+          "sha256": "6595bc59febbc8237c60580f1ecf18e80568ffc56cb6e40c87c44518ad1f90f2",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/val.parquet",
+          "bytes": 797731,
+          "sha256": "19eeb52ddc4abee99f6a9ef8f748d74428a2259cec389bb8800e212a3d06d709",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/validation_report.json",
+          "bytes": 944,
+          "sha256": "31323b4b39ffbad9c85e88d1df38f1dbb5a8b0659b852213272b1bed92b6df7a",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/zero_day_tiers.json",
+          "bytes": 2699,
+          "sha256": "1f1b85c830a1c6aa7bf973c08c91287c40441b0a2b631417d25c1a4a34cd1e0f",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/CICIoT2023/unified/qadcp/zeroday.parquet",
+          "bytes": 527581,
+          "sha256": "138d10e91b63492b45fb455be2089fc3026d8ffad8e9b7160713df24e9225768",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/partitions/CICIoT2023/calibration.csv",
+          "bytes": 3523899,
+          "sha256": "56de4cca3b6a70723b3b17de9f34304881caffab95bdae190cfba6ebed2ee36d",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 18883
+        },
+        {
+          "path": "week2/partitions/CICIoT2023/partition_meta.json",
+          "bytes": 4073,
+          "sha256": "023bfc34566c0aba8495e7851aff4bf3ecf0616361c434ad9acaa61af2e8e4db",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/partitions/CICIoT2023/test.csv",
+          "bytes": 3519555,
+          "sha256": "a2f5a7062e1a9b12928653bd09ec3aa15452eb3c79c2b22b90d8c415b0408685",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 18883
+        },
+        {
+          "path": "week2/partitions/CICIoT2023/train.csv",
+          "bytes": 28184201,
+          "sha256": "930527be9c6d056de2773857c70d28b0e2f3a4386d40ba30a78f67ea64fc2270",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 151049
+        },
+        {
+          "path": "week2/partitions/CICIoT2023/zeroday.csv",
+          "bytes": 2491297,
+          "sha256": "98531bcb07ede24d04be420029c94c2ad8d8c610cf735169723538781a86f052",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10984
+        },
+        {
+          "path": "week2/rq3/CICIoT2023/adversarial_source_pool.csv",
+          "bytes": 871403,
+          "sha256": "b117863507fe62251be4edf9e31a42c8b7907f0b80e7316788c00e161f841f23",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 3273
+        },
+        {
+          "path": "week2/rq3/CICIoT2023/eval_clean.csv",
+          "bytes": 1819897,
+          "sha256": "539a38ee12e70e2302672bdc02201ce3b30df4ed90c582a0eda75cea878d974e",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 6473
+        },
+        {
+          "path": "week2/rq3/CICIoT2023/rq3_schema.json",
+          "bytes": 1758,
+          "sha256": "76ddcb2c995c4b0b002964de8525572b59ea13e0539400ab5dc09732c8144211",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/CICIoT2023/autoencoder.joblib",
+          "bytes": 11679,
+          "sha256": "f4155c29a1f7b94caf3671c886365726d5ffbd424786de26df8ff5512e7565f4",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/CICIoT2023/isolation_forest.joblib",
+          "bytes": 4818068,
+          "sha256": "52321bef8b2cb3a508b05244ec0f3420b711c1f47b09588ec6009c8721a19007",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/CICIoT2023/predictions.csv",
+          "bytes": 3495541,
+          "sha256": "fc9a41eee7b083be764438c0c5e279e2c2c44ed5cd44b248d1369c883f0a7628",
+          "kind": "baseline",
+          "used_by_pipeline": false,
+          "data_rows": 29867
+        },
+        {
+          "path": "week2/baselines/CICIoT2023/results.json",
+          "bytes": 6066,
+          "sha256": "500d4e588eebd5c0e5ee0f6c2524de0ba3323f5d5fd6f0aa30c1ebe4a21f21b7",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/CICIoT2023/xgboost_detector.json",
+          "bytes": 9354331,
+          "sha256": "7e18f402bc68c1d9ef770d3516f56e892016e3a4dc3986ba15a573a61608fe2a",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/CICIoT2023/calibration_scores.head.csv",
+          "bytes": 8874,
+          "sha256": "5d3a8249b4c5a162974cfec675bc9f137a4567254f93a849f0713552ebae6745",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10
+        },
+        {
+          "path": "week2/interface/dummy_scores/CICIoT2023/calibration_scores.parquet",
+          "bytes": 7262244,
+          "sha256": "33d9aaedeb7d325a361edf9eb1afa2661d992b94781326111cc8694e1e15a6c3",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/CICIoT2023/prototypes_meta.json",
+          "bytes": 2126,
+          "sha256": "ed4413c74eac31505bdd5d79b486b9d4e09fa15507d96776d6c7519d7092d9df",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/CICIoT2023/test_scores.head.csv",
+          "bytes": 8818,
+          "sha256": "836632b33ba77ee42a321a4c681ef86545844fe126b6c6ad73e88b1cfaf54bd2",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10
+        },
+        {
+          "path": "week2/interface/dummy_scores/CICIoT2023/test_scores.parquet",
+          "bytes": 7262176,
+          "sha256": "aa7e4d9aca41f1f9ce645ca97b5136ea90215ffa8d25c3ea086c71e66b9792a1",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/CICIoT2023/zeroday_scores.head.csv",
+          "bytes": 8759,
+          "sha256": "2578e133d9c129ab0d7bce478bf6239366d6ac752eef496ed432885ebfb82882",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10
+        },
+        {
+          "path": "week2/interface/dummy_scores/CICIoT2023/zeroday_scores.parquet",
+          "bytes": 3959764,
+          "sha256": "e284d8af411ab74a0744e6e6b7f58f35059fa7192e734255af44ead7970b31b5",
+          "kind": "week2",
+          "used_by_pipeline": false
+        }
+      ]
+    },
+    "TON_IoT": {
+      "official": "https://research.unsw.edu.au/projects/toniot-datasets",
+      "source": "UNSW TON_IoT \u2014 Train_Test_Network 50k-Normal variant (211,043 rows)",
+      "paper": "Moustafa, TON_IoT, 2021",
+      "n_files": 163,
+      "total_bytes": 10307814307,
+      "files": [
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_IoT_dataset/IoT_Fridge.csv",
+          "bytes": 24965618,
+          "sha256": "e5c7fd42c1d44898eb8afe6800d7a335a38a6a8394c6af083407b9f581736272",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 587076
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_IoT_dataset/IoT_GPS_Tracker.csv",
+          "bytes": 31423494,
+          "sha256": "aa1146435bd964b7d247736d5c8a12221b0e9d16734d33f80b7e7a8153ebe917",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 595686
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_IoT_dataset/IoT_Garage_Door.csv",
+          "bytes": 25760262,
+          "sha256": "76639fd3e4b5a800d7e3216aefc6398c11a3f87a6b3bfcebf3f2a893f135e204",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 591446
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_IoT_dataset/IoT_Modbus.csv",
+          "bytes": 15347014,
+          "sha256": "1cdb245661db3f15be52c3e8aeba5b1a3af37b8eed3f9132a7f1a03d8111aa16",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 287194
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_IoT_dataset/IoT_Motion_Light.csv",
+          "bytes": 16561568,
+          "sha256": "6bdd41ac3c3e9fc2e70766691db000a063c73cbc85be7d5f6ce17a4d66dc346e",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 452262
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_IoT_dataset/IoT_Thermostat.csv",
+          "bytes": 19046111,
+          "sha256": "abb919eb3816d30036ad54bfd65bbbdf1e7b527bdb2993c22d9a36a21aa3a5c2",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 442228
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_IoT_dataset/IoT_Weather.csv",
+          "bytes": 42002630,
+          "sha256": "1b5e379011d37a1b4bf3598f3c06eb554b207a30787ddcb6a30833092c6ca9a1",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 650242
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Linux_dataset/Linux_process_1.csv",
+          "bytes": 64777970,
+          "sha256": "71ad491da40a83dfe262382062c57a33bdbe1ba78fb7736fc06356cba6efcb65",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Linux_dataset/Linux_process_2.csv",
+          "bytes": 60619695,
+          "sha256": "462d8e5eef2f99851566044eab285ea16a1ed3766b0e5ff53507203058ee75e5",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 927968
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Linux_dataset/linux_disk_1.csv",
+          "bytes": 44541585,
+          "sha256": "f7e314c7ff01285a2001237fd9a4e87516c4959bd3d65fcef2800d1334f72c8b",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Linux_dataset/linux_disk_2.csv",
+          "bytes": 40109807,
+          "sha256": "0c43702c3eeb47bef4e40cca083d42b0a0b86672474ae6def64dfd6b85b383e6",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 927361
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Linux_dataset/linux_memory1.csv",
+          "bytes": 60714835,
+          "sha256": "7588cd7c21ffe66261b7ff97dad13964885bd948f23321b05775c377899b4216",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Linux_dataset/linux_memory2.csv",
+          "bytes": 60871429,
+          "sha256": "da7341144cea6819273815b044259002b0768e59029cfec15b5e9fb986a85360",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_1.csv",
+          "bytes": 146725605,
+          "sha256": "37ea5238fcd2a7a18574b8e37e0427086c6c34d03a22f690256fc925946c0448",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_10.csv",
+          "bytes": 146536008,
+          "sha256": "c33290654db525d0f926d4bc010d27f82c615e1ba87cff0c9e87b1cff673d2ad",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_11.csv",
+          "bytes": 148428210,
+          "sha256": "ffd77ddb051852facd348ec189cf1204a01c0cc840da312c1a440fd0d8c287cf",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_12.csv",
+          "bytes": 153629818,
+          "sha256": "80fd7d6782d4acdd9c528085d38823e1036b530c551d3b646bc7d0eeb5298512",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_13.csv",
+          "bytes": 151016885,
+          "sha256": "fc295ee26ebee93e3ab0b0e61ae7ab567fb86c1b67cbcd1d8025944c9e5ad24c",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_14.csv",
+          "bytes": 153329384,
+          "sha256": "8eb759212e6b36c29478b5e45102814438b48e7929477a5bb8e734390cdc3ab0",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_15.csv",
+          "bytes": 153194923,
+          "sha256": "f7dded78b7670900cfa9c56e4b3df1c6c6f8ec3d82262c1b184af7f9d87e9f43",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_16.csv",
+          "bytes": 153017885,
+          "sha256": "415376cfbd6a4592b717b5e756ca5c1548d4491121e01fb0bab79555d8665cae",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_17.csv",
+          "bytes": 149859400,
+          "sha256": "d933a39088804258386441d83e4dec29ad14b97378b2a216f9919b0f5180143a",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_18.csv",
+          "bytes": 150807171,
+          "sha256": "32d04d9cfefee40774e979c600ec322e2da6518bb6d8974999075007794c3934",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_19.csv",
+          "bytes": 156962122,
+          "sha256": "162203394dc41b3020bdc70b99e213f620fd66bacd333dbdf1cd5279adbd5f5d",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_2.csv",
+          "bytes": 145496506,
+          "sha256": "63b70bb96a95499b477b890674b74cc207ccb638b68ea4cc3a3dea9a448772c1",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_20.csv",
+          "bytes": 157610648,
+          "sha256": "ca793a8ff6860c2a8b8e8b4bc72271bbbfc011b0b6c523765658949e1513fd0f",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_21.csv",
+          "bytes": 158679239,
+          "sha256": "63fe9f2c91c48c0f30721eda03864675e1d87103a36cd61c19a3ac68d8ac077b",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_22.csv",
+          "bytes": 153268181,
+          "sha256": "a1f6009f2be53bc1fba90f044d07ff5a9c5cfe4912b56690d8f02fb75aa335c0",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_23.csv",
+          "bytes": 51705634,
+          "sha256": "e89c54673961c2b260265cdd3f6c50355369f8a80e63c31999df04b0a757f213",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 339021
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_3.csv",
+          "bytes": 145618265,
+          "sha256": "7c8710722f26679c5d795b60019975945a81730934c768083261e66e3b1ee366",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_4.csv",
+          "bytes": 145220077,
+          "sha256": "a20b2aed18fa474681f3614d35d4a23554272d6424cf6148596015440fb84a91",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_5.csv",
+          "bytes": 145230697,
+          "sha256": "2cfccfbc2816418b49ab8bf26bcd45f0a4796f634512f7e5dff9def7b601778e",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_6.csv",
+          "bytes": 165814042,
+          "sha256": "e8aa726d8551ffe59ea816bb1199455c0ebd53f44993a8bbec67ef0843bab229",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_7.csv",
+          "bytes": 147175352,
+          "sha256": "e5d3303520909b2e90e57199aa2159f8b2bef287b56502f453df2a6407ca39ab",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_8.csv",
+          "bytes": 146639523,
+          "sha256": "485c53e676016c730018ec51ef885efa584546f6930035c75876b5ba520814be",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Network_dataset/Network_dataset_9.csv",
+          "bytes": 146509873,
+          "sha256": "ed86e18cd03c6b9e1963964e400a04c4b7684356f2ca7d3acca172c942c4dfba",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Windows_dataset/windows10_dataset.csv",
+          "bytes": 37260185,
+          "sha256": "b66bef4541ad3b4a3c934633b517cf05b29be47d6fd72482d09425b2fff05210",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 35975
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Processed_datasets/Processed_Windows_dataset/windows7_dataset.csv",
+          "bytes": 25113159,
+          "sha256": "5f36c505cb3df800874b636e78f0627729baf6e1f5676d03f973a956b45abefc",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 28367
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_IoT_datasets/GroundTruth_IoT_Fridge.csv",
+          "bytes": 2599764,
+          "sha256": "e9c3e2b953ec2938d26cdd5b8b3382ad11370527cd1f58e8241ce5b2cde3c1c6",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 63449
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_IoT_datasets/GroundTruth_IoT_GPS_Tracker.csv",
+          "bytes": 2667746,
+          "sha256": "467e412b300afaf310ba0337c34c8f1e7f86238bc5cc2375153c35a298b44464",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 64565
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_IoT_datasets/GroundTruth_IoT_Garage_Door.csv",
+          "bytes": 2412540,
+          "sha256": "c6e2a9401d9b972e83b32da65d0113f29299b3a15c52ad16ecd5ddafd7a3d2f7",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 58633
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_IoT_datasets/GroundTruth_IoT_Modbus.csv",
+          "bytes": 2500386,
+          "sha256": "07199c40dab24da43a7ad3f18bba42100b7ead1106e2b1ccba31a6f5682f496c",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 59989
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_IoT_datasets/GroundTruth_IoT_Motion_Light.csv",
+          "bytes": 2139208,
+          "sha256": "3b16012ea71acfe3455221165a4ebbae9eeb75038b02f7d09afb95301647c775",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 52910
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_IoT_datasets/GroundTruth_IoT_Thermostat.csv",
+          "bytes": 2059714,
+          "sha256": "3e3bc7c7a78ed17690707d3062ab25535e978a13643d9d92b1a3b116f37e5dda",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 49601
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_IoT_datasets/GroundTruth_IoT_Weather.csv",
+          "bytes": 2299345,
+          "sha256": "8c967703b1081581b45f1b01d20f9091438c5df9453b7ec9b2df43ed40a05b52",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 55890
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Linux_datasets/GroundTruth_Linux_disk.csv",
+          "bytes": 7589211,
+          "sha256": "54f4d83cb69d751b8e648612b3caadc3e6de1c54aa9a6092d37b4fd74930c132",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 316637
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Linux_datasets/GroundTruth_Linux_memory.csv",
+          "bytes": 4855189,
+          "sha256": "7612840f907c33ef2533434c47b56e5e411845a3366330138b9580e0c52dc1ce",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 205623
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Linux_datasets/GroundTruth_Linux_process.csv",
+          "bytes": 6923493,
+          "sha256": "ebed9eec2531858be501cdf189526913c4b5363ce38826b4be7d2487946f3fdd",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 291364
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_1.csv",
+          "bytes": 63357167,
+          "sha256": "79f2d99bf34965126480bc2f18949b67f7fc0a26c135c24a88f9aae700913f28",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_10.csv",
+          "bytes": 57167407,
+          "sha256": "b0746eb0cd48473ba6edb074064e2c2ce7693f23818d54abd195c69ebdea7746",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_11.csv",
+          "bytes": 57153006,
+          "sha256": "864b940ac93a6160a7ae4730d8c61eb6442c26f80b9c943f8672371f34c7d546",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_12.csv",
+          "bytes": 57179289,
+          "sha256": "d6486f75626c511cf4c4171fe2336f688709adc9d0f4dccbcb54d97b90c1021d",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_13.csv",
+          "bytes": 57334346,
+          "sha256": "7b93a47bd2a09d999d18eaa1d91d34d1be200e303363e7f93f582554bb87b45f",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_14.csv",
+          "bytes": 58304423,
+          "sha256": "2411ab4164dd93caeba360ef650b938e40e194673085079aa444c04814c39517",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_15.csv",
+          "bytes": 58467300,
+          "sha256": "d1d4cb491cb6edda3523f7424d24ea1afd4496a933e60b3ec357286f7f0f542f",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_16.csv",
+          "bytes": 58467300,
+          "sha256": "d1d4cb491cb6edda3523f7424d24ea1afd4496a933e60b3ec357286f7f0f542f",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_17.csv",
+          "bytes": 55515897,
+          "sha256": "68e999eaa3cb21b7e56cc03b9a1363f4b7b3075920d71d97c8cb8ad23df620f9",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_18.csv",
+          "bytes": 45787608,
+          "sha256": "446170e48b77da494809648ebfd45c7d517ad34baf34079d200d282235878508",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 801188
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_2.csv",
+          "bytes": 63083548,
+          "sha256": "3a688436c600ad2694120b31d958519d7d7acd70583617e136f972853660290a",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_3.csv",
+          "bytes": 62780574,
+          "sha256": "89088705e97c05694b6be0e9e55b4e3edbe3a9eedd87383d10ceb0f11957d033",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_4.csv",
+          "bytes": 62613989,
+          "sha256": "7dd2fd0469db61e5eb8afac45055ac12768803369895f54c01e9165bc59760bc",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_5.csv",
+          "bytes": 62708208,
+          "sha256": "dfa804275035d651ad3a324d54562afafc9aebfd4ee9b7eb727fff3955695cce",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_6.csv",
+          "bytes": 62815670,
+          "sha256": "e66dfa775b3b1eb442054b25c4df4fb4468885edb53cb52acf9f43e595c20a8a",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_7.csv",
+          "bytes": 63498788,
+          "sha256": "9c099cfd1c39117a2f797cfd900b507c552221be3cb66a9497c34202c3759e88",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_8.csv",
+          "bytes": 59973905,
+          "sha256": "826d9a99387418267249979788ee42d9aebeb7b3ca2675be89172f0d7d23f975",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Network_datasets/GroundTruth_Network_9.csv",
+          "bytes": 57464605,
+          "sha256": "5fab83f3602faea61770f204d7cf67a15d814ef825748147b340be3b324578e8",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Windows_datasets/GroundTruth_Windows10.csv",
+          "bytes": 206346,
+          "sha256": "57ab1bf2dd63a64ca82c91ab1592b53eb2fdbcdeced5cf8552b2914516eec171",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 11104
+        },
+        {
+          "path": "datasets/TON_IoT/raw/SecuityEvents_GroundTruth_datasets/SecurityEvents_Windows_datasets/GroundTruth_Windows7.csv",
+          "bytes": 118198,
+          "sha256": "e503ddf710e263d1820a0fd6f4bcf5f1169667d205e7ea60a5be593ebedb30db",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 5980
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_IoT_dataset/Train_Test_IoT_Fridge.csv",
+          "bytes": 1678744,
+          "sha256": "56377a00b97204ea65f8912eadea9e626fe05d091f975f5be64c94c85efe3149",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 39944
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_IoT_dataset/Train_Test_IoT_GPS_Tracker.csv",
+          "bytes": 2122967,
+          "sha256": "71c6cc302b14822aea699cf41a02dad36089ea59b87a28000b38a44b2d23cb9b",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 38960
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_IoT_dataset/Train_Test_IoT_Garage_Door.csv",
+          "bytes": 1739414,
+          "sha256": "44b2d63f233ed239d604815f53e2b2ba6ec2b9bc604a9f6fbed6b98d55e53188",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 39587
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_IoT_dataset/Train_Test_IoT_Modbus.csv",
+          "bytes": 1694191,
+          "sha256": "78345a857244e671b0c255ca65aac619049632448fc5aa736f1cea255f308cbb",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 31106
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_IoT_dataset/Train_Test_IoT_Motion_Light.csv",
+          "bytes": 1469248,
+          "sha256": "e0e145ff3d8145d4ad713380a291248dba74e75a70bd75525719ffaaaf2f5242",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 39488
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_IoT_dataset/Train_Test_IoT_Thermostat.csv",
+          "bytes": 1464768,
+          "sha256": "b475654a43ec885fd8c3409d9e85b7902ecc3ad47440948466f4fe3559fd1f6d",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 32774
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_IoT_dataset/Train_Test_IoT_Weather.csv",
+          "bytes": 2587701,
+          "sha256": "10c49fe8a6eae98db688e277e96218c9a9bf587cc5aee5962833470366dafdba",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 39260
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_Linux_dataset/Train_Test_Linux_process.csv",
+          "bytes": 4900281,
+          "sha256": "63a878f944bea1d3347da7335833738d3e616fe3db41157330d3bb0dc3f23f7e",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 90112
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_Linux_dataset/Train_test_linux_disk.csv",
+          "bytes": 2987385,
+          "sha256": "6116cd5d3a7c7bf1926a55fadd6a447255be29895b88da17bfdcb0431f5fea2f",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 90112
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_Linux_dataset/Train_test_linux_memory.csv",
+          "bytes": 3530080,
+          "sha256": "cfa9b8f32e4a1ba0974dcdd1f561ba60e0071344a59215d9479eaa640626dc31",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 70112
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_Network_dataset/train_test_network.csv",
+          "bytes": 29902775,
+          "sha256": "26ddc513552de36de6428b2e578efaed2b57504c716dfba847cc0109a64e1974",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 211043
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_Windows_dataset/Train_Test_Windows_10.csv",
+          "bytes": 21769739,
+          "sha256": "85f0827697ef5b0faf76a8b41371e95fd5e6ea3950d19ea35a9d7f35042703a8",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 21104
+        },
+        {
+          "path": "datasets/TON_IoT/raw/Train_Test_datasets/Train_Test_Windows_dataset/Train_Test_Windows_7.csv",
+          "bytes": 14070171,
+          "sha256": "5ed0c685148449bb493dd4196a35fcf0d1dc82d0a50b66da84a34114be36ef1d",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 15980
+        },
+        {
+          "path": "datasets/TON_IoT/TON_IoT.zip",
+          "bytes": 5134317991,
+          "sha256": "8c30f8f660a1bb1d782705e38b37b9e680fff21e229fe68def0b84fff8e85c3a",
+          "kind": "zip",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/processed/TON_IoT_clean.parquet",
+          "bytes": 1819011,
+          "sha256": "d8a02c8a260e6b1510efa7730830e936e1d822a91bd22811b487cb99d2093d28",
+          "kind": "processed",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/processed/TON_IoT_clean_meta.json",
+          "bytes": 1469,
+          "sha256": "6b153e27617e27c9caac666cf194da4c8fed482642910e8c78027e942da2c1c8",
+          "kind": "processed",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/processed/TON_IoT_sample.csv",
+          "bytes": 165155,
+          "sha256": "76a7a9718cfae54005e2a14f164e700fd713fe9ad7bbc5fdd56631275bedec86",
+          "kind": "processed",
+          "used_by_pipeline": false,
+          "data_rows": 1000
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/calibration.parquet",
+          "bytes": 224961,
+          "sha256": "c1c1fe0cd2798ba8c84278e7f68341ca29790bb92cdc022782d34d1a6b1113dc",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/feature_groups.json",
+          "bytes": 481,
+          "sha256": "6bca82ff265f978a9277e0c9eea8524c62ea74ea507d15e047d730e6a74a61ea",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/pca_baseline.json",
+          "bytes": 456,
+          "sha256": "4723962f8b73351e4755250d21d28fdaf6f04751b742cec82618c3b9fb867430",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/qadcp_report.json",
+          "bytes": 1873,
+          "sha256": "003e584c981fb2de6fac2a1a8790880dd1ba461c71b27762a8a7b65b4f4ae92e",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/pca8_calibration.parquet",
+          "bytes": 701013,
+          "sha256": "2f7cccdb35afd3e41839fa6d65487133c5a99dc91bf20f508c04051a1eb1467a",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/pca8_test.parquet",
+          "bytes": 701100,
+          "sha256": "14646d8e88911bc26395461eb1d01a7c719ba6259c9a614567cfd2725344b186",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/pca8_train.parquet",
+          "bytes": 4988547,
+          "sha256": "aa5bb6643d3dcedaa683fcf4280f73da4740db9bbcad723ac7e29b7d5a7bce3b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/pca8_val.parquet",
+          "bytes": 701143,
+          "sha256": "4c4bfb5b328cc6a42a363e168bf10c399df056dad3182bd2a306dfb3b3af8869",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/pca8_zeroday.parquet",
+          "bytes": 24585,
+          "sha256": "0ca58830cff685ff3e813376581bac13b9e8dc6c58b75e49bff7f9db916cc4f8",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q12_calibration.parquet",
+          "bytes": 87139,
+          "sha256": "8da6d94adc3b4313313cb1ec67b4dcada6e68dfa25d8d58d9893e5cd32e50255",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q12_test.parquet",
+          "bytes": 87089,
+          "sha256": "f483461be7c16d35ea04f417a3bd16d4d1b19b95ec7305d47c68ad05f4a57850",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q12_train.parquet",
+          "bytes": 500781,
+          "sha256": "74c0b3912baf0d008af8de784a5346f830f45692defcd74704d5acafd3119c48",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q12_val.parquet",
+          "bytes": 87400,
+          "sha256": "6dc1ec7196c0884bbe930371bb6ea9a9fafb3e8864ce1697f65fb8ce74fb7ac4",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q12_zeroday.parquet",
+          "bytes": 9458,
+          "sha256": "a967912a5e0379495c6809180dcf4e52d63cc8be649d2db1095cc4c147d54628",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q16_calibration.parquet",
+          "bytes": 194125,
+          "sha256": "23b0c3c1d40a35e695084468f7a9d89e1ce6f740a77453308be9b5c283f1b5b1",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q16_test.parquet",
+          "bytes": 195761,
+          "sha256": "0a8c3ca25fe377a26d38577e1694130278983cdb416aaee24c4335ce50ace01b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q16_train.parquet",
+          "bytes": 1151865,
+          "sha256": "08ee55bf194f59c483f6e318fd594899081ec98760e164f7382ee08b908a39bf",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q16_val.parquet",
+          "bytes": 197125,
+          "sha256": "e6bdacce9e90e810c1e69d0aea575e986e3b8c7f353d35bb1e8c0feba6473f62",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q16_zeroday.parquet",
+          "bytes": 11710,
+          "sha256": "d232dfe0ef95672bd0f3dbf05c7671f84b3d5335f239107da47f055ac3224f3c",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q4_calibration.parquet",
+          "bytes": 43488,
+          "sha256": "d35ccb2eac2f89935f0f3c1667d16e0745e7111b8f81c05dacbaef83c16d9c5b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q4_test.parquet",
+          "bytes": 43330,
+          "sha256": "621ddf82c1c1aeec3f0fdc0299ac29482ae6de075904e542981d1e378a5d2176",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q4_train.parquet",
+          "bytes": 255701,
+          "sha256": "cd77c0fb083cd8b41c5d6a9551c722cae82e6db18c6828126b383b418ed7d286",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q4_val.parquet",
+          "bytes": 43631,
+          "sha256": "206d872fc504c71b18025d8186c668ae42820845f88780c9a62d2ec5b11d931d",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q4_zeroday.parquet",
+          "bytes": 4896,
+          "sha256": "3f04f9f660180cbdcec7e3d071ec508cb5be8149418d40ed107754ae004feae7",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q8_calibration.parquet",
+          "bytes": 68605,
+          "sha256": "6ed876b53283fd7712e1bef4fb2540ce5462725c95b5ac6b4e5b7d3dcf1f4c9b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q8_test.parquet",
+          "bytes": 68705,
+          "sha256": "8fb5dd84047a5f6c206391b2ef3b60db67fab0cbf87553d140fa600f8ae65ec5",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q8_train.parquet",
+          "bytes": 397285,
+          "sha256": "ed0e97fc6db84e51c9d181b7ff843f3d33a4599ab87805a580456bda7bef1e4e",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q8_val.parquet",
+          "bytes": 68879,
+          "sha256": "6333a97a5ab30e6d595932577de87264ac10f149266e7d1b22cf9e8b7f9ff14b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/quantum/q8_zeroday.parquet",
+          "bytes": 7164,
+          "sha256": "fa4974d63bf22ce12dc19c338ccfe6dc44a326c8078d9cbe9cf7317ba6d97d22",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/qubit_budgets.json",
+          "bytes": 1163,
+          "sha256": "f8003d7ad0b7eced452c448e269027416821e015702e535b8af31fa939e66f19",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/scalers.json",
+          "bytes": 2987,
+          "sha256": "361d91bef1e8cea81626f47904587bf2864248c37ea4371b191d5bb0e3435069",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/test.parquet",
+          "bytes": 227169,
+          "sha256": "e7a2d9712df6c71fc0e7e0cdad83afbc32dfba400439cdacd4b1e2aa502946ad",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/train.parquet",
+          "bytes": 1317903,
+          "sha256": "3e9c98f7bb2a63a464afadf943bda6ceb59f773747dab0369b7bf3bb8c5c3b8f",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/train_balanced.parquet",
+          "bytes": 1317800,
+          "sha256": "3450529a2d892b71ef8ceea2968dd61d3e38f9e8259616c2cee16d91cdd3d105",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/val.parquet",
+          "bytes": 228938,
+          "sha256": "20e6355132dde663f3b3df640aa281af3550398ab207da4777f408dfe70ea4ed",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/zero_day_tiers.json",
+          "bytes": 2780,
+          "sha256": "40f1b654b1fb48ef4a2c666b32a0ed4d04e4a01c2ed22cc90aa3da160b599c48",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/qadcp/zeroday.parquet",
+          "bytes": 17581,
+          "sha256": "1218fa56164eee5fac9bb9c293cf1a48d6f1c7b3ab80abcb1d45226fb7bb9ab9",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/processed/TON_IoT_unified.parquet",
+          "bytes": 3618554,
+          "sha256": "ff8e11fc43c5cc07aba615ae8235677b01be24e99824a313ef53ee4e1239d80e",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/processed/TON_IoT_unified_meta.json",
+          "bytes": 770,
+          "sha256": "c78044d2a9c996beafb528b57044edc30e4b455fa607a0e10efa74e83ce675d7",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/calibration.parquet",
+          "bytes": 395899,
+          "sha256": "86b8dbe272379e22cf28f5706eba05a6068e17ebf8cfd6b8360d3be7fced4ef2",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/encoders.json",
+          "bytes": 1107,
+          "sha256": "cca858853d5ce467f36ee3cbb45dbf94b76a64f2e1caec4d9cc98a420c06172a",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/feature_groups.json",
+          "bytes": 382,
+          "sha256": "78eb1b1535b98a80b2dab8be9225d3a192d34cb7a8140fbcc3511f6321911360",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/pca_baseline.json",
+          "bytes": 454,
+          "sha256": "ee3badd0acc60871a14e59cb2c11fde45c4f2f6ab04410df6dd11a0280d59339",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/qadcp_report.json",
+          "bytes": 1880,
+          "sha256": "f44a36511421ea7d251ac8bc24baece25e0d36453ea047dd3e7de74b02f6d5da",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/pca8_calibration.parquet",
+          "bytes": 662289,
+          "sha256": "a5a23ad48853f6db2eeaf18459477d428b87a89352e431a264ad1ee68eb6d174",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/pca8_test.parquet",
+          "bytes": 661596,
+          "sha256": "435380190f51351372e85e9cf42d163f13a230a50a7dfd522fc484bf967f9c5a",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/pca8_train.parquet",
+          "bytes": 4775243,
+          "sha256": "17ad37823afd2c6119dc7cadf8c85d3f1f16da81f23a4635735afba818c2ec7a",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/pca8_val.parquet",
+          "bytes": 663268,
+          "sha256": "fbb5dd22ec8d456bf023b66faafab3407eed82e1b93b90b32540936d4b472716",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/pca8_zeroday.parquet",
+          "bytes": 6658,
+          "sha256": "a28b15c05ea74725c769d398cfcfdfc1d510f95ea96b4890f3e9c41a34c18100",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q12_calibration.parquet",
+          "bytes": 380283,
+          "sha256": "797859bb1e2f0785195718d86138c89dd1011d647a40a69eff8215c7b71d1675",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q12_test.parquet",
+          "bytes": 377929,
+          "sha256": "5d25af5f3449b8b0e6fa75f06f55c9fc66eb056c828b6527aef4b19bd1f693ca",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q12_train.parquet",
+          "bytes": 2481135,
+          "sha256": "eaddd449cef0c1c1455835da52cd104fc2dd3c1ae322757ae69cb802876f6cd3",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q12_val.parquet",
+          "bytes": 380471,
+          "sha256": "0d3534c1871768d42dacb6df85f3c83c7f394f3726ecad60e4d78ce58b30a341",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q12_zeroday.parquet",
+          "bytes": 9157,
+          "sha256": "f267f0a9777b919875c9d8c9160cef497171bd25baeb9087ae2f155c81419b3b",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q16_calibration.parquet",
+          "bytes": 382603,
+          "sha256": "c3e5d046e0556366994fd65d57d341916e72aed8fdc533b226bba7b7fef287b7",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q16_test.parquet",
+          "bytes": 380249,
+          "sha256": "100733c21bd611fa1a64d7756e684971ce5b65a6e10a472b6b5175e835981383",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q16_train.parquet",
+          "bytes": 2483463,
+          "sha256": "ace549b789cac1b68da5c410555e4688c9be3d56ced81ba6c8971f5204984740",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q16_val.parquet",
+          "bytes": 382791,
+          "sha256": "3aec40ae3d8f11bb56e9ed8592789d0063d3835a4d54e7647b354130ea1a3162",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q16_zeroday.parquet",
+          "bytes": 11437,
+          "sha256": "1471721ef396e8f18fce279399562f440e8db9789e04972d4f1a01e3c18d9e02",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q4_calibration.parquet",
+          "bytes": 46178,
+          "sha256": "df50bb1ea7dde54a4e167bef2cb7026ca4097c073a0682b7e20c59b90e4f0ed5",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q4_test.parquet",
+          "bytes": 45534,
+          "sha256": "602e09958e4a0d8751b0363f088b12d69adf25edd28c5e9999231932bcd4e8ba",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q4_train.parquet",
+          "bytes": 268758,
+          "sha256": "138b7f743f264240caccac102e4e29c8cd6ce8ca4874271352f2272094806cb4",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q4_val.parquet",
+          "bytes": 46062,
+          "sha256": "9617fb17bcd19c07fbd1b426be90d193b822fb1f6cd61a3bc88881de31abfb06",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q4_zeroday.parquet",
+          "bytes": 4650,
+          "sha256": "be2f9d8e874806456b95f8a10b366998e698c306573c72a550fd33d5aea110da",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q8_calibration.parquet",
+          "bytes": 171039,
+          "sha256": "8ca41488d3686df3a7242b59c6cd12e70cd5d111bc1db691f4d9389b5b6c203d",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q8_test.parquet",
+          "bytes": 169508,
+          "sha256": "d4ebc02462b51b63f1d63f4c8597b1936b5940ea7b424220bb453cf9e1a57823",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q8_train.parquet",
+          "bytes": 1024547,
+          "sha256": "56f64b49562f6ff022db5ec4f3e78cdb647d3dc948f0a9b03b0f5fb2a9747f0f",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q8_val.parquet",
+          "bytes": 171141,
+          "sha256": "9c46c0053a7ace7cb1b9c465055ca8b437a157c435e730462a42dbe1e024ea37",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/quantum/q8_zeroday.parquet",
+          "bytes": 6930,
+          "sha256": "16eb12552e9d3536e590e65508dc6c08716d8f48bcfaafd7f0d69ff367ef625e",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/qubit_budgets.json",
+          "bytes": 1091,
+          "sha256": "bde9205a09efa84070c0005cd2c0b8d7567e64ac0edea85bcf44820e73f5c5e2",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/scalers.json",
+          "bytes": 2558,
+          "sha256": "c0522cece20c36f8538e2022c3225371a55f4df4321e5b00b1a30197ebffbf82",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/test.parquet",
+          "bytes": 393512,
+          "sha256": "dbe62f6791649dd7ea821acfd5798ae2fcc4d4bbd93d8928070d3725fea85a79",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/train.parquet",
+          "bytes": 2574120,
+          "sha256": "5d8626ee2b25fc0939b58eb2bb5edfb3380c444306d6d8b521d851531f79aa13",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/train_balanced.parquet",
+          "bytes": 2578306,
+          "sha256": "495e8d0b17277e672bc41310e4e56ff140f4c5c57b4c4bb822e8ffaf1b230649",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/val.parquet",
+          "bytes": 396331,
+          "sha256": "76dda7382172b2a9f8d0371b0680e50428865cf60f4f913ffc32b829ab1510d7",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/validation_report.json",
+          "bytes": 936,
+          "sha256": "56f9d51e3415bc3ba40b4f6ea521467687f4e22a2211f805cb0c194424bb3b16",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/zero_day_tiers.json",
+          "bytes": 2782,
+          "sha256": "c53ddfac1241ec1169a7e9a18cad630d5aa4d065fef81e9826772bdafab5f227",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/TON_IoT/unified/qadcp/zeroday.parquet",
+          "bytes": 12019,
+          "sha256": "a31f208fdd6af02de04667683e2a53b9172689670cfb79a41bfc8632f4b378cd",
+          "kind": "unified",
+          "used_by_pipeline": false
+        }
+      ]
+    },
+    "BoT-IoT": {
+      "official": "https://research.unsw.edu.au/projects/bot-iot-dataset",
+      "source": "UNSW BoT-IoT full 'Entire Dataset' \u2014 74 CSV files",
+      "paper": "Koroniotis et al., FGCS 2019",
+      "n_files": 178,
+      "total_bytes": 16464097805,
+      "files": [
+        {
+          "path": "datasets/BoT-IoT/raw/data_1.csv",
+          "bytes": 218326470,
+          "sha256": "119b2b2f92db5ea5537663579e8f080ede15537958ced198c24c8c04dd860570",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_10.csv",
+          "bytes": 203190430,
+          "sha256": "0c852ecc50cf038aa30273e7426ae06b9721494c92245e4f4185eb649a2cf9cb",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_11.csv",
+          "bytes": 204685380,
+          "sha256": "255ae04c7a6fda772b9972de300b5119e2bb925de4fa95c390e9056f6a6d2acb",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_12.csv",
+          "bytes": 201327733,
+          "sha256": "c543c6717a0e17699f12f63bce0f2ac800fa270592b60270187baaf585bdb0bb",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_13.csv",
+          "bytes": 205151654,
+          "sha256": "5fd8f19fc8566a0b94617ba91ac0be1b5d90d035216fbd30782eb75ee2bbf315",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_14.csv",
+          "bytes": 205890955,
+          "sha256": "91e3ce2d1fec828aad4e3f7869780631b91f83ca094526d5a743ab726b3630e8",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_15.csv",
+          "bytes": 204550157,
+          "sha256": "363a75c0c7ab02f69ea656c8987b59019d3ad389b599445ca4b8f66c1887acda",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_16.csv",
+          "bytes": 205953129,
+          "sha256": "ab3d4c644b180d09193657d4411058236b5143fdb5d9bf8293f5b077257a2322",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_17.csv",
+          "bytes": 202042320,
+          "sha256": "c7dcb87ca074f3958ae45ca783dcb497b1b7a5480540deb0b830215205a2e466",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_18.csv",
+          "bytes": 204848836,
+          "sha256": "90389431309fec72ae0a55118a174e9ce365972ea9557bd6b3c78458fe37f34a",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_19.csv",
+          "bytes": 204594471,
+          "sha256": "a056230eaf69a0a75c10a02afe862b4c9f25f704648fa237d74e92c0f09a604b",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_2.csv",
+          "bytes": 218259016,
+          "sha256": "640929e6502f00a7308604e767ecd4f4a5112bb56d113a006a7f873c37832b80",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_20.csv",
+          "bytes": 197784245,
+          "sha256": "6a28c651f7e133dcb607f4ece66e939940335610245e9c7164fe61cbdb6ee5e5",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_21.csv",
+          "bytes": 206721148,
+          "sha256": "716fa22469ee4a7d989ca0f9bb93818c429fe7895fc339206b1de5d7d2eca3f9",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_22.csv",
+          "bytes": 205722416,
+          "sha256": "cae994b4faac1c84a8834fd88a3927c449a9e21134788376fb06c5eeb0df1619",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_23.csv",
+          "bytes": 205628615,
+          "sha256": "bb56d828ee44724d08898d0eea32cde6753e81672a50ba15bb8a56d48218d181",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_24.csv",
+          "bytes": 205976539,
+          "sha256": "a19fa58534ad6ffc6b4c283692d856d7b41abf86bfaf8560280cdf8bfb063570",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_25.csv",
+          "bytes": 205126466,
+          "sha256": "e2a84101f943f319877743f4e7de39aa322064049bdf7b11c3fc73af1be44844",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_26.csv",
+          "bytes": 196826613,
+          "sha256": "cd7fddf917accc5d176394de525d03fc4bf01b5edce1435b73d991cdb77b83a1",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_27.csv",
+          "bytes": 207073936,
+          "sha256": "9b688ce7cdf65fd688dc3a00fe6fcacdaffaa0968fc6cdce6c85463981733bcf",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_28.csv",
+          "bytes": 203341040,
+          "sha256": "70360ffb1ca93bdb61ee71700e420855ff011d37c10cd707f15b2be7cddda0d4",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_29.csv",
+          "bytes": 206760492,
+          "sha256": "f29bb1cef6db112cf791ea3eb52370b495692804db67fef8cd87b090a06d14c8",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_3.csv",
+          "bytes": 204091460,
+          "sha256": "16c797f1aba26bb0a400842dd30319fb5018bbab2f76ba844afd502c3705457d",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_30.csv",
+          "bytes": 205197386,
+          "sha256": "5e24fcc46adc7917839259aa7b8308e1c67bc6822724b8e7e06bf50ec5af6a06",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_31.csv",
+          "bytes": 198948626,
+          "sha256": "c2da8232ce03021420b95d473f062b9255bafa32f2425bcac346f6bf0d4b2f63",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_32.csv",
+          "bytes": 206830198,
+          "sha256": "c1043981c50f3f90fe32fdad348a7fc18b9bb9a60620f4d62e00d72316024bb7",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_33.csv",
+          "bytes": 197891336,
+          "sha256": "305ea2b6210acf10573314086822c456711b9fd27d53ebef332be1d997753d1c",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_34.csv",
+          "bytes": 205990226,
+          "sha256": "3c757cd0ae647d4ed30dc1d02ce257c820e43042130850fede7d101594ca6e20",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_35.csv",
+          "bytes": 202519060,
+          "sha256": "931b05daab545803f1922c6a90ff3c1c6de0bd0d1187a54b4dcd5e928e345e21",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_36.csv",
+          "bytes": 208600538,
+          "sha256": "e3e215bce9f247a72c44f1674afbec566b7d220a313af0fb15dcc206a06de1aa",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_37.csv",
+          "bytes": 206809157,
+          "sha256": "eb4349e4bbd8fcf698b30b0b454c68aa4ace2fee206613dfbfe832dd04d51771",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_38.csv",
+          "bytes": 207463722,
+          "sha256": "4f987b83ec4d80e7c70f050316a8c58d73a512e0a58de153774cd864fb27e0a4",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_39.csv",
+          "bytes": 207427337,
+          "sha256": "998fd618f068cb17dc85332e19db09c7fd614e72ab07898eef952b745786a225",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_4.csv",
+          "bytes": 204443641,
+          "sha256": "f73f341f5eca3c88ab131f70e57c47bd867657074aec73666e1c7668a9c93d82",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_40.csv",
+          "bytes": 202380232,
+          "sha256": "3966fde140fc5fe9ec95a4a7143e0fde10b1551e9472bea5a05d4c9438d13825",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_41.csv",
+          "bytes": 208529321,
+          "sha256": "66727702450ef3e25ba9e235e70be5b4f9d641f600df2fea0e1deecf1bc986cb",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_42.csv",
+          "bytes": 202145258,
+          "sha256": "e9f80d9bc7035d6205f435aa5cb028539c9e4baeaed84ed84fcdc7361a278cfa",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_43.csv",
+          "bytes": 203093100,
+          "sha256": "2b4c9a9f40a33f92b4be8526e361c9956ac70bca9866a72dd8c77c630d9591e8",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_44.csv",
+          "bytes": 204874879,
+          "sha256": "684aadf6f84fd0786f3c79af66266f81ccc1621bfc86cb1807784ec4c037c662",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_45.csv",
+          "bytes": 207771039,
+          "sha256": "949f1833a122839c6e13b5aefa0fce2775528ac58aace353380832d67d3c9b91",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_46.csv",
+          "bytes": 207317525,
+          "sha256": "4183e6435f6ec47aaf78285d5dfbb82a503c8a0aab925a6cb144d1930aa3f067",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_47.csv",
+          "bytes": 199199694,
+          "sha256": "6e4132dff26cac56b512a3459cec489ec1727f0fe31abf66f5a47b1da86cb7c6",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_48.csv",
+          "bytes": 197343917,
+          "sha256": "abefbcc44019e8a6f0a70088ebc296ad6cddb181d83d1a942c8fe9c0ec8b39b5",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_49.csv",
+          "bytes": 203714978,
+          "sha256": "6974529ce7daa71c56b8d1f8398086357f1e006c651dcbb8ef7a59e00b37374e",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_5.csv",
+          "bytes": 204251990,
+          "sha256": "b0e0678896929b1f7b31fee3c1646f25d0e93550e63c09d9b06a095eb86f24b0",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_50.csv",
+          "bytes": 203706389,
+          "sha256": "64f915311ebf50ef66426cd044067ae8cbc210f4dc49fcc100acf7d724867f02",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_51.csv",
+          "bytes": 192836481,
+          "sha256": "c40e272b7c559b014c923932b993fe7c9bad88e982a9f1d02fa3dd6b56f53edb",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_52.csv",
+          "bytes": 203787828,
+          "sha256": "57b9f4e137b68ad7ebb30566293f7b99c5784cbb8c13cefc53464aab53655837",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_53.csv",
+          "bytes": 207108028,
+          "sha256": "ab8612ca9adc512df4abc71e14874b423ca25ecdab1605ad22e34ff941b42233",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_54.csv",
+          "bytes": 207033726,
+          "sha256": "f47309fb0c2869adb2637eac1ddca161ee94f0d331165f76b2107cf11c2ee34e",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_55.csv",
+          "bytes": 204087336,
+          "sha256": "5b03ce2146775a79b61fbfd0d09efe50025f44e6dde4ef12dc939fc109b2f438",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_56.csv",
+          "bytes": 210126777,
+          "sha256": "52b14c1cc476d17e07b70087dcee299de5a6bf6090e34d7b7e30134c8bb5d356",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_57.csv",
+          "bytes": 208726650,
+          "sha256": "b8ed09fc778207deb57c1ccc0a868be09e4986a934080c024cc79f94f9b31951",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_58.csv",
+          "bytes": 208244742,
+          "sha256": "7fd6cee66226b31268b72f519accf240575762cde4a2e791e2250074adcd451e",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_59.csv",
+          "bytes": 207906043,
+          "sha256": "0969742604b1b63af2093b1152163781b5ea24ab523ac41a1c7869854f46e084",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_6.csv",
+          "bytes": 201303401,
+          "sha256": "2c5fdd0c9f21ee715ef4161c90d9d6346caf406795550ea492b832d4de797895",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_60.csv",
+          "bytes": 209520617,
+          "sha256": "a666f8c9df78bc12cafa3abec9e9b6cfa9d40e58e5d3fd1e40b0e42a2ea8e72c",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_61.csv",
+          "bytes": 210403338,
+          "sha256": "a57194731e3ff74899a37df7e5fd6c3478ec08579ec1e8d972e78b9eba7e9c56",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_62.csv",
+          "bytes": 210494927,
+          "sha256": "41d587a5477112519e9a82af3f62093424c2e0279bb932b4ce42be9aa36826ad",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_63.csv",
+          "bytes": 208614604,
+          "sha256": "4088ec65f6d84befc2399496d15695dcc9277c53d8c53e38b36eff4516f9822f",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_64.csv",
+          "bytes": 205620127,
+          "sha256": "e5a84f67a546a3a57df02686c94b7e5aa73322e4011c614352a47a38201f302b",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_65.csv",
+          "bytes": 203692223,
+          "sha256": "776024daccdd74e30e17f099b4756595591cb2af58d17ac7dafeb1a58dd9a5f6",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_66.csv",
+          "bytes": 203570551,
+          "sha256": "1fe01e57773c5f8913457f7ee7adfa57966caa0c0adbb1bab92dc1ca12877dcf",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_67.csv",
+          "bytes": 200247047,
+          "sha256": "7d71da951a2a36987aacd29b11b67b65477e17c37ffd70a99b9f86ea319847a4",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_68.csv",
+          "bytes": 199745091,
+          "sha256": "6523ef9574da00357e20ddf33feb334ba93da38be91d1fd8819d0bd3969df131",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_69.csv",
+          "bytes": 200841566,
+          "sha256": "5308580f3e4977fc8bd6a8baf3d2e8ba24ca26c811d9070c5b13add2a8b22414",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_7.csv",
+          "bytes": 203746860,
+          "sha256": "cbf5b6c030c9f346a68eaa8c7709291b432f8cd27f0d293fcf1c78f147eae162",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_70.csv",
+          "bytes": 187915386,
+          "sha256": "64e602bf984a30e6717d452878b631d57d71b35184719321cecfe41592591b45",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_71.csv",
+          "bytes": 201432889,
+          "sha256": "10a3b0f1773f22da0e7570c3ddcc1bd22ca57439e8fe63f7c5c20ce090828156",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_72.csv",
+          "bytes": 202858522,
+          "sha256": "e95cd0e2dabccf2827dc223b3e807ba5c241e22187eb52b6308e841028b16a00",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_73.csv",
+          "bytes": 202359117,
+          "sha256": "8f1ea93c43f2274216405801f978e5856349464f6c67b5db4b62009e3f80082c",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_74.csv",
+          "bytes": 73493929,
+          "sha256": "5ffd6482a3feda1c34dc51f457b7329548a82f552bbaf0017c7f79ce939ab8a6",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 370443
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_8.csv",
+          "bytes": 204279327,
+          "sha256": "db8af330e8a8712958bb8f9ca0fa8440da6ab455193cb9725165929a40030302",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_9.csv",
+          "bytes": 198257322,
+          "sha256": "0d9b34c2f17da96488b7017ea12e267ec0227dd09746769efa683d6c76a9f4b6",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 1000000
+        },
+        {
+          "path": "datasets/BoT-IoT/raw/data_names.csv",
+          "bytes": 203,
+          "sha256": "0c7516e0fb425ba0d245d4420e2b2e7adf381caa94de304f940d64d952b359aa",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 0
+        },
+        {
+          "path": "datasets/BoT-IoT/BoT-IoT.zip",
+          "bytes": 1257092644,
+          "sha256": "7869754e4b6192b45d4497be94cc34d621e1db81b6f76189e72ec4077e85bd75",
+          "kind": "zip",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/processed/BoT-IoT_clean.parquet",
+          "bytes": 13134686,
+          "sha256": "3f18181730ad86c7c22d4f9ba26e2e4670d190f296202d0102b1f84c4f95e94c",
+          "kind": "processed",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/processed/BoT-IoT_clean_meta.json",
+          "bytes": 1007,
+          "sha256": "47eb4207457c11244e78f0926a0a11a754673093aa0c2dc416b2206e88585b92",
+          "kind": "processed",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/processed/BoT-IoT_sample.csv",
+          "bytes": 253523,
+          "sha256": "075c20e614a1b980ff3fb400d4c1630d7f189cd2a2ebd54f8d174d210ad1c69b",
+          "kind": "processed",
+          "used_by_pipeline": false,
+          "data_rows": 1000
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/calibration.parquet",
+          "bytes": 1326326,
+          "sha256": "b8bdadf2a16e3fb1f5058d49791dbe517a73ad7829424d70f6286973b02df1d8",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/feature_groups.json",
+          "bytes": 314,
+          "sha256": "1ca1456c230cc517772a8237e58b3f4c18410d773531309749e3bec3cac68a03",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/pca_baseline.json",
+          "bytes": 460,
+          "sha256": "d16fd2a7f47baad64f39c71a1d860871b8f7a2138793b54055e6402a11ad5d37",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/qadcp_report.json",
+          "bytes": 1467,
+          "sha256": "f9f648fd53f59582009936e2f166a101d0e3ab50ce5a5c33206318a4bb44a442",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/pca8_calibration.parquet",
+          "bytes": 1487593,
+          "sha256": "9adf10e9657ffaecc13a6daa189be2f723f9400690e2f8a5991203482408b3ca",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/pca8_test.parquet",
+          "bytes": 1487556,
+          "sha256": "b512adb5205576bc603c4d737cbb91d71224caa3eaa0d5cefce5c40dee88e7fb",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/pca8_train.parquet",
+          "bytes": 10630725,
+          "sha256": "bef5aeb21e37bf5ca4b49308fc793e1e53a5e2ee5469ad8f7208b556de65b0a6",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/pca8_val.parquet",
+          "bytes": 1487553,
+          "sha256": "ab3df2668d7a548458c72f4516ba350ae64b4e205415e64dcdac1ab5ee689426",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/pca8_zeroday.parquet",
+          "bytes": 57248,
+          "sha256": "7d818c3062ef3f70027daba76d2ee54da3f6a69cfe880703e8ed39b61a352572",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q12_calibration.parquet",
+          "bytes": 934484,
+          "sha256": "f1a868448689c63d02ad84f773ea86c0e1143b85d41e822623fc2548611b0764",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q12_test.parquet",
+          "bytes": 934298,
+          "sha256": "62021b097f2093d4e43222a0b736992abf87b1894b30056b57d1c5cb6052d939",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q12_train.parquet",
+          "bytes": 6260392,
+          "sha256": "70db33b9e0c82590355568405a6bde73a6838fd1ca3ae7a2028d16b7c706116a",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q12_val.parquet",
+          "bytes": 933717,
+          "sha256": "4db8be340f41cfbf1f8f31bef650fd050124aaeeed1a899b68486fbd14f17760",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q12_zeroday.parquet",
+          "bytes": 41792,
+          "sha256": "d1813ff147d49c172ecbddac4c8845e1a56b0fce63459ea8d3d8117477bc2f16",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q16_calibration.parquet",
+          "bytes": 1326351,
+          "sha256": "965d95d40d8dfb83db422136564594d3dc5d2302567c43ad44612497185eafa5",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q16_test.parquet",
+          "bytes": 1326489,
+          "sha256": "a4616a8622d05fad2b0abbaf166d2a4991b205cd85f3cd8268dd2a09687500f0",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q16_train.parquet",
+          "bytes": 9056966,
+          "sha256": "567e063d052c796edbede519c87e6fd39d05496078a9ad37a77f0c10fa3f6460",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q16_val.parquet",
+          "bytes": 1327656,
+          "sha256": "e0f076e4e8b31d8a6b7502866a96abb3d3cf325e6a6b35700df68cc447c5e3c8",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q16_zeroday.parquet",
+          "bytes": 62592,
+          "sha256": "07a5d13ec1a71e724bab30a7578747b39014aa99bcb6424457dbb798d0f53514",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q4_calibration.parquet",
+          "bytes": 396349,
+          "sha256": "f0cfbc9912006d7f3ccdaea1c1ad828c40a2cf144fa7356a523e79ba01050dec",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q4_test.parquet",
+          "bytes": 396342,
+          "sha256": "b5f43e4ac9ad8cdec8add2bbc9d0296ca9f9900f13d49112ed6c8136f46b55f8",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q4_train.parquet",
+          "bytes": 2480660,
+          "sha256": "28892a546bb6873a16df1158c809e46409fa6ce73fa66a8f1f61c55e2dcd1ae4",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q4_val.parquet",
+          "bytes": 395572,
+          "sha256": "40263ccee96440b925c324493727250d5f2ef3aef66e3c9e824bb1ca34dde375",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q4_zeroday.parquet",
+          "bytes": 16693,
+          "sha256": "aedcbe012620de162b8dfd3aad5af477c9ebdba19fa32999d1d68c8ed5042d0b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q8_calibration.parquet",
+          "bytes": 618393,
+          "sha256": "e0cda1d07093723c7b98252f3e35034938843ba6398c9003f55f8f7b29a36915",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q8_test.parquet",
+          "bytes": 617008,
+          "sha256": "6aa7ee4198c3a797782015cca98ef592eb8a20412e0eadd54493a9329137d7f8",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q8_train.parquet",
+          "bytes": 4060355,
+          "sha256": "adc7131a37e2e156bc994e498bfd59e4b15f155854cc06f5bdc8d3a34ed11c46",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q8_val.parquet",
+          "bytes": 617299,
+          "sha256": "315049bd5766de904230013ecb6bf5cb53487d70cd0dba10f4a03aad17024108",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/quantum/q8_zeroday.parquet",
+          "bytes": 27662,
+          "sha256": "84c2465e1282c22749cceb06950c7bdb336420b756e2978c47c880d0b009e726",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/qubit_budgets.json",
+          "bytes": 958,
+          "sha256": "141aa13654b9b980d7d84ffe633ee95e1e383777512bd19aeacd5534fc2d532c",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/scalers.json",
+          "bytes": 2242,
+          "sha256": "7f85ff5ba190939f8c9b7ad0d40014cf21879cd528af93e88184670613f48273",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/test.parquet",
+          "bytes": 1326481,
+          "sha256": "d206c2be02a5ff2f09be36a6d3ae22adde41e5b65259f23ecd55522d964755c2",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/train.parquet",
+          "bytes": 9056926,
+          "sha256": "d18ab0b06422059480687f0212fd21897c0e882576fe2414e050b1ff894688a2",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/train_balanced.parquet",
+          "bytes": 3395718,
+          "sha256": "93100a8fdd043008cbb425efd6e42033172100a99dcdb8ae42b2c9014c2371f0",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/val.parquet",
+          "bytes": 1327638,
+          "sha256": "2259ee653c7557d5fc235a37b887e51a544be62a7095076849149eb3bd8ea35f",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/zero_day_tiers.json",
+          "bytes": 1462,
+          "sha256": "1771c70eacbe398186dddb8a0aa4e6b565e7ecc49f0d7ee978d234c6e031912e",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/qadcp/zeroday.parquet",
+          "bytes": 62611,
+          "sha256": "855fd79278baa131c3aa30edc2e510bdf5fd1f9ebbf9fd58a0570e082767254a",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/processed/BoT-IoT_unified.parquet",
+          "bytes": 11480716,
+          "sha256": "a81e2c68a9c342900dcd0cce897c6217202f09516b823889d2c83c537bdb769f",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/processed/BoT-IoT_unified_meta.json",
+          "bytes": 770,
+          "sha256": "a5110ecff25e44bb66ad5e533f9cd197d5f99c11f2cb4256dba74a827f7b702e",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/calibration.parquet",
+          "bytes": 1210782,
+          "sha256": "cb28112bab90bc83b15b4260826663f0c33f8f3d7527b66f1691f87f23f39bcc",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/encoders.json",
+          "bytes": 1094,
+          "sha256": "1ebe5c7f56fd0edace8e9af847d58d84834f340501227675679dc846fc28bfcb",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/feature_groups.json",
+          "bytes": 382,
+          "sha256": "f66eadb49a19f16e65f0e812af44c6258370a8b7a2145608f655f9725ba77ed5",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/pca_baseline.json",
+          "bytes": 463,
+          "sha256": "6afeccf9dbaa43d81739873734801e8c777497c2fecb91d11d7163300c3ec6fb",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/qadcp_report.json",
+          "bytes": 1449,
+          "sha256": "bc582ad19b53e4e577d22fc0a2f8a55980c18d2bb0e7b1f973b851dd30c57a03",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/pca8_calibration.parquet",
+          "bytes": 1486661,
+          "sha256": "2fb84e4b36b3bde3668899a04835a6cd8b58acce75d0f61a585b786309bc3827",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/pca8_test.parquet",
+          "bytes": 1486734,
+          "sha256": "41b9d2e9df41ae5ce66d12cdd3b1cc10cfeaa26320a974fe30da9064af09e9a6",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/pca8_train.parquet",
+          "bytes": 10625372,
+          "sha256": "39f7c85cdef647122a36a6293ba6f1cfcdee610db63a97952f4c2d6acdd7d44b",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/pca8_val.parquet",
+          "bytes": 1486709,
+          "sha256": "fade62cc31ccea6836638c6bf8d20b627edb01f84ef1f093433131a6219ab33a",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/pca8_zeroday.parquet",
+          "bytes": 57248,
+          "sha256": "d89e5493b2b7f519425e5091ae4b74d9630b784fc7a3cfe945daf6f0d6323e81",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q12_calibration.parquet",
+          "bytes": 965410,
+          "sha256": "f74e2ca783b94203d5c986785d6795183a9647b1537d061f4eccb4768db1279b",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q12_test.parquet",
+          "bytes": 963818,
+          "sha256": "18fe0d669f82da925e8168ae16c3a0d1cd3940db6d41d7bcd0de6bf9a90922e2",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q12_train.parquet",
+          "bytes": 6516338,
+          "sha256": "6b7600155689d95b782153be09dc8dacdebb65d6071925633fd3e9f7f81478d8",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q12_val.parquet",
+          "bytes": 962124,
+          "sha256": "caf517a8714248974af8d0d2f0a0af796b07528e23e6696c5c90347bbf0785ec",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q12_zeroday.parquet",
+          "bytes": 43648,
+          "sha256": "d9f766e54b1788e4d3f74c83142ceda5b0b24eb3bab31e4e90e41a7c8b2a0b81",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q16_calibration.parquet",
+          "bytes": 1210276,
+          "sha256": "95db10b705660c4d0719d80e89e0f34d54bdbe2590d85fa2649b50037eb61a15",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q16_test.parquet",
+          "bytes": 1208115,
+          "sha256": "f9908cd9e6cef910e8d1c23324ddacbda0b230278b5cecffe78defaa103b3092",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q16_train.parquet",
+          "bytes": 8232661,
+          "sha256": "79913d2c095c95e0383c48b209b71854ffecfe92dba9342ed36f8d0d216b9118",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q16_val.parquet",
+          "bytes": 1206219,
+          "sha256": "52b7d596dcd8059d1c1255cd90854d0134aad088f54be457198b45f02a509660",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q16_zeroday.parquet",
+          "bytes": 58527,
+          "sha256": "d2327cd0bf4da094c864259565b37ede4576dc479a76bb5d38e3faf60d345f52",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q4_calibration.parquet",
+          "bytes": 396437,
+          "sha256": "f28b8ba924d0f864c4665d5170e0044dd900643a4b651406c9fb7dd9f8366314",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q4_test.parquet",
+          "bytes": 396301,
+          "sha256": "228035c9c364c9cf3fb088c67170d7d357f9841f992bcc83fc9d2aa0947a12eb",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q4_train.parquet",
+          "bytes": 2488545,
+          "sha256": "36ba862abff0ad1d7fd687bff3916717b096c0640d51a1580293b892a15674ec",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q4_val.parquet",
+          "bytes": 396781,
+          "sha256": "4d9af95dcfe0765ed1b69cd9d499eaea4351267388a39f3739bc43513b1612cb",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q4_zeroday.parquet",
+          "bytes": 17409,
+          "sha256": "6567a165faba4e2fc9aee51743e7250c2888d3bb1b55c93f25fe1935a7a1f36a",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q8_calibration.parquet",
+          "bytes": 469615,
+          "sha256": "cc28b646f8078b773bfed46f9a551eeb0ceaf9f86b899bc80c132b1c3b9b8909",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q8_test.parquet",
+          "bytes": 469897,
+          "sha256": "b683bd8e4cd520724faa26dbd418090bdee431e3052505d6ff44ba967be417bd",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q8_train.parquet",
+          "bytes": 3061301,
+          "sha256": "d590666870455782a0e888a5a051286b63e6b5f95f9e073a1765bfad34ba7ea9",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q8_val.parquet",
+          "bytes": 469042,
+          "sha256": "a14343bcee1eaf612c4b9b85d9a8ae6533efda4714dbaa960f50975771db8d78",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/quantum/q8_zeroday.parquet",
+          "bytes": 23180,
+          "sha256": "db902078d61c99f7522818735ae7bae788018f6b76e921ffe5dc378705b57d7c",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/qubit_budgets.json",
+          "bytes": 1104,
+          "sha256": "8b21064c7322a44d4b75ee8bfc784245bfd3154083c138e884044f5f0c9fef86",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/scalers.json",
+          "bytes": 2605,
+          "sha256": "0df83d6d483ff0f0d7a1d2e15293b18b20cb97df75269d85c95671adc6f88d15",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/test.parquet",
+          "bytes": 1208667,
+          "sha256": "5b9ea500c15c0ace7f79804b6768e0bbf38e3c169785c40ef24bf90c1c36ca33",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/train.parquet",
+          "bytes": 8233164,
+          "sha256": "b7d187efac0acbd1b39f780dcc8c4b558e43701c19c79cba0a1ec20552061253",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/train_balanced.parquet",
+          "bytes": 3117634,
+          "sha256": "a60f310caf50e5300fbb10a8cffb350466eee29f7aa40206d1c94a110502767f",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/val.parquet",
+          "bytes": 1206746,
+          "sha256": "fe6acf99d02cf6d4c7c05180a87d4eaa1f209377f3c9cc21361bacf8628fc090",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/validation_report.json",
+          "bytes": 940,
+          "sha256": "f62365267be55b84651db382f040973c400bc980f1c5161130e333b0fe3918ab",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/zero_day_tiers.json",
+          "bytes": 1461,
+          "sha256": "bef8df46499f058984b8afcb1e161cc3ad358f7a01f1e710a347d94b64589fd8",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/BoT-IoT/unified/qadcp/zeroday.parquet",
+          "bytes": 59081,
+          "sha256": "310432da3910487209845201e149e081347657afe8c3b436107bdc6f60b4f072",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/partitions/BoT-IoT/calibration.csv",
+          "bytes": 4598335,
+          "sha256": "6f3d2aff1ed822f2889e858dc980f240af3966ee4a6650b611fd1107fb118a6b",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 18591
+        },
+        {
+          "path": "week2/partitions/BoT-IoT/partition_meta.json",
+          "bytes": 1010,
+          "sha256": "6d1aaeb018c331a07488b6448332fd7ce761b3fcef234fdff83fb5321dbf250c",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/partitions/BoT-IoT/test.csv",
+          "bytes": 4589308,
+          "sha256": "cfc238692a4e2c4e31890d24b37f96618594043c731f41df8b4c1346fd4a1379",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 18591
+        },
+        {
+          "path": "week2/partitions/BoT-IoT/train.csv",
+          "bytes": 36752928,
+          "sha256": "fd6a8b7d1a6f5004fe8d1c6b583607c192b9d81cea4dbff4ee18605faa150d5c",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 148729
+        },
+        {
+          "path": "week2/partitions/BoT-IoT/zeroday.csv",
+          "bytes": 217807,
+          "sha256": "fe35fd90b63550f0c867204633747d5fab99bfa3858b4255938efb6d40cc49e5",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 683
+        },
+        {
+          "path": "week2/rq3/BoT-IoT/adversarial_source_pool.csv",
+          "bytes": 194869,
+          "sha256": "4d5d085bbd3caf2b41df1d45bd8c350325529c29d0bbf1c8f0c627c108f94b01",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 600
+        },
+        {
+          "path": "week2/rq3/BoT-IoT/eval_clean.csv",
+          "bytes": 523344,
+          "sha256": "e80014f787445b6ddbec90cf9e60d523446359bbefb3a2054df1c4f080dbf0b5",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 1483
+        },
+        {
+          "path": "week2/rq3/BoT-IoT/rq3_schema.json",
+          "bytes": 1696,
+          "sha256": "15cfbf1cc2f832f527444e117e78d774a5efd0fbb3478eab29254370c0fa9871",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/BoT-IoT/autoencoder.joblib",
+          "bytes": 12657,
+          "sha256": "2927a2ae61f70324b000d61f69606579b059cd5242d6c1a9458f9884c3b5ffc0",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/BoT-IoT/isolation_forest.joblib",
+          "bytes": 4429216,
+          "sha256": "37fb36f3e81b584ecc88a6c7a19868a51def461ac0fef1fef0545c4bb6467ea8",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/BoT-IoT/ocsvm.joblib",
+          "bytes": 31389,
+          "sha256": "c46dcd8b4363201426f732f247e237d0428c552304909568a2162892c5130e3a",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/BoT-IoT/predictions.csv",
+          "bytes": 2326838,
+          "sha256": "b0f5882e518097978f143bc835d519169b511cc90b9a80cc3736ac9c6ac8eb11",
+          "kind": "baseline",
+          "used_by_pipeline": false,
+          "data_rows": 19274
+        },
+        {
+          "path": "week2/baselines/BoT-IoT/results.json",
+          "bytes": 5648,
+          "sha256": "494e68bb029ede58f73d2d7e06eecaebf73241a046c572685daacd5161520867",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/BoT-IoT/xgboost_detector.json",
+          "bytes": 2248118,
+          "sha256": "0e9a926538529cb9bc7de315ff158facbfdcb601c8beb083d9bd0ba70570fc67",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/BoT-IoT/calibration_scores.head.csv",
+          "bytes": 2780,
+          "sha256": "cee8fc4b7d46957b3027cd4ef268fd372c1b986b4bfc8a58c9c86f7620fee05d",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10
+        },
+        {
+          "path": "week2/interface/dummy_scores/BoT-IoT/calibration_scores.parquet",
+          "bytes": 2157134,
+          "sha256": "d523512d143309dae917263d48b7bdfd8dc48f714f50665fe27f9b4f621753f2",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/BoT-IoT/prototypes_meta.json",
+          "bytes": 703,
+          "sha256": "2d6c1d5f53019bdabdaa41b24110eb76613fbd1726d7c0f593a12d7c0ce2f532",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/BoT-IoT/test_scores.head.csv",
+          "bytes": 2716,
+          "sha256": "4413c269ce27a11c2466a97a588e2e855481717b786b3bb8c1935f80b3810019",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10
+        },
+        {
+          "path": "week2/interface/dummy_scores/BoT-IoT/test_scores.parquet",
+          "bytes": 2157125,
+          "sha256": "0525144c96bb4d4a27a64ee534e01655c171c3a8997d1f22839d91f798e78c78",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/BoT-IoT/zeroday_scores.head.csv",
+          "bytes": 2562,
+          "sha256": "336919481ebfd1005ce8b5ea3bc55a73aacb034037a9a64bb625b1862fde8465",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10
+        },
+        {
+          "path": "week2/interface/dummy_scores/BoT-IoT/zeroday_scores.parquet",
+          "bytes": 72260,
+          "sha256": "15089239ed8647d8adfb8d09caf83a26f5c4bc36aa29948a158113089c7e1ddd",
+          "kind": "week2",
+          "used_by_pipeline": false
+        }
+      ]
+    },
+    "Edge-IIoTset": {
+      "official": "https://www.kaggle.com/datasets/mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot",
+      "source": "Kaggle: mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot",
+      "paper": "Ferrag et al., 2022 (IEEE Access / TechRxiv)",
+      "n_files": 108,
+      "total_bytes": 10809876565,
+      "files": [
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/Backdoor_attack.csv",
+          "bytes": 17889603,
+          "sha256": "a3da7bfd919c5f238e5c721cbd0e24a0b2b717d7f231c87c3bc9bc083582295b",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 24862
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/DDoS_HTTP_Flood_attack.csv",
+          "bytes": 95709749,
+          "sha256": "526ef4221d74c046d35db948e7aa534f2660270321510726f312409d6036ca33",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 229022
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/DDoS_ICMP_Flood_attack.csv",
+          "bytes": 892080000,
+          "sha256": "bd3a180a18e331976b1e320aa0def408fa9adeff002035758cd2d3e36f25d325",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 2914354
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/DDoS_TCP_SYN_Flood_attack.csv",
+          "bytes": 941188405,
+          "sha256": "623e8a331af6412b002a6ee18df1fb914d026de4906bdebdc3d29890487283e1",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 2020120
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/DDoS_UDP_Flood_attack.csv",
+          "bytes": 900233551,
+          "sha256": "62dcd279cd2068d2f7055028fd823dfec526bd6167a5b6180eca460e1b5c9333",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 3201626
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/MITM_attack.csv",
+          "bytes": 329947,
+          "sha256": "c4fd9f0d33c1bcbf37a0c4e0cc378157d6af650300e657340ae3d86b40cfd498",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1229
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/OS_Fingerprinting_attack.csv",
+          "bytes": 311171,
+          "sha256": "b2dc428e1b5159ccbfff0e252b5fb096cd5c67fecca169f348a8d30342088613",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1001
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/Password_attack.csv",
+          "bytes": 653290138,
+          "sha256": "e8458c89e71706226ecd9d3730e3b0db5ae2d5f3fb87655fccf1d6e5f1730eba",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1053385
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/Port_Scanning_attack.csv",
+          "bytes": 7335171,
+          "sha256": "26f7f094254daa23e85ec7df1b7ad9352cf208d9ee9b55d7d7928d3415c793ad",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 22564
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/Ransomware_attack.csv",
+          "bytes": 7592169,
+          "sha256": "60fa5257c73f0eef6736a56953c7afe6a99e08942a32c3b9716a64abd2be0c7a",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 10925
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/SQL_injection_attack.csv",
+          "bytes": 26933868,
+          "sha256": "59d62ccfab6b708ce1c437a33b4c285e20e614e612edcd86260d4e5c2461c63d",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 51203
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/Uploading_attack.csv",
+          "bytes": 17513308,
+          "sha256": "f65ae75444183004a47fcda9e197daa42b38e485ea58ebc28464e21f830197e3",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 37634
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/Vulnerability_scanner_attack.csv",
+          "bytes": 175747472,
+          "sha256": "5b8d9bca352875d9b8c76d517ecb33808c45d6a1259f718e21bd1c4d6fea7d59",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 145869
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Attack traffic/XSS_attack.csv",
+          "bytes": 6963363,
+          "sha256": "acce72d7e9f8d373d4be61d67576c10c55b3eb59063f4a9a1a63715ab85ebf48",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 15915
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Normal traffic/Distance/Distance.csv",
+          "bytes": 366056131,
+          "sha256": "067fcf364a6c4e35a6aa436e6263466ef4c8f3f84c423d0aadf932f65d6e1ee5",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1143540
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Normal traffic/Flame_Sensor/Flame_Sensor.csv",
+          "bytes": 343523471,
+          "sha256": "e0f6812bd54e564d18e6f87d8d0566f86bde384f822d3252d7535f4239160528",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1070196
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Normal traffic/Heart_Rate/Heart_Rate.csv",
+          "bytes": 52569102,
+          "sha256": "f5104511c7b67988ec67fc2f8262913b4ad6d4285db047500a04307491f4b9d5",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 165319
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Normal traffic/IR_Receiver/IR_Receiver.csv",
+          "bytes": 412738438,
+          "sha256": "40325a578b4edc4714eef585095a1f92e1cc076e510ad93edc3507dea8e4eef7",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1307778
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Normal traffic/Modbus/Modbus.csv",
+          "bytes": 67899662,
+          "sha256": "6ae11be7ebd506429f43a0ebb7aa38e836ffea39165fc0247e2a6c96c019c37a",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 159502
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Normal traffic/Soil_Moisture/Soil_Moisture.csv",
+          "bytes": 381588722,
+          "sha256": "d3bf5662fd28b515e29c2b1b296b3b79ffc415836cb5a5da1666e164c099c440",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1192777
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Normal traffic/Sound_Sensor/Sound_Sensor.csv",
+          "bytes": 478970099,
+          "sha256": "1ac318ea539be09ac0ae4c9ae6d7e0e2d0013633131354c37d4f76663c3dc52b",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1512883
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Normal traffic/Temperature_and_Humidity/Temperature_and_Humidity.csv",
+          "bytes": 922587674,
+          "sha256": "2b48ddce8f1d60dbd0d189568c614ee04d4bc57b65f1c9089ea731b1a02a0c21",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 1615722
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Normal traffic/Water_Level/Water_Level.csv",
+          "bytes": 731458402,
+          "sha256": "19153cba2da0c69e2fd4f682a9e872af787fd04af5d7806cebb2ec01a6d83025",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 2295288
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Normal traffic/phValue/phValue.csv",
+          "bytes": 237328348,
+          "sha256": "7cd2d143bd079f2a6744bf22b1930c81ab034cf85ea4f8e3a815114d8b7fe07b",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 746908
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Selected dataset for ML and DL/DNN-EdgeIIoT-dataset.csv",
+          "bytes": 1217413981,
+          "sha256": "1d3ef6c7cc22784a528a117f1158f5cad750273679437e18a39c360ee6b79fd7",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 2219201
+        },
+        {
+          "path": "datasets/Edge-IIoTset/raw/Edge-IIoTset dataset/Selected dataset for ML and DL/ML-EdgeIIoT-dataset.csv",
+          "bytes": 82184390,
+          "sha256": "53101fad091af20bee815860962a5016b802ee45d456a141042f6183094c3c1a",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 157800
+        },
+        {
+          "path": "datasets/Edge-IIoTset/Edge-IIoTset.zip",
+          "bytes": 1746605436,
+          "sha256": "42df619d4a222c5ae014a3b8ad2017536dbf49fbc2d35145349e6012a65b74ae",
+          "kind": "zip",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/processed/Edge-IIoTset_clean.parquet",
+          "bytes": 3501061,
+          "sha256": "81cac58f3ccc5f13213ec213e327c7dff66d97ba5f527dfe15f0d8151b2c4282",
+          "kind": "processed",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/processed/Edge-IIoTset_clean_meta.json",
+          "bytes": 2245,
+          "sha256": "cf630e60108b9aedd81904a58690a0f84f203ce55750d80f3480ec3938aa7815",
+          "kind": "processed",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/processed/Edge-IIoTset_sample.csv",
+          "bytes": 288597,
+          "sha256": "e21c1aa1b077ccca9ec027dd92e5b66d52901e7d523600d21819e9fb442a10ed",
+          "kind": "processed",
+          "used_by_pipeline": false,
+          "data_rows": 1000
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/calibration.parquet",
+          "bytes": 397142,
+          "sha256": "36233953095a2ff55eb5749fd9b16783d87cd3a1a5e6b933ed8af537d9721d11",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/feature_groups.json",
+          "bytes": 955,
+          "sha256": "c48070e36552bdd13945cb5da32f8d073248f0b419089bab410022ed6baf63da",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/pca_baseline.json",
+          "bytes": 461,
+          "sha256": "50b96aa795de40688b726a3e9c4f85d486c864a1c77487f49cd7f39df4fabebc",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/qadcp_report.json",
+          "bytes": 2385,
+          "sha256": "06009dcdd8debdfdfe9634926bec073e0bee150b769c4ca907e7a5a88c091bd9",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/pca8_calibration.parquet",
+          "bytes": 1010265,
+          "sha256": "91aeb6ecf6fa26afce2d4693e51ca4805b602ed3064dd15b2be1cc8ba83326df",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/pca8_test.parquet",
+          "bytes": 1011345,
+          "sha256": "e5b6326722cc1fd1efacec3368e7ff2c7f878effa70c63c7de33b88961f874ca",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/pca8_train.parquet",
+          "bytes": 7295764,
+          "sha256": "362b8bde365fe20403c66acd9adfa7fe101cd8dcd65287e296c22ba9df251314",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/pca8_val.parquet",
+          "bytes": 1009905,
+          "sha256": "4b496115032bcd70afca8164707b1ef12725d84dea8adf7cc57765ff02b94a1b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/pca8_zeroday.parquet",
+          "bytes": 827774,
+          "sha256": "a01843a964053e37007e91c8f7f91f3e7247dbdc4b4e69894915531a0e087e7e",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q12_calibration.parquet",
+          "bytes": 74115,
+          "sha256": "96f34beebbd3369b22709bea4d1ae507ed19ce82647e24f11b066842a8e24e39",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q12_test.parquet",
+          "bytes": 74224,
+          "sha256": "352e52e11f7d2cafd85090be1430b989f97878bb2a4e18b661748a35e11cfe77",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q12_train.parquet",
+          "bytes": 395054,
+          "sha256": "ff31ce788720be302630cb45abbd4775df6b305141023c305338a5496f81fc75",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q12_val.parquet",
+          "bytes": 75996,
+          "sha256": "4a101446857aa23955a87302add9ea7d4bf3a7bc4acc0747ae4c4aac9d2b465d",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q12_zeroday.parquet",
+          "bytes": 19871,
+          "sha256": "92f16f9264c066c943b6b8510cc5f17e03886df9a695e8eaa5602e26fb267764",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q16_calibration.parquet",
+          "bytes": 92776,
+          "sha256": "cddd48114741c904050a665d98d28cd31708553dfe770d546d0738aae08a8351",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q16_test.parquet",
+          "bytes": 92814,
+          "sha256": "42cbe1483d1e4c118e182c4f87707b4912cb2daad967e34b210e252e144f6f46",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q16_train.parquet",
+          "bytes": 510724,
+          "sha256": "5a0f34a5652f07ee6536931fba72fc604d8b5ea28aef7e03faf7d93a505654bb",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q16_val.parquet",
+          "bytes": 94766,
+          "sha256": "db649b5235770cade8895d3d8b9330a383e2904bca688b15e6f32c830751af93",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q16_zeroday.parquet",
+          "bytes": 29281,
+          "sha256": "4838dc5c17443a6e5b54801053a35b0f00434b2a0057ea182f38a5930c9d47b8",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q4_calibration.parquet",
+          "bytes": 6223,
+          "sha256": "023d6408915e785b8cddcaab6d5a725ff6603ce92fe3150b67cef8567f172e80",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q4_test.parquet",
+          "bytes": 6236,
+          "sha256": "e3c2f08f0af254c0e11719d5919ff372b6cbb9e9e6d6d88f4b31d846d774211c",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q4_train.parquet",
+          "bytes": 10910,
+          "sha256": "c1cd66f7e4ee0c3291550e4dab0dd90734822218961848b1fc31d4dd434c485c",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q4_val.parquet",
+          "bytes": 6231,
+          "sha256": "80b774f8525af65b7b799cf742dc27543c8c095831482b6941b863f27d603839",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q4_zeroday.parquet",
+          "bytes": 4899,
+          "sha256": "a70a932821248b0ce4461a43949cce689501e84c22b7eeec8bbc257618c58260",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q8_calibration.parquet",
+          "bytes": 11307,
+          "sha256": "063dd6e7e240a9d46cd78b59d22275dcd70f5d0b93a53fdd97a538c1cf087a92",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q8_test.parquet",
+          "bytes": 11234,
+          "sha256": "61f86e6a8ef3d99d6f9cad9108ba1b2d2ab1e6e3acf8261e65ab99047873386e",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q8_train.parquet",
+          "bytes": 29412,
+          "sha256": "a0408502a984fbf9255b2450b316aa807fddc20856025586d54a275b7263635a",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q8_val.parquet",
+          "bytes": 11393,
+          "sha256": "4c12c99dfc4d746ce84d2f8e75fcf5050df2d56e275bfa76877e680d2e6f4bcf",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/quantum/q8_zeroday.parquet",
+          "bytes": 7299,
+          "sha256": "84646093dd65af897d887cce900309f3ed18d0818f34f369fd70af88efa3fb7a",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/qubit_budgets.json",
+          "bytes": 2136,
+          "sha256": "a30515c2cb65ad22e69fda057ebeff3816ea872c4f8ae1e01c543e05294ab63f",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/scalers.json",
+          "bytes": 5065,
+          "sha256": "5322b1c60f4e4174e7a1ae9a684c090791522777f9cc58d4ac35c2d622240bfe",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/test.parquet",
+          "bytes": 397623,
+          "sha256": "ea29fa0eef8d721628fa795e61da5fe678774101356f22b571165378037c81f3",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/train.parquet",
+          "bytes": 2285081,
+          "sha256": "5b65cb606e2f6e86481a229705b2fff6816db7801ac34e9af28b3fd9af6deaf8",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/train_balanced.parquet",
+          "bytes": 2859157,
+          "sha256": "fadd5b1167db13a6f68d064b49db8c69200ae488b81acaa3e1c0e30b3c0a6830",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/val.parquet",
+          "bytes": 399394,
+          "sha256": "21b2b63d904c4f3d4bddc7f65f4e583488de6d68740dd94e5f0ea55f5761dc63",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/zero_day_tiers.json",
+          "bytes": 2759,
+          "sha256": "694763055678661038d319f8aa37158c046373a5d0187c160bff979d2d1234f0",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/qadcp/zeroday.parquet",
+          "bytes": 292391,
+          "sha256": "6ca14510fc008dfbeba330d3dd8992a1164d42733e8c71bb8340f60362bd0303",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/processed/Edge-IIoTset_unified.parquet",
+          "bytes": 183634,
+          "sha256": "7b5258969988a294035a8260afffa728753a03832556addf19b33fd5fb3d280a",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/processed/Edge-IIoTset_unified_meta.json",
+          "bytes": 788,
+          "sha256": "88a818d60c7412bc131b731fc98c57ef5782d15c4914a3177c2d88735cf21870",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/calibration.parquet",
+          "bytes": 29094,
+          "sha256": "9aa432001798a5130bc608bd658a0d13661db783cb95d1336b76bbcab2685202",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/encoders.json",
+          "bytes": 1012,
+          "sha256": "f487a13470d08aec0a0237b53f1a35c073d3ba17a67dfd2a4d11e94d4e05a654",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/feature_groups.json",
+          "bytes": 382,
+          "sha256": "f66eadb49a19f16e65f0e812af44c6258370a8b7a2145608f655f9725ba77ed5",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/pca_baseline.json",
+          "bytes": 454,
+          "sha256": "2553162bf7123ce03f5d799aef5ef3d5f4df25eeb7ac5b5b073b74c9c1ae91b4",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/qadcp_report.json",
+          "bytes": 1994,
+          "sha256": "72df6349122c732975e19cd7e502a3ad07e30b085a7e70497cf7e588beb8a2d8",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/pca8_calibration.parquet",
+          "bytes": 124895,
+          "sha256": "dbdae06b4851643db992a4abec0855e8e62867fd1cfd0e2ca49f16cb24d9ecae",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/pca8_test.parquet",
+          "bytes": 124809,
+          "sha256": "650caea5872d7c81a0703ee014d37fc9da6fb59580549e10860f7c0bea5aee3d",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/pca8_train.parquet",
+          "bytes": 875371,
+          "sha256": "150cb9efc6b7cd6f0a8a2dad4e3fe685485fe090926c286c9d2e442696f87ab1",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/pca8_val.parquet",
+          "bytes": 125137,
+          "sha256": "58ac1bce9957bfce2fff81f7079f43fd4ddadb5cc5ff537be04764b5c02ce9e2",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/pca8_zeroday.parquet",
+          "bytes": 6722,
+          "sha256": "6ee6204c9da7e73524b9f644fcd959ae68ba627b3c845d67e3c9a2bdab7600d6",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q12_calibration.parquet",
+          "bytes": 26227,
+          "sha256": "8db9f11aea45af42bce465d5a9fcb46938f41749e1955bbf0a5710408d833346",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q12_test.parquet",
+          "bytes": 26381,
+          "sha256": "86d75cd17bd51c663590afbedb633c3a66554ed2d1b89c17474260f20b531806",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q12_train.parquet",
+          "bytes": 131475,
+          "sha256": "2f25d010877d9e0ed5d9f68fc11ed8ab4b4b0b71373727cac0b7ee0510f66f2f",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q12_val.parquet",
+          "bytes": 26463,
+          "sha256": "bfef007faf2230b0c32e640cdaefd3749858baa8a29a9832c2596aa96c82457f",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q12_zeroday.parquet",
+          "bytes": 9209,
+          "sha256": "fd13d52672dafda251989602332913f86120996e96fbf6f4901fceddb2ae2224",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q16_calibration.parquet",
+          "bytes": 28503,
+          "sha256": "37b77ddbc6b9eb45490bc789182cf945359bbbc33e90e265918eab85d4fecfd4",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q16_test.parquet",
+          "bytes": 28657,
+          "sha256": "633062644244990612a2e68eb11d168e3385d4c5221723ed94cb1a66fa6026c3",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q16_train.parquet",
+          "bytes": 133767,
+          "sha256": "1217b80e520cd306f6b1bf42b3dd052444fd8a81e1c9923da3b148b3a5802fc9",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q16_val.parquet",
+          "bytes": 28739,
+          "sha256": "9bab9a27c87af1d5e820bd70e7341174088d567e52a3a043162bcc7443032d41",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q16_zeroday.parquet",
+          "bytes": 11461,
+          "sha256": "d8ceb3c0e67d57c4c3a4b2cb4b9e006c74edc880789076fda5db29981df4fd5b",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q4_calibration.parquet",
+          "bytes": 20561,
+          "sha256": "2a9fd111f9c30f2c63d55707611b84bab6d75fa919074c83aef17fcd758169b2",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q4_test.parquet",
+          "bytes": 20739,
+          "sha256": "613dfae7eeb89c0ca48a98d5261504aeea69e1598ef51685f33b54caf8a68ff9",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q4_train.parquet",
+          "bytes": 117526,
+          "sha256": "939e26f32babfff53928ec2927ffd641dc022050debff3ea1d9ba26af8fe7e0a",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q4_val.parquet",
+          "bytes": 20771,
+          "sha256": "f851300705a82c469bb2908da531dbe43bf58cdf975f84b60ccbbcd537505ed2",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q4_zeroday.parquet",
+          "bytes": 4726,
+          "sha256": "5993345f432364acd7d53d900d3a2209545ac48611cb3222ed79455cfe74cad0",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q8_calibration.parquet",
+          "bytes": 23964,
+          "sha256": "efeb7ed9c80f729a71d517e51a13304378fe5309972104b078e965a6a9962001",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q8_test.parquet",
+          "bytes": 24118,
+          "sha256": "2866b2439992c9349b8d5937867d5869ca397b43dbb3cb0332e94b7465be36eb",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q8_train.parquet",
+          "bytes": 129196,
+          "sha256": "bb4fc8cf7600b5d7efe091e27f738fd5e4c1c05c31e210d41522a295e46d900c",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q8_val.parquet",
+          "bytes": 24200,
+          "sha256": "f121c836cd2f1ec82bf0cfd337ac8aa07a665c2f65444362542ce28b30a1143f",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/quantum/q8_zeroday.parquet",
+          "bytes": 6970,
+          "sha256": "a278eff011105c8d87798b52fe04762856ac87e73c186c3512032369c560a5a9",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/qubit_budgets.json",
+          "bytes": 1104,
+          "sha256": "7df30b00833f6da35632e2b878dbfb713eeb6d81a9e378ca4e79413799badb16",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/scalers.json",
+          "bytes": 2052,
+          "sha256": "fd54c9ee049a1c61570ace073897c68f815e3af2d5e9bfebc68aef175308cdd3",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/test.parquet",
+          "bytes": 29248,
+          "sha256": "db673c142c603053d3d5df9424731d23e4793b511909382e09520009dc910755",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/train.parquet",
+          "bytes": 134362,
+          "sha256": "98e15222bd5978ec858309a18fdb2066ca25b6cc30867f53944eae7b7b16554d",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/train_balanced.parquet",
+          "bytes": 149647,
+          "sha256": "bbd1232ed54c86ea96c825c13c5d8869e731827ddbfb2d8c1736ace400086464",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/val.parquet",
+          "bytes": 29329,
+          "sha256": "d0da1f6d7bf4d5c240412d83c440ce2bf57ffbeedf4d0dbe54d98245ce99d208",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/validation_report.json",
+          "bytes": 943,
+          "sha256": "595d52794f35a195e8d33c6608e0ffa569d83f7f43f8f693e6e4d2a926e4e0eb",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/zero_day_tiers.json",
+          "bytes": 1851,
+          "sha256": "7c6f66f326979dff59076bee8c009a91bc11eeb1fe507c3f2d94666947eb8bfb",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/Edge-IIoTset/unified/qadcp/zeroday.parquet",
+          "bytes": 12043,
+          "sha256": "0abde204bf4121818bcdd8f9a4a5bc249d8ccf4310f99c540f2bf87200615180",
+          "kind": "unified",
+          "used_by_pipeline": false
+        }
+      ]
+    },
+    "UNSW-NB15": {
+      "official": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+      "source": "Kaggle mirror: UNSW-NB15 complete (exact slug to confirm \u2014 several mirrors exist)",
+      "paper": "Moustafa & Slay, 2015 (MilCIS)",
+      "n_files": 111,
+      "total_bytes": 942774378,
+      "files": [
+        {
+          "path": "datasets/UNSW-NB15/raw/NUSW-NB15_features.csv",
+          "bytes": 4044,
+          "sha256": "c55f19cceebb6360dc50f44f8a5f246ccefbcf8a6c604ac1ad46e643869cafce",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 49
+        },
+        {
+          "path": "datasets/UNSW-NB15/raw/UNSW-NB15_1.csv",
+          "bytes": 168979718,
+          "sha256": "7d851bbeabd27894ce39c8e78835c73341fc946652fb7743b9eff193b55eb511",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 700001
+        },
+        {
+          "path": "datasets/UNSW-NB15/raw/UNSW-NB15_2.csv",
+          "bytes": 165221021,
+          "sha256": "6130ad02873cc6069ae695cf2844f2e8c2e9a9a1b7532dd82ab8f202757cacf8",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 700001
+        },
+        {
+          "path": "datasets/UNSW-NB15/raw/UNSW-NB15_3.csv",
+          "bytes": 154588103,
+          "sha256": "ae990a96c3dfcd425ce2801aadb1727a34d5e0ae6d8215dbcdae60dedfaef640",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 700001
+        },
+        {
+          "path": "datasets/UNSW-NB15/raw/UNSW-NB15_4.csv",
+          "bytes": 97588754,
+          "sha256": "cdf563692d51d405541dd659ddcdad9fa01f001f05fe9fc4b67f00ca12fbc96a",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 440044
+        },
+        {
+          "path": "datasets/UNSW-NB15/raw/UNSW-NB15_LIST_EVENTS.csv",
+          "bytes": 4639,
+          "sha256": "5b40f8128e2c87e691157c76debde04c328b0eb66bab97f1e7e17625f84497f2",
+          "kind": "raw",
+          "used_by_pipeline": false,
+          "data_rows": 208
+        },
+        {
+          "path": "datasets/UNSW-NB15/raw/UNSW_NB15_testing-set.csv",
+          "bytes": 32293018,
+          "sha256": "bec7dd5ec88dc2a0ccc7a07879d338395ed7421750f675fd0339e07dfe0648fa",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 175341
+        },
+        {
+          "path": "datasets/UNSW-NB15/raw/UNSW_NB15_training-set.csv",
+          "bytes": 15380800,
+          "sha256": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+          "kind": "raw",
+          "used_by_pipeline": true,
+          "data_rows": 82332
+        },
+        {
+          "path": "datasets/UNSW-NB15/UNSW-NB15.zip",
+          "bytes": 156257637,
+          "sha256": "d923de23e2378ff9e750f37d38fa60828eda33d8a1bd481a752f64930bc4cec6",
+          "kind": "zip",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/processed/UNSW-NB15_clean.parquet",
+          "bytes": 14188969,
+          "sha256": "8b01213ccc4aa98ad11fc885fa858c8fda0f5c32d75bc6233079f6b76aa478a7",
+          "kind": "processed",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/processed/UNSW-NB15_clean_meta.json",
+          "bytes": 1254,
+          "sha256": "0783b8c9c8210476756988175ff6c50b40f5d55a74f209820812bd98b83736b8",
+          "kind": "processed",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/processed/UNSW-NB15_sample.csv",
+          "bytes": 510653,
+          "sha256": "bbbbdb9d73781127b3855999079b696da5108387ed297db13adefb26d57fa1f4",
+          "kind": "processed",
+          "used_by_pipeline": false,
+          "data_rows": 1000
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/calibration.parquet",
+          "bytes": 1330608,
+          "sha256": "f4327d4266407dda2935dd8c99e2c747d5d18a54344c4c925fc5fc9f6f993a7c",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/feature_groups.json",
+          "bytes": 681,
+          "sha256": "ba7a73f3817900ea01081da6e8662d1a6d6cdceb1084ba38a1642a4e0d16618b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/pca_baseline.json",
+          "bytes": 460,
+          "sha256": "13544e10047491d043cccd82b948aec95e00fdf70bec9c9c85cc39cd01cb1468",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/qadcp_report.json",
+          "bytes": 1966,
+          "sha256": "36a029e97fb50d85a019197534b9280aa7e5af8569712641ec16dfe74e8dc409",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/pca8_calibration.parquet",
+          "bytes": 961921,
+          "sha256": "8e4ac714527ade642b02a5e343e5d3542bc5cd45773cce8e84ac1734cf277e2b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/pca8_test.parquet",
+          "bytes": 961917,
+          "sha256": "b741e2ec6afa34b73b222735b0f06890a573cd96d6b4305c814ca18e0297721d",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/pca8_train.parquet",
+          "bytes": 6946458,
+          "sha256": "305b1994c98d52e9e20672ca585eade5a96eb8aab51493ba4acc589406c6c464",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/pca8_val.parquet",
+          "bytes": 961922,
+          "sha256": "c54b12f9ffb9574d61f26225fddea6d99ce3ec6c924a1ba39d23acc4bd3e9113",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/pca8_zeroday.parquet",
+          "bytes": 128336,
+          "sha256": "ed0cfaf51b95e02f62f1f565177e9b5a7187988e77aa3511ee6cefe7c0f5bfa1",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q12_calibration.parquet",
+          "bytes": 589209,
+          "sha256": "0140536f34b581d2f1cac2ec5bf9ccf22fa5816588ca49defaac7d0a9663af2f",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q12_test.parquet",
+          "bytes": 593624,
+          "sha256": "5a4cf05affb9039c703f1b44486119e241117e9bc737f43a3ce6ac5e09e3ebe0",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q12_train.parquet",
+          "bytes": 3981565,
+          "sha256": "13cfaf8b6a0208cc6052a1b2897fbd9f0bb5852f10fa0b2d77020e713d825ecb",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q12_val.parquet",
+          "bytes": 590948,
+          "sha256": "be80c29686ce0a49eb844fd2ff9eec1a426568a67b7aa2cf6e47521a11bc8e20",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q12_zeroday.parquet",
+          "bytes": 66880,
+          "sha256": "97dd607fdaa9e82599e818dd47e70cb07ec7fff27b49adc8519b13e1f4f9549d",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q16_calibration.parquet",
+          "bytes": 779403,
+          "sha256": "6ee843292050036b366c382076de51ad21a55ecbcf07fe19ec15b1e433443292",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q16_test.parquet",
+          "bytes": 784864,
+          "sha256": "abba9d6e75213d83cdd05e9721c923a03cb7b53505de062245add64d2d0389d4",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q16_train.parquet",
+          "bytes": 5252579,
+          "sha256": "90ba741997b7523575e24e17acc1bd150c5790d259ea66efc0b18e83853b9313",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q16_val.parquet",
+          "bytes": 782324,
+          "sha256": "2eee860440d29f1299c8ceb231ba264102f02a48528278de9b565a736efa5ab7",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q16_zeroday.parquet",
+          "bytes": 89528,
+          "sha256": "eca34ed052bec9d67031bb467c5731f26f5250624fa9eaf84c5beb49379bff9b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q4_calibration.parquet",
+          "bytes": 128176,
+          "sha256": "7e06aefa14d2c2e0f98bc37bd5fdd4b45dde860463b5410680ba6831ff11dbcb",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q4_test.parquet",
+          "bytes": 128970,
+          "sha256": "6f7267dcf96dcd2f94ca5cd28a6c02318646e09bbda721d4628da4919a43860b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q4_train.parquet",
+          "bytes": 858106,
+          "sha256": "d7c897ad306148aa9576d9e6002fff251b0b9b21d11a3cd68db669dc54a6dd9b",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q4_val.parquet",
+          "bytes": 128444,
+          "sha256": "192b092dad91ad6267a643b7a4f682ba7ae53a8d753d99c56e358fe997f5ed71",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q4_zeroday.parquet",
+          "bytes": 14838,
+          "sha256": "ffb4da5780d2b1c12c4716885a4f631c0fc85859eff0870988456f4d5f96cb99",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q8_calibration.parquet",
+          "bytes": 362455,
+          "sha256": "0f4d8170e10f1d71c7bb42a5b11200ce6212dd28799c7a36734bf8f048d92411",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q8_test.parquet",
+          "bytes": 365487,
+          "sha256": "cf10350687f7cfa980ee4589b39cae8d8bd2b842d22f92a1bdd349a216a04384",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q8_train.parquet",
+          "bytes": 2426009,
+          "sha256": "489ce3d6573771c4b44d97e52ce57223dfd0fd900c536c07c79bb700e42a345e",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q8_val.parquet",
+          "bytes": 363934,
+          "sha256": "7ac0dc40251b78c6eeccc9d3e6cb0dc27f81a5ae0ca91712073e0012a71fe4dd",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/quantum/q8_zeroday.parquet",
+          "bytes": 44842,
+          "sha256": "52d7016906b52445ae1f1f7c681f5907fc1b5d5425eec71d8362f0d6194e42ab",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/qubit_budgets.json",
+          "bytes": 1456,
+          "sha256": "975ec339033388f9848a6f16e52982dfefc925c99870e20c3bec23d7b61b26ea",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/scalers.json",
+          "bytes": 5637,
+          "sha256": "b360b07a48065bee2aaaceab5d5cc44f6e621c57323f9577238a9ec17ff97b28",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/test.parquet",
+          "bytes": 1337421,
+          "sha256": "5b06eb86ae1ddfe0951838f292a7f5e958c24efd8ad1147352f828b42192829d",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/train.parquet",
+          "bytes": 8983805,
+          "sha256": "b983ed9ee36807a3a658dd3e3d52b7db67c64e9224bad4a196d19f122f9b4139",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/train_balanced.parquet",
+          "bytes": 6347212,
+          "sha256": "6fb3e0f8439b7a272a3164a53da098496e3c0248d533f8cf385c73ec9b566f99",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/val.parquet",
+          "bytes": 1333593,
+          "sha256": "d2bcc57cc0a8f3fd11b22ac16a23af71420b8a4342da9551ccbefc333860db66",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/zero_day_tiers.json",
+          "bytes": 2988,
+          "sha256": "720c73aaeee2927030fe0ec242b4ae3acbdcf0df1e8802ec359fc3ba03afb2e8",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/qadcp/zeroday.parquet",
+          "bytes": 152040,
+          "sha256": "8bb169a6ab7797f99385921d6118ddb7fed193a5f854d8aff662bc26c6e31ff1",
+          "kind": "qadcp",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/processed/UNSW-NB15_unified.parquet",
+          "bytes": 6492523,
+          "sha256": "91896a181818199dbbbd9297ec371a5754344a6234334c54efa69f739a46d3cb",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/processed/UNSW-NB15_unified_meta.json",
+          "bytes": 779,
+          "sha256": "a270fcda65733c1c347de0c02edc50e9752e36322ed116c815a9d26666458ef9",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/calibration.parquet",
+          "bytes": 688879,
+          "sha256": "71b70c6952f4f322b75c2e0e231d169371d0e6f750ce4f961492ef74982944d5",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/encoders.json",
+          "bytes": 1219,
+          "sha256": "eae35b61c541fbbbaf8b68fcf91ca0be99da6cca0a2e6599ff5211cb8f710a3b",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/feature_groups.json",
+          "bytes": 382,
+          "sha256": "78eb1b1535b98a80b2dab8be9225d3a192d34cb7a8140fbcc3511f6321911360",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/pca_baseline.json",
+          "bytes": 463,
+          "sha256": "93e3e00257a9545dd72b05ee75b6f9ece0f5bd573d381173495be58b4764e6f0",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/qadcp_report.json",
+          "bytes": 1926,
+          "sha256": "e48542a44b9093dc1f0b8331e59854f9530c00718db8899ee713e7778fc51816",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/pca8_calibration.parquet",
+          "bytes": 804758,
+          "sha256": "04c5bad78715dc3b73564ab0f846abe3b9c21182b7899224908e2c8cdebc7c38",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/pca8_test.parquet",
+          "bytes": 802740,
+          "sha256": "0ef98312d2850e3f84da3c8ce25ce659cc0399f8e486a5531734526b251f9ffc",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/pca8_train.parquet",
+          "bytes": 5829554,
+          "sha256": "13256c7a7921f8bf8712d4cfc37f246e4622c6f3e387f159bf832b53114e2c23",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/pca8_val.parquet",
+          "bytes": 805562,
+          "sha256": "99e4fc983c4aa6c571eea575ce6b26730b85658c13ab94ca60cc63a0650af14f",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/pca8_zeroday.parquet",
+          "bytes": 98275,
+          "sha256": "1d44cac6589685fea6a4ce306ec0bf719d57ca9caf20c292134179189ee34e09",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q12_calibration.parquet",
+          "bytes": 656317,
+          "sha256": "1f3e70204cba85d864e255dfd5ea01eb6dd405cfaa623602c3719a341c78c91a",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q12_test.parquet",
+          "bytes": 653980,
+          "sha256": "c43eac1a3c5225cd31d3da332a9e3d51b3220fac5b5af0b0af348b7ed42daba2",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q12_train.parquet",
+          "bytes": 4368197,
+          "sha256": "093ec77f9009f2dc7104cae78d8701a22c1f23c38677c8cef3eb0ab139f80d0b",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q12_val.parquet",
+          "bytes": 653632,
+          "sha256": "f9add7b9b79dfc4071009415fd9d028169023c83ad8fbf3c6c053ae162cef58a",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q12_zeroday.parquet",
+          "bytes": 66743,
+          "sha256": "01c31365ec0d65f7cd00d2c2c36c4a5892fa308a023b77cd9b20d113ce94aa84",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q16_calibration.parquet",
+          "bytes": 688277,
+          "sha256": "56c93a4adf76315dcaebfaa2fc719f740076b21916fcdafcd22d0bd0ebb5fcf7",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q16_test.parquet",
+          "bytes": 685349,
+          "sha256": "f309c94e480c2939f6cfb005605f29f811b854bbc665df71797b5d7f15735c99",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q16_train.parquet",
+          "bytes": 4537099,
+          "sha256": "1e291eafbb5685d1fe355ae9629f5d2f9621f10fe20579f51dbec838ce318cb1",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q16_val.parquet",
+          "bytes": 685216,
+          "sha256": "0836cede729d7d32b22c30a5eb4b64f5c404eca275292c99a38ffcddff4526d2",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q16_zeroday.parquet",
+          "bytes": 71942,
+          "sha256": "b4a8536bf3cb38a2689e1b9d35cdf266bc906066cf9afa314fdedd3da46b51d1",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q4_calibration.parquet",
+          "bytes": 393614,
+          "sha256": "125ff9eadd3fd1c42cde0f2190023362cc1c232b6d452914f258ca6f5e9d8e26",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q4_test.parquet",
+          "bytes": 392488,
+          "sha256": "8e613056be55ab030c7fbfeddb42dba2d4c1e762f73d4ef4f036f3d1aa985ded",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q4_train.parquet",
+          "bytes": 2724181,
+          "sha256": "0df9a5ebac40ddffc02cb50e864103da7f18f6947b8317b9fc9d6ed03256d3c0",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q4_val.parquet",
+          "bytes": 392490,
+          "sha256": "9b57d08005c5957cf0045128cafa29bb2de69247da0dc02c50841b5564a0f66a",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q4_zeroday.parquet",
+          "bytes": 42644,
+          "sha256": "50754aae1f65cb371f16ef3d5b7ec8e34ff9cd987f8a98d8e5e1e203c40a9b95",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q8_calibration.parquet",
+          "bytes": 532103,
+          "sha256": "c110b629c2520a1b8be5d75d461ed5df9277122b06bc4f8a530ecfc751683b38",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q8_test.parquet",
+          "bytes": 530513,
+          "sha256": "47272c8de3f3cdb7a4b7bbd0e90127701bc5228fe470f1a1efa0f2294b48c174",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q8_train.parquet",
+          "bytes": 3630717,
+          "sha256": "9b20811ecd6cea4324edd3690b0b5251992ea242fd0be7d5bffcce7163c50df1",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q8_val.parquet",
+          "bytes": 530243,
+          "sha256": "89dc7e84421b54b5c7fc9b0f32ce50f050e5ecd5c08b32a77a49c17e306552c1",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/quantum/q8_zeroday.parquet",
+          "bytes": 56045,
+          "sha256": "56e97227286fc7be7e44c72795956649b02027d40fac9d2a5e4b15b05d6542af",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/qubit_budgets.json",
+          "bytes": 1065,
+          "sha256": "bea5054592d8fabdb8b2ab3ca79ed40820776e573230cd1334adf987ed375f90",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/scalers.json",
+          "bytes": 2667,
+          "sha256": "57d746240952aeb611dd81220e25111eac4846c4d63e1ae6b5968d9f40dbbaa7",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/test.parquet",
+          "bytes": 685947,
+          "sha256": "3ad6fa97fd7633a14d9dd3ae8156d1fe1cd0e748f8afacf9d74e1b20b6c91036",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/train.parquet",
+          "bytes": 4537677,
+          "sha256": "fe9555c79d9deeccb709d6edcc5b82fe865fcb028dd9428d67e0082a0494abdd",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/train_balanced.parquet",
+          "bytes": 3345959,
+          "sha256": "3245c95963dc08b3acde2e17d648c15008477b6651080c6d88a0514e0711bd6b",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/val.parquet",
+          "bytes": 685824,
+          "sha256": "642cc9c9a6b2aaa606abc23ef05739222ca5e424541d2df3224f4901fe2cc8f7",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/validation_report.json",
+          "bytes": 947,
+          "sha256": "17de76f499e964094364fd777a850b19bc52a579ba940d78766367a69cd7f230",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/zero_day_tiers.json",
+          "bytes": 2990,
+          "sha256": "14a0f083e07702d43db9af8fe54ec4dd0ce86561e4a9e2f53a9be7d865445751",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "datasets/UNSW-NB15/unified/qadcp/zeroday.parquet",
+          "bytes": 72537,
+          "sha256": "16842ae614ab87a1d2272c1dee4fb8e24c6dbc28f2947d1fa991acd48f642996",
+          "kind": "unified",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/partitions/UNSW-NB15/calibration.csv",
+          "bytes": 2775513,
+          "sha256": "a2a020c2ddeb45dad2f7ab92bf00d9b8a5d52aeb05a33fce3cbae834871718db",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10112
+        },
+        {
+          "path": "week2/partitions/UNSW-NB15/partition_meta.json",
+          "bytes": 1351,
+          "sha256": "e9400cb0e3a539009523e8a3a2923bfcf30f6af58aa57572bc674e60a1f99e21",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/partitions/UNSW-NB15/test.csv",
+          "bytes": 2767056,
+          "sha256": "fe08553d2a1fcdadd3600675a9a055ed2bb0561e058cd593ae2c53d1bac953fb",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10086
+        },
+        {
+          "path": "week2/partitions/UNSW-NB15/train.csv",
+          "bytes": 22286008,
+          "sha256": "b0304194dcc656de8c66c2604d85bdc186f779401538aad872828fee5306c86f",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 81215
+        },
+        {
+          "path": "week2/partitions/UNSW-NB15/zeroday.csv",
+          "bytes": 349194,
+          "sha256": "73406316ae0dec4540968b56543ab8e3c004aad9d6751d3db249fe473860cd59",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 1216
+        },
+        {
+          "path": "week2/rq3/UNSW-NB15/adversarial_source_pool.csv",
+          "bytes": 318782,
+          "sha256": "d8b5892df2cd3fde41605215176aa23355ec5495ccb17601fccc15760e4b28ac",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 956
+        },
+        {
+          "path": "week2/rq3/UNSW-NB15/eval_clean.csv",
+          "bytes": 809994,
+          "sha256": "1ef59ee6f99e539a3a519d0384c52206587ba85c3da7de2fadc4e9fc61f19c7f",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 2372
+        },
+        {
+          "path": "week2/rq3/UNSW-NB15/rq3_schema.json",
+          "bytes": 1715,
+          "sha256": "68b6f4433087bdb515aef108ef134a34765181fa55cf1a6f3edc33d7a374c765",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/UNSW-NB15/autoencoder.joblib",
+          "bytes": 11725,
+          "sha256": "81ddc1e05937ece8b8e54af7f482a13a02fc72099ea869908438c58a2b468838",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/UNSW-NB15/isolation_forest.joblib",
+          "bytes": 3834886,
+          "sha256": "412d795c9fe596febd75a2df43893c14bf3d612b13ae6be4ecaee7517e06e61a",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/UNSW-NB15/ocsvm.joblib",
+          "bytes": 32082,
+          "sha256": "c3ef036ebbbfa7fca593b91bae32cf414b7b2d9a4200d37912b4bdcbffa4052a",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/UNSW-NB15/predictions.csv",
+          "bytes": 1429595,
+          "sha256": "a980295cf49b76b0fc86016390ca97d0c87e2332230f801557f2d2424a5f5820",
+          "kind": "baseline",
+          "used_by_pipeline": false,
+          "data_rows": 11302
+        },
+        {
+          "path": "week2/baselines/UNSW-NB15/results.json",
+          "bytes": 6581,
+          "sha256": "0082430a95b18c8835e1942de3a4df3eb95a2e7065bc6b0ff6a8d172d958953c",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/baselines/UNSW-NB15/xgboost_detector.json",
+          "bytes": 4878793,
+          "sha256": "bc4118d67d7a19721caf226fc4a649e0f39a7222c7a72cc68053053cbf0498f9",
+          "kind": "baseline",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/UNSW-NB15/calibration_scores.head.csv",
+          "bytes": 3717,
+          "sha256": "3ad9f3261845c6533b4cac79c9e721b65f8ac2b163ad3bff7b07090eba7cceef",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10
+        },
+        {
+          "path": "week2/interface/dummy_scores/UNSW-NB15/calibration_scores.parquet",
+          "bytes": 1565024,
+          "sha256": "78bb81b44620121a3a29bc58ce72b1c46a99e980b893cdbc502afbca424451f2",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/UNSW-NB15/prototypes_meta.json",
+          "bytes": 856,
+          "sha256": "c5b8b86f39531f0415dce184e7ec3f42723206aa05612e9c79595758f0b1b673",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/UNSW-NB15/test_scores.head.csv",
+          "bytes": 3666,
+          "sha256": "cd65a1fa43731bdc62c8716c37b6a690ab1b8fedc43f1387c53893be5b9cfedc",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10
+        },
+        {
+          "path": "week2/interface/dummy_scores/UNSW-NB15/test_scores.parquet",
+          "bytes": 1561072,
+          "sha256": "105538e05417b046af4a0de12e786a34a5780f96951b122717d1243c146dcf92",
+          "kind": "week2",
+          "used_by_pipeline": false
+        },
+        {
+          "path": "week2/interface/dummy_scores/UNSW-NB15/zeroday_scores.head.csv",
+          "bytes": 3393,
+          "sha256": "fc10c2dae43bd67b191d6e41c69db12f4cfbf1899a77c2062798741b682466f4",
+          "kind": "week2",
+          "used_by_pipeline": false,
+          "data_rows": 10
+        },
+        {
+          "path": "week2/interface/dummy_scores/UNSW-NB15/zeroday_scores.parquet",
+          "bytes": 169696,
+          "sha256": "560c492256faa74ef5eb75a022eb20fa87c87c40fa0b9e5452ba6d9945fba7a8",
+          "kind": "week2",
+          "used_by_pipeline": false
+        }
+      ]
+    }
+  },
+  "total_bytes": 41538435375
+}

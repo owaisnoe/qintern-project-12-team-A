@@ -1,0 +1,7 @@
+QS-Net Team A — Week-2 data package
+version: 1.0
+freeze: DATA FREEZE (Week 2, Day 14)
+seed: 42
+trio: CIC-IoT2023, BoT-IoT, UNSW-NB15
+files: 97  bytes: 180077013
+manifest: FROZEN/freeze_manifest_v1.0.json

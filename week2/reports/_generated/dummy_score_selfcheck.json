@@ -1,0 +1,33 @@
+{
+ "alpha": 0.1,
+ "seed": 42,
+ "datasets": {
+  "CICIoT2023": {
+   "alpha": 0.1,
+   "calibration_n": 18883,
+   "threshold_q": 0.2452326029720674,
+   "known_test_flag_rate": 0.09945453582587513,
+   "known_test_coverage": 0.9005454641741248,
+   "zeroday_rejection_rate": 0.9999089584850692,
+   "known_test_accuracy": 0.9034051792617699
+  },
+  "BoT-IoT": {
+   "alpha": 0.1,
+   "calibration_n": 18591,
+   "threshold_q": 0.2132808403296681,
+   "known_test_flag_rate": 0.10273788392232801,
+   "known_test_coverage": 0.897262116077672,
+   "zeroday_rejection_rate": 0.17862371888726208,
+   "known_test_accuracy": 0.939648216879135
+  },
+  "UNSW-NB15": {
+   "alpha": 0.1,
+   "calibration_n": 10112,
+   "threshold_q": 0.32873539547861297,
+   "known_test_flag_rate": 0.09676779694626214,
+   "known_test_coverage": 0.9032322030537379,
+   "zeroday_rejection_rate": 0.5238486842105263,
+   "known_test_accuracy": 0.7966488201467381
+  }
+ }
+}

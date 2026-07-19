@@ -1,0 +1,65 @@
+{
+  "dataset": "UNSW-NB15",
+  "seed": 42,
+  "raw_rows": 257673,
+  "raw_cols": 45,
+  "capped_rows": 200000,
+  "cap": 200000,
+  "rows_after_dedup": 122657,
+  "feature_dupes_removed": 77343,
+  "feature_space_dup_raw": 77343,
+  "n_features_final": 41,
+  "label_multiclass_classes": 10,
+  "label_binary_pos_frac": 0.4539,
+  "dropped_structural": [
+    "id"
+  ],
+  "dropped_high_missing": [],
+  "dropped_high_cardinality": [],
+  "dropped_perfect_corr": [
+    {
+      "kept": "is_ftp_login",
+      "dropped": "ct_ftp_cmd",
+      "r": 0.9993
+    }
+  ],
+  "encoded_categoricals": {
+    "proto": 133,
+    "service": 13,
+    "state": 10
+  },
+  "log1p_scaled": [
+    "ackdat",
+    "ct_dst_ltm",
+    "ct_flw_http_mthd",
+    "ct_ftp_cmd",
+    "ct_src_dport_ltm",
+    "ct_src_ltm",
+    "dbytes",
+    "dinpkt",
+    "djit",
+    "dload",
+    "dloss",
+    "dmean",
+    "dpkts",
+    "dur",
+    "is_ftp_login",
+    "is_sm_ips_ports",
+    "rate",
+    "response_body_len",
+    "sbytes",
+    "sinpkt",
+    "sjit",
+    "sload",
+    "sloss",
+    "smean",
+    "spkts",
+    "synack",
+    "tcprtt",
+    "trans_depth"
+  ],
+  "outputs": {
+    "parquet": "datasets/UNSW-NB15/processed/UNSW-NB15_clean.parquet",
+    "sample_csv": "datasets/UNSW-NB15/processed/UNSW-NB15_sample.csv"
+  }
+}

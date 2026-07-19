@@ -1,0 +1,599 @@
+{
+ "package": "QS-Net / QuantumSentinel \u2014 Team A \u2014 Week-2 data package",
+ "version": "1.0",
+ "frozen_utc": "2026-07-14T14:42:01Z",
+ "seed": 42,
+ "benchmark_trio": [
+  "CICIoT2023",
+  "BoT-IoT",
+  "UNSW-NB15"
+ ],
+ "scope": "Week-2 deliverable surface only (partitions, RQ3, baselines, interface, reports, scripts). Independent of the Week-1 raw-tree manifest (no raw data in this checkout).",
+ "note": "DATA FREEZE (Day 14). File hashes are content-only; frozen_utc is metadata and is NOT part of --verify. Re-hash with --verify (expect 0 mismatch).",
+ "n_files": 97,
+ "total_bytes": 180077013,
+ "files": [
+  {
+   "path": "week2/IWO_DAY13-14_SUMMARY.md",
+   "sha256": "88612406086497a576daeb153e04fba9886cdca10738ab7396dd1fd78e5cbfe6",
+   "bytes": 9590,
+   "rows": null
+  },
+  {
+   "path": "week2/IWO_TASK13_HANDOFF.md",
+   "sha256": "17411e41040739e3c097e0abc0356109d4eeb894aa6491a535c271d155dbebcc",
+   "bytes": 7300,
+   "rows": null
+  },
+  {
+   "path": "week2/IWO_TASK14_HANDOFF.md",
+   "sha256": "def7fd766a744a89e6454a7f63ea13dec43b95a53141d979836f3b4feca73a99",
+   "bytes": 6294,
+   "rows": null
+  },
+  {
+   "path": "week2/OWAIS_TASK11_12_HANDOFF.md",
+   "sha256": "8a52762694ec6aa6c638c2bedf9cb8435b235988d5715688affc7650edfa9dca",
+   "bytes": 7820,
+   "rows": null
+  },
+  {
+   "path": "week2/README.md",
+   "sha256": "c28973312e4fd0dd00f3ef19f4047293f027ebf7f889523428191a47b27dcb28",
+   "bytes": 6454,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/BoT-IoT/autoencoder.joblib",
+   "sha256": "2927a2ae61f70324b000d61f69606579b059cd5242d6c1a9458f9884c3b5ffc0",
+   "bytes": 12657,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/BoT-IoT/isolation_forest.joblib",
+   "sha256": "37fb36f3e81b584ecc88a6c7a19868a51def461ac0fef1fef0545c4bb6467ea8",
+   "bytes": 4429216,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/BoT-IoT/ocsvm.joblib",
+   "sha256": "c46dcd8b4363201426f732f247e237d0428c552304909568a2162892c5130e3a",
+   "bytes": 31389,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/BoT-IoT/predictions.csv",
+   "sha256": "b0f5882e518097978f143bc835d519169b511cc90b9a80cc3736ac9c6ac8eb11",
+   "bytes": 2326838,
+   "rows": 19274
+  },
+  {
+   "path": "week2/baselines/BoT-IoT/results.json",
+   "sha256": "494e68bb029ede58f73d2d7e06eecaebf73241a046c572685daacd5161520867",
+   "bytes": 5648,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/BoT-IoT/xgboost_detector.json",
+   "sha256": "0e9a926538529cb9bc7de315ff158facbfdcb601c8beb083d9bd0ba70570fc67",
+   "bytes": 2248118,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/CICIoT2023/autoencoder.joblib",
+   "sha256": "f4155c29a1f7b94caf3671c886365726d5ffbd424786de26df8ff5512e7565f4",
+   "bytes": 11679,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/CICIoT2023/isolation_forest.joblib",
+   "sha256": "52321bef8b2cb3a508b05244ec0f3420b711c1f47b09588ec6009c8721a19007",
+   "bytes": 4818068,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/CICIoT2023/predictions.csv",
+   "sha256": "fc9a41eee7b083be764438c0c5e279e2c2c44ed5cd44b248d1369c883f0a7628",
+   "bytes": 3495541,
+   "rows": 29867
+  },
+  {
+   "path": "week2/baselines/CICIoT2023/results.json",
+   "sha256": "500d4e588eebd5c0e5ee0f6c2524de0ba3323f5d5fd6f0aa30c1ebe4a21f21b7",
+   "bytes": 6066,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/CICIoT2023/xgboost_detector.json",
+   "sha256": "7e18f402bc68c1d9ef770d3516f56e892016e3a4dc3986ba15a573a61608fe2a",
+   "bytes": 9354331,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/UNSW-NB15/autoencoder.joblib",
+   "sha256": "81ddc1e05937ece8b8e54af7f482a13a02fc72099ea869908438c58a2b468838",
+   "bytes": 11725,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/UNSW-NB15/isolation_forest.joblib",
+   "sha256": "412d795c9fe596febd75a2df43893c14bf3d612b13ae6be4ecaee7517e06e61a",
+   "bytes": 3834886,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/UNSW-NB15/ocsvm.joblib",
+   "sha256": "c3ef036ebbbfa7fca593b91bae32cf414b7b2d9a4200d37912b4bdcbffa4052a",
+   "bytes": 32082,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/UNSW-NB15/predictions.csv",
+   "sha256": "a980295cf49b76b0fc86016390ca97d0c87e2332230f801557f2d2424a5f5820",
+   "bytes": 1429595,
+   "rows": 11302
+  },
+  {
+   "path": "week2/baselines/UNSW-NB15/results.json",
+   "sha256": "0082430a95b18c8835e1942de3a4df3eb95a2e7065bc6b0ff6a8d172d958953c",
+   "bytes": 6581,
+   "rows": null
+  },
+  {
+   "path": "week2/baselines/UNSW-NB15/xgboost_detector.json",
+   "sha256": "bc4118d67d7a19721caf226fc4a649e0f39a7222c7a72cc68053053cbf0498f9",
+   "bytes": 4878793,
+   "rows": null
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/calibration_scores.head.csv",
+   "sha256": "cee8fc4b7d46957b3027cd4ef268fd372c1b986b4bfc8a58c9c86f7620fee05d",
+   "bytes": 2780,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/calibration_scores.parquet",
+   "sha256": "d523512d143309dae917263d48b7bdfd8dc48f714f50665fe27f9b4f621753f2",
+   "bytes": 2157134,
+   "rows": 18591
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/prototypes_meta.json",
+   "sha256": "2d6c1d5f53019bdabdaa41b24110eb76613fbd1726d7c0f593a12d7c0ce2f532",
+   "bytes": 703,
+   "rows": null
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/test_scores.head.csv",
+   "sha256": "4413c269ce27a11c2466a97a588e2e855481717b786b3bb8c1935f80b3810019",
+   "bytes": 2716,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/test_scores.parquet",
+   "sha256": "0525144c96bb4d4a27a64ee534e01655c171c3a8997d1f22839d91f798e78c78",
+   "bytes": 2157125,
+   "rows": 18591
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/zeroday_scores.head.csv",
+   "sha256": "336919481ebfd1005ce8b5ea3bc55a73aacb034037a9a64bb625b1862fde8465",
+   "bytes": 2562,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/zeroday_scores.parquet",
+   "sha256": "15089239ed8647d8adfb8d09caf83a26f5c4bc36aa29948a158113089c7e1ddd",
+   "bytes": 72260,
+   "rows": 683
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/calibration_scores.head.csv",
+   "sha256": "5d3a8249b4c5a162974cfec675bc9f137a4567254f93a849f0713552ebae6745",
+   "bytes": 8874,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/calibration_scores.parquet",
+   "sha256": "33d9aaedeb7d325a361edf9eb1afa2661d992b94781326111cc8694e1e15a6c3",
+   "bytes": 7262244,
+   "rows": 18883
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/prototypes_meta.json",
+   "sha256": "ed4413c74eac31505bdd5d79b486b9d4e09fa15507d96776d6c7519d7092d9df",
+   "bytes": 2126,
+   "rows": null
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/test_scores.head.csv",
+   "sha256": "836632b33ba77ee42a321a4c681ef86545844fe126b6c6ad73e88b1cfaf54bd2",
+   "bytes": 8818,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/test_scores.parquet",
+   "sha256": "aa7e4d9aca41f1f9ce645ca97b5136ea90215ffa8d25c3ea086c71e66b9792a1",
+   "bytes": 7262176,
+   "rows": 18883
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/zeroday_scores.head.csv",
+   "sha256": "2578e133d9c129ab0d7bce478bf6239366d6ac752eef496ed432885ebfb82882",
+   "bytes": 8759,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/zeroday_scores.parquet",
+   "sha256": "e284d8af411ab74a0744e6e6b7f58f35059fa7192e734255af44ead7970b31b5",
+   "bytes": 3959764,
+   "rows": 10984
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/calibration_scores.head.csv",
+   "sha256": "3ad9f3261845c6533b4cac79c9e721b65f8ac2b163ad3bff7b07090eba7cceef",
+   "bytes": 3717,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/calibration_scores.parquet",
+   "sha256": "78bb81b44620121a3a29bc58ce72b1c46a99e980b893cdbc502afbca424451f2",
+   "bytes": 1565024,
+   "rows": 10112
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/prototypes_meta.json",
+   "sha256": "c5b8b86f39531f0415dce184e7ec3f42723206aa05612e9c79595758f0b1b673",
+   "bytes": 856,
+   "rows": null
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/test_scores.head.csv",
+   "sha256": "cd65a1fa43731bdc62c8716c37b6a690ab1b8fedc43f1387c53893be5b9cfedc",
+   "bytes": 3666,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/test_scores.parquet",
+   "sha256": "105538e05417b046af4a0de12e786a34a5780f96951b122717d1243c146dcf92",
+   "bytes": 1561072,
+   "rows": 10086
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/zeroday_scores.head.csv",
+   "sha256": "fc10c2dae43bd67b191d6e41c69db12f4cfbf1899a77c2062798741b682466f4",
+   "bytes": 3393,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/zeroday_scores.parquet",
+   "sha256": "560c492256faa74ef5eb75a022eb20fa87c87c40fa0b9e5452ba6d9945fba7a8",
+   "bytes": 169696,
+   "rows": 1216
+  },
+  {
+   "path": "week2/interface/dummy_scores_schema.json",
+   "sha256": "5e78858e38922a640d804098aa0c5c3714ce7a463ccd6297cff848babcc3a3a1",
+   "bytes": 1470,
+   "rows": null
+  },
+  {
+   "path": "week2/partitions/BoT-IoT/calibration.csv",
+   "sha256": "6f3d2aff1ed822f2889e858dc980f240af3966ee4a6650b611fd1107fb118a6b",
+   "bytes": 4598335,
+   "rows": 18591
+  },
+  {
+   "path": "week2/partitions/BoT-IoT/partition_meta.json",
+   "sha256": "6d1aaeb018c331a07488b6448332fd7ce761b3fcef234fdff83fb5321dbf250c",
+   "bytes": 1010,
+   "rows": null
+  },
+  {
+   "path": "week2/partitions/BoT-IoT/test.csv",
+   "sha256": "cfc238692a4e2c4e31890d24b37f96618594043c731f41df8b4c1346fd4a1379",
+   "bytes": 4589308,
+   "rows": 18591
+  },
+  {
+   "path": "week2/partitions/BoT-IoT/train.csv",
+   "sha256": "fd6a8b7d1a6f5004fe8d1c6b583607c192b9d81cea4dbff4ee18605faa150d5c",
+   "bytes": 36752928,
+   "rows": 148729
+  },
+  {
+   "path": "week2/partitions/BoT-IoT/zeroday.csv",
+   "sha256": "fe35fd90b63550f0c867204633747d5fab99bfa3858b4255938efb6d40cc49e5",
+   "bytes": 217807,
+   "rows": 683
+  },
+  {
+   "path": "week2/partitions/CICIoT2023/calibration.csv",
+   "sha256": "56de4cca3b6a70723b3b17de9f34304881caffab95bdae190cfba6ebed2ee36d",
+   "bytes": 3523899,
+   "rows": 18883
+  },
+  {
+   "path": "week2/partitions/CICIoT2023/partition_meta.json",
+   "sha256": "023bfc34566c0aba8495e7851aff4bf3ecf0616361c434ad9acaa61af2e8e4db",
+   "bytes": 4073,
+   "rows": null
+  },
+  {
+   "path": "week2/partitions/CICIoT2023/test.csv",
+   "sha256": "a2f5a7062e1a9b12928653bd09ec3aa15452eb3c79c2b22b90d8c415b0408685",
+   "bytes": 3519555,
+   "rows": 18883
+  },
+  {
+   "path": "week2/partitions/CICIoT2023/train.csv",
+   "sha256": "930527be9c6d056de2773857c70d28b0e2f3a4386d40ba30a78f67ea64fc2270",
+   "bytes": 28184201,
+   "rows": 151049
+  },
+  {
+   "path": "week2/partitions/CICIoT2023/zeroday.csv",
+   "sha256": "98531bcb07ede24d04be420029c94c2ad8d8c610cf735169723538781a86f052",
+   "bytes": 2491297,
+   "rows": 10984
+  },
+  {
+   "path": "week2/partitions/UNSW-NB15/calibration.csv",
+   "sha256": "a2a020c2ddeb45dad2f7ab92bf00d9b8a5d52aeb05a33fce3cbae834871718db",
+   "bytes": 2775513,
+   "rows": 10112
+  },
+  {
+   "path": "week2/partitions/UNSW-NB15/partition_meta.json",
+   "sha256": "e9400cb0e3a539009523e8a3a2923bfcf30f6af58aa57572bc674e60a1f99e21",
+   "bytes": 1351,
+   "rows": null
+  },
+  {
+   "path": "week2/partitions/UNSW-NB15/test.csv",
+   "sha256": "fe08553d2a1fcdadd3600675a9a055ed2bb0561e058cd593ae2c53d1bac953fb",
+   "bytes": 2767056,
+   "rows": 10086
+  },
+  {
+   "path": "week2/partitions/UNSW-NB15/train.csv",
+   "sha256": "b0304194dcc656de8c66c2604d85bdc186f779401538aad872828fee5306c86f",
+   "bytes": 22286008,
+   "rows": 81215
+  },
+  {
+   "path": "week2/partitions/UNSW-NB15/zeroday.csv",
+   "sha256": "73406316ae0dec4540968b56543ab8e3c004aad9d6751d3db249fe473860cd59",
+   "bytes": 349194,
+   "rows": 1216
+  },
+  {
+   "path": "week2/reports/_generated/baseline_results.csv",
+   "sha256": "00a725a46a2d41aa3406e5ba17837f6a489e28c85dbed8d4dab41b39ef5b73ca",
+   "bytes": 812,
+   "rows": 2
+  },
+  {
+   "path": "week2/reports/_generated/baseline_results.json",
+   "sha256": "506ea57140b1d011a88e61d5090b023006dd6b50d337affd8e02e0466277f9e2",
+   "bytes": 6550,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/_generated/day13_all_datasets.csv",
+   "sha256": "6fd512a2d1abca63c5337c1484a9aacdbc094d8689a17ecc2c11501186d79624",
+   "bytes": 3532,
+   "rows": 9
+  },
+  {
+   "path": "week2/reports/_generated/day13_all_datasets.json",
+   "sha256": "bc572f8b65798099c209d269302f5a98e71c0543a672675024e4dd7e71bcaf15",
+   "bytes": 24846,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/_generated/day13_leakage_check.json",
+   "sha256": "4805176244b13e4763743c4e58e2a6fceadd74dec6386e8a9f5b731af0c22366",
+   "bytes": 3959,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/_generated/dummy_score_selfcheck.json",
+   "sha256": "7a6ab3f137607e1b00f8b381ee96ef11169f61049450d8351b6d8d89478f435c",
+   "bytes": 923,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/_generated/rq3_summary.json",
+   "sha256": "86bcb0636b290f3cd6f21cc054237d70aaae74fc5e4bb075949696136031a8c1",
+   "bytes": 325,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/_generated/split_integrity.json",
+   "sha256": "3305deacc6e55382a3fcadfba11b85c32a93c7c0f3e725eeb47b353bfb4d1bc1",
+   "bytes": 2173,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/_generated/stats_harness.csv",
+   "sha256": "5a72bb35818179acacb2aac5d4e48453b456391524632d3691c8a5dd1ecb7bdb",
+   "bytes": 12717,
+   "rows": 96
+  },
+  {
+   "path": "week2/reports/_generated/stats_harness.json",
+   "sha256": "e30bd394ca4e4ac48a184bf0cc2fc5f689b2a437172ad3ae9c47ec9fa790576d",
+   "bytes": 71018,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/w2_01_partition_spec.md",
+   "sha256": "f18703de2312b626dc23dbbddcc4024764b864d355eecc9e2c2f2a5f6be7e200",
+   "bytes": 3973,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/w2_02_split_integrity.md",
+   "sha256": "119e6c209e091acb7630da30b311feec864ccddd8251b2d7b7152faae8269d91",
+   "bytes": 5092,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/w2_03_rq3_eval_set.md",
+   "sha256": "ac78a8106c0e71caf137d19c9a113fff924e6b02b895df3d3e238e6b1e564ecf",
+   "bytes": 5267,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/w2_04_classical_baselines.md",
+   "sha256": "ff32381cb18ca32f5f70bdae66e995780ebb8a43eb75711456d8f8ad1f76842e",
+   "bytes": 5728,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/w2_05_day13_all_datasets.md",
+   "sha256": "9ef5478147e7db70a4e39cb241a7e8f56ff75ec27709d70acfd12d8e466325a0",
+   "bytes": 10719,
+   "rows": null
+  },
+  {
+   "path": "week2/reports/w2_06_data_freeze.md",
+   "sha256": "21fe059b9c67f8027f88f6b732f8b60350cb3636f2814c91c2d3ff871353e731",
+   "bytes": 8731,
+   "rows": null
+  },
+  {
+   "path": "week2/rq3/BoT-IoT/adversarial_source_pool.csv",
+   "sha256": "ecafcd2a522b770a6f1aefd59cb59f8751ce30d711f8aa4ec74881c3e0a27f3d",
+   "bytes": 195470,
+   "rows": 600
+  },
+  {
+   "path": "week2/rq3/BoT-IoT/eval_clean.csv",
+   "sha256": "1074c9b6c7ffaac03038b1efb27ecfbf1127a58ebf76f5db4cea746e92d660be",
+   "bytes": 524828,
+   "rows": 1483
+  },
+  {
+   "path": "week2/rq3/BoT-IoT/rq3_schema.json",
+   "sha256": "55aad91f1d147915fd6cacac1a605963ff8324b4af4cf4b543c3ca8b6638869d",
+   "bytes": 1771,
+   "rows": null
+  },
+  {
+   "path": "week2/rq3/CICIoT2023/adversarial_source_pool.csv",
+   "sha256": "026f33ee671c1b1fff4e39a073e19f334f9d6fa060affd928029d534346d99f8",
+   "bytes": 874677,
+   "rows": 3273
+  },
+  {
+   "path": "week2/rq3/CICIoT2023/eval_clean.csv",
+   "sha256": "407b8227f42c815dae2a083c26a16c6af88ce92e2356b9485b4d6e1d85237e48",
+   "bytes": 1826371,
+   "rows": 6473
+  },
+  {
+   "path": "week2/rq3/CICIoT2023/rq3_schema.json",
+   "sha256": "582c2a3e7aede47996b0802a34c3c4ad724a337ccdfeb27c2d5f3af6ce3b6893",
+   "bytes": 1835,
+   "rows": null
+  },
+  {
+   "path": "week2/rq3/UNSW-NB15/adversarial_source_pool.csv",
+   "sha256": "dc3fd13ec9bb365c8f789a7bfe2ff869e4c21a0050e97bb2b4f4dbb95043605a",
+   "bytes": 319739,
+   "rows": 956
+  },
+  {
+   "path": "week2/rq3/UNSW-NB15/eval_clean.csv",
+   "sha256": "93f1ce97b4843adb9a3289be225c6a78d7ad3ff8ee44fbb857e9f15f535093d3",
+   "bytes": 812367,
+   "rows": 2372
+  },
+  {
+   "path": "week2/rq3/UNSW-NB15/rq3_schema.json",
+   "sha256": "a6faf2b389a2fddc312946297fa005baf746133a8f2ebaddad0a8e113a5d4bbc",
+   "bytes": 1791,
+   "rows": null
+  },
+  {
+   "path": "week2/scripts/baseline_metrics.py",
+   "sha256": "e7e41e035473e593de5affe510e9fe6794939910f54cc60b51eb7aebe5b06d1c",
+   "bytes": 7376,
+   "rows": null
+  },
+  {
+   "path": "week2/scripts/classical_baselines.py",
+   "sha256": "29f45bfcf6660c3d713a836f02c2f2470e51b3b1869e4f6192b46aa303ded3e8",
+   "bytes": 23035,
+   "rows": null
+  },
+  {
+   "path": "week2/scripts/freeze_package.py",
+   "sha256": "ffdd8d783ced43b9b9952bc494459b7f639745d6d595ee697583ffd682936f48",
+   "bytes": 7341,
+   "rows": null
+  },
+  {
+   "path": "week2/scripts/leakage_check.py",
+   "sha256": "2f042fa604e4932982f8904060f89ba5f50f4f7c18f0681c66d2a0d5b1b526ec",
+   "bytes": 6196,
+   "rows": null
+  },
+  {
+   "path": "week2/scripts/make_dummy_scores.py",
+   "sha256": "83972ca815d984ff0140c9e90bd51a1efd05545098343892c8fc08d158dd299c",
+   "bytes": 12326,
+   "rows": null
+  },
+  {
+   "path": "week2/scripts/make_partitions.py",
+   "sha256": "8769ccc252652b5842eb2e61a5c871fee628cdd8b67fb442718e40b7d6bbd9ba",
+   "bytes": 4381,
+   "rows": null
+  },
+  {
+   "path": "week2/scripts/make_rq3_evalset.py",
+   "sha256": "248b899cf768757c930c4a1caf83daa28837a7259e4864c25a9c6520fff27eb2",
+   "bytes": 7800,
+   "rows": null
+  },
+  {
+   "path": "week2/scripts/split_integrity.py",
+   "sha256": "f7811505d3f169d64d32491c4c4499c02aef18c5223f479ffe69fecb476c4c70",
+   "bytes": 8706,
+   "rows": null
+  },
+  {
+   "path": "week2/scripts/stats_harness.py",
+   "sha256": "6315cd53e94349480d205d4fecb30300258d3d6487f21d63257c81d4d6900cb5",
+   "bytes": 11062,
+   "rows": null
+  },
+  {
+   "path": "week2/tests/test_baseline_artifacts.py",
+   "sha256": "fd9a2d54a16a1e4f5f84cfaa64e8a7cbe0ad027534738aa57b088af8924f4d93",
+   "bytes": 5490,
+   "rows": null
+  },
+  {
+   "path": "week2/tests/test_baseline_metrics.py",
+   "sha256": "b8ffb6ec147d65baaa67ecf4c4f4623819d721f48049255f622ee01c0a0b5632",
+   "bytes": 3817,
+   "rows": null
+  },
+  {
+   "path": "week2/tests/test_dummy_scores.py",
+   "sha256": "93e5c5d05ba86b0ef5900de9ebde9e0ca23b3dd9a705894a302fc58c83118b26",
+   "bytes": 3774,
+   "rows": null
+  },
+  {
+   "path": "week2/tests/test_stats_harness.py",
+   "sha256": "4a084002acd9c97df64126dbd57f3b088fe854df184c22733badd20f469e700c",
+   "bytes": 1354,
+   "rows": null
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "dataset": "BoT-IoT",
+ "seed": 42,
+ "status": "DUMMY prototype registry \u2014 real rho_c come from Team B MAQT (Alg 1) Day-14 checkpoint",
+ "n_qubits": 8,
+ "hilbert_dim": 256,
+ "encoding": "angle-encoded top-8 ranked features in [0, pi] (quantum/q8_*)",
+ "prototype_representation": "per-class mean density matrix rho_c (Hermitian, PSD, trace 1)",
+ "fidelity": "Uhlmann F(rho_x, rho_c) in [0,1] -> column fid__<class>",
+ "nonconformity": "1 - max_c F(rho_x, rho_c)",
+ "n_known_classes": 4,
+ "known_classes": [
+  "DDoS",
+  "DoS",
+  "Normal",
+  "Reconnaissance"
+ ],
+ "zero_day_families": [
+  "Theft"
+ ],
+ "fidelity_columns": [
+  "fid__DDoS",
+  "fid__DoS",
+  "fid__Normal",
+  "fid__Reconnaissance"
+ ]
+}

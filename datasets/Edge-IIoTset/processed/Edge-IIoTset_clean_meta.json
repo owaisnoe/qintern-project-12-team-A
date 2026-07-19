@@ -1,0 +1,100 @@
+{
+  "dataset": "Edge-IIoTset",
+  "seed": 42,
+  "raw_rows": 157800,
+  "raw_cols": 63,
+  "capped_rows": 157800,
+  "cap": 200000,
+  "rows_after_dedup": 152210,
+  "feature_dupes_removed": 5590,
+  "feature_space_dup_raw": 814,
+  "n_features_final": 42,
+  "label_multiclass_classes": 15,
+  "label_binary_pos_frac": 0.8414,
+  "dropped_structural": [
+    "dns.qry.type",
+    "dns.retransmit_request_in",
+    "http.tls_port",
+    "icmp.unused",
+    "mbtcp.len",
+    "mbtcp.trans_id",
+    "mbtcp.unit_id",
+    "mqtt.msg_decoded_as"
+  ],
+  "dropped_high_missing": [],
+  "dropped_high_cardinality": [
+    "frame.time",
+    "http.request.full_uri",
+    "http.request.uri.query",
+    "ip.dst_host",
+    "ip.src_host",
+    "tcp.options",
+    "tcp.payload",
+    "tcp.srcport"
+  ],
+  "dropped_perfect_corr": [
+    {
+      "kept": "mqtt.conflag.cleansess",
+      "dropped": "mqtt.conflags",
+      "r": 1.0
+    },
+    {
+      "kept": "mqtt.conflag.cleansess",
+      "dropped": "mqtt.proto_len",
+      "r": 1.0
+    },
+    {
+      "kept": "mqtt.conflag.cleansess",
+      "dropped": "mqtt.ver",
+      "r": 1.0
+    }
+  ],
+  "encoded_categoricals": {
+    "arp.dst.proto_ipv4": 8,
+    "arp.src.proto_ipv4": 8,
+    "http.file_data": 496,
+    "http.request.method": 6,
+    "http.referer": 4,
+    "http.request.version": 8,
+    "dns.qry.name.len": 8,
+    "mqtt.conack.flags": 3,
+    "mqtt.msg": 117,
+    "mqtt.protoname": 3,
+    "mqtt.topic": 3
+  },
+  "log1p_scaled": [
+    "arp.hw.size",
+    "arp.opcode",
+    "dns.qry.name",
+    "dns.qry.qu",
+    "dns.retransmission",
+    "dns.retransmit_request",
+    "http.content_length",
+    "http.response",
+    "icmp.checksum",
+    "icmp.seq_le",
+    "icmp.transmit_timestamp",
+    "mqtt.conflag.cleansess",
+    "mqtt.conflags",
+    "mqtt.hdrflags",
+    "mqtt.len",
+    "mqtt.msgtype",
+    "mqtt.proto_len",
+    "mqtt.topic_len",
+    "mqtt.ver",
+    "tcp.ack",
+    "tcp.connection.fin",
+    "tcp.connection.rst",
+    "tcp.connection.syn",
+    "tcp.connection.synack",
+    "tcp.len",
+    "tcp.seq",
+    "udp.port",
+    "udp.stream",
+    "udp.time_delta"
+  ],
+  "outputs": {
+    "parquet": "datasets/Edge-IIoTset/processed/Edge-IIoTset_clean.parquet",
+    "sample_csv": "datasets/Edge-IIoTset/processed/Edge-IIoTset_sample.csv"
+  }
+}

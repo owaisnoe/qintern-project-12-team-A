@@ -1,0 +1,55 @@
+{
+  "dataset": "BoT-IoT",
+  "seed": 42,
+  "raw_rows": 233130,
+  "raw_cols": 35,
+  "capped_rows": 200001,
+  "cap": 200000,
+  "rows_after_dedup": 186691,
+  "feature_dupes_removed": 13310,
+  "feature_space_dup_raw": 13310,
+  "n_features_final": 18,
+  "label_multiclass_classes": 5,
+  "label_binary_pos_frac": 0.963,
+  "dropped_structural": [
+    "daddr",
+    "dco",
+    "dmac",
+    "doui",
+    "dport",
+    "ltime",
+    "pkSeqID",
+    "saddr",
+    "sco",
+    "seq",
+    "smac",
+    "soui",
+    "sport",
+    "stime"
+  ],
+  "dropped_high_missing": [],
+  "dropped_high_cardinality": [],
+  "dropped_perfect_corr": [],
+  "encoded_categoricals": {
+    "flgs": 11,
+    "proto": 7,
+    "state": 9
+  },
+  "log1p_scaled": [
+    "bytes",
+    "dbytes",
+    "dpkts",
+    "drate",
+    "dur",
+    "pkts",
+    "rate",
+    "sbytes",
+    "spkts",
+    "srate",
+    "sum"
+  ],
+  "outputs": {
+    "parquet": "datasets/BoT-IoT/processed/BoT-IoT_clean.parquet",
+    "sample_csv": "datasets/BoT-IoT/processed/BoT-IoT_sample.csv"
+  }
+}

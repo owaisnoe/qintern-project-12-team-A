@@ -1,0 +1,97 @@
+{
+ "CICIoT2023": {
+  "dataset": "CICIoT2023",
+  "disjoint_asserts": "pass",
+  "calibration_known_only": true,
+  "n_known_classes": 31,
+  "zero_day_families": [
+   "Mirai-greeth_flood",
+   "Mirai-greip_flood",
+   "Mirai-udpplain"
+  ],
+  "cal_vs_test": {
+   "class_set_identical": true,
+   "tvd": 0.0,
+   "chi2": 0.0,
+   "chi2_dof": 30,
+   "chi2_p": 1.0,
+   "ks": 0.0
+  },
+  "classifier_two_sample_auroc": 0.4999,
+  "conformal": {
+   "alpha": 0.1,
+   "target_coverage": 0.9,
+   "empirical_coverage": 0.9019,
+   "q_threshold": 0.076,
+   "cal_n": 18883,
+   "mean_test_nonconformity": 0.0428,
+   "mean_zeroday_nonconformity": 0.7714
+  },
+  "rare_known_classes_lt10": [
+   "Backdoor_Malware",
+   "Recon-PingSweep",
+   "Uploading_Attack",
+   "XSS"
+  ],
+  "exchangeable_verdict": true
+ },
+ "BoT-IoT": {
+  "dataset": "BoT-IoT",
+  "disjoint_asserts": "pass",
+  "calibration_known_only": true,
+  "n_known_classes": 4,
+  "zero_day_families": [
+   "Theft"
+  ],
+  "cal_vs_test": {
+   "class_set_identical": true,
+   "tvd": 0.0,
+   "chi2": 0.0,
+   "chi2_dof": 3,
+   "chi2_p": 1.0,
+   "ks": 0.0
+  },
+  "classifier_two_sample_auroc": 0.5038,
+  "conformal": {
+   "alpha": 0.1,
+   "target_coverage": 0.9,
+   "empirical_coverage": 0.9007,
+   "q_threshold": 0.108,
+   "cal_n": 18591,
+   "mean_test_nonconformity": 0.05,
+   "mean_zeroday_nonconformity": 0.134
+  },
+  "rare_known_classes_lt10": [],
+  "exchangeable_verdict": true
+ },
+ "UNSW-NB15": {
+  "dataset": "UNSW-NB15",
+  "disjoint_asserts": "pass",
+  "calibration_known_only": true,
+  "n_known_classes": 8,
+  "zero_day_families": [
+   "Shellcode",
+   "Worms"
+  ],
+  "cal_vs_test": {
+   "class_set_identical": true,
+   "tvd": 0.00188,
+   "chi2": 0.677,
+   "chi2_dof": 7,
+   "chi2_p": 0.9985,
+   "ks": 0.00083
+  },
+  "classifier_two_sample_auroc": 0.5035,
+  "conformal": {
+   "alpha": 0.1,
+   "target_coverage": 0.9,
+   "empirical_coverage": 0.9063,
+   "q_threshold": 0.768,
+   "cal_n": 10112,
+   "mean_test_nonconformity": 0.2149,
+   "mean_zeroday_nonconformity": 0.3519
+  },
+  "rare_known_classes_lt10": [],
+  "exchangeable_verdict": true
+ }
+}

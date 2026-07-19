@@ -1,0 +1,73 @@
+{
+ "dataset": "BoT-IoT",
+ "seed": 42,
+ "mode": "v0.1",
+ "config": {
+  "weights": {
+   "simA": 0.5,
+   "transferB": 0.3,
+   "isolationC": 0.2
+  },
+  "tier_edges": [
+   0.35,
+   0.6
+  ],
+  "knn_k": 10,
+  "sample_per_family": 5000,
+  "centroid_norm_ref_p95": 27.3012
+ },
+ "families": [
+  {
+   "family": "theft_exfiltration",
+   "mode": "holdout",
+   "n_rows": 683,
+   "nearest_train_family": "recon",
+   "centroid_distance": 14.3135,
+   "knn_overlap": 0.0,
+   "simA": 0.7621,
+   "transfer_recallB": 0.6149,
+   "cluster_isolationC": 0.3324,
+   "difficulty_score": 0.5631,
+   "tier": "Medium"
+  },
+  {
+   "family": "ddos",
+   "mode": "loo",
+   "n_rows": 5000,
+   "nearest_train_family": "dos",
+   "centroid_distance": 0.6934,
+   "knn_overlap": 0.0564,
+   "simA": 0.4845,
+   "transfer_recallB": 0.9844,
+   "cluster_isolationC": 0.0,
+   "difficulty_score": 0.2469,
+   "tier": "Easy"
+  },
+  {
+   "family": "dos",
+   "mode": "loo",
+   "n_rows": 5000,
+   "nearest_train_family": "ddos",
+   "centroid_distance": 0.6934,
+   "knn_overlap": 0.0368,
+   "simA": 0.4943,
+   "transfer_recallB": 0.9954,
+   "cluster_isolationC": 0.0,
+   "difficulty_score": 0.2485,
+   "tier": "Easy"
+  },
+  {
+   "family": "recon",
+   "mode": "loo",
+   "n_rows": 2479,
+   "nearest_train_family": "ddos",
+   "centroid_distance": 27.1006,
+   "knn_overlap": 0.0,
+   "simA": 0.9963,
+   "transfer_recallB": 0.8911,
+   "cluster_isolationC": 0.952,
+   "difficulty_score": 0.7212,
+   "tier": "Hard"
+  }
+ ]
+}

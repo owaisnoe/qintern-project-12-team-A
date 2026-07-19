@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "description": "Day-13 confirmation: no resample-before-split or duplicate-flow leakage.",
+  "overall_passed": true,
+  "datasets": {
+    "CICIoT2023": {
+      "dataset": "CICIoT2023",
+      "passed": true,
+      "train_to_eval_duplicate_flows": 0,
+      "cross_split_feature_collisions": {
+        "train|calibration": 0,
+        "train|test": 0,
+        "train|zeroday": 0,
+        "calibration|test": 0,
+        "calibration|zeroday": 0,
+        "test|zeroday": 0
+      },
+      "class_membership": {
+        "calibration_known_only": true,
+        "test_known_only": true,
+        "zeroday_disjoint_from_known": true,
+        "zeroday_nonempty": true,
+        "known_classes": 31,
+        "zero_day_classes": [
+          "Mirai-greeth_flood",
+          "Mirai-greip_flood",
+          "Mirai-udpplain"
+        ]
+      },
+      "within_split_duplication": {
+        "train": {
+          "rows": 151049,
+          "unique_feature_rows": 151049,
+          "duplicate_rate": 0.0
+        },
+        "calibration": {
+          "rows": 18883,
+          "unique_feature_rows": 18883,
+          "duplicate_rate": 0.0
+        },
+        "test": {
+          "rows": 18883,
+          "unique_feature_rows": 18883,
+          "duplicate_rate": 0.0
+        },
+        "zeroday": {
+          "rows": 10984,
+          "unique_feature_rows": 10984,
+          "duplicate_rate": 0.0
+        }
+      },
+      "label_multiclass_to_binary_consistent": true
+    },
+    "BoT-IoT": {
+      "dataset": "BoT-IoT",
+      "passed": true,
+      "train_to_eval_duplicate_flows": 0,
+      "cross_split_feature_collisions": {
+        "train|calibration": 0,
+        "train|test": 0,
+        "train|zeroday": 0,
+        "calibration|test": 0,
+        "calibration|zeroday": 0,
+        "test|zeroday": 0
+      },
+      "class_membership": {
+        "calibration_known_only": true,
+        "test_known_only": true,
+        "zeroday_disjoint_from_known": true,
+        "zeroday_nonempty": true,
+        "known_classes": 4,
+        "zero_day_classes": [
+          "Theft"
+        ]
+      },
+      "within_split_duplication": {
+        "train": {
+          "rows": 148729,
+          "unique_feature_rows": 148729,
+          "duplicate_rate": 0.0
+        },
+        "calibration": {
+          "rows": 18591,
+          "unique_feature_rows": 18591,
+          "duplicate_rate": 0.0
+        },
+        "test": {
+          "rows": 18591,
+          "unique_feature_rows": 18591,
+          "duplicate_rate": 0.0
+        },
+        "zeroday": {
+          "rows": 683,
+          "unique_feature_rows": 683,
+          "duplicate_rate": 0.0
+        }
+      },
+      "label_multiclass_to_binary_consistent": true
+    },
+    "UNSW-NB15": {
+      "dataset": "UNSW-NB15",
+      "passed": true,
+      "train_to_eval_duplicate_flows": 0,
+      "cross_split_feature_collisions": {
+        "train|calibration": 0,
+        "train|test": 0,
+        "train|zeroday": 0,
+        "calibration|test": 0,
+        "calibration|zeroday": 0,
+        "test|zeroday": 0
+      },
+      "class_membership": {
+        "calibration_known_only": true,
+        "test_known_only": true,
+        "zeroday_disjoint_from_known": true,
+        "zeroday_nonempty": true,
+        "known_classes": 8,
+        "zero_day_classes": [
+          "Shellcode",
+          "Worms"
+        ]
+      },
+      "within_split_duplication": {
+        "train": {
+          "rows": 81215,
+          "unique_feature_rows": 81215,
+          "duplicate_rate": 0.0
+        },
+        "calibration": {
+          "rows": 10112,
+          "unique_feature_rows": 10112,
+          "duplicate_rate": 0.0
+        },
+        "test": {
+          "rows": 10086,
+          "unique_feature_rows": 10086,
+          "duplicate_rate": 0.0
+        },
+        "zeroday": {
+          "rows": 1216,
+          "unique_feature_rows": 1216,
+          "duplicate_rate": 0.0
+        }
+      },
+      "label_multiclass_to_binary_consistent": true
+    }
+  }
+}

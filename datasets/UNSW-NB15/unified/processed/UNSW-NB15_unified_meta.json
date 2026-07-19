@@ -1,0 +1,36 @@
+{
+  "dataset": "UNSW-NB15",
+  "seed": 42,
+  "schema_version": "1.0",
+  "source_checkpoint": "datasets/UNSW-NB15/processed/UNSW-NB15_clean.parquet",
+  "rows_in": 122657,
+  "rows_after_dedup": 103463,
+  "feature_dupes_removed": 19194,
+  "n_features_unified": 17,
+  "columns": [
+    "duration",
+    "n_pkts_total",
+    "n_bytes_total",
+    "src_pkts",
+    "dst_pkts",
+    "src_bytes",
+    "dst_bytes",
+    "rate",
+    "rate_src",
+    "rate_dst",
+    "pkt_size_min",
+    "pkt_size_max",
+    "pkt_size_mean",
+    "pkt_size_std",
+    "iat",
+    "protocol_cat",
+    "conn_state_cat",
+    "label_multiclass",
+    "label_binary"
+  ],
+  "categorical_raw": [
+    "protocol_cat",
+    "conn_state_cat"
+  ],
+  "note": "protocol/conn_state frequency-encoded in qadcp.py --unified (train-fit)"
+}

@@ -1,0 +1,33 @@
+{
+ "timing": [
+  "dur"
+ ],
+ "rate": [
+  "rate",
+  "srate",
+  "drate"
+ ],
+ "volume": [
+  "pkts",
+  "bytes",
+  "spkts",
+  "dpkts",
+  "sbytes",
+  "dbytes"
+ ],
+ "flags_state": [
+  "flgs",
+  "state"
+ ],
+ "protocol": [
+  "proto"
+ ],
+ "connection_ctx": [],
+ "other": [
+  "mean",
+  "stddev",
+  "sum",
+  "min",
+  "max"
+ ]
+}

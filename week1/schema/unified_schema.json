@@ -1,0 +1,90 @@
+{
+  "version": "1.0",
+  "seed": 42,
+  "description": "QS-Net unified network-flow schema (Day 6). Same column names/order in every dataset split.",
+  "labels": ["label_multiclass", "label_binary", "label_family"],
+  "categorical_raw": ["protocol_cat", "conn_state_cat"],
+  "numeric_features": [
+    "duration",
+    "n_pkts_total",
+    "n_bytes_total",
+    "src_pkts",
+    "dst_pkts",
+    "src_bytes",
+    "dst_bytes",
+    "rate",
+    "rate_src",
+    "rate_dst",
+    "pkt_size_min",
+    "pkt_size_max",
+    "pkt_size_mean",
+    "pkt_size_std",
+    "iat",
+    "protocol",
+    "conn_state"
+  ],
+  "feature_order": [
+    "duration",
+    "n_pkts_total",
+    "n_bytes_total",
+    "src_pkts",
+    "dst_pkts",
+    "src_bytes",
+    "dst_bytes",
+    "rate",
+    "rate_src",
+    "rate_dst",
+    "pkt_size_min",
+    "pkt_size_max",
+    "pkt_size_mean",
+    "pkt_size_std",
+    "iat",
+    "protocol",
+    "conn_state",
+    "label_multiclass",
+    "label_binary",
+    "label_family"
+  ],
+  "protocol_vocab": [
+    "tcp",
+    "udp",
+    "icmp",
+    "arp",
+    "dns",
+    "http",
+    "https",
+    "mqtt",
+    "other"
+  ],
+  "conn_state_vocab": [
+    "established",
+    "closed",
+    "syn",
+    "rst",
+    "rej",
+    "fin",
+    "other"
+  ],
+  "datasets": {
+    "CICIoT2023": {
+      "checkpoint": "datasets/CICIoT2023/processed/CICIoT2023_clean.parquet",
+      "mapping_notes": "Protocol from one-hot flags; packet total from flag counts; directional pkts/bytes imputed in QADCP"
+    },
+    "TON_IoT": {
+      "checkpoint": "datasets/TON_IoT/processed/TON_IoT_clean.parquet",
+      "mapping_notes": "Ordinal proto/service/conn_state decoded to harmonized vocab strings"
+    },
+    "BoT-IoT": {
+      "checkpoint": "datasets/BoT-IoT/processed/BoT-IoT_clean.parquet",
+      "mapping_notes": "Argus flow fields; proto/state from ordinal codes"
+    },
+    "Edge-IIoTset": {
+      "checkpoint": "datasets/Edge-IIoTset/processed/Edge-IIoTset_clean.parquet",
+      "mapping_notes": "Protocol-field dataset down-mapped to common core only"
+    },
+    "UNSW-NB15": {
+      "checkpoint": "datasets/UNSW-NB15/processed/UNSW-NB15_clean.parquet",
+      "mapping_notes": "Richest template; proto/state from ordinal codes"
+    }
+  }
+}

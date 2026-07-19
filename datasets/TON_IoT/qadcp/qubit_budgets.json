@@ -1,0 +1,78 @@
+{
+ "ranking_metric": "|pearson r| vs label_binary on train (baseline; Team C refines)",
+ "ranking": [
+  "dst_ip_bytes",
+  "dst_pkts",
+  "proto",
+  "dns_RD",
+  "dns_qtype",
+  "dns_rejected",
+  "dns_RA",
+  "dst_bytes",
+  "src_pkts",
+  "service",
+  "dns_AA",
+  "dns_qclass",
+  "dns_query",
+  "src_bytes",
+  "duration",
+  "dns_rcode",
+  "http_status_code",
+  "http_response_body_len",
+  "conn_state",
+  "src_ip_bytes",
+  "missed_bytes",
+  "http_request_body_len"
+ ],
+ "budgets": {
+  "4": [
+   "dst_ip_bytes",
+   "dst_pkts",
+   "proto",
+   "dns_RD"
+  ],
+  "8": [
+   "dst_ip_bytes",
+   "dst_pkts",
+   "proto",
+   "dns_RD",
+   "dns_qtype",
+   "dns_rejected",
+   "dns_RA",
+   "dst_bytes"
+  ],
+  "12": [
+   "dst_ip_bytes",
+   "dst_pkts",
+   "proto",
+   "dns_RD",
+   "dns_qtype",
+   "dns_rejected",
+   "dns_RA",
+   "dst_bytes",
+   "src_pkts",
+   "service",
+   "dns_AA",
+   "dns_qclass"
+  ],
+  "16": [
+   "dst_ip_bytes",
+   "dst_pkts",
+   "proto",
+   "dns_RD",
+   "dns_qtype",
+   "dns_rejected",
+   "dns_RA",
+   "dst_bytes",
+   "src_pkts",
+   "service",
+   "dns_AA",
+   "dns_qclass",
+   "dns_query",
+   "src_bytes",
+   "duration",
+   "dns_rcode"
+  ]
+ },
+ "corr_pruned": []
+}

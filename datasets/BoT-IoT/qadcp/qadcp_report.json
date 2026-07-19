@@ -1,0 +1,92 @@
+{
+ "dataset": "BoT-IoT",
+ "seed": 42,
+ "checkpoint": "datasets/BoT-IoT/processed/BoT-IoT_clean.parquet",
+ "mode": "v0.1",
+ "s0_validate": {
+  "rows": 186691,
+  "gates": "pass"
+ },
+ "s2_engineer": {
+  "families": {
+   "ddos": 94161,
+   "dos": 81397,
+   "benign": 6909,
+   "recon": 3541,
+   "theft_exfiltration": 683
+  }
+ },
+ "s3_groups": {
+  "timing": 1,
+  "rate": 3,
+  "volume": 6,
+  "flags_state": 2,
+  "protocol": 1,
+  "other": 5
+ },
+ "s7_split": {
+  "train": 130205,
+  "val": 18601,
+  "calibration": 18601,
+  "test": 18601,
+  "zeroday": 683
+ },
+ "s7_zero_day_labels": [
+  "Theft"
+ ],
+ "s7b_postprune_dupes_dropped": {
+  "train": 0,
+  "val": 0,
+  "calibration": 0,
+  "test": 0,
+  "zeroday": 0
+ },
+ "s6_quantum": {
+  "corr_pruned": 2,
+  "n_features": 16,
+  "budgets": {
+   "4": 4,
+   "8": 8,
+   "12": 12,
+   "16": 16
+  }
+ },
+ "s5_balance": {
+  "train": 130205,
+  "train_balanced": 47315,
+  "capped_classes": [
+   "DDoS",
+   "DoS"
+  ]
+ },
+ "s8_gates": "pass (disjoint splits, zero-day isolated, rare classes kept, 0 NaN)",
+ "per_class_split": {
+  "train": {
+   "DDoS": 65913,
+   "DoS": 56977,
+   "Normal": 4836,
+   "Reconnaissance": 2479
+  },
+  "val": {
+   "DDoS": 9416,
+   "DoS": 8140,
+   "Normal": 691,
+   "Reconnaissance": 354
+  },
+  "calibration": {
+   "DDoS": 9416,
+   "DoS": 8140,
+   "Normal": 691,
+   "Reconnaissance": 354
+  },
+  "test": {
+   "DDoS": 9416,
+   "DoS": 8140,
+   "Normal": 691,
+   "Reconnaissance": 354
+  },
+  "zeroday": {
+   "Theft": 683
+  }
+ }
+}

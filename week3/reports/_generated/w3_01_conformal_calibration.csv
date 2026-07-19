@@ -1,0 +1,4 @@
+dataset,alpha,mode,n_cal,k,q,target_coverage,known_coverage,false_zeroday_rate,zeroday_rejection_rate,coverage_ok,source_kind
+CICIoT2023,0.05,marginal,18883,17940,0.300551,0.95,0.9514,0.0486,0.9998,True,dummy
+BoT-IoT,0.05,marginal,18591,17663,0.262934,0.95,0.947,0.053,0.0952,False,dummy
+UNSW-NB15,0.05,marginal,10112,9608,0.38338,0.95,0.9537,0.0463,0.3857,True,dummy

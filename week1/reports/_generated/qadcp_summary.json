@@ -1,0 +1,651 @@
+{
+ "CICIoT2023": {
+  "dataset": "CICIoT2023",
+  "seed": 42,
+  "checkpoint": "datasets/CICIoT2023/processed/CICIoT2023_clean.parquet",
+  "mode": "v0.1",
+  "s0_validate": {
+   "rows": 199799,
+   "gates": "pass"
+  },
+  "s2_engineer": {
+   "families": {
+    "ddos": 143632,
+    "dos": 35334,
+    "botnet_mirai": 10984,
+    "benign": 4576,
+    "recon": 2286,
+    "spoofing_mitm": 2046,
+    "web_injection": 560,
+    "bruteforce_password": 288,
+    "backdoor_malware_ransomware": 93
+   }
+  },
+  "s3_groups": {
+   "timing": 3,
+   "rate": 2,
+   "flags_state": 8,
+   "protocol": 7,
+   "other": 17
+  },
+  "s7_split": {
+   "train": 132166,
+   "val": 18883,
+   "calibration": 18883,
+   "test": 18883,
+   "zeroday": 10984
+  },
+  "s7_zero_day_labels": [
+   "Mirai-greeth_flood",
+   "Mirai-greip_flood",
+   "Mirai-udpplain"
+  ],
+  "s7b_postprune_dupes_dropped": {
+   "train": 0,
+   "val": 0,
+   "calibration": 0,
+   "test": 0,
+   "zeroday": 0
+  },
+  "s6_quantum": {
+   "corr_pruned": 7,
+   "n_features": 30,
+   "budgets": {
+    "4": 4,
+    "8": 8,
+    "12": 12,
+    "16": 16
+   }
+  },
+  "s5_balance": {
+   "train": 132166,
+   "train_balanced": 130989,
+   "capped_classes": [
+    "DDoS-ICMP_Flood"
+   ]
+  },
+  "s8_gates": "pass (disjoint splits, zero-day isolated, rare classes kept, 0 NaN)",
+  "per_class_split": {
+   "train": {
+    "DDoS-ICMP_Flood": 21177,
+    "DDoS-UDP_Flood": 15878,
+    "DDoS-TCP_Flood": 13249,
+    "DDoS-PSHACK_Flood": 11988,
+    "DDoS-SYN_Flood": 11947,
+    "DDoS-RSTFINFlood": 11816,
+    "DDoS-SynonymousIP_Flood": 10561,
+    "DoS-UDP_Flood": 9711,
+    "DoS-TCP_Flood": 7803,
+    "DoS-SYN_Flood": 5947,
+    "BenignTraffic": 3202,
+    "DDoS-ICMP_Fragmentation": 1331,
+    "DoS-HTTP_Flood": 1271,
+    "MITM-ArpSpoofing": 901,
+    "DDoS-UDP_Fragmentation": 840,
+    "DDoS-ACK_Fragmentation": 837,
+    "VulnerabilityScan": 630,
+    "DNS_Spoofing": 530,
+    "DDoS-HTTP_Flood": 491,
+    "DDoS-SlowLoris": 431,
+    "Recon-HostDiscovery": 405,
+    "Recon-OSScan": 289,
+    "Recon-PortScan": 242,
+    "DictionaryBruteForce": 201,
+    "BrowserHijacking": 109,
+    "SqlInjection": 101,
+    "CommandInjection": 93,
+    "Backdoor_Malware": 66,
+    "XSS": 63,
+    "Recon-PingSweep": 33,
+    "Uploading_Attack": 23
+   },
+   "val": {
+    "DDoS-ICMP_Flood": 3025,
+    "DDoS-UDP_Flood": 2268,
+    "DDoS-TCP_Flood": 1892,
+    "DDoS-PSHACK_Flood": 1712,
+    "DDoS-SYN_Flood": 1706,
+    "DDoS-RSTFINFlood": 1688,
+    "DDoS-SynonymousIP_Flood": 1509,
+    "DoS-UDP_Flood": 1387,
+    "DoS-TCP_Flood": 1115,
+    "DoS-SYN_Flood": 850,
+    "BenignTraffic": 458,
+    "DDoS-ICMP_Fragmentation": 190,
+    "DoS-HTTP_Flood": 182,
+    "MITM-ArpSpoofing": 129,
+    "DDoS-ACK_Fragmentation": 120,
+    "DDoS-UDP_Fragmentation": 120,
+    "VulnerabilityScan": 90,
+    "DNS_Spoofing": 76,
+    "DDoS-HTTP_Flood": 70,
+    "DDoS-SlowLoris": 62,
+    "Recon-HostDiscovery": 58,
+    "Recon-OSScan": 42,
+    "Recon-PortScan": 35,
+    "DictionaryBruteForce": 29,
+    "BrowserHijacking": 16,
+    "SqlInjection": 15,
+    "CommandInjection": 13,
+    "Backdoor_Malware": 9,
+    "XSS": 9,
+    "Recon-PingSweep": 4,
+    "Uploading_Attack": 4
+   },
+   "calibration": {
+    "DDoS-ICMP_Flood": 3025,
+    "DDoS-UDP_Flood": 2268,
+    "DDoS-TCP_Flood": 1892,
+    "DDoS-PSHACK_Flood": 1712,
+    "DDoS-SYN_Flood": 1706,
+    "DDoS-RSTFINFlood": 1688,
+    "DDoS-SynonymousIP_Flood": 1509,
+    "DoS-UDP_Flood": 1387,
+    "DoS-TCP_Flood": 1115,
+    "DoS-SYN_Flood": 850,
+    "BenignTraffic": 458,
+    "DDoS-ICMP_Fragmentation": 190,
+    "DoS-HTTP_Flood": 182,
+    "MITM-ArpSpoofing": 129,
+    "DDoS-ACK_Fragmentation": 120,
+    "DDoS-UDP_Fragmentation": 120,
+    "VulnerabilityScan": 90,
+    "DNS_Spoofing": 76,
+    "DDoS-HTTP_Flood": 70,
+    "DDoS-SlowLoris": 62,
+    "Recon-HostDiscovery": 58,
+    "Recon-OSScan": 42,
+    "Recon-PortScan": 35,
+    "DictionaryBruteForce": 29,
+    "BrowserHijacking": 16,
+    "SqlInjection": 15,
+    "CommandInjection": 13,
+    "Backdoor_Malware": 9,
+    "XSS": 9,
+    "Recon-PingSweep": 4,
+    "Uploading_Attack": 4
+   },
+   "test": {
+    "DDoS-ICMP_Flood": 3025,
+    "DDoS-UDP_Flood": 2268,
+    "DDoS-TCP_Flood": 1892,
+    "DDoS-PSHACK_Flood": 1712,
+    "DDoS-SYN_Flood": 1706,
+    "DDoS-RSTFINFlood": 1688,
+    "DDoS-SynonymousIP_Flood": 1509,
+    "DoS-UDP_Flood": 1387,
+    "DoS-TCP_Flood": 1115,
+    "DoS-SYN_Flood": 850,
+    "BenignTraffic": 458,
+    "DDoS-ICMP_Fragmentation": 190,
+    "DoS-HTTP_Flood": 182,
+    "MITM-ArpSpoofing": 129,
+    "DDoS-ACK_Fragmentation": 120,
+    "DDoS-UDP_Fragmentation": 120,
+    "VulnerabilityScan": 90,
+    "DNS_Spoofing": 76,
+    "DDoS-HTTP_Flood": 70,
+    "DDoS-SlowLoris": 62,
+    "Recon-HostDiscovery": 58,
+    "Recon-OSScan": 42,
+    "Recon-PortScan": 35,
+    "DictionaryBruteForce": 29,
+    "BrowserHijacking": 16,
+    "SqlInjection": 15,
+    "CommandInjection": 13,
+    "Backdoor_Malware": 9,
+    "XSS": 9,
+    "Uploading_Attack": 4,
+    "Recon-PingSweep": 4
+   },
+   "zeroday": {
+    "Mirai-greeth_flood": 4144,
+    "Mirai-udpplain": 3706,
+    "Mirai-greip_flood": 3134
+   }
+  }
+ },
+ "TON_IoT": {
+  "dataset": "TON_IoT",
+  "seed": 42,
+  "checkpoint": "datasets/TON_IoT/processed/TON_IoT_clean.parquet",
+  "mode": "v0.1",
+  "s0_validate": {
+   "rows": 89136,
+   "gates": "pass"
+  },
+  "s2_engineer": {
+   "families": {
+    "web_injection": 26977,
+    "benign": 22727,
+    "bruteforce_password": 14516,
+    "ddos": 11338,
+    "dos": 6132,
+    "recon": 4272,
+    "backdoor_malware_ransomware": 2140,
+    "spoofing_mitm": 1034
+   }
+  },
+  "s3_groups": {
+   "timing": 1,
+   "volume": 7,
+   "flags_state": 1,
+   "protocol": 13
+  },
+  "s7_split": {
+   "train": 62215,
+   "val": 8889,
+   "calibration": 8889,
+   "test": 8889,
+   "zeroday": 254
+  },
+  "s7_zero_day_labels": [
+   "ransomware"
+  ],
+  "s7b_postprune_dupes_dropped": {
+   "train": 0,
+   "val": 0,
+   "calibration": 0,
+   "test": 0,
+   "zeroday": 0
+  },
+  "s6_quantum": {
+   "corr_pruned": 0,
+   "n_features": 22,
+   "budgets": {
+    "4": 4,
+    "8": 8,
+    "12": 12,
+    "16": 16
+   }
+  },
+  "s5_balance": {
+   "train": 62215,
+   "train_balanced": 62215,
+   "capped_classes": []
+  },
+  "s8_gates": "pass (disjoint splits, zero-day isolated, rare classes kept, 0 NaN)",
+  "per_class_split": {
+   "train": {
+    "normal": 15908,
+    "injection": 13118,
+    "password": 10160,
+    "ddos": 7936,
+    "xss": 5765,
+    "dos": 4293,
+    "scanning": 2991,
+    "backdoor": 1319,
+    "mitm": 725
+   },
+   "val": {
+    "normal": 2273,
+    "injection": 1874,
+    "password": 1452,
+    "ddos": 1134,
+    "xss": 824,
+    "dos": 613,
+    "scanning": 427,
+    "backdoor": 189,
+    "mitm": 103
+   },
+   "calibration": {
+    "normal": 2273,
+    "injection": 1874,
+    "password": 1452,
+    "ddos": 1134,
+    "xss": 824,
+    "dos": 613,
+    "scanning": 427,
+    "backdoor": 189,
+    "mitm": 103
+   },
+   "test": {
+    "normal": 2273,
+    "injection": 1874,
+    "password": 1452,
+    "ddos": 1134,
+    "xss": 824,
+    "dos": 613,
+    "scanning": 427,
+    "backdoor": 189,
+    "mitm": 103
+   },
+   "zeroday": {
+    "ransomware": 254
+   }
+  }
+ },
+ "BoT-IoT": {
+  "dataset": "BoT-IoT",
+  "seed": 42,
+  "checkpoint": "datasets/BoT-IoT/processed/BoT-IoT_clean.parquet",
+  "mode": "v0.1",
+  "s0_validate": {
+   "rows": 186691,
+   "gates": "pass"
+  },
+  "s2_engineer": {
+   "families": {
+    "ddos": 94161,
+    "dos": 81397,
+    "benign": 6909,
+    "recon": 3541,
+    "theft_exfiltration": 683
+   }
+  },
+  "s3_groups": {
+   "timing": 1,
+   "rate": 3,
+   "volume": 6,
+   "flags_state": 2,
+   "protocol": 1,
+   "other": 5
+  },
+  "s7_split": {
+   "train": 130205,
+   "val": 18601,
+   "calibration": 18601,
+   "test": 18601,
+   "zeroday": 683
+  },
+  "s7_zero_day_labels": [
+   "Theft"
+  ],
+  "s7b_postprune_dupes_dropped": {
+   "train": 0,
+   "val": 0,
+   "calibration": 0,
+   "test": 0,
+   "zeroday": 0
+  },
+  "s6_quantum": {
+   "corr_pruned": 2,
+   "n_features": 16,
+   "budgets": {
+    "4": 4,
+    "8": 8,
+    "12": 12,
+    "16": 16
+   }
+  },
+  "s5_balance": {
+   "train": 130205,
+   "train_balanced": 47315,
+   "capped_classes": [
+    "DDoS",
+    "DoS"
+   ]
+  },
+  "s8_gates": "pass (disjoint splits, zero-day isolated, rare classes kept, 0 NaN)",
+  "per_class_split": {
+   "train": {
+    "DDoS": 65913,
+    "DoS": 56977,
+    "Normal": 4836,
+    "Reconnaissance": 2479
+   },
+   "val": {
+    "DDoS": 9416,
+    "DoS": 8140,
+    "Normal": 691,
+    "Reconnaissance": 354
+   },
+   "calibration": {
+    "DDoS": 9416,
+    "DoS": 8140,
+    "Normal": 691,
+    "Reconnaissance": 354
+   },
+   "test": {
+    "DDoS": 9416,
+    "DoS": 8140,
+    "Normal": 691,
+    "Reconnaissance": 354
+   },
+   "zeroday": {
+    "Theft": 683
+   }
+  }
+ },
+ "Edge-IIoTset": {
+  "dataset": "Edge-IIoTset",
+  "seed": 42,
+  "checkpoint": "datasets/Edge-IIoTset/processed/Edge-IIoTset_clean.parquet",
+  "mode": "v0.1",
+  "s0_validate": {
+   "rows": 152210,
+   "gates": "pass"
+  },
+  "s2_engineer": {
+   "families": {
+    "ddos": 48335,
+    "web_injection": 30011,
+    "benign": 24148,
+    "recon": 19834,
+    "backdoor_malware_ransomware": 19551,
+    "bruteforce_password": 9973,
+    "spoofing_mitm": 358
+   }
+  },
+  "s3_groups": {
+   "timing": 2,
+   "flags_state": 5,
+   "protocol": 35
+  },
+  "s7_split": {
+   "train": 99158,
+   "val": 14168,
+   "calibration": 14168,
+   "test": 14168,
+   "zeroday": 10548
+  },
+  "s7_zero_day_labels": [
+   "Fingerprinting",
+   "Ransomware"
+  ],
+  "s7b_postprune_dupes_dropped": {
+   "train": 9187,
+   "val": 1315,
+   "calibration": 1311,
+   "test": 1296,
+   "zeroday": 0
+  },
+  "s6_quantum": {
+   "corr_pruned": 4,
+   "n_features": 38,
+   "budgets": {
+    "4": 4,
+    "8": 8,
+    "12": 12,
+    "16": 16
+   }
+  },
+  "s5_balance": {
+   "train": 89971,
+   "train_balanced": 89971,
+   "capped_classes": []
+  },
+  "s8_gates": "pass (disjoint splits, zero-day isolated, rare classes kept, 0 NaN)",
+  "per_class_split": {
+   "train": {
+    "Normal": 16903,
+    "DDoS_ICMP": 9165,
+    "DDoS_HTTP": 7345,
+    "SQL_injection": 7193,
+    "DDoS_TCP": 7172,
+    "Uploading": 7155,
+    "Vulnerability_scanner": 7040,
+    "Password": 6982,
+    "Backdoor": 6901,
+    "XSS": 6660,
+    "Port_Scanning": 6244,
+    "DDoS_UDP": 961,
+    "MITM": 250
+   },
+   "val": {
+    "Normal": 2415,
+    "DDoS_ICMP": 1310,
+    "DDoS_HTTP": 1050,
+    "SQL_injection": 1027,
+    "DDoS_TCP": 1025,
+    "Uploading": 1022,
+    "Vulnerability_scanner": 1006,
+    "Password": 997,
+    "Backdoor": 986,
+    "XSS": 952,
+    "Port_Scanning": 892,
+    "DDoS_UDP": 135,
+    "MITM": 36
+   },
+   "calibration": {
+    "Normal": 2415,
+    "DDoS_ICMP": 1310,
+    "DDoS_HTTP": 1050,
+    "SQL_injection": 1027,
+    "DDoS_TCP": 1025,
+    "Uploading": 1022,
+    "Vulnerability_scanner": 1006,
+    "Password": 997,
+    "Backdoor": 986,
+    "XSS": 952,
+    "Port_Scanning": 892,
+    "DDoS_UDP": 139,
+    "MITM": 36
+   },
+   "test": {
+    "Normal": 2415,
+    "DDoS_ICMP": 1310,
+    "DDoS_HTTP": 1050,
+    "SQL_injection": 1027,
+    "DDoS_TCP": 1025,
+    "Uploading": 1022,
+    "Vulnerability_scanner": 1006,
+    "Password": 997,
+    "Backdoor": 986,
+    "XSS": 952,
+    "Port_Scanning": 892,
+    "DDoS_UDP": 154,
+    "MITM": 36
+   },
+   "zeroday": {
+    "Ransomware": 9692,
+    "Fingerprinting": 856
+   }
+  }
+ },
+ "UNSW-NB15": {
+  "dataset": "UNSW-NB15",
+  "seed": 42,
+  "checkpoint": "datasets/UNSW-NB15/processed/UNSW-NB15_clean.parquet",
+  "mode": "v0.1",
+  "s0_validate": {
+   "rows": 122657,
+   "gates": "pass"
+  },
+  "s2_engineer": {
+   "families": {
+    "benign": 66985,
+    "exploits": 21016,
+    "fuzzers": 15170,
+    "generic": 6840,
+    "recon": 6743,
+    "dos": 3446,
+    "shellcode": 1449,
+    "analysis": 477,
+    "backdoor_malware_ransomware": 365,
+    "worms": 166
+   }
+  },
+  "s3_groups": {
+   "timing": 3,
+   "rate": 3,
+   "volume": 6,
+   "flags_state": 2,
+   "protocol": 6,
+   "connection_ctx": 7,
+   "other": 14
+  },
+  "s7_split": {
+   "train": 84730,
+   "val": 12104,
+   "calibration": 12104,
+   "test": 12104,
+   "zeroday": 1615
+  },
+  "s7_zero_day_labels": [
+   "Shellcode",
+   "Worms"
+  ],
+  "s7b_postprune_dupes_dropped": {
+   "train": 0,
+   "val": 0,
+   "calibration": 0,
+   "test": 0,
+   "zeroday": 0
+  },
+  "s6_quantum": {
+   "corr_pruned": 3,
+   "n_features": 38,
+   "budgets": {
+    "4": 4,
+    "8": 8,
+    "12": 12,
+    "16": 16
+   }
+  },
+  "s5_balance": {
+   "train": 84730,
+   "train_balanced": 57839,
+   "capped_classes": [
+    "Normal"
+   ]
+  },
+  "s8_gates": "pass (disjoint splits, zero-day isolated, rare classes kept, 0 NaN)",
+  "per_class_split": {
+   "train": {
+    "Normal": 46891,
+    "Exploits": 14710,
+    "Fuzzers": 10619,
+    "Generic": 4788,
+    "Reconnaissance": 4721,
+    "DoS": 2411,
+    "Analysis": 333,
+    "Backdoor": 257
+   },
+   "val": {
+    "Normal": 6698,
+    "Exploits": 2102,
+    "Fuzzers": 1517,
+    "Generic": 684,
+    "Reconnaissance": 674,
+    "DoS": 345,
+    "Analysis": 48,
+    "Backdoor": 36
+   },
+   "calibration": {
+    "Normal": 6698,
+    "Exploits": 2102,
+    "Fuzzers": 1517,
+    "Generic": 684,
+    "Reconnaissance": 674,
+    "DoS": 345,
+    "Analysis": 48,
+    "Backdoor": 36
+   },
+   "test": {
+    "Normal": 6698,
+    "Exploits": 2102,
+    "Fuzzers": 1517,
+    "Generic": 684,
+    "Reconnaissance": 674,
+    "DoS": 345,
+    "Analysis": 48,
+    "Backdoor": 36
+   },
+   "zeroday": {
+    "Shellcode": 1449,
+    "Worms": 166
+   }
+  }
+ }
+}

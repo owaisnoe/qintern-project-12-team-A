@@ -1,0 +1,70 @@
+{
+  "dataset": "TON_IoT",
+  "seed": 42,
+  "raw_rows": 211043,
+  "raw_cols": 44,
+  "capped_rows": 199998,
+  "cap": 200000,
+  "rows_after_dedup": 89136,
+  "feature_dupes_removed": 110862,
+  "feature_space_dup_raw": 110825,
+  "n_features_final": 22,
+  "label_multiclass_classes": 10,
+  "label_binary_pos_frac": 0.745,
+  "dropped_structural": [
+    "dst_ip",
+    "dst_port",
+    "src_ip",
+    "src_port"
+  ],
+  "dropped_high_missing": [
+    "http_method",
+    "http_orig_mime_types",
+    "http_resp_mime_types",
+    "http_trans_depth",
+    "http_uri",
+    "http_user_agent",
+    "http_version",
+    "ssl_cipher",
+    "ssl_established",
+    "ssl_issuer",
+    "ssl_resumed",
+    "ssl_subject",
+    "ssl_version",
+    "weird_addl",
+    "weird_name",
+    "weird_notice"
+  ],
+  "dropped_high_cardinality": [],
+  "dropped_perfect_corr": [],
+  "encoded_categoricals": {
+    "proto": 3,
+    "service": 9,
+    "conn_state": 13,
+    "dns_query": 718,
+    "dns_AA": 3,
+    "dns_RD": 3,
+    "dns_RA": 3,
+    "dns_rejected": 3
+  },
+  "log1p_scaled": [
+    "dns_qclass",
+    "dns_qtype",
+    "dns_rcode",
+    "dst_bytes",
+    "dst_ip_bytes",
+    "dst_pkts",
+    "duration",
+    "http_request_body_len",
+    "http_response_body_len",
+    "http_status_code",
+    "missed_bytes",
+    "src_bytes",
+    "src_ip_bytes",
+    "src_pkts"
+  ],
+  "outputs": {
+    "parquet": "datasets/TON_IoT/processed/TON_IoT_clean.parquet",
+    "sample_csv": "datasets/TON_IoT/processed/TON_IoT_sample.csv"
+  }
+}
