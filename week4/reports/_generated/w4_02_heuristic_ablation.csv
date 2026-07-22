@@ -1,0 +1,4 @@
+dataset,conformal_fzr,heuristic_fzr,fixed_fzr,insample_source
+CICIoT2023,0.048615,0.048721,0.001271,calibration_proxy(dummy)
+BoT-IoT,0.053036,0.053144,0.000861,calibration_proxy(dummy)
+UNSW-NB15,0.046302,0.0465,0.007535,calibration_proxy(dummy)
