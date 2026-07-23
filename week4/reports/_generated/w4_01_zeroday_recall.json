@@ -1,0 +1,133 @@
+{
+ "schema_version": "1.0",
+ "day": 19,
+ "alpha": 0.05,
+ "seed": 42,
+ "primary_alpha_note": "same \u03b1 applied to quantum + classical (theory open-item 4)",
+ "rows": [
+  {
+   "dataset": "CICIoT2023",
+   "system": "quantum_cqzdr",
+   "source_kind": "dummy",
+   "n_cal": 18883,
+   "q": 0.300551,
+   "coverage": 0.9514,
+   "false_zeroday_rate": 0.0486,
+   "zeroday_recall": 0.9998,
+   "n_zeroday": 10984
+  },
+  {
+   "dataset": "CICIoT2023",
+   "system": "classical_isolation_forest",
+   "source_kind": "real",
+   "n_cal": 18883,
+   "q": 0.513429,
+   "coverage": 0.9517,
+   "false_zeroday_rate": 0.0483,
+   "zeroday_recall": 0.9978,
+   "n_zeroday": 10984
+  },
+  {
+   "dataset": "CICIoT2023",
+   "system": "classical_autoencoder",
+   "source_kind": "real",
+   "n_cal": 18883,
+   "q": 0.534323,
+   "coverage": 0.9525,
+   "false_zeroday_rate": 0.0475,
+   "zeroday_recall": 0.4994,
+   "n_zeroday": 10984
+  },
+  {
+   "dataset": "BoT-IoT",
+   "system": "quantum_cqzdr",
+   "source_kind": "dummy",
+   "n_cal": 18591,
+   "q": 0.262934,
+   "coverage": 0.947,
+   "false_zeroday_rate": 0.053,
+   "zeroday_recall": 0.0952,
+   "n_zeroday": 683
+  },
+  {
+   "dataset": "BoT-IoT",
+   "system": "classical_isolation_forest",
+   "source_kind": "real",
+   "n_cal": 18591,
+   "q": 0.49003,
+   "coverage": 0.9542,
+   "false_zeroday_rate": 0.0458,
+   "zeroday_recall": 0.7233,
+   "n_zeroday": 683
+  },
+  {
+   "dataset": "BoT-IoT",
+   "system": "classical_ocsvm",
+   "source_kind": "real",
+   "n_cal": 18591,
+   "q": -0.774626,
+   "coverage": 0.9522,
+   "false_zeroday_rate": 0.0478,
+   "zeroday_recall": 0.7218,
+   "n_zeroday": 683
+  },
+  {
+   "dataset": "BoT-IoT",
+   "system": "classical_autoencoder",
+   "source_kind": "real",
+   "n_cal": 18591,
+   "q": 0.099035,
+   "coverage": 0.9499,
+   "false_zeroday_rate": 0.0501,
+   "zeroday_recall": 0.5417,
+   "n_zeroday": 683
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "system": "quantum_cqzdr",
+   "source_kind": "dummy",
+   "n_cal": 10112,
+   "q": 0.38338,
+   "coverage": 0.9537,
+   "false_zeroday_rate": 0.0463,
+   "zeroday_recall": 0.3857,
+   "n_zeroday": 1216
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "system": "classical_isolation_forest",
+   "source_kind": "real",
+   "n_cal": 10112,
+   "q": 0.558992,
+   "coverage": 0.9495,
+   "false_zeroday_rate": 0.0505,
+   "zeroday_recall": 0.0,
+   "n_zeroday": 1216
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "system": "classical_ocsvm",
+   "source_kind": "real",
+   "n_cal": 10112,
+   "q": 5.783827,
+   "coverage": 0.9487,
+   "false_zeroday_rate": 0.0513,
+   "zeroday_recall": 0.0033,
+   "n_zeroday": 1216
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "system": "classical_autoencoder",
+   "source_kind": "real",
+   "n_cal": 10112,
+   "q": 1.710545,
+   "coverage": 0.9481,
+   "false_zeroday_rate": 0.0519,
+   "zeroday_recall": 0.2656,
+   "n_zeroday": 1216
+  }
+ ],
+ "notes": [
+  "CICIoT2023: classical head 'ocsvm' unavailable (Day-12 skipped) \u2014 omitted."
+ ]
+}
