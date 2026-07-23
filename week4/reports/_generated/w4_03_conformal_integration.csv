@@ -1,0 +1,2 @@
+dataset,applied_q,score_contract_max_abs_err,coverage,false_zeroday_rate,zeroday_recall,tp,fp,coverage_reproduces_frozen
+CICIoT2023,0.300551,0.0,0.951385,0.048615,0.999818,10982,918,True

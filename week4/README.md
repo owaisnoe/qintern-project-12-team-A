@@ -19,8 +19,9 @@ qubit budget 8; seed 42.
 | **18** (week3) | Coverage table v1, all datasets — DONE | [`../week3/reports/w3_04_coverage_table.md`](../week3/reports/w3_04_coverage_table.md) | [`../week3/scripts/coverage_table.py`](../week3/scripts/coverage_table.py) |
 | **19** | **Zero-day recall + quantum-vs-classical novelty** — DONE | [`reports/w4_01_zeroday_recall.md`](reports/w4_01_zeroday_recall.md) | [`scripts/zeroday_recall.py`](scripts/zeroday_recall.py) |
 | **20** | **Heuristic-threshold baseline + conformal ablation** — DONE | [`reports/w4_02_heuristic_ablation.md`](reports/w4_02_heuristic_ablation.md) | [`scripts/heuristic_ablation.py`](scripts/heuristic_ablation.py) |
-| **21** | Freeze the calibration + statistics interface for integration | _pending_ | packages Day 15/16/17/19/20 outputs |
-| **22–23** | Connect conformal module to Team B inference; live coverage; exchangeability audit | _pending_ | — |
+| **21** | **Freeze the calibration + statistics interface for integration** — DONE | [`INTEGRATION/INTEGRATION_PACKAGE.md`](INTEGRATION/INTEGRATION_PACKAGE.md) | [`scripts/freeze_integration.py`](scripts/freeze_integration.py) → `INTEGRATION/` (frozen `q` + contract + manifest) |
+| **22** | **Connect conformal module to Team B inference; first end-to-end decisions** — DONE | [`reports/w4_03_conformal_integration.md`](reports/w4_03_conformal_integration.md) | [`scripts/conformal_integration.py`](scripts/conformal_integration.py) → `reports/_generated/w4_03_*` |
+| **23** | Live coverage on the integrated pipeline; exchangeability audit | _pending_ | reuses `conformal_integration.py` + Day-16 harness |
 | **24** | RQ2 results (all datasets): recall + achieved α; Table B skeleton | _pending_ | builds on Day-18 table |
 | **25** | Full significance testing QS-Net vs baselines; RQ5 honesty notes | _pending_ | reuses [`../week3/scripts/stats_protocol.py`](../week3/scripts/stats_protocol.py) |
 
@@ -37,7 +38,10 @@ source ../.venv/bin/activate                                                   #
 python week3/scripts/coverage_table.py --alpha 0.05 --sweep-csv week3/reports/_generated/w3_02_alpha_sweep.csv
 python week4/scripts/zeroday_recall.py     --datasets CICIoT2023 BoT-IoT UNSW-NB15 --alpha 0.05 --heads isolation_forest ocsvm autoencoder
 python week4/scripts/heuristic_ablation.py --datasets CICIoT2023 BoT-IoT UNSW-NB15 --alpha 0.05 --sweep 0.01 0.20 0.01 --small-n-demo 30 50 100 200
-python -m pytest week3/tests week4/tests -q                                     # (full suite: week2+week3+week4)
+python week4/scripts/freeze_integration.py                                      # Day 21 -> INTEGRATION/ (frozen q + contract + manifest)
+python week4/scripts/freeze_integration.py --verify                             # Day 21 -> re-hash, expect 0 mismatch
+python week4/scripts/conformal_integration.py --datasets CICIoT2023             # Day 22 -> first end-to-end decisions (dataset 1)
+python -m pytest week2/tests week3/tests week4/tests -q                          # full suite: 78 tests
 ```
 
 ## For Team B (QML) — integration spec

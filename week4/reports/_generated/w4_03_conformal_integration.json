@@ -1,0 +1,45 @@
+{
+ "schema_version": "1.0",
+ "day": 22,
+ "seed": 42,
+ "primary_alpha": 0.05,
+ "source_kind": "dummy",
+ "scores_root": "C:\\Users\\OwaisNoe\\Downloads\\Team A-20260719T195741Z-1-001\\Team A\\week2\\interface\\dummy_scores",
+ "assume_fidelity_squared": false,
+ "frozen_thresholds": "week4/INTEGRATION/frozen_thresholds.json",
+ "datasets": [
+  {
+   "dataset": "CICIoT2023",
+   "alpha": 0.05,
+   "source_kind": "dummy",
+   "assume_fidelity_squared": false,
+   "threshold_q_frozen": 0.300551,
+   "threshold_q_audit": 0.3005510745405626,
+   "applied_q": 0.300551,
+   "n_known_classes": 31,
+   "score_contract_max_abs_err": 0.0,
+   "score_contract_ok": true,
+   "known_test": {
+    "n": 18883,
+    "kept_known": 17965,
+    "flagged_zeroday": 918,
+    "coverage": 0.951385,
+    "false_zeroday_rate": 0.048615
+   },
+   "zeroday": {
+    "n": 10984,
+    "detected": 10982,
+    "missed": 2,
+    "recall": 0.999818
+   },
+   "confusion_known_vs_zeroday": {
+    "tn_known_kept": 17965,
+    "fp_known_flagged": 918,
+    "fn_zeroday_missed": 2,
+    "tp_zeroday_detected": 10982
+   },
+   "coverage_reproduces_frozen": true,
+   "frozen_false_zeroday_rate": 0.048615
+  }
+ ]
+}

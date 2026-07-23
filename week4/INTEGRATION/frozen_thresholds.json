@@ -1,0 +1,38 @@
+{
+ "package": "QS-Net / QuantumSentinel \u2014 Team A \u2014 Integration calibration package",
+ "version": "1.0",
+ "day": 21,
+ "seed": 42,
+ "primary_alpha": 0.05,
+ "source_kind": "dummy",
+ "scores_root": "C:\\Users\\OwaisNoe\\Downloads\\Team A-20260719T195741Z-1-001\\Team A\\week2\\interface\\dummy_scores",
+ "decision_rule": "flag x as zero-day iff s(x) > threshold_q, with s = 1 - max_c F(rho_x, rho_c)",
+ "nonconformity_def": "s = 1 - max_c F(rho_x, rho_c)  (non-squared Uhlmann fidelity F in [0,1])",
+ "q_index_formula": "k = ceil((1-alpha)*(n+1)); q = s_(k)  (Day-15 CQ-ZDR / Algorithm 2)",
+ "note": "Authoritative per-dataset thresholds for integration week. Team B's Day-22 adapter loads threshold_q and applies the decision rule; it does NOT recalibrate. Reprices on real prototypes via --source real --scores-root <dir> (identical schema).",
+ "datasets": {
+  "CICIoT2023": {
+   "alpha": 0.05,
+   "mode": "marginal",
+   "n_known_classes": 31,
+   "n_cal": 18883,
+   "k": 17940,
+   "threshold_q": 0.300551,
+   "decision_rule": "flag zero-day iff  s = 1 - max_c F(rho_x, rho_c)  >  threshold_q",
+   "known_test": {
+    "n": 18883,
+    "coverage": 0.9514,
+    "false_zeroday_rate": 0.0486
+   },
+   "zeroday_rejection_rate": 0.9998,
+   "achieved_coverage": 0.951385,
+   "false_zeroday_rate": 0.048615,
+   "exact_band": [
+    0.044326,
+    0.055923
+   ],
+   "band_p_value_upper": 0.731747,
+   "coverage_verdict": "PASS"
+  }
+ }
+}
