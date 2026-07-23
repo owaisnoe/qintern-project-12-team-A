@@ -72,8 +72,8 @@ zip -rq week1/QS-Net_TeamA_Week1_deliverables.zip \
 zip -rq week2/QS-Net_TeamA_Week2_partitions.zip \
   week2/README.md week2/reports/w2_*.md week2/*_HANDOFF.md week2/scripts/*.py week2/tests/*.py \
   week2/partitions week2/rq3 week2/baselines week2/interface week2/FROZEN \
-  -x '*/__pycache__/*' '*/_generated/*'
+  -x '*/__pycache__/*' '*/_generated/*' '*/ja/*'
 zip -rq week3/QS-Net_TeamA_Week3_conformal.zip \
   week3/README.md week3/reports/w3_*.md week3/AK_TASK15_HANDOFF.md week3/scripts/*.py week3/tests/*.py \
-  -x '*/__pycache__/*' '*/_generated/*'
+  -x '*/__pycache__/*' '*/_generated/*' '*/ja/*'
 ```
