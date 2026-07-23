@@ -1,0 +1,9 @@
+QS-Net Team A — Integration calibration/stats package
+version: 1.0
+freeze: INTEGRATION FREEZE (Week 4, Day 21)
+seed: 42
+primary_alpha: 0.05
+source: dummy
+trio: CICIoT2023
+files: 34  bytes: 26291676
+manifest: INTEGRATION/integration_manifest_v1.0.json

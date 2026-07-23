@@ -1,0 +1,222 @@
+{
+ "package": "QS-Net / QuantumSentinel \u2014 Team A \u2014 Integration calibration/stats package",
+ "version": "1.0",
+ "day": 21,
+ "seed": 42,
+ "frozen_utc": "2026-07-23T18:44:26Z",
+ "primary_alpha": 0.05,
+ "source_kind": "dummy",
+ "benchmark_trio": [
+  "CICIoT2023"
+ ],
+ "scope": "Integration hand-off surface: the pinned conformal/coverage/stats/recall code modules, the score interface Team B fills, the packaged coverage/zero-day/significance outputs, and the frozen thresholds + interface contract. frozen_utc is metadata, NOT part of --verify.",
+ "missing_optional_outputs": [],
+ "n_files": 34,
+ "total_bytes": 26291676,
+ "files": [
+  {
+   "path": "week3/scripts/conformal_calibrate.py",
+   "sha256": "2a010b733d51121c7fe0bc183ac79ad2b4fca05181e0d0beeca239b1ee738877",
+   "bytes": 13951,
+   "rows": null
+  },
+  {
+   "path": "week3/scripts/coverage_harness.py",
+   "sha256": "72d9e19d8496ec2494d4a75ce9be26b2ee2f12d9a483f037dbddd6ca6b7fa18d",
+   "bytes": 14013,
+   "rows": null
+  },
+  {
+   "path": "week3/scripts/stats_protocol.py",
+   "sha256": "ed601368afc425391e1b2ef99c4c13be581cfa79f538650d076ad4b630795e5d",
+   "bytes": 11969,
+   "rows": null
+  },
+  {
+   "path": "week4/scripts/zeroday_recall.py",
+   "sha256": "fc8ae3740f10139f00a1cc4cf4588fd6d6ec0e094b5db075c32b3608d6c234b9",
+   "bytes": 9401,
+   "rows": null
+  },
+  {
+   "path": "week4/INTEGRATION/frozen_thresholds.json",
+   "sha256": "5e587e8dda25d64fdd7875e6a1fc343a3624021e32449e10fad08b33cd3270fe",
+   "bytes": 1468,
+   "rows": null
+  },
+  {
+   "path": "week4/INTEGRATION/interface_contract.json",
+   "sha256": "b5ab6b55ba5863e31713c92abd7711207dd3df7e2c69c349b67967f9aeea8674",
+   "bytes": 1853,
+   "rows": null
+  },
+  {
+   "path": "week3/reports/_generated/w3_02_coverage_verification.json",
+   "sha256": "35436a488d38351ba0791e3f20483563d9f9be8d4cf5f8cec7c4b1d06b871fcc",
+   "bytes": 2318,
+   "rows": null
+  },
+  {
+   "path": "week3/reports/_generated/w3_02_alpha_sweep.csv",
+   "sha256": "25a526cf46b5bd2a92d5844f97d8150e41aa049561302f8ae701d13dc2afbb1f",
+   "bytes": 8991,
+   "rows": 60
+  },
+  {
+   "path": "week3/reports/_generated/w3_04_coverage_table.json",
+   "sha256": "ea4439aae7e29e2118984401c8e373f75f4d8416381372b31372dd1c95a5eda8",
+   "bytes": 1262,
+   "rows": null
+  },
+  {
+   "path": "week4/reports/_generated/w4_01_zeroday_recall.json",
+   "sha256": "b0eaf1f8671e49682cb957f18e7a6f28981c046d901c8c79c94c9ec4f76ffd5c",
+   "bytes": 3048,
+   "rows": null
+  },
+  {
+   "path": "week4/reports/_generated/w4_01_zeroday_recall.csv",
+   "sha256": "0e1bc05bc097c2f74f489a7383bb353a8f8810c5a0902521d60329ed5bc88573",
+   "bytes": 928,
+   "rows": 11
+  },
+  {
+   "path": "week3/reports/_generated/w3_03_significance_dryrun.json",
+   "sha256": "bbc8d94d10d6ab37e43af08bdfcad49217bbed2403a26d622541a6b889a31d91",
+   "bytes": 5622,
+   "rows": null
+  },
+  {
+   "path": "week3/reports/_generated/w3_03_significance_dryrun.csv",
+   "sha256": "3dd34dc19aaedc9da8aa3471028bf5dcbb7d2377f8405f1b91fd398cd15680f4",
+   "bytes": 1387,
+   "rows": 9
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/calibration_scores.head.csv",
+   "sha256": "cee8fc4b7d46957b3027cd4ef268fd372c1b986b4bfc8a58c9c86f7620fee05d",
+   "bytes": 2780,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/calibration_scores.parquet",
+   "sha256": "d523512d143309dae917263d48b7bdfd8dc48f714f50665fe27f9b4f621753f2",
+   "bytes": 2157134,
+   "rows": 18591
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/prototypes_meta.json",
+   "sha256": "2d6c1d5f53019bdabdaa41b24110eb76613fbd1726d7c0f593a12d7c0ce2f532",
+   "bytes": 703,
+   "rows": null
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/test_scores.head.csv",
+   "sha256": "4413c269ce27a11c2466a97a588e2e855481717b786b3bb8c1935f80b3810019",
+   "bytes": 2716,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/test_scores.parquet",
+   "sha256": "0525144c96bb4d4a27a64ee534e01655c171c3a8997d1f22839d91f798e78c78",
+   "bytes": 2157125,
+   "rows": 18591
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/zeroday_scores.head.csv",
+   "sha256": "336919481ebfd1005ce8b5ea3bc55a73aacb034037a9a64bb625b1862fde8465",
+   "bytes": 2562,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/BoT-IoT/zeroday_scores.parquet",
+   "sha256": "15089239ed8647d8adfb8d09caf83a26f5c4bc36aa29948a158113089c7e1ddd",
+   "bytes": 72260,
+   "rows": 683
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/calibration_scores.head.csv",
+   "sha256": "5d3a8249b4c5a162974cfec675bc9f137a4567254f93a849f0713552ebae6745",
+   "bytes": 8874,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/calibration_scores.parquet",
+   "sha256": "33d9aaedeb7d325a361edf9eb1afa2661d992b94781326111cc8694e1e15a6c3",
+   "bytes": 7262244,
+   "rows": 18883
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/prototypes_meta.json",
+   "sha256": "ed4413c74eac31505bdd5d79b486b9d4e09fa15507d96776d6c7519d7092d9df",
+   "bytes": 2126,
+   "rows": null
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/test_scores.head.csv",
+   "sha256": "836632b33ba77ee42a321a4c681ef86545844fe126b6c6ad73e88b1cfaf54bd2",
+   "bytes": 8818,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/test_scores.parquet",
+   "sha256": "aa7e4d9aca41f1f9ce645ca97b5136ea90215ffa8d25c3ea086c71e66b9792a1",
+   "bytes": 7262176,
+   "rows": 18883
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/zeroday_scores.head.csv",
+   "sha256": "2578e133d9c129ab0d7bce478bf6239366d6ac752eef496ed432885ebfb82882",
+   "bytes": 8759,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/CICIoT2023/zeroday_scores.parquet",
+   "sha256": "e284d8af411ab74a0744e6e6b7f58f35059fa7192e734255af44ead7970b31b5",
+   "bytes": 3959764,
+   "rows": 10984
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/calibration_scores.head.csv",
+   "sha256": "3ad9f3261845c6533b4cac79c9e721b65f8ac2b163ad3bff7b07090eba7cceef",
+   "bytes": 3717,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/calibration_scores.parquet",
+   "sha256": "78bb81b44620121a3a29bc58ce72b1c46a99e980b893cdbc502afbca424451f2",
+   "bytes": 1565024,
+   "rows": 10112
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/prototypes_meta.json",
+   "sha256": "c5b8b86f39531f0415dce184e7ec3f42723206aa05612e9c79595758f0b1b673",
+   "bytes": 856,
+   "rows": null
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/test_scores.head.csv",
+   "sha256": "cd65a1fa43731bdc62c8716c37b6a690ab1b8fedc43f1387c53893be5b9cfedc",
+   "bytes": 3666,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/test_scores.parquet",
+   "sha256": "105538e05417b046af4a0de12e786a34a5780f96951b122717d1243c146dcf92",
+   "bytes": 1561072,
+   "rows": 10086
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/zeroday_scores.head.csv",
+   "sha256": "fc10c2dae43bd67b191d6e41c69db12f4cfbf1899a77c2062798741b682466f4",
+   "bytes": 3393,
+   "rows": 10
+  },
+  {
+   "path": "week2/interface/dummy_scores/UNSW-NB15/zeroday_scores.parquet",
+   "sha256": "560c492256faa74ef5eb75a022eb20fa87c87c40fa0b9e5452ba6d9945fba7a8",
+   "bytes": 169696,
+   "rows": 1216
+  }
+ ]
+}
