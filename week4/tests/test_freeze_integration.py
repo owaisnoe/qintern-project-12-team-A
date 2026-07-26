@@ -28,23 +28,41 @@ def test_frozen_threshold_equals_day15_calibration():
     assert t["coverage_verdict"] == "PASS"
 
 
+def _sandbox(tmp_path, monkeypatch):
+    """Redirect freeze() writes into tmp_path.
+
+    freeze() writes into INTEG and MANIFEST, so an un-sandboxed test rewrites the real
+    week4/INTEGRATION/ package as a side effect of running the suite — which silently re-cut the
+    frozen thresholds to whichever --datasets the last test happened to pass, breaking Day 24
+    (it needs all three). Sandboxing matches what the other tests in this file already do.
+    The freeze and the verify are still real: _resolve_files pins the repo-relative paths either
+    way, so verify() re-hashes the actual files against the manifest written here.
+    """
+    monkeypatch.setattr(fi, "INTEG", tmp_path)
+    monkeypatch.setattr(fi, "MANIFEST", tmp_path / f"integration_manifest_v{fi.VERSION}.json")
+
+
 @needs_iface
-def test_freeze_writes_package_and_verifies():
+def test_freeze_writes_package_and_verifies(tmp_path, monkeypatch):
     """A real freeze (deterministic, idempotent) must round-trip through --verify with 0 mismatch."""
+    _sandbox(tmp_path, monkeypatch)
     m = fi.freeze(["CICIoT2023", "BoT-IoT", "UNSW-NB15"], 0.05, str(IFACE), "dummy")
     for name in ("frozen_thresholds.json", "interface_contract.json", "INTEGRATION_PACKAGE.md", "VERSION"):
         assert (fi.INTEG / name).exists()
     assert m["n_files"] == len(m["files"]) and m["n_files"] > 0
+    assert set(json.loads((fi.INTEG / "frozen_thresholds.json").read_text())["datasets"]) == {
+        "CICIoT2023", "BoT-IoT", "UNSW-NB15"}
     assert fi.verify() == 0                                        # 0 mismatch on an untouched freeze
 
 
 @needs_iface
 def test_verify_detects_tamper(tmp_path, monkeypatch):
     """Corrupt a stored hash in a throwaway manifest copy; verify() must report CHANGED (no real file touched)."""
-    fi.freeze(["CICIoT2023"], 0.05, str(IFACE), "dummy")           # ensure a real manifest exists
+    _sandbox(tmp_path, monkeypatch)
+    fi.freeze(["CICIoT2023"], 0.05, str(IFACE), "dummy")           # ensure a manifest exists
     manifest = json.loads(fi.MANIFEST.read_text(encoding="utf-8"))
     manifest["files"][0]["sha256"] = "0" * 64                      # corrupt one pin
-    tampered = tmp_path / "integration_manifest_v1.0.json"
+    tampered = tmp_path / "tampered_manifest.json"
     tampered.write_text(json.dumps(manifest), encoding="utf-8")
     monkeypatch.setattr(fi, "MANIFEST", tampered)
     assert fi.verify() == 1                                        # CHANGED detected
