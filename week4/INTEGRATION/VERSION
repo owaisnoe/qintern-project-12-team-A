@@ -5,5 +5,5 @@ seed: 42
 primary_alpha: 0.05
 source: dummy
 trio: CICIoT2023
-files: 34  bytes: 26291676
+files: 34  bytes: 26290752
 manifest: INTEGRATION/integration_manifest_v1.0.json

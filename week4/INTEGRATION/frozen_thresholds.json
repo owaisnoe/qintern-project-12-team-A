@@ -5,7 +5,7 @@
  "seed": 42,
  "primary_alpha": 0.05,
  "source_kind": "dummy",
- "scores_root": "C:\\Users\\OwaisNoe\\Downloads\\Team A-20260719T195741Z-1-001\\Team A\\week2\\interface\\dummy_scores",
+ "scores_root": "/Users/jkw/Documents/uni/axion/qintern-project-12-team-A/week2/interface/dummy_scores",
  "decision_rule": "flag x as zero-day iff s(x) > threshold_q, with s = 1 - max_c F(rho_x, rho_c)",
  "nonconformity_def": "s = 1 - max_c F(rho_x, rho_c)  (non-squared Uhlmann fidelity F in [0,1])",
  "q_index_formula": "k = ceil((1-alpha)*(n+1)); q = s_(k)  (Day-15 CQ-ZDR / Algorithm 2)",

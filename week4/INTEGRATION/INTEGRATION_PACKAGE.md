@@ -1,6 +1,6 @@
 # INTEGRATION — QS-Net Team A · calibration/stats package · **v1.0**
 
-**INTEGRATION FREEZE (Day 21).** Seed 42 · primary α = 0.05 · source `dummy` · trio CICIoT2023 · 34 files · 26.3 MB · frozen 2026-07-23T18:44:26Z.
+**INTEGRATION FREEZE (Day 21).** Seed 42 · primary α = 0.05 · source `dummy` · trio CICIoT2023 · 34 files · 26.3 MB · frozen 2026-07-26T10:29:34Z.
 
 Frozen hand-off surface for integration week (Days 22–25): the calibration rule, the score schema, the primary α, and the per-dataset thresholds are pinned so a decision on Day 25 uses the same `q` as Day 22. Every file is SHA-256-pinned in [`integration_manifest_v1.0.json`](integration_manifest_v1.0.json). Verify:
 

@@ -21,7 +21,7 @@ qubit budget 8; seed 42.
 | **20** | **Heuristic-threshold baseline + conformal ablation** — DONE | [`reports/w4_02_heuristic_ablation.md`](reports/w4_02_heuristic_ablation.md) | [`scripts/heuristic_ablation.py`](scripts/heuristic_ablation.py) |
 | **21** | **Freeze the calibration + statistics interface for integration** — DONE | [`INTEGRATION/INTEGRATION_PACKAGE.md`](INTEGRATION/INTEGRATION_PACKAGE.md) | [`scripts/freeze_integration.py`](scripts/freeze_integration.py) → `INTEGRATION/` (frozen `q` + contract + manifest) |
 | **22** | **Connect conformal module to Team B inference; first end-to-end decisions** — DONE | [`reports/w4_03_conformal_integration.md`](reports/w4_03_conformal_integration.md) | [`scripts/conformal_integration.py`](scripts/conformal_integration.py) → `reports/_generated/w4_03_*` |
-| **23** | Live coverage on the integrated pipeline; exchangeability audit | _pending_ | reuses `conformal_integration.py` + Day-16 harness |
+| **23** | **Live coverage result + exchangeability audit** — DONE | [`reports/w4_04_live_coverage.md`](reports/w4_04_live_coverage.md) | [`scripts/live_coverage.py`](scripts/live_coverage.py) → `reports/_generated/w4_04_*` (drives the Day-22 adapter; does not recalibrate) |
 | **24** | RQ2 results (all datasets): recall + achieved α; Table B skeleton | _pending_ | builds on Day-18 table |
 | **25** | Full significance testing QS-Net vs baselines; RQ5 honesty notes | _pending_ | reuses [`../week3/scripts/stats_protocol.py`](../week3/scripts/stats_protocol.py) |
 
@@ -30,6 +30,16 @@ at the same α, but **zero-day recall differs** — the paper's separation (cove
 bar (classical IF/OC-SVM ≈ 0 recall on Shellcode+Worms). The no-`+1` heuristic is anti-conservative (mean FZR
 ≈ 0.096 at n=30 vs conformal ≈ 0.032); a fixed cutoff is α-independent and varies per dataset — conformal
 holds the exact band.
+
+**Day-23 headline:** run live through the Day-22 adapter at the **frozen** q, dataset 1 achieves FZR
+0.0486 — ≤ α and inside the exact 99% band (p = 0.73) — with |Δq| = 7e-8 (pure 6-dp rounding of the
+published threshold) and the per-row decisions CSV byte-consistent with the in-process run. The
+exchangeability assumption survives an 18-cell Holm-corrected audit (6 tests × 3 datasets — BoT/UNSW are
+audited pre-Day-24 even though only dataset 1 is frozen) with **zero violations**, and nine
+injected-violation drills confirm the audit has power: calibration trimming and test-score shift roughly
+double the FZR and are caught; a class-mix skew is caught by χ² (p ≈ 1e-209) *without* moving the pooled
+rate — exactly the failure a coverage-only check cannot see. The `class_mix_chi2 = 0` rows are a dummy
+artifact (the Day-14 generator mirrors class counts calibration→test), flagged in the report.
 
 ## Reproduce
 
@@ -41,7 +51,8 @@ python week4/scripts/heuristic_ablation.py --datasets CICIoT2023 BoT-IoT UNSW-NB
 python week4/scripts/freeze_integration.py                                      # Day 21 -> INTEGRATION/ (frozen q + contract + manifest)
 python week4/scripts/freeze_integration.py --verify                             # Day 21 -> re-hash, expect 0 mismatch
 python week4/scripts/conformal_integration.py --datasets CICIoT2023             # Day 22 -> first end-to-end decisions (dataset 1)
-python -m pytest week2/tests week3/tests week4/tests -q                          # full suite: 78 tests
+python week4/scripts/live_coverage.py --alpha 0.05 --drills                     # Day 23 -> live coverage + exchangeability audit
+python -m pytest week2/tests week3/tests week4/tests -q                          # full suite: 91 tests
 ```
 
 ## For Team B (QML) — integration spec

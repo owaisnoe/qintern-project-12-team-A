@@ -3,7 +3,7 @@
  "version": "1.0",
  "day": 21,
  "seed": 42,
- "frozen_utc": "2026-07-23T18:44:26Z",
+ "frozen_utc": "2026-07-26T10:29:34Z",
  "primary_alpha": 0.05,
  "source_kind": "dummy",
  "benchmark_trio": [
@@ -12,7 +12,7 @@
  "scope": "Integration hand-off surface: the pinned conformal/coverage/stats/recall code modules, the score interface Team B fills, the packaged coverage/zero-day/significance outputs, and the frozen thresholds + interface contract. frozen_utc is metadata, NOT part of --verify.",
  "missing_optional_outputs": [],
  "n_files": 34,
- "total_bytes": 26291676,
+ "total_bytes": 26290752,
  "files": [
   {
    "path": "week3/scripts/conformal_calibrate.py",
@@ -34,62 +34,62 @@
   },
   {
    "path": "week4/scripts/zeroday_recall.py",
-   "sha256": "fc8ae3740f10139f00a1cc4cf4588fd6d6ec0e094b5db075c32b3608d6c234b9",
-   "bytes": 9401,
+   "sha256": "fae2b42a4a0d242681a25e8e8d76df381620aad94bd4fb4ba76553e535156ade",
+   "bytes": 9229,
    "rows": null
   },
   {
    "path": "week4/INTEGRATION/frozen_thresholds.json",
-   "sha256": "5e587e8dda25d64fdd7875e6a1fc343a3624021e32449e10fad08b33cd3270fe",
-   "bytes": 1468,
+   "sha256": "0a5940d551cc850a13d00cf723049a55b97775806889a9f40ea39a67c2f287d0",
+   "bytes": 1415,
    "rows": null
   },
   {
    "path": "week4/INTEGRATION/interface_contract.json",
-   "sha256": "b5ab6b55ba5863e31713c92abd7711207dd3df7e2c69c349b67967f9aeea8674",
-   "bytes": 1853,
+   "sha256": "910fbf7361725e3d2201b52033fcd039dcb444c69a278f7391fbf525f8aae145",
+   "bytes": 1785,
    "rows": null
   },
   {
    "path": "week3/reports/_generated/w3_02_coverage_verification.json",
-   "sha256": "35436a488d38351ba0791e3f20483563d9f9be8d4cf5f8cec7c4b1d06b871fcc",
-   "bytes": 2318,
+   "sha256": "cdb2542096f36a3e3b8c5d45938890f9483316abd4602469bad1887a58443f26",
+   "bytes": 2214,
    "rows": null
   },
   {
    "path": "week3/reports/_generated/w3_02_alpha_sweep.csv",
-   "sha256": "25a526cf46b5bd2a92d5844f97d8150e41aa049561302f8ae701d13dc2afbb1f",
-   "bytes": 8991,
+   "sha256": "9e6e4725aa978653ea624214fe6d14290e4d1513cbc4fa1ab49bd4b35cd724d6",
+   "bytes": 8930,
    "rows": 60
   },
   {
    "path": "week3/reports/_generated/w3_04_coverage_table.json",
-   "sha256": "ea4439aae7e29e2118984401c8e373f75f4d8416381372b31372dd1c95a5eda8",
-   "bytes": 1262,
+   "sha256": "775b62c9f6113a6c1fa6be77f899f389c79a528fa2f8bf1b610d613fd14d43e1",
+   "bytes": 1206,
    "rows": null
   },
   {
    "path": "week4/reports/_generated/w4_01_zeroday_recall.json",
-   "sha256": "b0eaf1f8671e49682cb957f18e7a6f28981c046d901c8c79c94c9ec4f76ffd5c",
-   "bytes": 3048,
+   "sha256": "7b216107ea15556983ad064f90a862f6b9fd095a5c782bd6221dd1a9a14fa693",
+   "bytes": 2916,
    "rows": null
   },
   {
    "path": "week4/reports/_generated/w4_01_zeroday_recall.csv",
-   "sha256": "0e1bc05bc097c2f74f489a7383bb353a8f8810c5a0902521d60329ed5bc88573",
-   "bytes": 928,
+   "sha256": "2eadde1af18be5edcb43dc5dfe5760ccc071e29cf03dd05704fdbfc4db684b6d",
+   "bytes": 916,
    "rows": 11
   },
   {
    "path": "week3/reports/_generated/w3_03_significance_dryrun.json",
-   "sha256": "bbc8d94d10d6ab37e43af08bdfcad49217bbed2403a26d622541a6b889a31d91",
-   "bytes": 5622,
+   "sha256": "223ec7d64e305596f35250194737482b70e59bbfb31d5d7852da48779687a158",
+   "bytes": 5366,
    "rows": null
   },
   {
    "path": "week3/reports/_generated/w3_03_significance_dryrun.csv",
-   "sha256": "3dd34dc19aaedc9da8aa3471028bf5dcbb7d2377f8405f1b91fd398cd15680f4",
-   "bytes": 1387,
+   "sha256": "8b029a4129083cf53f48f18a1c39f41e5fa88c5fd4b2f695409f51427f635cab",
+   "bytes": 1377,
    "rows": 9
   },
   {
