@@ -6,13 +6,11 @@ This is not a Day-16 rerun, and it does not re-implement Day 22. Day 16 *derives
 
 ## 0. Contract provenance (what these numbers are attributable to)
 
-- Frozen surface: `INTEGRATION/integration_manifest_v1.0.json` v1.0 · **34 pinned files** · frozen `2026-07-26T10:29:34Z`.
+- Frozen surface: `INTEGRATION/integration_manifest_v1.0.json` v1.0 · **34 pinned files** · frozen `2026-07-26T10:55:48Z`.
 - Re-hashed live: missing **0**, changed **0** → contract **INTACT**.
-- Frozen thresholds: `week4/INTEGRATION/frozen_thresholds.json` covering **CICIoT2023**.
+- Frozen thresholds: `week4/INTEGRATION/frozen_thresholds.json` covering **CICIoT2023, BoT-IoT, UNSW-NB15**.
 
 The Day-21 manifest pins an explicit whitelist — the Day-15/16/17/19 code modules, the score interface Team B fills, the packaged coverage/recall/significance outputs, and the two frozen JSONs. Because it is a whitelist rather than a directory sweep, later work (this module, the Day-24 reports) never registers as drift: a `MISSING`/`CHANGED` line is a real break, with no `ADDED` noise to filter. Re-cut as v1.1 when Team B's real numbers land.
-
-> **Scope.** `BoT-IoT`, `UNSW-NB15` are **not in the frozen package** — Day 22 integrated dataset 1 and Day 24 extends to all three. They are audited for exchangeability below (§2) but carry no coverage verdict in §1, because there is no deployed threshold to verify. Extend with `python week4/scripts/freeze_integration.py` (its default is the full trio) and re-run this module.
 
 ## 1. Live coverage result — achieved FZR at the frozen q
 
@@ -21,14 +19,18 @@ Produced by the Day-22 adapter, whose own three gates (score contract `s = 1 −
 | Dataset | frozen q | n_cal | m_test | false flags | **achieved FZR** | ≤ α? | exact 99% band | p(E ≥ e) | verdict |
 |---|---:|---:|---:|---:|---:|:--:|---|---:|---|
 | CICIoT2023 | 0.300551 | 18,883 | 18,883 | 918 | **0.0486** | ✅ | [0.0443, 0.0559] | 0.732 | **PASS** |
+| BoT-IoT | 0.262934 | 18,591 | 18,591 | 986 | **0.0530** | ⚠ | [0.0443, 0.0559] | 0.090 | **PASS** |
+| UNSW-NB15 | 0.383380 | 10,112 | 10,086 | 467 | **0.0463** | ✅ | [0.0423, 0.0581] | 0.887 | **PASS** |
 
-**Achieved false-zero-day rate ≤ α on 1/1 datasets; inside the exact finite-sample band on 1/1.** The band is the verdict, `≤ α` is the headline: the empirical rate fluctuates around (n+1−k)/(n+1), so a bare `≤ α` assertion fails on sound systems roughly half the time (Day 16 §law). A dataset that is ≤ α but outside the band would be over-conservative — also worth eyes.
+**Achieved false-zero-day rate ≤ α on 2/3 datasets; inside the exact finite-sample band on 3/3.** The band is the verdict, `≤ α` is the headline: the empirical rate fluctuates around (n+1−k)/(n+1), so a bare `≤ α` assertion fails on sound systems roughly half the time (Day 16 §law). A dataset that is ≤ α but outside the band would be over-conservative — also worth eyes.
 
 ### Frozen q vs repriced q (threshold drift)
 
 | Dataset | frozen q | repriced q (live cal) | \|Δq\| | rounding only? | n_cal matches | FZR frozen | FZR repriced | zero-day recall |
 |---|---:|---:|---:|:--:|:--:|---:|---:|---:|
 | CICIoT2023 | 0.300551 | 0.300551 | 7.00e-08 | yes | yes | 0.0486 | 0.0486 | 0.9998 |
+| BoT-IoT | 0.262934 | 0.262934 | 1.20e-07 | yes | yes | 0.0530 | 0.0530 | 0.0952 |
+| UNSW-NB15 | 0.383380 | 0.383380 | 4.10e-07 | yes | yes | 0.0463 | 0.0463 | 0.3857 |
 
 `frozen_thresholds.json` publishes q rounded to 6 dp. That rounding is a real (small) difference between the calibration-time flag count and the deployed one — it is reported rather than hidden, and it is the only source of drift on a dummy-vs-dummy run. A |Δq| above 0.0001 on real prototypes means the interface was repriced and the frozen package must be re-cut, not patched.
 
@@ -39,6 +41,8 @@ The adapter recomputes decisions in-process; Day 24 and Team B read the per-row 
 | Dataset | decisions CSV | rows | flags on disk | flags in-process | agrees |
 |---|---|---:|---:|---:|:--:|
 | CICIoT2023 | `week4/reports/_generated/w4_03_decisions_CICIoT2023.csv` | 29,867 | 918 | 918 | ✅ |
+| BoT-IoT | `week4/reports/_generated/w4_03_decisions_BoT-IoT.csv` | 19,274 | 986 | 986 | ✅ |
+| UNSW-NB15 | `week4/reports/_generated/w4_03_decisions_UNSW-NB15.csv` | 11,302 | 467 | 467 | ✅ |
 
 ## 2. Exchangeability audit
 
@@ -112,6 +116,6 @@ Remediation is judged over 5 re-split seeds rather than one: the drill's own 3-t
 
 ## Bottom line
 
-Run live through the Day-22 adapter, the frozen threshold holds achieved false-zero-day rate ≤ α on 1/1 integrated dataset(s) (CICIoT2023), and the exchangeability assumption behind that number survives a Holm-corrected audit over 18 cells spanning 3 dataset(s) with zero violations. All quantum-side numbers ride the Day-14 **dummy** interface and are placeholders — the same command reprices them against Team B's prototypes (`--source real --scores-root <dir>`) with no code change, and that rerun is the one that goes in the paper.
+Run live through the Day-22 adapter, the frozen threshold holds achieved false-zero-day rate inside the exact finite-sample band on 3/3 integrated dataset(s) (CICIoT2023, BoT-IoT, UNSW-NB15), and the exchangeability assumption behind that number survives a Holm-corrected audit over 18 cells spanning 3 dataset(s) with zero violations. All quantum-side numbers ride the Day-14 **dummy** interface and are placeholders — the same command reprices them against Team B's prototypes (`--source real --scores-root <dir>`) with no code change, and that rerun is the one that goes in the paper.
 
 Figure: `figures/w4_04_exchangeability.png` (written) · CSV: `_generated/w4_04_live_coverage.csv`, `_generated/w4_04_exchangeability_audit.csv` · JSON: `_generated/w4_04_live_coverage.json`.

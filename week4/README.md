@@ -22,7 +22,7 @@ qubit budget 8; seed 42.
 | **21** | **Freeze the calibration + statistics interface for integration** — DONE | [`INTEGRATION/INTEGRATION_PACKAGE.md`](INTEGRATION/INTEGRATION_PACKAGE.md) | [`scripts/freeze_integration.py`](scripts/freeze_integration.py) → `INTEGRATION/` (frozen `q` + contract + manifest) |
 | **22** | **Connect conformal module to Team B inference; first end-to-end decisions** — DONE | [`reports/w4_03_conformal_integration.md`](reports/w4_03_conformal_integration.md) | [`scripts/conformal_integration.py`](scripts/conformal_integration.py) → `reports/_generated/w4_03_*` |
 | **23** | **Live coverage result + exchangeability audit** — DONE | [`reports/w4_04_live_coverage.md`](reports/w4_04_live_coverage.md) | [`scripts/live_coverage.py`](scripts/live_coverage.py) → `reports/_generated/w4_04_*` (drives the Day-22 adapter; does not recalibrate) |
-| **24** | RQ2 results (all datasets): recall + achieved α; Table B skeleton | _pending_ | builds on Day-18 table |
+| **24** | **RQ2 results (all datasets) + Table B skeleton** — DONE | [`reports/w4_05_rq2_table_b.md`](reports/w4_05_rq2_table_b.md) · Table B: [`_generated/w4_05_table_b.md`](reports/_generated/w4_05_table_b.md) + [`.tex`](reports/_generated/w4_05_table_b.tex) | [`scripts/rq2_table_b.py`](scripts/rq2_table_b.py) → `reports/_generated/w4_05_*` (assembles Days 19/21/22/23; recomputes nothing) |
 | **25** | Full significance testing QS-Net vs baselines; RQ5 honesty notes | _pending_ | reuses [`../week3/scripts/stats_protocol.py`](../week3/scripts/stats_protocol.py) |
 
 **Day-19/20 headline (dummy interface, α = 0.05):** every system (quantum + classical) holds coverage ≈ 0.95
@@ -41,6 +41,17 @@ double the FZR and are caught; a class-mix skew is caught by χ² (p ≈ 1e-209)
 rate — exactly the failure a coverage-only check cannot see. The `class_mix_chi2 = 0` rows are a dummy
 artifact (the Day-14 generator mirrors class counts calibration→test), flagged in the report.
 
+**Day-24 headline (RQ2, all datasets):** the Day-21 freeze now covers the full trio, so all three run
+end-to-end through the Day-22 adapter. The guarantee **holds on 3/3** — every achieved α lands inside
+its exact 99% band (0.0486 / 0.0530 / 0.0463; BoT-IoT reads above α but well inside the band, tail
+p = 0.09) — and **11/11 system-dataset cells** hold it, quantum and classical alike, because they share
+one α and one rule. Coverage is not what separates the systems; **recall is**, and not uniformly:
+Δ(QS-Net − best classical) = +0.002 / −0.628 / +0.120. Table B ships as
+[`_generated/w4_05_table_b.md`](reports/_generated/w4_05_table_b.md) and `.tex` (booktabs). Its
+`n_cal`, `k`, `m_test`, `n_zero-day`, **exact band** and best-classical columns are **already final** —
+the acceptance region depends only on the split geometry and α, not on the scores — so only the ‡ cells
+move when Team B lands real fidelities.
+
 ## Reproduce
 
 ```bash
@@ -51,8 +62,10 @@ python week4/scripts/heuristic_ablation.py --datasets CICIoT2023 BoT-IoT UNSW-NB
 python week4/scripts/freeze_integration.py                                      # Day 21 -> INTEGRATION/ (frozen q + contract + manifest)
 python week4/scripts/freeze_integration.py --verify                             # Day 21 -> re-hash, expect 0 mismatch
 python week4/scripts/conformal_integration.py --datasets CICIoT2023             # Day 22 -> first end-to-end decisions (dataset 1)
+python week4/scripts/conformal_integration.py --datasets CICIoT2023 BoT-IoT UNSW-NB15  # Day 24 -> all datasets
 python week4/scripts/live_coverage.py --alpha 0.05 --drills                     # Day 23 -> live coverage + exchangeability audit
-python -m pytest week2/tests week3/tests week4/tests -q                          # full suite: 91 tests
+python week4/scripts/rq2_table_b.py                                             # Day 24 -> RQ2 + Table B skeleton
+python -m pytest week2/tests week3/tests week4/tests -q                          # full suite: 99 tests
 ```
 
 ## For Team B (QML) — integration spec

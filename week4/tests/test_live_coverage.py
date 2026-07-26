@@ -193,22 +193,28 @@ def test_cli_writes_every_declared_artifact(tmp_path, monkeypatch):
     monkeypatch.setattr(lc, "GEN", tmp_path / "_generated")
     monkeypatch.setattr(lc, "REPORTS", tmp_path)
     monkeypatch.setattr(lc, "FIG", tmp_path / "figures")
-    # CICIoT2023 is frozen (verified); BoT-IoT is not (audited only, until Day 24 extends the freeze)
-    out = lc.main(["--datasets", "CICIoT2023", "BoT-IoT", "--alpha", "0.05", "--no-figure"])
+    asked = ["CICIoT2023", "BoT-IoT"]
+    out = lc.main(["--datasets", *asked, "--alpha", "0.05", "--no-figure"])
 
     assert out["day"] == 23 and out["all_finite_sample_ok"] and out["exchangeable"]
-    assert out["datasets_verified"] == ["CICIoT2023"]
-    assert out["datasets_not_frozen"] == ["BoT-IoT"]
+    # every requested dataset is accounted for: coverage-verified if the freeze covers it,
+    # audit-only if not. Which bucket a dataset lands in depends on the freeze's current scope
+    # (Day 24 extended it to the trio), so assert the partition, not a fixed membership.
+    assert out["datasets_verified"] + out["datasets_not_frozen"] == asked
+    assert not set(out["datasets_verified"]) & set(out["datasets_not_frozen"])
+    assert out["datasets_verified"], "nothing verified — is the Day-21 freeze empty?"
     assert out["scores_root"].startswith("week2/")          # repo-relative, no home directory leaked
     for f in ("_generated/w4_04_live_coverage.json", "_generated/w4_04_live_coverage.csv",
               "_generated/w4_04_exchangeability_audit.csv", "w4_04_live_coverage.md"):
         assert (tmp_path / f).exists(), f
     saved = json.loads((tmp_path / "_generated" / "w4_04_live_coverage.json").read_text())
     assert saved["frozen_contract"]["contract_ok"]
-    # audit covers both datasets even though only one is coverage-verified
-    assert {r["dataset"] for r in saved["exchangeability_audit"]} == {"CICIoT2023", "BoT-IoT"}
+    # the audit covers every requested dataset, frozen or not
+    assert {r["dataset"] for r in saved["exchangeability_audit"]} == set(asked)
     md = (tmp_path / "w4_04_live_coverage.md").read_text()
-    assert "Day 23" in md and "Exchangeability Audit" in md and "not in the frozen package" in md
+    assert "Day 23" in md and "Exchangeability Audit" in md
+    # the scope caveat appears exactly when something was audited but not verified
+    assert ("not in the frozen package" in md) == bool(out["datasets_not_frozen"])
 
 
 @needs_iface

@@ -4,7 +4,7 @@
  "seed": 42,
  "primary_alpha": 0.05,
  "source_kind": "dummy",
- "scores_root": "C:\\Users\\OwaisNoe\\Downloads\\Team A-20260719T195741Z-1-001\\Team A\\week2\\interface\\dummy_scores",
+ "scores_root": "/Users/jkw/Documents/uni/axion/qintern-project-12-team-A/week2/interface/dummy_scores",
  "assume_fidelity_squared": false,
  "frozen_thresholds": "week4/INTEGRATION/frozen_thresholds.json",
  "datasets": [
@@ -40,6 +40,72 @@
    },
    "coverage_reproduces_frozen": true,
    "frozen_false_zeroday_rate": 0.048615
+  },
+  {
+   "dataset": "BoT-IoT",
+   "alpha": 0.05,
+   "source_kind": "dummy",
+   "assume_fidelity_squared": false,
+   "threshold_q_frozen": 0.262934,
+   "threshold_q_audit": 0.26293412481893186,
+   "applied_q": 0.262934,
+   "n_known_classes": 4,
+   "score_contract_max_abs_err": 0.0,
+   "score_contract_ok": true,
+   "known_test": {
+    "n": 18591,
+    "kept_known": 17605,
+    "flagged_zeroday": 986,
+    "coverage": 0.946964,
+    "false_zeroday_rate": 0.053036
+   },
+   "zeroday": {
+    "n": 683,
+    "detected": 65,
+    "missed": 618,
+    "recall": 0.095168
+   },
+   "confusion_known_vs_zeroday": {
+    "tn_known_kept": 17605,
+    "fp_known_flagged": 986,
+    "fn_zeroday_missed": 618,
+    "tp_zeroday_detected": 65
+   },
+   "coverage_reproduces_frozen": true,
+   "frozen_false_zeroday_rate": 0.053036
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "alpha": 0.05,
+   "source_kind": "dummy",
+   "assume_fidelity_squared": false,
+   "threshold_q_frozen": 0.38338,
+   "threshold_q_audit": 0.3833795914811795,
+   "applied_q": 0.38338,
+   "n_known_classes": 8,
+   "score_contract_max_abs_err": 0.0,
+   "score_contract_ok": true,
+   "known_test": {
+    "n": 10086,
+    "kept_known": 9619,
+    "flagged_zeroday": 467,
+    "coverage": 0.953698,
+    "false_zeroday_rate": 0.046302
+   },
+   "zeroday": {
+    "n": 1216,
+    "detected": 469,
+    "missed": 747,
+    "recall": 0.385691
+   },
+   "confusion_known_vs_zeroday": {
+    "tn_known_kept": 9619,
+    "fp_known_flagged": 467,
+    "fn_zeroday_missed": 747,
+    "tp_zeroday_detected": 469
+   },
+   "coverage_reproduces_frozen": true,
+   "frozen_false_zeroday_rate": 0.046302
   }
  ]
 }

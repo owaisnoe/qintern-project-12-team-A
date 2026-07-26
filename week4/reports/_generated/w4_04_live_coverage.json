@@ -9,11 +9,13 @@
  "frozen_package": "week4/INTEGRATION/frozen_thresholds.json",
  "frozen_contract": {
   "manifest": "integration_manifest_v1.0.json",
-  "frozen_utc": "2026-07-26T10:29:34Z",
+  "frozen_utc": "2026-07-26T10:55:48Z",
   "version": "1.0",
   "n_pinned": 34,
   "frozen_datasets": [
-   "CICIoT2023"
+   "CICIoT2023",
+   "BoT-IoT",
+   "UNSW-NB15"
   ],
   "missing": [],
   "changed": [],
@@ -26,12 +28,11 @@
   "UNSW-NB15"
  ],
  "datasets_verified": [
-  "CICIoT2023"
- ],
- "datasets_not_frozen": [
+  "CICIoT2023",
   "BoT-IoT",
   "UNSW-NB15"
  ],
+ "datasets_not_frozen": [],
  "law": "E ~ BetaBinomial(m, n+1-k, k); conformal p-values ~ U(0,1) under exchangeability",
  "audit_family": "all (dataset x exchangeability-test) cells of the live audit, Holm step-down at alpha=0.05. The conformal p-value uniformity row is DESCRIPTIVE (its one-sample KS null is invalid for dependent p-values) and the diagnostics (ties, fidelity range, q rounding) carry no p-value \u2014 both are outside the family",
  "holm": {
@@ -102,6 +103,134 @@
    "n_cal_matches_freeze": true,
    "zeroday_n": 10984,
    "zeroday_recall_at_frozen_q": 0.999818
+  },
+  {
+   "dataset": "BoT-IoT",
+   "alpha": 0.05,
+   "band_level": 0.99,
+   "via": "conformal_integration.integrate_dataset (Day-22 adapter)",
+   "frozen": {
+    "q": 0.262934,
+    "n_cal": 18591,
+    "k": 17663,
+    "target_alpha": 0.05,
+    "source_kind": "dummy",
+    "fzr_at_freeze": 0.053036,
+    "m_test": 18591,
+    "false_flags": 986,
+    "fzr_observed": 0.053036,
+    "fzr_expected": 0.049968,
+    "known_coverage": 0.946964,
+    "band_lo_rate": 0.044269,
+    "band_hi_rate": 0.055941,
+    "p_value_upper": 0.09047977538246763,
+    "fzr_le_alpha": false,
+    "finite_sample_ok": true,
+    "conservative_note": false,
+    "verdict": "PASS"
+   },
+   "repriced": {
+    "n_cal": 18591,
+    "k": 17663,
+    "q": 0.26293412,
+    "m_test": 18591,
+    "false_flags": 986,
+    "fzr_observed": 0.053036,
+    "fzr_expected": 0.049968,
+    "known_coverage": 0.946964,
+    "band_lo_rate": 0.044269,
+    "band_hi_rate": 0.055941,
+    "p_value_upper": 0.09047977538246763,
+    "fzr_le_alpha": false,
+    "finite_sample_ok": true,
+    "conservative_note": false,
+    "verdict": "PASS"
+   },
+   "adapter_gates": {
+    "score_contract_max_abs_err": 0.0,
+    "score_contract_ok": true,
+    "coverage_reproduces_frozen": true,
+    "threshold_q_frozen": 0.262934,
+    "threshold_q_audit": 0.26293412481893186
+   },
+   "decisions_on_disk": {
+    "path": "week4/reports/_generated/w4_03_decisions_BoT-IoT.csv",
+    "present": true,
+    "rows_on_disk": 19274,
+    "test_rows_on_disk": 18591,
+    "flags_on_disk": 986,
+    "flags_in_process": 986,
+    "agrees": true
+   },
+   "q_drift_abs": 1.2e-07,
+   "q_drift_is_rounding_only": true,
+   "n_cal_matches_freeze": true,
+   "zeroday_n": 683,
+   "zeroday_recall_at_frozen_q": 0.095168
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "alpha": 0.05,
+   "band_level": 0.99,
+   "via": "conformal_integration.integrate_dataset (Day-22 adapter)",
+   "frozen": {
+    "q": 0.38338,
+    "n_cal": 10112,
+    "k": 9608,
+    "target_alpha": 0.05,
+    "source_kind": "dummy",
+    "fzr_at_freeze": 0.046302,
+    "m_test": 10086,
+    "false_flags": 467,
+    "fzr_observed": 0.046302,
+    "fzr_expected": 0.049936,
+    "known_coverage": 0.953698,
+    "band_lo_rate": 0.042336,
+    "band_hi_rate": 0.0581,
+    "p_value_upper": 0.8866358162867843,
+    "fzr_le_alpha": true,
+    "finite_sample_ok": true,
+    "conservative_note": false,
+    "verdict": "PASS"
+   },
+   "repriced": {
+    "n_cal": 10112,
+    "k": 9608,
+    "q": 0.38337959,
+    "m_test": 10086,
+    "false_flags": 467,
+    "fzr_observed": 0.046302,
+    "fzr_expected": 0.049936,
+    "known_coverage": 0.953698,
+    "band_lo_rate": 0.042336,
+    "band_hi_rate": 0.0581,
+    "p_value_upper": 0.8866358162867843,
+    "fzr_le_alpha": true,
+    "finite_sample_ok": true,
+    "conservative_note": false,
+    "verdict": "PASS"
+   },
+   "adapter_gates": {
+    "score_contract_max_abs_err": 0.0,
+    "score_contract_ok": true,
+    "coverage_reproduces_frozen": true,
+    "threshold_q_frozen": 0.38338,
+    "threshold_q_audit": 0.3833795914811795
+   },
+   "decisions_on_disk": {
+    "path": "week4/reports/_generated/w4_03_decisions_UNSW-NB15.csv",
+    "present": true,
+    "rows_on_disk": 11302,
+    "test_rows_on_disk": 10086,
+    "flags_on_disk": 467,
+    "flags_in_process": 467,
+    "agrees": true
+   },
+   "q_drift_abs": 4.1e-07,
+   "q_drift_is_rounding_only": true,
+   "n_cal_matches_freeze": true,
+   "zeroday_n": 1216,
+   "zeroday_recall_at_frozen_q": 0.385691
   }
  ],
  "exchangeability_audit": [
@@ -197,7 +326,7 @@
    "effect": 0.010997,
    "effect_name": "KS D",
    "detail": "mean p=0.4962 (0.5 under exchangeability); frac(p<=alpha)=0.0530; one-sample KS null invalid (dependent p-values) \u2014 inference via cal_vs_test_ks2",
-   "frozen": false,
+   "frozen": true,
    "p_holm": null,
    "violation": false
   },
@@ -209,7 +338,7 @@
    "effect": 0.011027,
    "effect_name": "KS D",
    "detail": "n_cal=18591, m_test=18591",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   },
@@ -221,7 +350,7 @@
    "effect": -0.00773,
    "effect_name": "rank-biserial r",
    "detail": "mean s: cal=0.099333 test=0.100641",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   },
@@ -233,7 +362,7 @@
    "effect": 0.0,
    "effect_name": "Cramer's V",
    "detail": "4 classes, dof=3",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   },
@@ -245,7 +374,7 @@
    "effect": null,
    "effect_name": null,
    "detail": "4 classes with expected>=5.0, dof=3",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   },
@@ -257,7 +386,7 @@
    "effect": -0.003108,
    "effect_name": "Spearman rho",
    "detail": "score vs sample_id (time-ordered splits break exchangeability)",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   },
@@ -269,7 +398,7 @@
    "effect": -0.013679,
    "effect_name": "Spearman rho",
    "detail": "score vs sample_id (time-ordered splits break exchangeability)",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   },
@@ -281,7 +410,7 @@
    "effect": 0.012437,
    "effect_name": "KS D",
    "detail": "mean p=0.5046 (0.5 under exchangeability); frac(p<=alpha)=0.0463; one-sample KS null invalid (dependent p-values) \u2014 inference via cal_vs_test_ks2",
-   "frozen": false,
+   "frozen": true,
    "p_holm": null,
    "violation": false
   },
@@ -293,7 +422,7 @@
    "effect": 0.012385,
    "effect_name": "KS D",
    "detail": "n_cal=10112, m_test=10086",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   },
@@ -305,7 +434,7 @@
    "effect": 0.009134,
    "effect_name": "rank-biserial r",
    "detail": "mean s: cal=0.180696 test=0.179069",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   },
@@ -317,7 +446,7 @@
    "effect": 0.004071,
    "effect_name": "Cramer's V",
    "detail": "8 classes, dof=7",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   },
@@ -329,7 +458,7 @@
    "effect": null,
    "effect_name": null,
    "detail": "5 classes with expected>=5.0, dof=4",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   },
@@ -341,7 +470,7 @@
    "effect": 0.012901,
    "effect_name": "Spearman rho",
    "detail": "score vs sample_id (time-ordered splits break exchangeability)",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   },
@@ -353,7 +482,7 @@
    "effect": 0.011816,
    "effect_name": "Spearman rho",
    "detail": "score vs sample_id (time-ordered splits break exchangeability)",
-   "frozen": false,
+   "frozen": true,
    "p_holm": 1.0,
    "violation": false
   }
@@ -382,7 +511,7 @@
    "fidelity_mean": 0.52877,
    "fidelity_in_unit_interval": true,
    "conformal_pvalue_mean": 0.496162,
-   "frozen": false
+   "frozen": true
   },
   {
    "dataset": "UNSW-NB15",
@@ -394,7 +523,7 @@
    "fidelity_mean": 0.426727,
    "fidelity_in_unit_interval": true,
    "conformal_pvalue_mean": 0.504616,
-   "frozen": false
+   "frozen": true
   }
  ],
  "drills": [
@@ -1030,7 +1159,7 @@
   }
  ],
  "remediation": [],
- "all_fzr_le_alpha": true,
+ "all_fzr_le_alpha": false,
  "all_finite_sample_ok": true,
  "exchangeable": true
 }

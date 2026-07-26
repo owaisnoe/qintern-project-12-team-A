@@ -1,6 +1,6 @@
 # INTEGRATION — QS-Net Team A · calibration/stats package · **v1.0**
 
-**INTEGRATION FREEZE (Day 21).** Seed 42 · primary α = 0.05 · source `dummy` · trio CICIoT2023 · 34 files · 26.3 MB · frozen 2026-07-26T10:29:34Z.
+**INTEGRATION FREEZE (Day 21).** Seed 42 · primary α = 0.05 · source `dummy` · trio CICIoT2023, BoT-IoT, UNSW-NB15 · 34 files · 26.3 MB · frozen 2026-07-26T10:55:48Z.
 
 Frozen hand-off surface for integration week (Days 22–25): the calibration rule, the score schema, the primary α, and the per-dataset thresholds are pinned so a decision on Day 25 uses the same `q` as Day 22. Every file is SHA-256-pinned in [`integration_manifest_v1.0.json`](integration_manifest_v1.0.json). Verify:
 
@@ -13,6 +13,8 @@ python week4/scripts/freeze_integration.py --verify   # expect 0 mismatch
 | Dataset | n_cal | k | threshold q | achieved coverage | false-zero-day | exact band | verdict |
 |---|---:|---:|---:|---:|---:|---|---|
 | CICIoT2023 | 18,883 | 17,940 | 0.300551 | 0.9514 | 0.0486 | [0.0443, 0.0559] | PASS |
+| BoT-IoT | 18,591 | 17,663 | 0.262934 | 0.9470 | 0.0530 | [0.0443, 0.0559] | PASS |
+| UNSW-NB15 | 10,112 | 9,608 | 0.383380 | 0.9537 | 0.0463 | [0.0423, 0.0581] | PASS |
 
 ## What Team B does with this (Day 22)
 1. Emit real inference scores into the **frozen schema** (`interface_contract.json`): one row per partition row, the `fid__<class>` Uhlmann-fidelity columns (**non-squared** F).

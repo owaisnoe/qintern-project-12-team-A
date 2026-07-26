@@ -33,6 +33,52 @@
    ],
    "band_p_value_upper": 0.731747,
    "coverage_verdict": "PASS"
+  },
+  "BoT-IoT": {
+   "alpha": 0.05,
+   "mode": "marginal",
+   "n_known_classes": 4,
+   "n_cal": 18591,
+   "k": 17663,
+   "threshold_q": 0.262934,
+   "decision_rule": "flag zero-day iff  s = 1 - max_c F(rho_x, rho_c)  >  threshold_q",
+   "known_test": {
+    "n": 18591,
+    "coverage": 0.947,
+    "false_zeroday_rate": 0.053
+   },
+   "zeroday_rejection_rate": 0.0952,
+   "achieved_coverage": 0.946964,
+   "false_zeroday_rate": 0.053036,
+   "exact_band": [
+    0.044269,
+    0.055941
+   ],
+   "band_p_value_upper": 0.09048,
+   "coverage_verdict": "PASS"
+  },
+  "UNSW-NB15": {
+   "alpha": 0.05,
+   "mode": "marginal",
+   "n_known_classes": 8,
+   "n_cal": 10112,
+   "k": 9608,
+   "threshold_q": 0.38338,
+   "decision_rule": "flag zero-day iff  s = 1 - max_c F(rho_x, rho_c)  >  threshold_q",
+   "known_test": {
+    "n": 10086,
+    "coverage": 0.9537,
+    "false_zeroday_rate": 0.0463
+   },
+   "zeroday_rejection_rate": 0.3857,
+   "achieved_coverage": 0.953698,
+   "false_zeroday_rate": 0.046302,
+   "exact_band": [
+    0.042336,
+    0.0581
+   ],
+   "band_p_value_upper": 0.886636,
+   "coverage_verdict": "PASS"
   }
  }
 }
