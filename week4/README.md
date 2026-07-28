@@ -23,7 +23,7 @@ qubit budget 8; seed 42.
 | **22** | **Connect conformal module to Team B inference; first end-to-end decisions** — DONE | [`reports/w4_03_conformal_integration.md`](reports/w4_03_conformal_integration.md) | [`scripts/conformal_integration.py`](scripts/conformal_integration.py) → `reports/_generated/w4_03_*` |
 | **23** | **Live coverage result + exchangeability audit** — DONE | [`reports/w4_04_live_coverage.md`](reports/w4_04_live_coverage.md) | [`scripts/live_coverage.py`](scripts/live_coverage.py) → `reports/_generated/w4_04_*` (drives the Day-22 adapter; does not recalibrate) |
 | **24** | **RQ2 results (all datasets) + Table B skeleton** — DONE | [`reports/w4_05_rq2_table_b.md`](reports/w4_05_rq2_table_b.md) · Table B: [`_generated/w4_05_table_b.md`](reports/_generated/w4_05_table_b.md) + [`.tex`](reports/_generated/w4_05_table_b.tex) | [`scripts/rq2_table_b.py`](scripts/rq2_table_b.py) → `reports/_generated/w4_05_*` (assembles Days 19/21/22/23; recomputes nothing) |
-| **25** | Full significance testing QS-Net vs baselines; RQ5 honesty notes | _pending_ | reuses [`../week3/scripts/stats_protocol.py`](../week3/scripts/stats_protocol.py) |
+| **25** | **Significance results + RQ5 honesty notes** — DONE | [`reports/w4_06_significance.md`](reports/w4_06_significance.md) · RQ5: [`_generated/w4_06_rq5_honesty.md`](reports/_generated/w4_06_rq5_honesty.md) | [`scripts/significance.py`](scripts/significance.py) → `reports/_generated/w4_06_*` (reuses [`../week3/scripts/stats_protocol.py`](../week3/scripts/stats_protocol.py)) |
 
 **Day-19/20 headline (dummy interface, α = 0.05):** every system (quantum + classical) holds coverage ≈ 0.95
 at the same α, but **zero-day recall differs** — the paper's separation (coverage ≠ power). UNSW is the hard
@@ -52,6 +52,17 @@ one α and one rule. Coverage is not what separates the systems; **recall is**, 
 the acceptance region depends only on the split geometry and α, not on the scores — so only the ‡ cells
 move when Team B lands real fidelities.
 
+**Day-25 headline (significance + RQ5):** the Day-17 protocol runs on the paper's real comparison across
+**three declared Holm families** — 8 exact McNemar tests on all decisions, 8 restricted to zero-day rows
+(*that* is the test for the Day-24 Δ column), and 9 paired t-tests over the 5 real retraining seeds.
+Verdicts require the exact test **and** a 2,000-resample bootstrap CI to agree: **4 ahead · 3 behind ·
+1 equivalent · 0 unresolved**. QS-Net beats every head on UNSW-NB15 (Δ up to +0.347, h = +0.94), loses to
+every head on BoT-IoT (Δ down to −0.638, h = −1.43), and is *equivalent* to Isolation Forest on
+CIC-IoT2023 (CI [−0.0004, +0.0004] — a positive finding, not a failed detection). Two gaps are reported
+rather than hidden: **QS-Net cannot enter the 5-seed family at all** (the Day-13 harness has no quantum
+arm), and a candidate design that would have faked one — pairing on the calibration draw — is documented
+as **rejected on measured evidence** (it inflates d_z to 40–481 and makes everything "significant").
+
 ## Reproduce
 
 ```bash
@@ -65,7 +76,8 @@ python week4/scripts/conformal_integration.py --datasets CICIoT2023             
 python week4/scripts/conformal_integration.py --datasets CICIoT2023 BoT-IoT UNSW-NB15  # Day 24 -> all datasets
 python week4/scripts/live_coverage.py --alpha 0.05 --drills                     # Day 23 -> live coverage + exchangeability audit
 python week4/scripts/rq2_table_b.py                                             # Day 24 -> RQ2 + Table B skeleton
-python -m pytest week2/tests week3/tests week4/tests -q                          # full suite: 99 tests
+python week4/scripts/significance.py                                            # Day 25 -> significance + RQ5 honesty
+python -m pytest week2/tests week3/tests week4/tests -q                          # full suite: 110 tests
 ```
 
 ## For Team B (QML) — integration spec
