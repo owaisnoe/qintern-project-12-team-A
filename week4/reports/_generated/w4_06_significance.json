@@ -5,7 +5,7 @@
  "conformal_alpha": 0.05,
  "test_alpha": 0.05,
  "source_kind": "dummy",
- "scores_root": "/Users/jkw/Documents/uni/axion/qintern-project-12-team-A/week2/interface/dummy_scores",
+ "scores_root": "week2/interface/dummy_scores",
  "headline_metric": "true_zeroday_recall",
  "families": {
   "mcnemar_all": "all (dataset x head) QS-Net-vs-baseline exact McNemar tests on per-sample known-vs-zero-day decisions at the frozen q; Holm step-down",

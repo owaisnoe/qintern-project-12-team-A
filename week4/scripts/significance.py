@@ -81,7 +81,7 @@ sys.path.insert(0, str(BASE / "week3" / "scripts"))
 sys.path.insert(0, str(BASE / "week4" / "scripts"))
 
 from conformal_calibrate import (  # noqa: E402  (Day-15 threshold rule + interface I/O)
-    IFACE, TRIO, conformal_threshold, known_classes, load_scores, nonconformity_from_fidelities,
+    IFACE, TRIO, _rel, conformal_threshold, known_classes, load_scores, nonconformity_from_fidelities,
 )
 from stats_protocol import (  # noqa: E402  (Day-17 protocol — the single source of every test)
     cohens_d_paired, head_pair_tests, holm_bonferroni, load_harness, mcnemar_exact, paired_t,
@@ -721,7 +721,7 @@ def main(argv=None):
     out = {
         "schema_version": "1.0", "day": 25, "seed": SEED,
         "conformal_alpha": args.alpha, "test_alpha": args.test_alpha,
-        "source_kind": args.source, "scores_root": str(Path(args.scores_root)),
+        "source_kind": args.source, "scores_root": _rel(args.scores_root),
         "headline_metric": "true_zeroday_recall",
         "families": FAMILIES,
         "detection_floor": {"n": N_SEEDS, "d_z_for_significance": round(float(d_sig), 4),

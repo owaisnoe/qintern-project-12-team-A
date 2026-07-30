@@ -48,7 +48,7 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parents[2]                 # Team A/
 sys.path.insert(0, str(BASE / "week3" / "scripts"))
 
-from conformal_calibrate import IFACE, TRIO, calibrate_dataset  # noqa: E402  (Day-15 single source of truth)
+from conformal_calibrate import IFACE, TRIO, _rel, calibrate_dataset  # noqa: E402  (Day-15 single source)
 from coverage_harness import verify_dataset                     # noqa: E402  (Day-16 exact-band verdict)
 
 INTEG = BASE / "week4" / "INTEGRATION"
@@ -140,7 +140,7 @@ def write_frozen_thresholds(datasets, alpha, scores_root, source):
         "seed": SEED,
         "primary_alpha": alpha,
         "source_kind": source,
-        "scores_root": str(Path(scores_root)),
+        "scores_root": _rel(scores_root),
         "decision_rule": "flag x as zero-day iff s(x) > threshold_q, with s = 1 - max_c F(rho_x, rho_c)",
         "nonconformity_def": "s = 1 - max_c F(rho_x, rho_c)  (non-squared Uhlmann fidelity F in [0,1])",
         "q_index_formula": "k = ceil((1-alpha)*(n+1)); q = s_(k)  (Day-15 CQ-ZDR / Algorithm 2)",

@@ -73,6 +73,17 @@ def log(m):
     print(f"[{time.strftime('%H:%M:%S')}] {m}", flush=True)
 
 
+def _rel(p):
+    """Repo-relative path for committed outputs — an absolute scores_root would leak the author's home
+    directory (and OS username) into the public repo. Falls back to the raw string for paths outside the
+    repo (e.g. Team B's external real-score dir on a --source real run)."""
+    p = Path(p)
+    try:
+        return p.resolve().relative_to(BASE).as_posix()
+    except ValueError:
+        return str(p)
+
+
 # ---------------------------------------------------------------------------- core conformal math
 
 def conformal_threshold(scores, alpha):
@@ -239,7 +250,7 @@ def main():
     GEN.mkdir(parents=True, exist_ok=True)
     out = {"schema_version": "1.0", "day": 15, "algorithm": "CQ-ZDR (Algorithm 2)", "seed": SEED,
            "mode": args.mode, "source_kind": args.source,
-           "scores_root": str(Path(args.scores_root)),
+           "scores_root": _rel(args.scores_root),
            "nonconformity_def": "s = 1 - max_c F(rho_x, rho_c)",
            "q_index_formula": "k = ceil((1-alpha)*(n+1)); q = s_(k)",
            "datasets": {}}
