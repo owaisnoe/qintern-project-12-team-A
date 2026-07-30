@@ -19,16 +19,49 @@ qubit budget 8; seed 42.
 | **18** (week3) | Coverage table v1, all datasets — DONE | [`../week3/reports/w3_04_coverage_table.md`](../week3/reports/w3_04_coverage_table.md) | [`../week3/scripts/coverage_table.py`](../week3/scripts/coverage_table.py) |
 | **19** | **Zero-day recall + quantum-vs-classical novelty** — DONE | [`reports/w4_01_zeroday_recall.md`](reports/w4_01_zeroday_recall.md) | [`scripts/zeroday_recall.py`](scripts/zeroday_recall.py) |
 | **20** | **Heuristic-threshold baseline + conformal ablation** — DONE | [`reports/w4_02_heuristic_ablation.md`](reports/w4_02_heuristic_ablation.md) | [`scripts/heuristic_ablation.py`](scripts/heuristic_ablation.py) |
-| **21** | Freeze the calibration + statistics interface for integration | _pending_ | packages Day 15/16/17/19/20 outputs |
-| **22–23** | Connect conformal module to Team B inference; live coverage; exchangeability audit | _pending_ | — |
-| **24** | RQ2 results (all datasets): recall + achieved α; Table B skeleton | _pending_ | builds on Day-18 table |
-| **25** | Full significance testing QS-Net vs baselines; RQ5 honesty notes | _pending_ | reuses [`../week3/scripts/stats_protocol.py`](../week3/scripts/stats_protocol.py) |
+| **21** | **Freeze the calibration + statistics interface for integration** — DONE | [`INTEGRATION/INTEGRATION_PACKAGE.md`](INTEGRATION/INTEGRATION_PACKAGE.md) | [`scripts/freeze_integration.py`](scripts/freeze_integration.py) → `INTEGRATION/` (frozen `q` + contract + manifest) |
+| **22** | **Connect conformal module to Team B inference; first end-to-end decisions** — DONE | [`reports/w4_03_conformal_integration.md`](reports/w4_03_conformal_integration.md) | [`scripts/conformal_integration.py`](scripts/conformal_integration.py) → `reports/_generated/w4_03_*` |
+| **23** | **Live coverage result + exchangeability audit** — DONE | [`reports/w4_04_live_coverage.md`](reports/w4_04_live_coverage.md) | [`scripts/live_coverage.py`](scripts/live_coverage.py) → `reports/_generated/w4_04_*` (drives the Day-22 adapter; does not recalibrate) |
+| **24** | **RQ2 results (all datasets) + Table B skeleton** — DONE | [`reports/w4_05_rq2_table_b.md`](reports/w4_05_rq2_table_b.md) · Table B: [`_generated/w4_05_table_b.md`](reports/_generated/w4_05_table_b.md) + [`.tex`](reports/_generated/w4_05_table_b.tex) | [`scripts/rq2_table_b.py`](scripts/rq2_table_b.py) → `reports/_generated/w4_05_*` (assembles Days 19/21/22/23; recomputes nothing) |
+| **25** | **Significance results + RQ5 honesty notes** — DONE | [`reports/w4_06_significance.md`](reports/w4_06_significance.md) · RQ5: [`_generated/w4_06_rq5_honesty.md`](reports/_generated/w4_06_rq5_honesty.md) | [`scripts/significance.py`](scripts/significance.py) → `reports/_generated/w4_06_*` (reuses [`../week3/scripts/stats_protocol.py`](../week3/scripts/stats_protocol.py)) |
 
 **Day-19/20 headline (dummy interface, α = 0.05):** every system (quantum + classical) holds coverage ≈ 0.95
 at the same α, but **zero-day recall differs** — the paper's separation (coverage ≠ power). UNSW is the hard
 bar (classical IF/OC-SVM ≈ 0 recall on Shellcode+Worms). The no-`+1` heuristic is anti-conservative (mean FZR
 ≈ 0.096 at n=30 vs conformal ≈ 0.032); a fixed cutoff is α-independent and varies per dataset — conformal
 holds the exact band.
+
+**Day-23 headline:** run live through the Day-22 adapter at the **frozen** q, dataset 1 achieves FZR
+0.0486 — ≤ α and inside the exact 99% band (p = 0.73) — with |Δq| = 7e-8 (pure 6-dp rounding of the
+published threshold) and the per-row decisions CSV byte-consistent with the in-process run. The
+exchangeability assumption survives an 18-cell Holm-corrected audit (6 tests × 3 datasets — BoT/UNSW are
+audited pre-Day-24 even though only dataset 1 is frozen) with **zero violations**, and nine
+injected-violation drills confirm the audit has power: calibration trimming and test-score shift roughly
+double the FZR and are caught; a class-mix skew is caught by χ² (p ≈ 1e-209) *without* moving the pooled
+rate — exactly the failure a coverage-only check cannot see. The `class_mix_chi2 = 0` rows are a dummy
+artifact (the Day-14 generator mirrors class counts calibration→test), flagged in the report.
+
+**Day-24 headline (RQ2, all datasets):** the Day-21 freeze now covers the full trio, so all three run
+end-to-end through the Day-22 adapter. The guarantee **holds on 3/3** — every achieved α lands inside
+its exact 99% band (0.0486 / 0.0530 / 0.0463; BoT-IoT reads above α but well inside the band, tail
+p = 0.09) — and **11/11 system-dataset cells** hold it, quantum and classical alike, because they share
+one α and one rule. Coverage is not what separates the systems; **recall is**, and not uniformly:
+Δ(QS-Net − best classical) = +0.002 / −0.628 / +0.120. Table B ships as
+[`_generated/w4_05_table_b.md`](reports/_generated/w4_05_table_b.md) and `.tex` (booktabs). Its
+`n_cal`, `k`, `m_test`, `n_zero-day`, **exact band** and best-classical columns are **already final** —
+the acceptance region depends only on the split geometry and α, not on the scores — so only the ‡ cells
+move when Team B lands real fidelities.
+
+**Day-25 headline (significance + RQ5):** the Day-17 protocol runs on the paper's real comparison across
+**three declared Holm families** — 8 exact McNemar tests on all decisions, 8 restricted to zero-day rows
+(*that* is the test for the Day-24 Δ column), and 9 paired t-tests over the 5 real retraining seeds.
+Verdicts require the exact test **and** a 2,000-resample bootstrap CI to agree: **4 ahead · 3 behind ·
+1 equivalent · 0 unresolved**. QS-Net beats every head on UNSW-NB15 (Δ up to +0.347, h = +0.94), loses to
+every head on BoT-IoT (Δ down to −0.638, h = −1.43), and is *equivalent* to Isolation Forest on
+CIC-IoT2023 (CI [−0.0004, +0.0004] — a positive finding, not a failed detection). Two gaps are reported
+rather than hidden: **QS-Net cannot enter the 5-seed family at all** (the Day-13 harness has no quantum
+arm), and a candidate design that would have faked one — pairing on the calibration draw — is documented
+as **rejected on measured evidence** (it inflates d_z to 40–481 and makes everything "significant").
 
 ## Reproduce
 
@@ -37,7 +70,14 @@ source ../.venv/bin/activate                                                   #
 python week3/scripts/coverage_table.py --alpha 0.05 --sweep-csv week3/reports/_generated/w3_02_alpha_sweep.csv
 python week4/scripts/zeroday_recall.py     --datasets CICIoT2023 BoT-IoT UNSW-NB15 --alpha 0.05 --heads isolation_forest ocsvm autoencoder
 python week4/scripts/heuristic_ablation.py --datasets CICIoT2023 BoT-IoT UNSW-NB15 --alpha 0.05 --sweep 0.01 0.20 0.01 --small-n-demo 30 50 100 200
-python -m pytest week3/tests week4/tests -q                                     # (full suite: week2+week3+week4)
+python week4/scripts/freeze_integration.py                                      # Day 21 -> INTEGRATION/ (frozen q + contract + manifest)
+python week4/scripts/freeze_integration.py --verify                             # Day 21 -> re-hash, expect 0 mismatch
+python week4/scripts/conformal_integration.py --datasets CICIoT2023             # Day 22 -> first end-to-end decisions (dataset 1)
+python week4/scripts/conformal_integration.py --datasets CICIoT2023 BoT-IoT UNSW-NB15  # Day 24 -> all datasets
+python week4/scripts/live_coverage.py --alpha 0.05 --drills                     # Day 23 -> live coverage + exchangeability audit
+python week4/scripts/rq2_table_b.py                                             # Day 24 -> RQ2 + Table B skeleton
+python week4/scripts/significance.py                                            # Day 25 -> significance + RQ5 honesty
+python -m pytest week2/tests week3/tests week4/tests -q                          # full suite: 110 tests
 ```
 
 ## For Team B (QML) — integration spec

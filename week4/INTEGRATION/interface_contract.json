@@ -1,0 +1,69 @@
+{
+ "package": "QS-Net \u2014 Team A \u2014 frozen score-interface contract",
+ "version": "1.0",
+ "day": 21,
+ "seed": 42,
+ "primary_alpha": 0.05,
+ "source_schema": "week2/interface/dummy_scores_schema.json (Day 14)",
+ "fidelity_convention": "NON-SQUARED Uhlmann F in [0,1]. PennyLane qml.math.fidelity and Qiskit state_fidelity return F^2 -> emit sqrt() into fid__<class>, or run the adapter with --assume-fidelity-squared. s, F_in, F_out share one convention.",
+ "required_columns": [
+  "sample_id",
+  "dataset",
+  "split",
+  "true_label_multiclass",
+  "true_label_family",
+  "y_known",
+  "pred_class",
+  "pred_correct",
+  "max_fidelity",
+  "runner_up_fidelity",
+  "margin",
+  "fid_true_class",
+  "nonconformity",
+  "nonconformity_true",
+  "trace_distance_nearest"
+ ],
+ "prototype_columns": "fid__<known_class> in [0,1] \u2014 Uhlmann fidelity to prototype rho_class",
+ "nonconformity": "1 - max_fidelity  (= 1 - max_c F(rho_x, rho_c)); higher => more novel",
+ "row_alignment": "sample_id == 0-based row index into week2/partitions/<dataset>/<split>.csv",
+ "column_dtypes": {
+  "sample_id": "int64",
+  "y_known": "int8",
+  "pred_correct": "int8",
+  "max_fidelity": "float64",
+  "nonconformity": "float64",
+  "fid__<class>": "float64"
+ },
+ "datasets": {
+  "CICIoT2023": {
+   "n_known_classes": 31,
+   "rows": {
+    "calibration": 18883,
+    "test": 18883,
+    "zeroday": 10984
+   },
+   "n_columns": 46,
+   "fidelity_columns": 31
+  },
+  "BoT-IoT": {
+   "n_known_classes": 4,
+   "rows": {
+    "calibration": 18591,
+    "test": 18591,
+    "zeroday": 683
+   },
+   "n_columns": 19,
+   "fidelity_columns": 4
+  },
+  "UNSW-NB15": {
+   "n_known_classes": 8,
+   "rows": {
+    "calibration": 10112,
+    "test": 10086,
+    "zeroday": 1216
+   },
+   "n_columns": 23,
+   "fidelity_columns": 8
+  }
+ }
+}
