@@ -1,0 +1,64 @@
+{
+ "schema_version": "1.0",
+ "day": 26,
+ "research_question": "RQ3 \u2014 disentanglement",
+ "seed": 42,
+ "alpha": 0.05,
+ "source_kind": "dummy",
+ "scores_root": "week2/interface/dummy_scores",
+ "n_boot": 2000,
+ "ci_level": 0.95,
+ "score_def": "s = 1 - max_c F(rho_x, rho_c)",
+ "separation_def": "AUROC(true_zeroday POSITIVE vs adv_known NEGATIVE)",
+ "datasets": [
+  "CICIoT2023"
+ ],
+ "results": {
+  "CICIoT2023": {
+   "dataset": "CICIoT2023",
+   "source_kind": "dummy",
+   "n_by_role": {
+    "clean_known": 18883,
+    "adv_known": 5492,
+    "true_zeroday": 5492
+   },
+   "mean_score_by_role": {
+    "clean_known": 0.120451,
+    "adv_known": 0.771248,
+    "true_zeroday": 0.771352
+   },
+   "panels": [
+    {
+     "panel": "separation",
+     "positive": "true_zeroday",
+     "negative": "adv_known",
+     "n_pos": 5492,
+     "n_neg": 5492,
+     "auroc": 0.4994,
+     "ci95_low": 0.4886,
+     "ci95_high": 0.5106
+    },
+    {
+     "panel": "zeroday_vs_clean",
+     "positive": "true_zeroday",
+     "negative": "clean_known",
+     "n_pos": 5492,
+     "n_neg": 18883,
+     "auroc": 0.9998,
+     "ci95_low": 0.9998,
+     "ci95_high": 0.9999
+    },
+    {
+     "panel": "adv_vs_clean",
+     "positive": "adv_known",
+     "negative": "clean_known",
+     "n_pos": 5492,
+     "n_neg": 18883,
+     "auroc": 0.9998,
+     "ci95_low": 0.9998,
+     "ci95_high": 0.9999
+    }
+   ]
+  }
+ }
+}
