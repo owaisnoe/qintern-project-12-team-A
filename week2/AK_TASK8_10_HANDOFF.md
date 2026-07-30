@@ -128,7 +128,7 @@ verification work done during this period (most importantly the quantum-label fi
 
 ## Do not upload
 
-- `../.venv/`, any `__pycache__/`, `week2/reports/_generated/` (confidential local mirror).
+- `../.venv/`, any `__pycache__/`, `week2/reports/_generated/` (regeneratable intermediates).
 
 ## Verification performed
 
