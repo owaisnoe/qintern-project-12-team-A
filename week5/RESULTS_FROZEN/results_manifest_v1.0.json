@@ -1,0 +1,117 @@
+{
+ "package": "QS-Net / QuantumSentinel \u2014 Team A \u2014 Week-5 RESULTS freeze",
+ "version": "1.0",
+ "day": 26,
+ "seed": 42,
+ "frozen_utc": "2026-07-30T01:46:51Z",
+ "primary_alpha": 0.05,
+ "source_kind": "dummy",
+ "benchmark_trio": [
+  "CICIoT2023",
+  "BoT-IoT",
+  "UNSW-NB15"
+ ],
+ "scope": "Day-26/27 result artefacts (RQ1 Table A, RQ3 disentanglement AUROC, Figure 2 coverage headline) + the three result modules. frozen_utc is metadata, NOT part of --verify. Every quantum number is PROVISIONAL on the Day-14 dummy interface unless source=real.",
+ "reproducibility": "python week5/scripts/freeze_results.py --reproduce  (re-runs the mains, asserts every scalar in results_frozen_scalars.json to 1e-9)",
+ "n_scalars_pinned": 39,
+ "n_files": 16,
+ "total_bytes": 272700,
+ "files": [
+  {
+   "path": "week5/scripts/disentanglement.py",
+   "sha256": "38294040e3052b90bd22ef88e9c29b1983e60cbaa8e3b7820dd264b4b1dfad62",
+   "bytes": 16718,
+   "rows": null
+  },
+  {
+   "path": "week5/scripts/table_a.py",
+   "sha256": "631ed1300993717b994ba5df6d0be0ea142754370ca1f93734608e02557eb6af",
+   "bytes": 28135,
+   "rows": null
+  },
+  {
+   "path": "week5/scripts/figure2_coverage.py",
+   "sha256": "1da7455270841d59942e66df577503ab62c099ca5420abc8b7f5810196ca99c4",
+   "bytes": 14249,
+   "rows": null
+  },
+  {
+   "path": "week5/reports/w5_01_disentanglement.md",
+   "sha256": "2e7af947a143e68e6edc4c54b8b5e7d43612de199f99a726cf904fb9ab994bb6",
+   "bytes": 3857,
+   "rows": null
+  },
+  {
+   "path": "week5/reports/w5_02_table_a.md",
+   "sha256": "a4d326373a9f2adc4a86693aae14fcc76cf94676a97b94813b9d197e06ef7e2d",
+   "bytes": 4472,
+   "rows": null
+  },
+  {
+   "path": "week5/reports/w5_03_figure2.md",
+   "sha256": "2f623bdbe6fdc721e74317676dd8c1ff4d4173dbdfe03487e1b22808ef59ef8e",
+   "bytes": 2133,
+   "rows": null
+  },
+  {
+   "path": "week5/reports/_generated/w5_01_disentanglement.json",
+   "sha256": "013d4b759a4b946fb6369e14fec3cff8abbb347bc196a30e6ad751f993aca9b8",
+   "bytes": 3324,
+   "rows": null
+  },
+  {
+   "path": "week5/reports/_generated/w5_01_disentanglement.csv",
+   "sha256": "414433a654dfe3a554cec77b639614f93b320485cb5794019bac291be2369c1b",
+   "bytes": 831,
+   "rows": 9
+  },
+  {
+   "path": "week5/reports/_generated/w5_02_table_a.json",
+   "sha256": "5cf8ed35168d4e42c7228d88553646e6c9af5c82ce4cb194dccaa01f199cbd80",
+   "bytes": 20274,
+   "rows": null
+  },
+  {
+   "path": "week5/reports/_generated/w5_02_table_a.csv",
+   "sha256": "6cca894e51942bdfb6e8b27ad94cd4c93ccdd51478541ba31d9b08b3b3dd6b20",
+   "bytes": 873,
+   "rows": 6
+  },
+  {
+   "path": "week5/reports/_generated/w5_02_table_a.md",
+   "sha256": "d175d7352ad9cff63cc91388f7eb863dac1799fe48d1a2c033ebd4ad167f4b8a",
+   "bytes": 1792,
+   "rows": null
+  },
+  {
+   "path": "week5/reports/_generated/w5_02_table_a.tex",
+   "sha256": "c7aae2f75260770c7ff334f10cef80c5bf35b3d5e7b00284544b3943e2335775",
+   "bytes": 1075,
+   "rows": null
+  },
+  {
+   "path": "week5/reports/_generated/w5_02_per_class_fzr.csv",
+   "sha256": "ffa0bd19f10095994bda80ac3c5107c7b7af396cc5d510142cbafb40cf6dd48c",
+   "bytes": 3314,
+   "rows": 43
+  },
+  {
+   "path": "week5/reports/_generated/w5_03_figure2.json",
+   "sha256": "e1114bc1a8dfc6fc14ce61a4fab8c3c6b6be2a4b72d8844e8f0056d9fac9fd39",
+   "bytes": 3094,
+   "rows": null
+  },
+  {
+   "path": "week5/reports/_generated/w5_03_figure2_data.csv",
+   "sha256": "9e6e4725aa978653ea624214fe6d14290e4d1513cbc4fa1ab49bd4b35cd724d6",
+   "bytes": 8930,
+   "rows": 60
+  },
+  {
+   "path": "week5/reports/figures/w5_fig2_coverage.png",
+   "sha256": "00065ef05849585120a4ff4318e630b6f11cd16a2583013e1a420e4136118485",
+   "bytes": 159629,
+   "rows": null
+  }
+ ]
+}

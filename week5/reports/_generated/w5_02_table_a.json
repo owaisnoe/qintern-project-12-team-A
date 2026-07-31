@@ -1,0 +1,520 @@
+{
+ "schema_version": "1.0",
+ "day": 26,
+ "research_question": "RQ1 \u2014 in-distribution detection",
+ "seed": 42,
+ "alpha": 0.05,
+ "band_level": 0.99,
+ "source_kind": "dummy",
+ "scores_root": "week2/interface/dummy_scores",
+ "datasets": [
+  "CICIoT2023"
+ ],
+ "status_legend": {
+  "final": "real frozen Day-12 model on real features",
+  "provisional": "rides the Day-14 dummy fidelity interface; reprices on Team B's real prototypes"
+ },
+ "rows": [
+  {
+   "dataset": "CICIoT2023",
+   "system": "XGBoost (detector)",
+   "arm": "classical",
+   "source_kind": "real",
+   "accuracy": 0.9896,
+   "macro_f1": 0.8043,
+   "auroc_ovr_macro": 0.999,
+   "n_classes": 31,
+   "provenance": "week2/baselines/<ds>/results.json (detector.multiclass)"
+  },
+  {
+   "dataset": "CICIoT2023",
+   "system": "QS-Net (CQ-ZDR)",
+   "arm": "quantum",
+   "source_kind": "dummy",
+   "accuracy": 0.9034,
+   "macro_f1": 0.6598,
+   "auroc_ovr_macro": 0.9438,
+   "n_classes": 31,
+   "provenance": "week2/interface/.../test_scores.parquet (pred_correct / pred_class / fid__*)"
+  }
+ ],
+ "mcnemar": [
+  {
+   "dataset": "CICIoT2023",
+   "pair": "QS-Net (CQ-ZDR) vs XGBoost (detector)",
+   "n_pairs": 18883,
+   "qsnet_only_right": 176,
+   "xgboost_only_right": 1803,
+   "p_raw": 0.0,
+   "note": null,
+   "p_holm": 0.0,
+   "significant": true
+  }
+ ],
+ "holm": {
+  "alpha": 0.05,
+  "m": 1
+ },
+ "coverage_all_seed": [
+  {
+   "dataset": "CICIoT2023",
+   "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "per_seed": [
+    {
+     "seed": 42,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883,
+     "false_flags": 968,
+     "fzr": 0.051263,
+     "band_lo_rate": 0.044326,
+     "band_hi_rate": 0.055923,
+     "in_band": true
+    },
+    {
+     "seed": 43,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883,
+     "false_flags": 993,
+     "fzr": 0.052587,
+     "band_lo_rate": 0.044326,
+     "band_hi_rate": 0.055923,
+     "in_band": true
+    },
+    {
+     "seed": 44,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883,
+     "false_flags": 968,
+     "fzr": 0.051263,
+     "band_lo_rate": 0.044326,
+     "band_hi_rate": 0.055923,
+     "in_band": true
+    },
+    {
+     "seed": 45,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883,
+     "false_flags": 1018,
+     "fzr": 0.053911,
+     "band_lo_rate": 0.044326,
+     "band_hi_rate": 0.055923,
+     "in_band": true
+    },
+    {
+     "seed": 46,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883,
+     "false_flags": 939,
+     "fzr": 0.049727,
+     "band_lo_rate": 0.044326,
+     "band_hi_rate": 0.055923,
+     "in_band": true
+    }
+   ],
+   "mean_fzr": 0.05175,
+   "max_fzr": 0.053911,
+   "n_in_band": 5,
+   "n_seeds": 5,
+   "all_in_band": true
+  }
+ ],
+ "per_class_fzr": [
+  {
+   "dataset": "CICIoT2023",
+   "n_cal": 18883,
+   "k": 17940,
+   "threshold_q": 0.300551,
+   "alpha": 0.05,
+   "conditional_floor": 19,
+   "n_classes": 31,
+   "n_out_of_band": 0,
+   "per_class": [
+    {
+     "dataset": "CICIoT2023",
+     "class": "Backdoor_Malware",
+     "m_test": 9,
+     "false_flags": 1,
+     "fzr": 0.111111,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.333333,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": true
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "BenignTraffic",
+     "m_test": 458,
+     "false_flags": 23,
+     "fzr": 0.050218,
+     "band_lo_rate": 0.026201,
+     "band_hi_rate": 0.078603,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "BrowserHijacking",
+     "m_test": 16,
+     "false_flags": 1,
+     "fzr": 0.0625,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.25,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": true
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "CommandInjection",
+     "m_test": 13,
+     "false_flags": 0,
+     "fzr": 0.0,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.230769,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": true
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-ACK_Fragmentation",
+     "m_test": 120,
+     "false_flags": 4,
+     "fzr": 0.033333,
+     "band_lo_rate": 0.008333,
+     "band_hi_rate": 0.108333,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-HTTP_Flood",
+     "m_test": 70,
+     "false_flags": 3,
+     "fzr": 0.042857,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.128571,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-ICMP_Flood",
+     "m_test": 3025,
+     "false_flags": 150,
+     "fzr": 0.049587,
+     "band_lo_rate": 0.039339,
+     "band_hi_rate": 0.061488,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-ICMP_Fragmentation",
+     "m_test": 190,
+     "false_flags": 9,
+     "fzr": 0.047368,
+     "band_lo_rate": 0.015789,
+     "band_hi_rate": 0.094737,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-PSHACK_Flood",
+     "m_test": 1712,
+     "false_flags": 96,
+     "fzr": 0.056075,
+     "band_lo_rate": 0.036215,
+     "band_hi_rate": 0.064836,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-RSTFINFlood",
+     "m_test": 1688,
+     "false_flags": 77,
+     "fzr": 0.045616,
+     "band_lo_rate": 0.036137,
+     "band_hi_rate": 0.064573,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-SYN_Flood",
+     "m_test": 1706,
+     "false_flags": 93,
+     "fzr": 0.054513,
+     "band_lo_rate": 0.036342,
+     "band_hi_rate": 0.064478,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-SlowLoris",
+     "m_test": 62,
+     "false_flags": 4,
+     "fzr": 0.064516,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.129032,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-SynonymousIP_Flood",
+     "m_test": 1509,
+     "false_flags": 70,
+     "fzr": 0.046388,
+     "band_lo_rate": 0.035785,
+     "band_hi_rate": 0.065606,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-TCP_Flood",
+     "m_test": 1892,
+     "false_flags": 85,
+     "fzr": 0.044926,
+     "band_lo_rate": 0.036998,
+     "band_hi_rate": 0.063953,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-UDP_Flood",
+     "m_test": 2268,
+     "false_flags": 113,
+     "fzr": 0.049824,
+     "band_lo_rate": 0.037919,
+     "band_hi_rate": 0.063051,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DDoS-UDP_Fragmentation",
+     "m_test": 120,
+     "false_flags": 6,
+     "fzr": 0.05,
+     "band_lo_rate": 0.008333,
+     "band_hi_rate": 0.108333,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DNS_Spoofing",
+     "m_test": 76,
+     "false_flags": 6,
+     "fzr": 0.078947,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.118421,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DictionaryBruteForce",
+     "m_test": 29,
+     "false_flags": 3,
+     "fzr": 0.103448,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.172414,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DoS-HTTP_Flood",
+     "m_test": 182,
+     "false_flags": 15,
+     "fzr": 0.082418,
+     "band_lo_rate": 0.010989,
+     "band_hi_rate": 0.093407,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DoS-SYN_Flood",
+     "m_test": 850,
+     "false_flags": 32,
+     "fzr": 0.037647,
+     "band_lo_rate": 0.031765,
+     "band_hi_rate": 0.070588,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DoS-TCP_Flood",
+     "m_test": 1115,
+     "false_flags": 52,
+     "fzr": 0.046637,
+     "band_lo_rate": 0.033184,
+     "band_hi_rate": 0.068161,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "DoS-UDP_Flood",
+     "m_test": 1387,
+     "false_flags": 62,
+     "fzr": 0.044701,
+     "band_lo_rate": 0.035328,
+     "band_hi_rate": 0.06633,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "MITM-ArpSpoofing",
+     "m_test": 129,
+     "false_flags": 5,
+     "fzr": 0.03876,
+     "band_lo_rate": 0.007752,
+     "band_hi_rate": 0.108527,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "Recon-HostDiscovery",
+     "m_test": 58,
+     "false_flags": 2,
+     "fzr": 0.034483,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.137931,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "Recon-OSScan",
+     "m_test": 42,
+     "false_flags": 1,
+     "fzr": 0.02381,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.142857,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "Recon-PingSweep",
+     "m_test": 4,
+     "false_flags": 0,
+     "fzr": 0.0,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.5,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": true
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "Recon-PortScan",
+     "m_test": 35,
+     "false_flags": 0,
+     "fzr": 0.0,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.171429,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "SqlInjection",
+     "m_test": 15,
+     "false_flags": 0,
+     "fzr": 0.0,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.266667,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": true
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "Uploading_Attack",
+     "m_test": 4,
+     "false_flags": 0,
+     "fzr": 0.0,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.5,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": true
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "VulnerabilityScan",
+     "m_test": 90,
+     "false_flags": 5,
+     "fzr": 0.055556,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.122222,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": false
+    },
+    {
+     "dataset": "CICIoT2023",
+     "class": "XSS",
+     "m_test": 9,
+     "false_flags": 0,
+     "fzr": 0.0,
+     "band_lo_rate": 0.0,
+     "band_hi_rate": 0.333333,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "below_conditional_floor": true
+    }
+   ]
+  }
+ ],
+ "all_seed_coverage_all_in_band": true,
+ "per_class_all_in_band": true
+}

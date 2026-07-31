@@ -1,0 +1,4 @@
+dataset,source_kind,panel,positive,negative,n_pos,n_neg,auroc,ci95_low,ci95_high
+CICIoT2023,dummy,separation,true_zeroday,adv_known,5492,5492,0.4994,0.4886,0.5106
+CICIoT2023,dummy,zeroday_vs_clean,true_zeroday,clean_known,5492,18883,0.9998,0.9998,0.9999
+CICIoT2023,dummy,adv_vs_clean,adv_known,clean_known,5492,18883,0.9998,0.9998,0.9999

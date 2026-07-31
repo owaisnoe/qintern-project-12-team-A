@@ -3,7 +3,7 @@
  "version": "1.0",
  "day": 21,
  "seed": 42,
- "frozen_utc": "2026-07-26T10:55:48Z",
+ "frozen_utc": "2026-07-30T01:56:19Z",
  "primary_alpha": 0.05,
  "source_kind": "dummy",
  "benchmark_trio": [
@@ -14,12 +14,12 @@
  "scope": "Integration hand-off surface: the pinned conformal/coverage/stats/recall code modules, the score interface Team B fills, the packaged coverage/zero-day/significance outputs, and the frozen thresholds + interface contract. frozen_utc is metadata, NOT part of --verify.",
  "missing_optional_outputs": [],
  "n_files": 34,
- "total_bytes": 26291861,
+ "total_bytes": 26292226,
  "files": [
   {
    "path": "week3/scripts/conformal_calibrate.py",
-   "sha256": "2a010b733d51121c7fe0bc183ac79ad2b4fca05181e0d0beeca239b1ee738877",
-   "bytes": 13951,
+   "sha256": "6556c39ea41f428ddad999105619c199668150912b486c373d5b5c57fec29823",
+   "bytes": 14373,
    "rows": null
   },
   {
@@ -42,8 +42,8 @@
   },
   {
    "path": "week4/INTEGRATION/frozen_thresholds.json",
-   "sha256": "72f4ada2f653b106d9439edd636b0b899c99db1bbaf389c21b050132e2a0c1ca",
-   "bytes": 2524,
+   "sha256": "cd97dacb0a41579a4b90a618ef3ebb685ebdfb248ca394d8bc4af8cde4796960",
+   "bytes": 2467,
    "rows": null
   },
   {

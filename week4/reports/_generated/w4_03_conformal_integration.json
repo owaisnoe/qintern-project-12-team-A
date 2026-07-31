@@ -4,7 +4,7 @@
  "seed": 42,
  "primary_alpha": 0.05,
  "source_kind": "dummy",
- "scores_root": "/Users/jkw/Documents/uni/axion/qintern-project-12-team-A/week2/interface/dummy_scores",
+ "scores_root": "week2/interface/dummy_scores",
  "assume_fidelity_squared": false,
  "frozen_thresholds": "week4/INTEGRATION/frozen_thresholds.json",
  "datasets": [

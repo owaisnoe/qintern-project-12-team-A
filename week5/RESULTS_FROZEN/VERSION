@@ -1,0 +1,8 @@
+QS-Net Team A — Week-5 RESULTS freeze
+version: 1.0
+seed: 42
+primary_alpha: 0.05
+source: dummy
+trio: CICIoT2023, BoT-IoT, UNSW-NB15
+files: 16  bytes: 272700  scalars: 39
+manifest: RESULTS_FROZEN/results_manifest_v1.0.json

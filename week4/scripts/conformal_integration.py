@@ -52,7 +52,7 @@ BASE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(BASE / "week3" / "scripts"))
 
 from conformal_calibrate import (  # noqa: E402  (Day-15 single source of the conformal math + interface I/O)
-    IFACE, TRIO, conformal_threshold, known_classes, load_scores, nonconformity_from_fidelities,
+    IFACE, TRIO, _rel, conformal_threshold, known_classes, load_scores, nonconformity_from_fidelities,
 )
 
 INTEG = BASE / "week4" / "INTEGRATION"
@@ -236,7 +236,7 @@ def main(argv=None):
             f"{zd['n']}, reproduces_frozen={summary['coverage_reproduces_frozen']})")
 
     out = {"schema_version": "1.0", "day": 22, "seed": SEED, "primary_alpha": args.alpha,
-           "source_kind": frozen["source_kind"], "scores_root": str(Path(args.scores_root)),
+           "source_kind": frozen["source_kind"], "scores_root": _rel(args.scores_root),
            "assume_fidelity_squared": args.assume_fidelity_squared,
            "frozen_thresholds": "week4/INTEGRATION/frozen_thresholds.json",
            "datasets": summaries}
