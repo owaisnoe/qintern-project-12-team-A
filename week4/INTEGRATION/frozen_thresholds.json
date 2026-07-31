@@ -1,0 +1,84 @@
+{
+ "package": "QS-Net / QuantumSentinel \u2014 Team A \u2014 Integration calibration package",
+ "version": "1.0",
+ "day": 21,
+ "seed": 42,
+ "primary_alpha": 0.05,
+ "source_kind": "dummy",
+ "scores_root": "week2/interface/dummy_scores",
+ "decision_rule": "flag x as zero-day iff s(x) > threshold_q, with s = 1 - max_c F(rho_x, rho_c)",
+ "nonconformity_def": "s = 1 - max_c F(rho_x, rho_c)  (non-squared Uhlmann fidelity F in [0,1])",
+ "q_index_formula": "k = ceil((1-alpha)*(n+1)); q = s_(k)  (Day-15 CQ-ZDR / Algorithm 2)",
+ "note": "Authoritative per-dataset thresholds for integration week. Team B's Day-22 adapter loads threshold_q and applies the decision rule; it does NOT recalibrate. Reprices on real prototypes via --source real --scores-root <dir> (identical schema).",
+ "datasets": {
+  "CICIoT2023": {
+   "alpha": 0.05,
+   "mode": "marginal",
+   "n_known_classes": 31,
+   "n_cal": 18883,
+   "k": 17940,
+   "threshold_q": 0.300551,
+   "decision_rule": "flag zero-day iff  s = 1 - max_c F(rho_x, rho_c)  >  threshold_q",
+   "known_test": {
+    "n": 18883,
+    "coverage": 0.9514,
+    "false_zeroday_rate": 0.0486
+   },
+   "zeroday_rejection_rate": 0.9998,
+   "achieved_coverage": 0.951385,
+   "false_zeroday_rate": 0.048615,
+   "exact_band": [
+    0.044326,
+    0.055923
+   ],
+   "band_p_value_upper": 0.731747,
+   "coverage_verdict": "PASS"
+  },
+  "BoT-IoT": {
+   "alpha": 0.05,
+   "mode": "marginal",
+   "n_known_classes": 4,
+   "n_cal": 18591,
+   "k": 17663,
+   "threshold_q": 0.262934,
+   "decision_rule": "flag zero-day iff  s = 1 - max_c F(rho_x, rho_c)  >  threshold_q",
+   "known_test": {
+    "n": 18591,
+    "coverage": 0.947,
+    "false_zeroday_rate": 0.053
+   },
+   "zeroday_rejection_rate": 0.0952,
+   "achieved_coverage": 0.946964,
+   "false_zeroday_rate": 0.053036,
+   "exact_band": [
+    0.044269,
+    0.055941
+   ],
+   "band_p_value_upper": 0.09048,
+   "coverage_verdict": "PASS"
+  },
+  "UNSW-NB15": {
+   "alpha": 0.05,
+   "mode": "marginal",
+   "n_known_classes": 8,
+   "n_cal": 10112,
+   "k": 9608,
+   "threshold_q": 0.38338,
+   "decision_rule": "flag zero-day iff  s = 1 - max_c F(rho_x, rho_c)  >  threshold_q",
+   "known_test": {
+    "n": 10086,
+    "coverage": 0.9537,
+    "false_zeroday_rate": 0.0463
+   },
+   "zeroday_rejection_rate": 0.3857,
+   "achieved_coverage": 0.953698,
+   "false_zeroday_rate": 0.046302,
+   "exact_band": [
+    0.042336,
+    0.0581
+   ],
+   "band_p_value_upper": 0.886636,
+   "coverage_verdict": "PASS"
+  }
+ }
+}

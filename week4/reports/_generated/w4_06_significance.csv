@@ -1,0 +1,17 @@
+family,dataset,baseline,comparison,scope,n_pairs,rate_qsnet,rate_baseline,rate_diff,cohens_h,n01_baseline_only,n10_qsnet_only,odds_ratio_qsnet,p_raw,note,p_holm,significant
+mcnemar_all,CICIoT2023,Isolation Forest,QS-Net (CQ-ZDR) vs Isolation Forest,all,29867,0.969197,0.935949,0.033247,0.1589,823,1816,2.2066,4.1567444276881724e-85,,2.0783722138440864e-84,True
+mcnemar_all,CICIoT2023,Autoencoder,QS-Net (CQ-ZDR) vs Autoencoder,all,29867,0.969197,0.811263,0.157934,0.546,831,5548,6.6763,0.0,,0.0,True
+mcnemar_all,BoT-IoT,Isolation Forest,QS-Net (CQ-ZDR) vs Isolation Forest,all,19274,0.916779,0.895818,0.020961,0.072,1323,1727,1.3054,2.718255880795283e-13,,5.436511761590566e-13,True
+mcnemar_all,BoT-IoT,Autoencoder,QS-Net (CQ-ZDR) vs Autoencoder,all,19274,0.916779,0.89338,0.023399,0.08,1263,1714,1.3571,1.4191759558700117e-16,,4.2575278676100354e-16,True
+mcnemar_all,BoT-IoT,OC-SVM,QS-Net (CQ-ZDR) vs OC-SVM,all,19274,0.916779,0.896856,0.019923,0.0686,1345,1729,1.2855,4.622495554626855e-12,,4.622495554626855e-12,True
+mcnemar_all,UNSW-NB15,Isolation Forest,QS-Net (CQ-ZDR) vs Isolation Forest,all,11302,0.892585,0.810918,0.081667,0.2319,470,1393,2.9638,9.660060806223858e-106,,5.7960364837343145e-105,True
+mcnemar_all,UNSW-NB15,Autoencoder,QS-Net (CQ-ZDR) vs Autoencoder,all,11302,0.892585,0.829942,0.062644,0.1823,607,1315,2.1664,7.447202851364767e-60,,2.9788811405459067e-59,True
+mcnemar_all,UNSW-NB15,OC-SVM,QS-Net (CQ-ZDR) vs OC-SVM,all,11302,0.892585,0.80384,0.088745,0.2498,449,1452,3.2339,7.036659011209818e-123,,4.925661307846873e-122,True
+mcnemar_zeroday,CICIoT2023,Isolation Forest,QS-Net (CQ-ZDR) vs Isolation Forest,zeroday,10984,0.999818,0.999818,0.0,0.0,2,2,1.0,1.0,,1.0,False
+mcnemar_zeroday,CICIoT2023,Autoencoder,QS-Net (CQ-ZDR) vs Autoencoder,zeroday,10984,0.999818,0.661052,0.338765,1.2159,1,3722,3722.0,0.0,,0.0,True
+mcnemar_zeroday,BoT-IoT,Isolation Forest,QS-Net (CQ-ZDR) vs Isolation Forest,zeroday,683,0.095168,0.72328,-0.628111,-1.4065,448,19,0.0424,1.6199927071751175e-107,,9.719956243050705e-107,True
+mcnemar_zeroday,BoT-IoT,Autoencoder,QS-Net (CQ-ZDR) vs Autoencoder,zeroday,683,0.095168,0.625183,-0.530015,-1.1966,386,24,0.0622,3.330075482980173e-85,,1.3320301931920693e-84,True
+mcnemar_zeroday,BoT-IoT,OC-SVM,QS-Net (CQ-ZDR) vs OC-SVM,zeroday,683,0.095168,0.733529,-0.63836,-1.4295,455,19,0.0418,1.687290100167907e-109,,1.181103070117535e-108,True
+mcnemar_zeroday,UNSW-NB15,Isolation Forest,QS-Net (CQ-ZDR) vs Isolation Forest,zeroday,1216,0.385691,0.066612,0.319079,0.818,50,438,8.76,1.818137993549561e-78,,5.454413980648683e-78,True
+mcnemar_zeroday,UNSW-NB15,Autoencoder,QS-Net (CQ-ZDR) vs Autoencoder,zeroday,1216,0.385691,0.268092,0.117599,0.2516,187,330,1.7647,3.28931727782697e-10,,6.57863455565394e-10,True
+mcnemar_zeroday,UNSW-NB15,OC-SVM,QS-Net (CQ-ZDR) vs OC-SVM,zeroday,1216,0.385691,0.038651,0.347039,0.9444,22,444,20.1818,3.006539606823728e-103,,1.5032698034118638e-102,True

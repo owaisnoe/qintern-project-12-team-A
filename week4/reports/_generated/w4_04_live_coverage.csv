@@ -1,0 +1,4 @@
+dataset,alpha,source_kind,q_frozen,q_repriced,q_drift_abs,n_cal,m_test,false_flags,fzr_observed,known_coverage,band_lo_rate,band_hi_rate,p_value_upper,fzr_le_alpha,finite_sample_ok,verdict,zeroday_recall_at_frozen_q,score_contract_ok,coverage_reproduces_frozen,decisions_on_disk_agree
+CICIoT2023,0.05,dummy,0.300551,0.30055107,7e-08,18883,18883,918,0.048615,0.951385,0.044326,0.055923,0.7317469626508127,True,True,PASS,0.999818,True,True,True
+BoT-IoT,0.05,dummy,0.262934,0.26293412,1.2e-07,18591,18591,986,0.053036,0.946964,0.044269,0.055941,0.09047977538246763,False,True,PASS,0.095168,True,True,True
+UNSW-NB15,0.05,dummy,0.38338,0.38337959,4.1e-07,10112,10086,467,0.046302,0.953698,0.042336,0.0581,0.8866358162867843,True,True,PASS,0.385691,True,True,True

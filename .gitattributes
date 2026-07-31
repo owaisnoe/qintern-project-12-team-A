@@ -1,0 +1,18 @@
+# Normalize all text to LF in the repository AND on checkout, on every OS.
+# Without this, a Windows checkout with core.autocrlf=true rewrites committed text
+# files (.py/.json/.csv/.md/.tex) to CRLF on checkout, changing their bytes — which
+# breaks every SHA-256 freeze manifest (week4/INTEGRATION, week5/RESULTS_FROZEN)
+# with spurious "CHANGED" lines on a fresh clone. Pinning eol=lf keeps a clean clone
+# byte-identical to the Linux blobs, so `--verify` passes on any platform.
+* text=auto eol=lf
+
+# Binary artefacts: never apply line-ending conversion (it would corrupt them and,
+# for the pinned .parquet/.png, also break the freeze hashes).
+*.parquet binary
+*.png binary
+*.joblib binary
+*.npy binary
+*.npz binary
+*.pdf binary
+*.zip binary
+*.gz binary

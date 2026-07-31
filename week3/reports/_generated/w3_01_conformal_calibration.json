@@ -5,7 +5,7 @@
  "seed": 42,
  "mode": "marginal",
  "source_kind": "dummy",
- "scores_root": "/home/a-koike/dev/QIntern2026/qi26_12/week2/interface/dummy_scores",
+ "scores_root": "week2/interface/dummy_scores",
  "nonconformity_def": "s = 1 - max_c F(rho_x, rho_c)",
  "q_index_formula": "k = ceil((1-alpha)*(n+1)); q = s_(k)",
  "datasets": {

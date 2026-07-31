@@ -1,0 +1,99 @@
+{
+ "schema_version": "1.0",
+ "day": 27,
+ "seed": 42,
+ "source_kind": "dummy",
+ "scores_root": "week2/interface/dummy_scores",
+ "headline_alpha": 0.05,
+ "band_level": 0.99,
+ "sweep_grid": [
+  0.01,
+  0.02,
+  0.03,
+  0.04,
+  0.05,
+  0.06,
+  0.07,
+  0.08,
+  0.09,
+  0.1,
+  0.11,
+  0.12,
+  0.13,
+  0.14,
+  0.15,
+  0.16,
+  0.17,
+  0.18,
+  0.19,
+  0.2
+ ],
+ "seeds": [
+  42,
+  43,
+  44,
+  45,
+  46
+ ],
+ "law": "E ~ BetaBinomial(m, n+1-k, k)  [coverage|cal ~ Beta(k, n+1-k)]",
+ "datasets": [
+  "CICIoT2023"
+ ],
+ "points": [
+  {
+   "dataset": "CICIoT2023",
+   "alpha": 0.05,
+   "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "per_seed": [
+    {
+     "seed": 42,
+     "fzr": 0.051263,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883
+    },
+    {
+     "seed": 43,
+     "fzr": 0.052587,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883
+    },
+    {
+     "seed": 44,
+     "fzr": 0.051263,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883
+    },
+    {
+     "seed": 45,
+     "fzr": 0.053911,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883
+    },
+    {
+     "seed": 46,
+     "fzr": 0.049727,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883
+    }
+   ],
+   "mean_fzr": 0.05175,
+   "min_fzr": 0.049727,
+   "max_fzr": 0.053911,
+   "std_fzr": 0.001576,
+   "band_lo_rate": 0.044326,
+   "band_hi_rate": 0.055923
+  }
+ ],
+ "figure_written": true
+}

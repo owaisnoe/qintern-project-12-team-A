@@ -1,0 +1,4 @@
+dataset,applied_q,score_contract_max_abs_err,coverage,false_zeroday_rate,zeroday_recall,tp,fp,coverage_reproduces_frozen
+CICIoT2023,0.300551,0.0,0.951385,0.048615,0.999818,10982,918,True
+BoT-IoT,0.262934,0.0,0.946964,0.053036,0.095168,65,986,True
+UNSW-NB15,0.38338,0.0,0.953698,0.046302,0.385691,469,467,True
