@@ -21,6 +21,20 @@ needs_data = pytest.mark.skipif(not (IFACE_OK and BASE_OK),
                                 reason="Day-14 interface / Day-12 baselines not present")
 
 
+def _redirect_mains_to_tmp(monkeypatch, tmp_path):
+    """Point the three result mains' output dirs at a tmp dir so freeze()'s `run_all` does NOT overwrite
+    the committed full-trio artefacts with the CIC-only test run. `freeze` still hashes the REAL pinned
+    files (they exist in the checkout) and captures scalars from the in-memory return values, so the
+    freeze/verify/reproduce logic is exercised unchanged — only the destructive side effect is removed."""
+    gen, reports, fig = tmp_path / "_generated", tmp_path / "reports", tmp_path / "figures"
+    for d in (gen, reports, fig):
+        d.mkdir(parents=True, exist_ok=True)
+    for mod, attr, dest in ((fr.dis, "GEN", gen), (fr.dis, "REPORTS", reports),
+                            (fr.ta, "GEN", gen), (fr.ta, "REPORTS", reports),
+                            (fr.fig2, "GEN", gen), (fr.fig2, "REPORTS", reports), (fr.fig2, "FIG", fig)):
+        monkeypatch.setattr(mod, attr, dest)
+
+
 def test_assert_lf_rejects_crlf(tmp_path):
     crlf = tmp_path / "bad.md"
     crlf.write_bytes(b"line one\r\nline two\r\n")
@@ -51,6 +65,7 @@ def test_freeze_roundtrip_verify_ok_then_tamper_fails(tmp_path, monkeypatch):
     monkeypatch.setattr(fr, "RESULTS", results_dir)
     monkeypatch.setattr(fr, "MANIFEST", manifest)
     monkeypatch.setattr(fr, "SCALARS", scalars)
+    _redirect_mains_to_tmp(monkeypatch, tmp_path)      # don't overwrite the committed full-trio artefacts
 
     fr.freeze(["CICIoT2023"], 0.05, IFACE, "dummy")   # runs the 3 mains, pins real artefacts into tmp manifest
     assert manifest.exists() and scalars.exists()
@@ -70,6 +85,7 @@ def test_reproduce_check_passes_after_freeze(tmp_path, monkeypatch):
     monkeypatch.setattr(fr, "RESULTS", results_dir)
     monkeypatch.setattr(fr, "MANIFEST", results_dir / "results_manifest_v1.0.json")
     monkeypatch.setattr(fr, "SCALARS", results_dir / "results_frozen_scalars.json")
+    _redirect_mains_to_tmp(monkeypatch, tmp_path)      # don't overwrite the committed full-trio artefacts
     fr.freeze(["CICIoT2023"], 0.05, IFACE, "dummy")
     # deterministic mains (seed 42) -> every frozen scalar reproduces to 1e-9
     assert fr.reproduce_check(["CICIoT2023"], 0.05, IFACE, "dummy") == 0

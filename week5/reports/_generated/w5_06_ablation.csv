@@ -1,0 +1,10 @@
+dataset,rule,alpha,n_cal,tau,false_flags,false_zeroday_rate,zeroday_recall,in_band,method
+CICIoT2023,conformal,0.05,18883,0.300551,918,0.048615,0.9998,True,"conformal (q=s_(k), +1, held-out)"
+CICIoT2023,heuristic,0.05,18883,0.300489,920,0.048721,0.9998,True,heuristic in-sample percentile (no +1; source=calibration_proxy(dummy))
+CICIoT2023,fixed,0.05,18883,0.5,24,0.001271,0.979,False,fixed cutoff τ=0.5
+BoT-IoT,conformal,0.05,18591,0.262934,986,0.053036,0.0952,True,"conformal (q=s_(k), +1, held-out)"
+BoT-IoT,heuristic,0.05,18591,0.262872,988,0.053144,0.0952,True,heuristic in-sample percentile (no +1; source=calibration_proxy(dummy))
+BoT-IoT,fixed,0.05,18591,0.5,16,0.000861,0.0029,False,fixed cutoff τ=0.5
+UNSW-NB15,conformal,0.05,10112,0.38338,467,0.046302,0.3857,True,"conformal (q=s_(k), +1, held-out)"
+UNSW-NB15,heuristic,0.05,10112,0.382977,469,0.0465,0.3865,True,heuristic in-sample percentile (no +1; source=calibration_proxy(dummy))
+UNSW-NB15,fixed,0.05,10112,0.5,76,0.007535,0.1398,False,fixed cutoff τ=0.5

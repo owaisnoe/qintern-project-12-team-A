@@ -1,0 +1,578 @@
+{
+ "schema_version": "1.0",
+ "day": 28,
+ "seed": 42,
+ "research_question": "RQ2 \u2014 zero-day guarantee, FINAL: achieved alpha vs target + true-zero-day recall, with 5-seed re-split CIs",
+ "alpha": 0.05,
+ "band_level": 0.99,
+ "source_kind": "dummy",
+ "scores_root": "week2/interface/dummy_scores",
+ "datasets": [
+  "CICIoT2023",
+  "BoT-IoT",
+  "UNSW-NB15"
+ ],
+ "seeds": [
+  42,
+  43,
+  44,
+  45,
+  46
+ ],
+ "sources": {
+  "frozen": "week4/INTEGRATION/frozen_thresholds.json",
+  "integration": "week4/reports/_generated/w4_03_conformal_integration.json",
+  "live": "week4/reports/_generated/w4_04_live_coverage.json",
+  "recall": "week4/reports/_generated/w4_01_zeroday_recall.json",
+  "interface": "week2/interface/dummy_scores"
+ },
+ "status_legend": {
+  "final": "fixed by the frozen partitions or the real classical models",
+  "provisional": "rides the Day-14 dummy fidelity interface; reprices on Team B's real prototypes"
+ },
+ "table_b_final": [
+  {
+   "dataset": "CICIoT2023",
+   "n_cal": 18883,
+   "k": 17940,
+   "m_test": 18883,
+   "threshold_q": 0.300551,
+   "target_alpha": 0.05,
+   "achieved_alpha": 0.048615,
+   "band": [
+    0.044326,
+    0.055923
+   ],
+   "band_level": 0.99,
+   "guarantee_held": true,
+   "alpha_le_target": true,
+   "exchangeability": "PASS",
+   "n_zeroday": 10984,
+   "qsnet_recall": 0.999818,
+   "best_classical": "Isolation Forest",
+   "best_classical_recall": 0.9978,
+   "recall_delta": 0.002018,
+   "status": {
+    "n_cal": "final",
+    "k": "final",
+    "m_test": "final",
+    "n_zeroday": "final",
+    "band": "final",
+    "best_classical_recall": "final",
+    "threshold_q": "provisional",
+    "achieved_alpha": "provisional",
+    "guarantee_held": "provisional",
+    "exchangeability": "provisional",
+    "qsnet_recall": "provisional",
+    "recall_delta": "provisional",
+    "fzr_5seed": "provisional",
+    "recall_5seed": "provisional"
+   },
+   "fzr_5seed": {
+    "n": 5,
+    "mean": 0.05175,
+    "std": 0.001576,
+    "ci95_low": 0.049793,
+    "ci95_high": 0.053707,
+    "ci95_half_width": 0.001957
+   },
+   "recall_5seed": {
+    "n": 5,
+    "mean": 0.999818,
+    "std": 0.0,
+    "ci95_low": 0.999818,
+    "ci95_high": 0.999818,
+    "ci95_half_width": 0.0
+   },
+   "n_in_band": 5,
+   "n_seeds": 5,
+   "all_in_band": true
+  },
+  {
+   "dataset": "BoT-IoT",
+   "n_cal": 18591,
+   "k": 17663,
+   "m_test": 18591,
+   "threshold_q": 0.262934,
+   "target_alpha": 0.05,
+   "achieved_alpha": 0.053036,
+   "band": [
+    0.044269,
+    0.055941
+   ],
+   "band_level": 0.99,
+   "guarantee_held": true,
+   "alpha_le_target": false,
+   "exchangeability": "PASS",
+   "n_zeroday": 683,
+   "qsnet_recall": 0.095168,
+   "best_classical": "Isolation Forest",
+   "best_classical_recall": 0.7233,
+   "recall_delta": -0.628132,
+   "status": {
+    "n_cal": "final",
+    "k": "final",
+    "m_test": "final",
+    "n_zeroday": "final",
+    "band": "final",
+    "best_classical_recall": "final",
+    "threshold_q": "provisional",
+    "achieved_alpha": "provisional",
+    "guarantee_held": "provisional",
+    "exchangeability": "provisional",
+    "qsnet_recall": "provisional",
+    "recall_delta": "provisional",
+    "fzr_5seed": "provisional",
+    "recall_5seed": "provisional"
+   },
+   "fzr_5seed": {
+    "n": 5,
+    "mean": 0.050143,
+    "std": 0.002048,
+    "ci95_low": 0.047599,
+    "ci95_high": 0.052686,
+    "ci95_half_width": 0.002543
+   },
+   "recall_5seed": {
+    "n": 5,
+    "mean": 0.092826,
+    "std": 0.001309,
+    "ci95_low": 0.0912,
+    "ci95_high": 0.094451,
+    "ci95_half_width": 0.001626
+   },
+   "n_in_band": 5,
+   "n_seeds": 5,
+   "all_in_band": true
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "n_cal": 10112,
+   "k": 9608,
+   "m_test": 10086,
+   "threshold_q": 0.38338,
+   "target_alpha": 0.05,
+   "achieved_alpha": 0.046302,
+   "band": [
+    0.042336,
+    0.0581
+   ],
+   "band_level": 0.99,
+   "guarantee_held": true,
+   "alpha_le_target": true,
+   "exchangeability": "PASS",
+   "n_zeroday": 1216,
+   "qsnet_recall": 0.385691,
+   "best_classical": "Autoencoder",
+   "best_classical_recall": 0.2656,
+   "recall_delta": 0.120091,
+   "status": {
+    "n_cal": "final",
+    "k": "final",
+    "m_test": "final",
+    "n_zeroday": "final",
+    "band": "final",
+    "best_classical_recall": "final",
+    "threshold_q": "provisional",
+    "achieved_alpha": "provisional",
+    "guarantee_held": "provisional",
+    "exchangeability": "provisional",
+    "qsnet_recall": "provisional",
+    "recall_delta": "provisional",
+    "fzr_5seed": "provisional",
+    "recall_5seed": "provisional"
+   },
+   "fzr_5seed": {
+    "n": 5,
+    "mean": 0.050783,
+    "std": 0.002777,
+    "ci95_low": 0.047335,
+    "ci95_high": 0.054232,
+    "ci95_half_width": 0.003449
+   },
+   "recall_5seed": {
+    "n": 5,
+    "mean": 0.392927,
+    "std": 0.00365,
+    "ci95_low": 0.388395,
+    "ci95_high": 0.397459,
+    "ci95_half_width": 0.004532
+   },
+   "n_in_band": 5,
+   "n_seeds": 5,
+   "all_in_band": true
+  }
+ ],
+ "allseed_ci": [
+  {
+   "dataset": "CICIoT2023",
+   "alpha": 0.05,
+   "band_level": 0.99,
+   "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "per_seed": [
+    {
+     "seed": 42,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883,
+     "q": 0.29865,
+     "false_flags": 968,
+     "fzr": 0.051263,
+     "band_lo_rate": 0.044326,
+     "band_hi_rate": 0.055923,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "n_zeroday": 10984,
+     "zeroday_detected": 10982,
+     "zeroday_recall": 0.999818
+    },
+    {
+     "seed": 43,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883,
+     "q": 0.297419,
+     "false_flags": 993,
+     "fzr": 0.052587,
+     "band_lo_rate": 0.044326,
+     "band_hi_rate": 0.055923,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "n_zeroday": 10984,
+     "zeroday_detected": 10982,
+     "zeroday_recall": 0.999818
+    },
+    {
+     "seed": 44,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883,
+     "q": 0.29865,
+     "false_flags": 968,
+     "fzr": 0.051263,
+     "band_lo_rate": 0.044326,
+     "band_hi_rate": 0.055923,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "n_zeroday": 10984,
+     "zeroday_detected": 10982,
+     "zeroday_recall": 0.999818
+    },
+    {
+     "seed": 45,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883,
+     "q": 0.296144,
+     "false_flags": 1018,
+     "fzr": 0.053911,
+     "band_lo_rate": 0.044326,
+     "band_hi_rate": 0.055923,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "n_zeroday": 10984,
+     "zeroday_detected": 10982,
+     "zeroday_recall": 0.999818
+    },
+    {
+     "seed": 46,
+     "n_cal": 18883,
+     "k": 17940,
+     "m_test": 18883,
+     "q": 0.299902,
+     "false_flags": 939,
+     "fzr": 0.049727,
+     "band_lo_rate": 0.044326,
+     "band_hi_rate": 0.055923,
+     "expected_rate": 0.049989,
+     "in_band": true,
+     "n_zeroday": 10984,
+     "zeroday_detected": 10982,
+     "zeroday_recall": 0.999818
+    }
+   ],
+   "fzr_5seed": {
+    "n": 5,
+    "mean": 0.05175,
+    "std": 0.001576,
+    "ci95_low": 0.049793,
+    "ci95_high": 0.053707,
+    "ci95_half_width": 0.001957
+   },
+   "recall_5seed": {
+    "n": 5,
+    "mean": 0.999818,
+    "std": 0.0,
+    "ci95_low": 0.999818,
+    "ci95_high": 0.999818,
+    "ci95_half_width": 0.0
+   },
+   "n_in_band": 5,
+   "n_seeds": 5,
+   "all_in_band": true,
+   "fzr_ci_covers_alpha": true
+  },
+  {
+   "dataset": "BoT-IoT",
+   "alpha": 0.05,
+   "band_level": 0.99,
+   "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "per_seed": [
+    {
+     "seed": 42,
+     "n_cal": 18591,
+     "k": 17663,
+     "m_test": 18591,
+     "q": 0.26723,
+     "false_flags": 873,
+     "fzr": 0.046958,
+     "band_lo_rate": 0.044269,
+     "band_hi_rate": 0.055941,
+     "expected_rate": 0.049968,
+     "in_band": true,
+     "n_zeroday": 683,
+     "zeroday_detected": 62,
+     "zeroday_recall": 0.090776
+    },
+    {
+     "seed": 43,
+     "n_cal": 18591,
+     "k": 17663,
+     "m_test": 18591,
+     "q": 0.263474,
+     "false_flags": 975,
+     "fzr": 0.052445,
+     "band_lo_rate": 0.044269,
+     "band_hi_rate": 0.055941,
+     "expected_rate": 0.049968,
+     "in_band": true,
+     "n_zeroday": 683,
+     "zeroday_detected": 64,
+     "zeroday_recall": 0.093704
+    },
+    {
+     "seed": 44,
+     "n_cal": 18591,
+     "k": 17663,
+     "m_test": 18591,
+     "q": 0.265472,
+     "false_flags": 922,
+     "fzr": 0.049594,
+     "band_lo_rate": 0.044269,
+     "band_hi_rate": 0.055941,
+     "expected_rate": 0.049968,
+     "in_band": true,
+     "n_zeroday": 683,
+     "zeroday_detected": 63,
+     "zeroday_recall": 0.09224
+    },
+    {
+     "seed": 45,
+     "n_cal": 18591,
+     "k": 17663,
+     "m_test": 18591,
+     "q": 0.264693,
+     "false_flags": 944,
+     "fzr": 0.050777,
+     "band_lo_rate": 0.044269,
+     "band_hi_rate": 0.055941,
+     "expected_rate": 0.049968,
+     "in_band": true,
+     "n_zeroday": 683,
+     "zeroday_detected": 64,
+     "zeroday_recall": 0.093704
+    },
+    {
+     "seed": 46,
+     "n_cal": 18591,
+     "k": 17663,
+     "m_test": 18591,
+     "q": 0.264637,
+     "false_flags": 947,
+     "fzr": 0.050939,
+     "band_lo_rate": 0.044269,
+     "band_hi_rate": 0.055941,
+     "expected_rate": 0.049968,
+     "in_band": true,
+     "n_zeroday": 683,
+     "zeroday_detected": 64,
+     "zeroday_recall": 0.093704
+    }
+   ],
+   "fzr_5seed": {
+    "n": 5,
+    "mean": 0.050143,
+    "std": 0.002048,
+    "ci95_low": 0.047599,
+    "ci95_high": 0.052686,
+    "ci95_half_width": 0.002543
+   },
+   "recall_5seed": {
+    "n": 5,
+    "mean": 0.092826,
+    "std": 0.001309,
+    "ci95_low": 0.0912,
+    "ci95_high": 0.094451,
+    "ci95_half_width": 0.001626
+   },
+   "n_in_band": 5,
+   "n_seeds": 5,
+   "all_in_band": true,
+   "fzr_ci_covers_alpha": true
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "alpha": 0.05,
+   "band_level": 0.99,
+   "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "per_seed": [
+    {
+     "seed": 42,
+     "n_cal": 10112,
+     "k": 9608,
+     "m_test": 10086,
+     "q": 0.380584,
+     "false_flags": 523,
+     "fzr": 0.051854,
+     "band_lo_rate": 0.042336,
+     "band_hi_rate": 0.0581,
+     "expected_rate": 0.049936,
+     "in_band": true,
+     "n_zeroday": 1216,
+     "zeroday_detected": 479,
+     "zeroday_recall": 0.393914
+    },
+    {
+     "seed": 43,
+     "n_cal": 10112,
+     "k": 9608,
+     "m_test": 10086,
+     "q": 0.380333,
+     "false_flags": 527,
+     "fzr": 0.052251,
+     "band_lo_rate": 0.042336,
+     "band_hi_rate": 0.0581,
+     "expected_rate": 0.049936,
+     "in_band": true,
+     "n_zeroday": 1216,
+     "zeroday_detected": 479,
+     "zeroday_recall": 0.393914
+    },
+    {
+     "seed": 44,
+     "n_cal": 10112,
+     "k": 9608,
+     "m_test": 10086,
+     "q": 0.382863,
+     "false_flags": 475,
+     "fzr": 0.047095,
+     "band_lo_rate": 0.042336,
+     "band_hi_rate": 0.0581,
+     "expected_rate": 0.049936,
+     "in_band": true,
+     "n_zeroday": 1216,
+     "zeroday_detected": 473,
+     "zeroday_recall": 0.38898
+    },
+    {
+     "seed": 45,
+     "n_cal": 10112,
+     "k": 9608,
+     "m_test": 10086,
+     "q": 0.379101,
+     "false_flags": 544,
+     "fzr": 0.053936,
+     "band_lo_rate": 0.042336,
+     "band_hi_rate": 0.0581,
+     "expected_rate": 0.049936,
+     "in_band": true,
+     "n_zeroday": 1216,
+     "zeroday_detected": 484,
+     "zeroday_recall": 0.398026
+    },
+    {
+     "seed": 46,
+     "n_cal": 10112,
+     "k": 9608,
+     "m_test": 10086,
+     "q": 0.382104,
+     "false_flags": 492,
+     "fzr": 0.04878,
+     "band_lo_rate": 0.042336,
+     "band_hi_rate": 0.0581,
+     "expected_rate": 0.049936,
+     "in_band": true,
+     "n_zeroday": 1216,
+     "zeroday_detected": 474,
+     "zeroday_recall": 0.389803
+    }
+   ],
+   "fzr_5seed": {
+    "n": 5,
+    "mean": 0.050783,
+    "std": 0.002777,
+    "ci95_low": 0.047335,
+    "ci95_high": 0.054232,
+    "ci95_half_width": 0.003449
+   },
+   "recall_5seed": {
+    "n": 5,
+    "mean": 0.392927,
+    "std": 0.00365,
+    "ci95_low": 0.388395,
+    "ci95_high": 0.397459,
+    "ci95_half_width": 0.004532
+   },
+   "n_in_band": 5,
+   "n_seeds": 5,
+   "all_in_band": true,
+   "fzr_ci_covers_alpha": true
+  }
+ ],
+ "crosscheck_table_a": {
+  "checked": true,
+  "tol": 1e-09,
+  "all_agree": true,
+  "rows": [
+   {
+    "dataset": "CICIoT2023",
+    "table_a_mean_fzr": 0.05175,
+    "table_b_mean_fzr": 0.05175,
+    "agree": true
+   },
+   {
+    "dataset": "BoT-IoT",
+    "table_a_mean_fzr": 0.050143,
+    "table_b_mean_fzr": 0.050143,
+    "agree": true
+   },
+   {
+    "dataset": "UNSW-NB15",
+    "table_a_mean_fzr": 0.050783,
+    "table_b_mean_fzr": 0.050783,
+    "agree": true
+   }
+  ]
+ },
+ "all_guarantees_held": true,
+ "all_seeds_in_band": true,
+ "all_ci_cover_alpha": true
+}

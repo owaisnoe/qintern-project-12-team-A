@@ -37,7 +37,9 @@
  ],
  "law": "E ~ BetaBinomial(m, n+1-k, k)  [coverage|cal ~ Beta(k, n+1-k)]",
  "datasets": [
-  "CICIoT2023"
+  "CICIoT2023",
+  "BoT-IoT",
+  "UNSW-NB15"
  ],
  "points": [
   {
@@ -93,6 +95,114 @@
    "std_fzr": 0.001576,
    "band_lo_rate": 0.044326,
    "band_hi_rate": 0.055923
+  },
+  {
+   "dataset": "BoT-IoT",
+   "alpha": 0.05,
+   "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "per_seed": [
+    {
+     "seed": 42,
+     "fzr": 0.046958,
+     "n_cal": 18591,
+     "k": 17663,
+     "m_test": 18591
+    },
+    {
+     "seed": 43,
+     "fzr": 0.052445,
+     "n_cal": 18591,
+     "k": 17663,
+     "m_test": 18591
+    },
+    {
+     "seed": 44,
+     "fzr": 0.049594,
+     "n_cal": 18591,
+     "k": 17663,
+     "m_test": 18591
+    },
+    {
+     "seed": 45,
+     "fzr": 0.050777,
+     "n_cal": 18591,
+     "k": 17663,
+     "m_test": 18591
+    },
+    {
+     "seed": 46,
+     "fzr": 0.050939,
+     "n_cal": 18591,
+     "k": 17663,
+     "m_test": 18591
+    }
+   ],
+   "mean_fzr": 0.050143,
+   "min_fzr": 0.046958,
+   "max_fzr": 0.052445,
+   "std_fzr": 0.002048,
+   "band_lo_rate": 0.044269,
+   "band_hi_rate": 0.055941
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "alpha": 0.05,
+   "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "per_seed": [
+    {
+     "seed": 42,
+     "fzr": 0.051854,
+     "n_cal": 10112,
+     "k": 9608,
+     "m_test": 10086
+    },
+    {
+     "seed": 43,
+     "fzr": 0.052251,
+     "n_cal": 10112,
+     "k": 9608,
+     "m_test": 10086
+    },
+    {
+     "seed": 44,
+     "fzr": 0.047095,
+     "n_cal": 10112,
+     "k": 9608,
+     "m_test": 10086
+    },
+    {
+     "seed": 45,
+     "fzr": 0.053936,
+     "n_cal": 10112,
+     "k": 9608,
+     "m_test": 10086
+    },
+    {
+     "seed": 46,
+     "fzr": 0.04878,
+     "n_cal": 10112,
+     "k": 9608,
+     "m_test": 10086
+    }
+   ],
+   "mean_fzr": 0.050783,
+   "min_fzr": 0.047095,
+   "max_fzr": 0.053936,
+   "std_fzr": 0.002777,
+   "band_lo_rate": 0.042336,
+   "band_hi_rate": 0.0581
   }
  ],
  "figure_written": true

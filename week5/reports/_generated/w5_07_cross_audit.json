@@ -1,0 +1,935 @@
+{
+ "schema_version": "1.0",
+ "day": 30,
+ "seed": 42,
+ "alpha": 0.05,
+ "research_question": "audit \u2014 every Team-A number vs raw logs (independent re-derivation)",
+ "source_kind": "dummy",
+ "scores_root": "week2/interface/dummy_scores",
+ "datasets": [
+  "CICIoT2023",
+  "BoT-IoT",
+  "UNSW-NB15"
+ ],
+ "tolerances": {
+  "exact_copy": 1e-09,
+  "independent_estimator": 5e-05
+ },
+ "n_checks": 91,
+ "n_pass": 90,
+ "n_fail": 0,
+ "n_warn": 1,
+ "all_pass": true,
+ "checks": [
+  {
+   "check": "threshold q (order statistic)",
+   "scope": "CICIoT2023",
+   "expected": 0.300551,
+   "observed": 0.300551,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "frozen_thresholds.json"
+  },
+  {
+   "check": "k = ceil((1-a)(n+1))",
+   "scope": "CICIoT2023",
+   "expected": 17940,
+   "observed": 17940,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "n_cal",
+   "scope": "CICIoT2023",
+   "expected": 18883,
+   "observed": 18883,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "canonical FZR",
+   "scope": "CICIoT2023",
+   "expected": 0.048615,
+   "observed": 0.048615,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "w4_03 integration"
+  },
+  {
+   "check": "canonical coverage",
+   "scope": "CICIoT2023",
+   "expected": 0.951385,
+   "observed": 0.951385,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "zero-day recall",
+   "scope": "CICIoT2023",
+   "expected": 0.999818,
+   "observed": 0.999818,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "zero-day n",
+   "scope": "CICIoT2023",
+   "expected": 10984,
+   "observed": 10984,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "Day-19 quantum recall row",
+   "scope": "CICIoT2023",
+   "expected": 0.9998,
+   "observed": 0.9998,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "w4_01 zeroday_recall"
+  },
+  {
+   "check": "exact band membership",
+   "scope": "CICIoT2023",
+   "expected": true,
+   "observed": true,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "count 918 in [837, 1056] (band re-derived from raw pmf)"
+  },
+  {
+   "check": "XGB accuracy: predictions.csv vs results.json",
+   "scope": "CICIoT2023",
+   "expected": 0.9896,
+   "observed": 0.9896,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "raw per-sample log vs frozen summary"
+  },
+  {
+   "check": "XGB macro-F1: predictions.csv vs results.json",
+   "scope": "CICIoT2023",
+   "expected": 0.8043,
+   "observed": 0.8043,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "label set = test-split classes"
+  },
+  {
+   "check": "XGB accuracy vs frozen scalar",
+   "scope": "CICIoT2023",
+   "expected": 0.9896,
+   "observed": 0.9896,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "XGB macro-F1 vs frozen scalar",
+   "scope": "CICIoT2023",
+   "expected": 0.8043,
+   "observed": 0.8043,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "XGB OVR-AUROC vs frozen scalar",
+   "scope": "CICIoT2023",
+   "expected": 0.999,
+   "observed": 0.999,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "QS-Net accuracy (argmax re-derivation)",
+   "scope": "CICIoT2023",
+   "expected": 0.9034,
+   "observed": 0.9034,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "argmax fid__ vs frozen scalar \u2014 also validates stored pred_class/pred_correct"
+  },
+  {
+   "check": "QS-Net macro-F1 (argmax re-derivation)",
+   "scope": "CICIoT2023",
+   "expected": 0.6598,
+   "observed": 0.6598,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "QS-Net OVR-AUROC (sklearn vs Mann-Whitney)",
+   "scope": "CICIoT2023",
+   "expected": 0.9438,
+   "observed": 0.9438,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "two independent AUROC estimators"
+  },
+  {
+   "check": "McNemar n10 (QS-only-right)",
+   "scope": "CICIoT2023",
+   "expected": 176,
+   "observed": 176,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "McNemar n01 (XGB-only-right)",
+   "scope": "CICIoT2023",
+   "expected": 1803,
+   "observed": 1803,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "McNemar doubled exact tail",
+   "scope": "CICIoT2023",
+   "expected": 0.0,
+   "observed": 0.0,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "recomputed from scipy binom.cdf"
+  },
+  {
+   "check": "RQ3 separation AUROC (sklearn)",
+   "scope": "CICIoT2023",
+   "expected": 0.4994,
+   "observed": 0.4994,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "independent estimator + independently re-seeded halves"
+  },
+  {
+   "check": "RQ3 zeroday_vs_clean AUROC (sklearn)",
+   "scope": "CICIoT2023",
+   "expected": 0.9998,
+   "observed": 0.9998,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "independent estimator + independently re-seeded halves"
+  },
+  {
+   "check": "RQ3 adv_vs_clean AUROC (sklearn)",
+   "scope": "CICIoT2023",
+   "expected": 0.9998,
+   "observed": 0.9998,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "independent estimator + independently re-seeded halves"
+  },
+  {
+   "check": "threshold q (order statistic)",
+   "scope": "BoT-IoT",
+   "expected": 0.262934,
+   "observed": 0.262934,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "frozen_thresholds.json"
+  },
+  {
+   "check": "k = ceil((1-a)(n+1))",
+   "scope": "BoT-IoT",
+   "expected": 17663,
+   "observed": 17663,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "n_cal",
+   "scope": "BoT-IoT",
+   "expected": 18591,
+   "observed": 18591,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "canonical FZR",
+   "scope": "BoT-IoT",
+   "expected": 0.053036,
+   "observed": 0.053036,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "w4_03 integration"
+  },
+  {
+   "check": "canonical coverage",
+   "scope": "BoT-IoT",
+   "expected": 0.946964,
+   "observed": 0.946964,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "zero-day recall",
+   "scope": "BoT-IoT",
+   "expected": 0.095168,
+   "observed": 0.095168,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "zero-day n",
+   "scope": "BoT-IoT",
+   "expected": 683,
+   "observed": 683,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "Day-19 quantum recall row",
+   "scope": "BoT-IoT",
+   "expected": 0.0952,
+   "observed": 0.0952,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "w4_01 zeroday_recall"
+  },
+  {
+   "check": "exact band membership",
+   "scope": "BoT-IoT",
+   "expected": true,
+   "observed": true,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "count 986 in [823, 1040] (band re-derived from raw pmf)"
+  },
+  {
+   "check": "XGB accuracy: predictions.csv vs results.json",
+   "scope": "BoT-IoT",
+   "expected": 0.9515,
+   "observed": 0.9515,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "raw per-sample log vs frozen summary"
+  },
+  {
+   "check": "XGB macro-F1: predictions.csv vs results.json",
+   "scope": "BoT-IoT",
+   "expected": 0.9727,
+   "observed": 0.9727,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "label set = test-split classes"
+  },
+  {
+   "check": "XGB accuracy vs frozen scalar",
+   "scope": "BoT-IoT",
+   "expected": 0.9515,
+   "observed": 0.9515,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "XGB macro-F1 vs frozen scalar",
+   "scope": "BoT-IoT",
+   "expected": 0.9727,
+   "observed": 0.9727,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "XGB OVR-AUROC vs frozen scalar",
+   "scope": "BoT-IoT",
+   "expected": 0.9955,
+   "observed": 0.9955,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "QS-Net accuracy (argmax re-derivation)",
+   "scope": "BoT-IoT",
+   "expected": 0.9396,
+   "observed": 0.9396,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "argmax fid__ vs frozen scalar \u2014 also validates stored pred_class/pred_correct"
+  },
+  {
+   "check": "QS-Net macro-F1 (argmax re-derivation)",
+   "scope": "BoT-IoT",
+   "expected": 0.8339,
+   "observed": 0.8339,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "QS-Net OVR-AUROC (sklearn vs Mann-Whitney)",
+   "scope": "BoT-IoT",
+   "expected": 0.9509,
+   "observed": 0.9509,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "two independent AUROC estimators"
+  },
+  {
+   "check": "McNemar n10 (QS-only-right)",
+   "scope": "BoT-IoT",
+   "expected": 869,
+   "observed": 869,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "McNemar n01 (XGB-only-right)",
+   "scope": "BoT-IoT",
+   "expected": 1089,
+   "observed": 1089,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "McNemar doubled exact tail",
+   "scope": "BoT-IoT",
+   "expected": 7.26273412199973e-07,
+   "observed": 7.26273412199973e-07,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "recomputed from scipy binom.cdf"
+  },
+  {
+   "check": "RQ3 separation AUROC (sklearn)",
+   "scope": "BoT-IoT",
+   "expected": 0.4763,
+   "observed": 0.4763,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "independent estimator + independently re-seeded halves"
+  },
+  {
+   "check": "RQ3 zeroday_vs_clean AUROC (sklearn)",
+   "scope": "BoT-IoT",
+   "expected": 0.5881,
+   "observed": 0.5881,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "independent estimator + independently re-seeded halves"
+  },
+  {
+   "check": "RQ3 adv_vs_clean AUROC (sklearn)",
+   "scope": "BoT-IoT",
+   "expected": 0.6083,
+   "observed": 0.6083,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "independent estimator + independently re-seeded halves"
+  },
+  {
+   "check": "threshold q (order statistic)",
+   "scope": "UNSW-NB15",
+   "expected": 0.38338,
+   "observed": 0.38338,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "frozen_thresholds.json"
+  },
+  {
+   "check": "k = ceil((1-a)(n+1))",
+   "scope": "UNSW-NB15",
+   "expected": 9608,
+   "observed": 9608,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "n_cal",
+   "scope": "UNSW-NB15",
+   "expected": 10112,
+   "observed": 10112,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "canonical FZR",
+   "scope": "UNSW-NB15",
+   "expected": 0.046302,
+   "observed": 0.046302,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "w4_03 integration"
+  },
+  {
+   "check": "canonical coverage",
+   "scope": "UNSW-NB15",
+   "expected": 0.953698,
+   "observed": 0.953698,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "zero-day recall",
+   "scope": "UNSW-NB15",
+   "expected": 0.385691,
+   "observed": 0.385691,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "zero-day n",
+   "scope": "UNSW-NB15",
+   "expected": 1216,
+   "observed": 1216,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "Day-19 quantum recall row",
+   "scope": "UNSW-NB15",
+   "expected": 0.3857,
+   "observed": 0.3857,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "w4_01 zeroday_recall"
+  },
+  {
+   "check": "exact band membership",
+   "scope": "UNSW-NB15",
+   "expected": true,
+   "observed": true,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "count 467 in [427, 586] (band re-derived from raw pmf)"
+  },
+  {
+   "check": "XGB accuracy: predictions.csv vs results.json",
+   "scope": "UNSW-NB15",
+   "expected": 0.802,
+   "observed": 0.802,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "raw per-sample log vs frozen summary"
+  },
+  {
+   "check": "XGB macro-F1: predictions.csv vs results.json",
+   "scope": "UNSW-NB15",
+   "expected": 0.6016,
+   "observed": 0.6016,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "label set = test-split classes"
+  },
+  {
+   "check": "XGB accuracy vs frozen scalar",
+   "scope": "UNSW-NB15",
+   "expected": 0.802,
+   "observed": 0.802,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "XGB macro-F1 vs frozen scalar",
+   "scope": "UNSW-NB15",
+   "expected": 0.6016,
+   "observed": 0.6016,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "XGB OVR-AUROC vs frozen scalar",
+   "scope": "UNSW-NB15",
+   "expected": 0.9695,
+   "observed": 0.9695,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "QS-Net accuracy (argmax re-derivation)",
+   "scope": "UNSW-NB15",
+   "expected": 0.7966,
+   "observed": 0.7966,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "argmax fid__ vs frozen scalar \u2014 also validates stored pred_class/pred_correct"
+  },
+  {
+   "check": "QS-Net macro-F1 (argmax re-derivation)",
+   "scope": "UNSW-NB15",
+   "expected": 0.5513,
+   "observed": 0.5513,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "QS-Net OVR-AUROC (sklearn vs Mann-Whitney)",
+   "scope": "UNSW-NB15",
+   "expected": 0.8711,
+   "observed": 0.8711,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "two independent AUROC estimators"
+  },
+  {
+   "check": "McNemar n10 (QS-only-right)",
+   "scope": "UNSW-NB15",
+   "expected": 1602,
+   "observed": 1602,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "McNemar n01 (XGB-only-right)",
+   "scope": "UNSW-NB15",
+   "expected": 1656,
+   "observed": 1656,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "McNemar doubled exact tail",
+   "scope": "UNSW-NB15",
+   "expected": 0.3531295497640803,
+   "observed": 0.3531295497640803,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "recomputed from scipy binom.cdf"
+  },
+  {
+   "check": "RQ3 separation AUROC (sklearn)",
+   "scope": "UNSW-NB15",
+   "expected": 0.5104,
+   "observed": 0.5104,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "independent estimator + independently re-seeded halves"
+  },
+  {
+   "check": "RQ3 zeroday_vs_clean AUROC (sklearn)",
+   "scope": "UNSW-NB15",
+   "expected": 0.8477,
+   "observed": 0.8477,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "independent estimator + independently re-seeded halves"
+  },
+  {
+   "check": "RQ3 adv_vs_clean AUROC (sklearn)",
+   "scope": "UNSW-NB15",
+   "expected": 0.8405,
+   "observed": 0.8405,
+   "delta": 0.0,
+   "tol": 5e-05,
+   "verdict": "PASS",
+   "note": "independent estimator + independently re-seeded halves"
+  },
+  {
+   "check": "all-seed mean FZR: Table A vs frozen scalar",
+   "scope": "CICIoT2023",
+   "expected": 0.05175,
+   "observed": 0.05175,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "all-seed mean FZR: Table A vs Figure 2",
+   "scope": "CICIoT2023",
+   "expected": 0.05175,
+   "observed": 0.05175,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "all-seed mean recomputed from per-seed rows",
+   "scope": "CICIoT2023",
+   "expected": 0.05175,
+   "observed": 0.05175,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "all-seed mean FZR: Table A vs frozen scalar",
+   "scope": "BoT-IoT",
+   "expected": 0.050143,
+   "observed": 0.050143,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "all-seed mean FZR: Table A vs Figure 2",
+   "scope": "BoT-IoT",
+   "expected": 0.050143,
+   "observed": 0.050143,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "all-seed mean recomputed from per-seed rows",
+   "scope": "BoT-IoT",
+   "expected": 0.050143,
+   "observed": 0.050143,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "all-seed mean FZR: Table A vs frozen scalar",
+   "scope": "UNSW-NB15",
+   "expected": 0.050783,
+   "observed": 0.050783,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "all-seed mean FZR: Table A vs Figure 2",
+   "scope": "UNSW-NB15",
+   "expected": 0.050783,
+   "observed": 0.050783,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "all-seed mean recomputed from per-seed rows",
+   "scope": "UNSW-NB15",
+   "expected": 0.050783,
+   "observed": 0.050783,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "per-class out-of-band recount",
+   "scope": "CICIoT2023",
+   "expected": 0,
+   "observed": 0,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "per-class out-of-band recount",
+   "scope": "BoT-IoT",
+   "expected": 0,
+   "observed": 0,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "per-class out-of-band recount",
+   "scope": "UNSW-NB15",
+   "expected": 0,
+   "observed": 0,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "Table B 5-seed mean == Table A all-seed mean",
+   "scope": "CICIoT2023",
+   "expected": 0.05175,
+   "observed": 0.05175,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "Table B 5-seed mean == Table A all-seed mean",
+   "scope": "BoT-IoT",
+   "expected": 0.050143,
+   "observed": 0.050143,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "Table B 5-seed mean == Table A all-seed mean",
+   "scope": "UNSW-NB15",
+   "expected": 0.050783,
+   "observed": 0.050783,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": ""
+  },
+  {
+   "check": "rendered md cells match JSON (w5_02_table_a.md)",
+   "scope": "-",
+   "expected": "all",
+   "observed": "all",
+   "delta": null,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "6 printed cells verified at 4 dp"
+  },
+  {
+   "check": "rendered md cells match JSON (w5_04_table_b.md)",
+   "scope": "-",
+   "expected": "all",
+   "observed": "all",
+   "delta": null,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "3 printed cells verified at 4 dp"
+  },
+  {
+   "check": "SHA-256 manifest (RESULTS_FROZEN)",
+   "scope": "-",
+   "expected": 0,
+   "observed": 0,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "16 files re-hashed independently"
+  },
+  {
+   "check": "SHA-256 manifest (INTEGRATION)",
+   "scope": "-",
+   "expected": 0,
+   "observed": 0,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "34 files re-hashed independently"
+  },
+  {
+   "check": "SHA-256 manifest (week2 FROZEN)",
+   "scope": "-",
+   "expected": "known drift",
+   "observed": "13 deviations",
+   "delta": null,
+   "tol": null,
+   "verdict": "WARN",
+   "note": "pre-existing week2 drift (rq3 regenerated post-freeze, README evolved, IWO summary renamed to the two TASK handoffs); also the 93-vs-97 file-count discrepancy between w2_06/IWO handoff docs and the manifest \u2014 week2 re-freeze is a team decision, out of Day-30 scope"
+  },
+  {
+   "check": "absolute-path leak scan",
+   "scope": "repo",
+   "expected": 0,
+   "observed": 0,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "patterns: drive-letter+Users, /home/<user>, /Users/<user>"
+  },
+  {
+   "check": "CRLF scan (committed text)",
+   "scope": "repo",
+   "expected": 0,
+   "observed": 0,
+   "delta": 0.0,
+   "tol": 1e-09,
+   "verdict": "PASS",
+   "note": "every text artifact is LF (matches .gitattributes)"
+  }
+ ]
+}

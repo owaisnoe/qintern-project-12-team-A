@@ -2,3 +2,9 @@ dataset,source_kind,panel,positive,negative,n_pos,n_neg,auroc,ci95_low,ci95_high
 CICIoT2023,dummy,separation,true_zeroday,adv_known,5492,5492,0.4994,0.4886,0.5106
 CICIoT2023,dummy,zeroday_vs_clean,true_zeroday,clean_known,5492,18883,0.9998,0.9998,0.9999
 CICIoT2023,dummy,adv_vs_clean,adv_known,clean_known,5492,18883,0.9998,0.9998,0.9999
+BoT-IoT,dummy,separation,true_zeroday,adv_known,341,341,0.4763,0.4335,0.5181
+BoT-IoT,dummy,zeroday_vs_clean,true_zeroday,clean_known,341,18591,0.5881,0.5591,0.6159
+BoT-IoT,dummy,adv_vs_clean,adv_known,clean_known,341,18591,0.6083,0.5779,0.6369
+UNSW-NB15,dummy,separation,true_zeroday,adv_known,608,608,0.5104,0.4796,0.5416
+UNSW-NB15,dummy,zeroday_vs_clean,true_zeroday,clean_known,608,10086,0.8477,0.833,0.8626
+UNSW-NB15,dummy,adv_vs_clean,adv_known,clean_known,608,10086,0.8405,0.8254,0.8555

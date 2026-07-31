@@ -1,0 +1,4 @@
+family,dataset,comparison,scope,n_pairs,acc_qsnet,acc_xgboost,acc_diff,qsnet_only_right,xgboost_only_right,cohens_h,cohens_dz,p_raw,note,p_holm,significant
+closed_set_correctness,CICIoT2023,QS-Net (CQ-ZDR) vs XGBoost (detector),"KNOWN test split, multiclass",18883,0.9034,0.9896,-0.0862,176,1803,-0.4274,-0.2761,0.0,,0.0,True
+closed_set_correctness,BoT-IoT,QS-Net (CQ-ZDR) vs XGBoost (detector),"KNOWN test split, multiclass",18591,0.9396,0.9515,-0.0118,869,1089,-0.0522,-0.0365,7.26273412199973e-07,,1.452546824399946e-06,True
+closed_set_correctness,UNSW-NB15,QS-Net (CQ-ZDR) vs XGBoost (detector),"KNOWN test split, multiclass",10086,0.7966,0.802,-0.0054,1602,1656,-0.0134,-0.0094,0.3531295497640803,,0.3531295497640803,False

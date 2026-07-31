@@ -1,0 +1,9 @@
+QS-Net Team A — Team-B manuscript hand-off
+version: 1.0
+seed: 42
+primary_alpha: 0.05
+source: dummy
+trio: CICIoT2023, BoT-IoT, UNSW-NB15
+files: 41  bytes: 587269
+audit: 90 PASS / 0 FAIL / 1 WARN
+manifest: HANDOVER/handover_manifest_v1.0.json

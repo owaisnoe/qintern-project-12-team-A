@@ -11,7 +11,9 @@
  "score_def": "s = 1 - max_c F(rho_x, rho_c)",
  "separation_def": "AUROC(true_zeroday POSITIVE vs adv_known NEGATIVE)",
  "datasets": [
-  "CICIoT2023"
+  "CICIoT2023",
+  "BoT-IoT",
+  "UNSW-NB15"
  ],
  "results": {
   "CICIoT2023": {
@@ -57,6 +59,98 @@
      "auroc": 0.9998,
      "ci95_low": 0.9998,
      "ci95_high": 0.9999
+    }
+   ]
+  },
+  "BoT-IoT": {
+   "dataset": "BoT-IoT",
+   "source_kind": "dummy",
+   "n_by_role": {
+    "clean_known": 18591,
+    "adv_known": 341,
+    "true_zeroday": 341
+   },
+   "mean_score_by_role": {
+    "clean_known": 0.100641,
+    "adv_known": 0.132979,
+    "true_zeroday": 0.123799
+   },
+   "panels": [
+    {
+     "panel": "separation",
+     "positive": "true_zeroday",
+     "negative": "adv_known",
+     "n_pos": 341,
+     "n_neg": 341,
+     "auroc": 0.4763,
+     "ci95_low": 0.4335,
+     "ci95_high": 0.5181
+    },
+    {
+     "panel": "zeroday_vs_clean",
+     "positive": "true_zeroday",
+     "negative": "clean_known",
+     "n_pos": 341,
+     "n_neg": 18591,
+     "auroc": 0.5881,
+     "ci95_low": 0.5591,
+     "ci95_high": 0.6159
+    },
+    {
+     "panel": "adv_vs_clean",
+     "positive": "adv_known",
+     "negative": "clean_known",
+     "n_pos": 341,
+     "n_neg": 18591,
+     "auroc": 0.6083,
+     "ci95_low": 0.5779,
+     "ci95_high": 0.6369
+    }
+   ]
+  },
+  "UNSW-NB15": {
+   "dataset": "UNSW-NB15",
+   "source_kind": "dummy",
+   "n_by_role": {
+    "clean_known": 10086,
+    "adv_known": 608,
+    "true_zeroday": 608
+   },
+   "mean_score_by_role": {
+    "clean_known": 0.179069,
+    "adv_known": 0.347336,
+    "true_zeroday": 0.351806
+   },
+   "panels": [
+    {
+     "panel": "separation",
+     "positive": "true_zeroday",
+     "negative": "adv_known",
+     "n_pos": 608,
+     "n_neg": 608,
+     "auroc": 0.5104,
+     "ci95_low": 0.4796,
+     "ci95_high": 0.5416
+    },
+    {
+     "panel": "zeroday_vs_clean",
+     "positive": "true_zeroday",
+     "negative": "clean_known",
+     "n_pos": 608,
+     "n_neg": 10086,
+     "auroc": 0.8477,
+     "ci95_low": 0.833,
+     "ci95_high": 0.8626
+    },
+    {
+     "panel": "adv_vs_clean",
+     "positive": "adv_known",
+     "negative": "clean_known",
+     "n_pos": 608,
+     "n_neg": 10086,
+     "auroc": 0.8405,
+     "ci95_low": 0.8254,
+     "ci95_high": 0.8555
     }
    ]
   }

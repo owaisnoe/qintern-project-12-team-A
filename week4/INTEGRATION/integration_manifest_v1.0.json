@@ -3,7 +3,7 @@
  "version": "1.0",
  "day": 21,
  "seed": 42,
- "frozen_utc": "2026-07-30T01:56:19Z",
+ "frozen_utc": "2026-07-31T15:35:55Z",
  "primary_alpha": 0.05,
  "source_kind": "dummy",
  "benchmark_trio": [
@@ -14,7 +14,7 @@
  "scope": "Integration hand-off surface: the pinned conformal/coverage/stats/recall code modules, the score interface Team B fills, the packaged coverage/zero-day/significance outputs, and the frozen thresholds + interface contract. frozen_utc is metadata, NOT part of --verify.",
  "missing_optional_outputs": [],
  "n_files": 34,
- "total_bytes": 26292226,
+ "total_bytes": 26292393,
  "files": [
   {
    "path": "week3/scripts/conformal_calibrate.py",
@@ -24,8 +24,8 @@
   },
   {
    "path": "week3/scripts/coverage_harness.py",
-   "sha256": "72d9e19d8496ec2494d4a75ce9be26b2ee2f12d9a483f037dbddd6ca6b7fa18d",
-   "bytes": 14013,
+   "sha256": "5909e435a37defcf47433d805d92cf3148d45355f3da272d4b485f3648c2427b",
+   "bytes": 14253,
    "rows": null
   },
   {
@@ -54,8 +54,8 @@
   },
   {
    "path": "week3/reports/_generated/w3_02_coverage_verification.json",
-   "sha256": "cdb2542096f36a3e3b8c5d45938890f9483316abd4602469bad1887a58443f26",
-   "bytes": 2214,
+   "sha256": "840eb55a125cdec8ef8b7c69f09b7588639c209cc5e46dcc7e752e5aaf8b0061",
+   "bytes": 2141,
    "rows": null
   },
   {
