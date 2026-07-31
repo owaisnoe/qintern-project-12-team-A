@@ -70,6 +70,15 @@ BASE = Path(__file__).resolve().parents[2]
 GEN = BASE / "week3" / "reports" / "_generated"
 FIG = BASE / "week3" / "reports" / "figures"
 
+
+def _rel(p):
+    """Repo-relative path for committed outputs (an absolute path would leak the author's home dir)."""
+    p = Path(p)
+    try:
+        return p.resolve().relative_to(BASE).as_posix()
+    except ValueError:
+        return str(p)
+
 SEED = 42
 DEFAULT_ALPHA = 0.05
 DEFAULT_SWEEP = (0.01, 0.20, 0.01)
@@ -280,7 +289,7 @@ def main(argv=None):
         f"finite-sample verdicts: {len(sweep) - n_fail} PASS / {n_fail} FAIL")
 
     out = {"schema_version": "1.0", "day": 16, "seed": SEED, "source_kind": args.source,
-           "scores_root": str(Path(args.scores_root)),
+           "scores_root": _rel(args.scores_root),
            "band_level": args.band, "fail_p": FAIL_P,
            "law": "E ~ BetaBinomial(m, n+1-k, k)  [coverage|cal ~ Beta(k, n+1-k); Vovk 2012, A&B 2023 s3.2]",
            "headline_alpha": args.alpha, "headline": headline,

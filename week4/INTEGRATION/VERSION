@@ -5,5 +5,5 @@ seed: 42
 primary_alpha: 0.05
 source: dummy
 trio: CICIoT2023, BoT-IoT, UNSW-NB15
-files: 34  bytes: 26292226
+files: 34  bytes: 26292393
 manifest: INTEGRATION/integration_manifest_v1.0.json

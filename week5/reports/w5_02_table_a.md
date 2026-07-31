@@ -1,6 +1,6 @@
 # Week 5 · Day 26 — Table A (In-Distribution Detection, RQ1) + Significance + Coverage
 
-Task (`qi26_12_Week_5.pdf`): *finalise Table A (in-distribution detection) with significance markers and an all-seed coverage check.* Seed 42 · α = 0.05 · trio CICIoT2023 · quantum scores: **dummy**.
+Task (`qi26_12_Week_5.pdf`): *finalise Table A (in-distribution detection) with significance markers and an all-seed coverage check.* Seed 42 · α = 0.05 · trio CICIoT2023, BoT-IoT, UNSW-NB15 · quantum scores: **dummy**.
 
 Table A is the closed-set complement to Table B's zero-day guarantee: how well each system classifies KNOWN traffic (RQ1). XGBoost is real and final; QS-Net rides the Day-14 dummy interface and is provisional. Rendered standalone for the manuscript in [`_generated/w5_02_table_a.md`](_generated/w5_02_table_a.md) + [`.tex`](_generated/w5_02_table_a.tex). Reproduced here:
 
@@ -8,6 +8,10 @@ Table A is the closed-set complement to Table B's zero-day guarantee: how well e
 |---|---|---|---:|---:|---:|---:|
 | CICIoT2023 | XGBoost (detector) | real | 0.9896 | 0.8043 | 0.9990 | — (reference) |
 | CICIoT2023 | QS-Net (CQ-ZDR) | dummy | 0.9034*‡ | 0.6598‡ | 0.9438‡ | 0.00e+00‡ |
+| BoT-IoT | XGBoost (detector) | real | 0.9515 | 0.9727 | 0.9955 | — (reference) |
+| BoT-IoT | QS-Net (CQ-ZDR) | dummy | 0.9396*‡ | 0.8339‡ | 0.9509‡ | 1.45e-06‡ |
+| UNSW-NB15 | XGBoost (detector) | real | 0.8020 | 0.6016 | 0.9695 | — (reference) |
+| UNSW-NB15 | QS-Net (CQ-ZDR) | dummy | 0.7966‡ | 0.5513‡ | 0.8711‡ | 3.53e-01‡ |
 
 ‡ provisional (Day-14 **dummy** fidelity interface); `*` = McNemar significant at α = 0.05 after Holm. 
 
@@ -26,8 +30,10 @@ The split-conformal guarantee is marginal over the calibration/test draw, so it 
 | Dataset | mean FZR (5 seeds) | max FZR | in band | target α |
 |---|---:|---:|:--:|---:|
 | CICIoT2023 | 0.0517 | 0.0539 | 5/5 | 0.05 |
+| BoT-IoT | 0.0501 | 0.0524 | 5/5 | 0.05 |
+| UNSW-NB15 | 0.0508 | 0.0539 | 5/5 | 0.05 |
 
-**1/1 datasets hold the exact band on all 5 seeds** — the conformal false-alarm control is stable across the 5-seed convention, not an artifact of one split.
+**3/3 datasets hold the exact band on all 5 seeds** — the conformal false-alarm control is stable across the 5-seed convention, not an artifact of one split.
 
 ## Per-class achieved-FZR diagnostic
 
@@ -36,6 +42,8 @@ Marginal conformal controls the false-alarm rate over the KNOWN **mixture**; it 
 | Dataset | classes | classes out of their own band | conditional floor ⌈1/α⌉−1 | note |
 |---|---:|---:|---:|---|
 | CICIoT2023 | 31 | 0 | 19 | all classes inside their own band |
+| BoT-IoT | 4 | 0 | 19 | all classes inside their own band |
+| UNSW-NB15 | 8 | 0 | 19 | all classes inside their own band |
 
 Per-class detail (every class, its m_test, achieved FZR, own band, and in-band verdict) is in [`_generated/w5_02_per_class_fzr.csv`](_generated/w5_02_per_class_fzr.csv). Where a class falls outside its band, the fix is **clustered conformal** (Ding et al. 2023) — grouping the rare classes into a few clusters with enough calibration mass each — **not** fully class-conditional conformal, since several classes sit far below the ⌈1/α⌉−1 floor (19 at α = 0.05) needed for a finite class-conditional quantile.
 

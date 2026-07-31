@@ -1,0 +1,92 @@
+check,scope,expected,observed,delta,tol,verdict,note
+threshold q (order statistic),CICIoT2023,0.300551,0.300551,0.0,1e-09,PASS,frozen_thresholds.json
+k = ceil((1-a)(n+1)),CICIoT2023,17940,17940,0.0,1e-09,PASS,
+n_cal,CICIoT2023,18883,18883,0.0,1e-09,PASS,
+canonical FZR,CICIoT2023,0.048615,0.048615,0.0,1e-09,PASS,w4_03 integration
+canonical coverage,CICIoT2023,0.951385,0.951385,0.0,1e-09,PASS,
+zero-day recall,CICIoT2023,0.999818,0.999818,0.0,1e-09,PASS,
+zero-day n,CICIoT2023,10984,10984,0.0,1e-09,PASS,
+Day-19 quantum recall row,CICIoT2023,0.9998,0.9998,0.0,1e-09,PASS,w4_01 zeroday_recall
+exact band membership,CICIoT2023,True,True,0.0,1e-09,PASS,"count 918 in [837, 1056] (band re-derived from raw pmf)"
+XGB accuracy: predictions.csv vs results.json,CICIoT2023,0.9896,0.9896,0.0,1e-09,PASS,raw per-sample log vs frozen summary
+XGB macro-F1: predictions.csv vs results.json,CICIoT2023,0.8043,0.8043,0.0,5e-05,PASS,label set = test-split classes
+XGB accuracy vs frozen scalar,CICIoT2023,0.9896,0.9896,0.0,1e-09,PASS,
+XGB macro-F1 vs frozen scalar,CICIoT2023,0.8043,0.8043,0.0,1e-09,PASS,
+XGB OVR-AUROC vs frozen scalar,CICIoT2023,0.999,0.999,0.0,1e-09,PASS,
+QS-Net accuracy (argmax re-derivation),CICIoT2023,0.9034,0.9034,0.0,1e-09,PASS,argmax fid__ vs frozen scalar — also validates stored pred_class/pred_correct
+QS-Net macro-F1 (argmax re-derivation),CICIoT2023,0.6598,0.6598,0.0,1e-09,PASS,
+QS-Net OVR-AUROC (sklearn vs Mann-Whitney),CICIoT2023,0.9438,0.9438,0.0,5e-05,PASS,two independent AUROC estimators
+McNemar n10 (QS-only-right),CICIoT2023,176,176,0.0,1e-09,PASS,
+McNemar n01 (XGB-only-right),CICIoT2023,1803,1803,0.0,1e-09,PASS,
+McNemar doubled exact tail,CICIoT2023,0.0,0.0,0.0,1e-09,PASS,recomputed from scipy binom.cdf
+RQ3 separation AUROC (sklearn),CICIoT2023,0.4994,0.4994,0.0,5e-05,PASS,independent estimator + independently re-seeded halves
+RQ3 zeroday_vs_clean AUROC (sklearn),CICIoT2023,0.9998,0.9998,0.0,5e-05,PASS,independent estimator + independently re-seeded halves
+RQ3 adv_vs_clean AUROC (sklearn),CICIoT2023,0.9998,0.9998,0.0,5e-05,PASS,independent estimator + independently re-seeded halves
+threshold q (order statistic),BoT-IoT,0.262934,0.262934,0.0,1e-09,PASS,frozen_thresholds.json
+k = ceil((1-a)(n+1)),BoT-IoT,17663,17663,0.0,1e-09,PASS,
+n_cal,BoT-IoT,18591,18591,0.0,1e-09,PASS,
+canonical FZR,BoT-IoT,0.053036,0.053036,0.0,1e-09,PASS,w4_03 integration
+canonical coverage,BoT-IoT,0.946964,0.946964,0.0,1e-09,PASS,
+zero-day recall,BoT-IoT,0.095168,0.095168,0.0,1e-09,PASS,
+zero-day n,BoT-IoT,683,683,0.0,1e-09,PASS,
+Day-19 quantum recall row,BoT-IoT,0.0952,0.0952,0.0,1e-09,PASS,w4_01 zeroday_recall
+exact band membership,BoT-IoT,True,True,0.0,1e-09,PASS,"count 986 in [823, 1040] (band re-derived from raw pmf)"
+XGB accuracy: predictions.csv vs results.json,BoT-IoT,0.9515,0.9515,0.0,1e-09,PASS,raw per-sample log vs frozen summary
+XGB macro-F1: predictions.csv vs results.json,BoT-IoT,0.9727,0.9727,0.0,5e-05,PASS,label set = test-split classes
+XGB accuracy vs frozen scalar,BoT-IoT,0.9515,0.9515,0.0,1e-09,PASS,
+XGB macro-F1 vs frozen scalar,BoT-IoT,0.9727,0.9727,0.0,1e-09,PASS,
+XGB OVR-AUROC vs frozen scalar,BoT-IoT,0.9955,0.9955,0.0,1e-09,PASS,
+QS-Net accuracy (argmax re-derivation),BoT-IoT,0.9396,0.9396,0.0,1e-09,PASS,argmax fid__ vs frozen scalar — also validates stored pred_class/pred_correct
+QS-Net macro-F1 (argmax re-derivation),BoT-IoT,0.8339,0.8339,0.0,1e-09,PASS,
+QS-Net OVR-AUROC (sklearn vs Mann-Whitney),BoT-IoT,0.9509,0.9509,0.0,5e-05,PASS,two independent AUROC estimators
+McNemar n10 (QS-only-right),BoT-IoT,869,869,0.0,1e-09,PASS,
+McNemar n01 (XGB-only-right),BoT-IoT,1089,1089,0.0,1e-09,PASS,
+McNemar doubled exact tail,BoT-IoT,7.26273412199973e-07,7.26273412199973e-07,0.0,1e-09,PASS,recomputed from scipy binom.cdf
+RQ3 separation AUROC (sklearn),BoT-IoT,0.4763,0.4763,0.0,5e-05,PASS,independent estimator + independently re-seeded halves
+RQ3 zeroday_vs_clean AUROC (sklearn),BoT-IoT,0.5881,0.5881,0.0,5e-05,PASS,independent estimator + independently re-seeded halves
+RQ3 adv_vs_clean AUROC (sklearn),BoT-IoT,0.6083,0.6083,0.0,5e-05,PASS,independent estimator + independently re-seeded halves
+threshold q (order statistic),UNSW-NB15,0.38338,0.38338,0.0,1e-09,PASS,frozen_thresholds.json
+k = ceil((1-a)(n+1)),UNSW-NB15,9608,9608,0.0,1e-09,PASS,
+n_cal,UNSW-NB15,10112,10112,0.0,1e-09,PASS,
+canonical FZR,UNSW-NB15,0.046302,0.046302,0.0,1e-09,PASS,w4_03 integration
+canonical coverage,UNSW-NB15,0.953698,0.953698,0.0,1e-09,PASS,
+zero-day recall,UNSW-NB15,0.385691,0.385691,0.0,1e-09,PASS,
+zero-day n,UNSW-NB15,1216,1216,0.0,1e-09,PASS,
+Day-19 quantum recall row,UNSW-NB15,0.3857,0.3857,0.0,1e-09,PASS,w4_01 zeroday_recall
+exact band membership,UNSW-NB15,True,True,0.0,1e-09,PASS,"count 467 in [427, 586] (band re-derived from raw pmf)"
+XGB accuracy: predictions.csv vs results.json,UNSW-NB15,0.802,0.802,0.0,1e-09,PASS,raw per-sample log vs frozen summary
+XGB macro-F1: predictions.csv vs results.json,UNSW-NB15,0.6016,0.6016,0.0,5e-05,PASS,label set = test-split classes
+XGB accuracy vs frozen scalar,UNSW-NB15,0.802,0.802,0.0,1e-09,PASS,
+XGB macro-F1 vs frozen scalar,UNSW-NB15,0.6016,0.6016,0.0,1e-09,PASS,
+XGB OVR-AUROC vs frozen scalar,UNSW-NB15,0.9695,0.9695,0.0,1e-09,PASS,
+QS-Net accuracy (argmax re-derivation),UNSW-NB15,0.7966,0.7966,0.0,1e-09,PASS,argmax fid__ vs frozen scalar — also validates stored pred_class/pred_correct
+QS-Net macro-F1 (argmax re-derivation),UNSW-NB15,0.5513,0.5513,0.0,1e-09,PASS,
+QS-Net OVR-AUROC (sklearn vs Mann-Whitney),UNSW-NB15,0.8711,0.8711,0.0,5e-05,PASS,two independent AUROC estimators
+McNemar n10 (QS-only-right),UNSW-NB15,1602,1602,0.0,1e-09,PASS,
+McNemar n01 (XGB-only-right),UNSW-NB15,1656,1656,0.0,1e-09,PASS,
+McNemar doubled exact tail,UNSW-NB15,0.3531295497640803,0.3531295497640803,0.0,1e-09,PASS,recomputed from scipy binom.cdf
+RQ3 separation AUROC (sklearn),UNSW-NB15,0.5104,0.5104,0.0,5e-05,PASS,independent estimator + independently re-seeded halves
+RQ3 zeroday_vs_clean AUROC (sklearn),UNSW-NB15,0.8477,0.8477,0.0,5e-05,PASS,independent estimator + independently re-seeded halves
+RQ3 adv_vs_clean AUROC (sklearn),UNSW-NB15,0.8405,0.8405,0.0,5e-05,PASS,independent estimator + independently re-seeded halves
+all-seed mean FZR: Table A vs frozen scalar,CICIoT2023,0.05175,0.05175,0.0,1e-09,PASS,
+all-seed mean FZR: Table A vs Figure 2,CICIoT2023,0.05175,0.05175,0.0,1e-09,PASS,
+all-seed mean recomputed from per-seed rows,CICIoT2023,0.05175,0.05175,0.0,1e-09,PASS,
+all-seed mean FZR: Table A vs frozen scalar,BoT-IoT,0.050143,0.050143,0.0,1e-09,PASS,
+all-seed mean FZR: Table A vs Figure 2,BoT-IoT,0.050143,0.050143,0.0,1e-09,PASS,
+all-seed mean recomputed from per-seed rows,BoT-IoT,0.050143,0.050143,0.0,1e-09,PASS,
+all-seed mean FZR: Table A vs frozen scalar,UNSW-NB15,0.050783,0.050783,0.0,1e-09,PASS,
+all-seed mean FZR: Table A vs Figure 2,UNSW-NB15,0.050783,0.050783,0.0,1e-09,PASS,
+all-seed mean recomputed from per-seed rows,UNSW-NB15,0.050783,0.050783,0.0,1e-09,PASS,
+per-class out-of-band recount,CICIoT2023,0,0,0.0,1e-09,PASS,
+per-class out-of-band recount,BoT-IoT,0,0,0.0,1e-09,PASS,
+per-class out-of-band recount,UNSW-NB15,0,0,0.0,1e-09,PASS,
+Table B 5-seed mean == Table A all-seed mean,CICIoT2023,0.05175,0.05175,0.0,1e-09,PASS,
+Table B 5-seed mean == Table A all-seed mean,BoT-IoT,0.050143,0.050143,0.0,1e-09,PASS,
+Table B 5-seed mean == Table A all-seed mean,UNSW-NB15,0.050783,0.050783,0.0,1e-09,PASS,
+rendered md cells match JSON (w5_02_table_a.md),-,all,all,,1e-09,PASS,6 printed cells verified at 4 dp
+rendered md cells match JSON (w5_04_table_b.md),-,all,all,,1e-09,PASS,3 printed cells verified at 4 dp
+SHA-256 manifest (RESULTS_FROZEN),-,0,0,0.0,1e-09,PASS,16 files re-hashed independently
+SHA-256 manifest (INTEGRATION),-,0,0,0.0,1e-09,PASS,34 files re-hashed independently
+SHA-256 manifest (week2 FROZEN),-,known drift,13 deviations,,,WARN,"pre-existing week2 drift (rq3 regenerated post-freeze, README evolved, IWO summary renamed to the two TASK handoffs); also the 93-vs-97 file-count discrepancy between w2_06/IWO handoff docs and the manifest — week2 re-freeze is a team decision, out of Day-30 scope"
+absolute-path leak scan,repo,0,0,0.0,1e-09,PASS,"patterns: drive-letter+Users, /home/<user>, /Users/<user>"
+CRLF scan (committed text),repo,0,0,0.0,1e-09,PASS,every text artifact is LF (matches .gitattributes)

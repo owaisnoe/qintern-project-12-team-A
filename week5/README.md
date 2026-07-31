@@ -19,7 +19,12 @@ significance-tested result tables. Trio **CIC-IoT2023 + BoT-IoT + UNSW-NB15**; q
 | **26** (b) | **Table A (RQ1 in-distribution detection) + significance + coverage diagnostics** — DONE | [`reports/w5_02_table_a.md`](reports/w5_02_table_a.md) · Table A: [`_generated/w5_02_table_a.md`](reports/_generated/w5_02_table_a.md) + [`.tex`](reports/_generated/w5_02_table_a.tex) | [`scripts/table_a.py`](scripts/table_a.py) → `reports/_generated/w5_02_*` + `w5_02_per_class_fzr.csv` |
 | **26** (c) | **Freeze Team-A result artefacts + confirm reproducibility** — DONE | [`RESULTS_FROZEN/RESULTS_FROZEN.md`](RESULTS_FROZEN/RESULTS_FROZEN.md) | [`scripts/freeze_results.py`](scripts/freeze_results.py) → `RESULTS_FROZEN/` (SHA-256 manifest + scalar snapshot) |
 | **27** | **Figure 2 (headline) — empirical false-zero-day rate vs target α** — DONE | [`reports/w5_03_figure2.md`](reports/w5_03_figure2.md) · figure: [`reports/figures/w5_fig2_coverage.png`](reports/figures/w5_fig2_coverage.png) | [`scripts/figure2_coverage.py`](scripts/figure2_coverage.py) → `reports/_generated/w5_03_*` |
-| **28–32** | Results week continues — final figures/tables, hand-off of coverage + stats assets to Team B (Day 30), manuscript prep | pending | pending |
+| **28** | **Table B (RQ2) FINAL + all-seed coverage CIs** (5-seed re-split CIs for achieved α AND recall) — DONE | [`reports/w5_04_table_b.md`](reports/w5_04_table_b.md) · Table B: [`_generated/w5_04_table_b.md`](reports/_generated/w5_04_table_b.md) + [`.tex`](reports/_generated/w5_04_table_b.tex) | [`scripts/table_b_final.py`](scripts/table_b_final.py) → `reports/_generated/w5_04_*` |
+| **29** (a) | **Table A (RQ1) FINAL — significance vs every baseline + Cohen's d/h effects** — DONE | [`reports/w5_05_table_a_effects.md`](reports/w5_05_table_a_effects.md) · Table A: [`_generated/w5_05_table_a.md`](reports/_generated/w5_05_table_a.md) + [`.tex`](reports/_generated/w5_05_table_a.tex) | [`scripts/table_a_effects.py`](scripts/table_a_effects.py) → `reports/_generated/w5_05_*` |
+| **29** (b) | **Conformal-vs-heuristic ablation asset + RQ5 honesty summary** — DONE | [`reports/w5_06_ablation_rq5.md`](reports/w5_06_ablation_rq5.md) · figure: [`reports/figures/w5_fig3_ablation.png`](reports/figures/w5_fig3_ablation.png) · RQ5: [`_generated/w5_06_rq5_honesty.md`](reports/_generated/w5_06_rq5_honesty.md) | [`scripts/ablation_rq5.py`](scripts/ablation_rq5.py) → `reports/_generated/w5_06_*` |
+| **30** (a) | **Cross-audit: every Team-A number vs the raw logs (independent re-derivations)** — DONE, 90/91 PASS + 1 documented WARN | [`reports/w5_07_cross_audit.md`](reports/w5_07_cross_audit.md) | [`scripts/cross_audit.py`](scripts/cross_audit.py) → `reports/_generated/w5_07_*` |
+| **30** (b) | **Handover to manuscript — Team B package (audit-gated, SHA-256-pinned)** — DONE | [`reports/w5_08_handover.md`](reports/w5_08_handover.md) · package: [`HANDOVER/HANDOVER.md`](HANDOVER/HANDOVER.md) | [`scripts/handover_teamB.py`](scripts/handover_teamB.py) → `HANDOVER/` |
+| **31–32** | Methods subsections (data + conformal statistics) + repro appendix; final sign-off | pending | pending |
 
 **Day-26 disentanglement (RQ3, dummy):** the separation AUROC — true-zero-day (+) vs adversarial-known (−) —
 is **0.4994 / 0.4763 / 0.5104** (CIC / BoT / UNSW), every CI bracketing 0.5. That is the **honest null**: with
@@ -61,7 +66,14 @@ python week5/scripts/figure2_coverage.py --alpha 0.05 --sweep 0.01 0.20 0.01
 python week5/scripts/freeze_results.py                                          # Day 26 -> RESULTS_FROZEN/
 python week5/scripts/freeze_results.py --verify                                 # re-hash, expect 0 mismatch
 python week5/scripts/freeze_results.py --reproduce                              # re-run mains, 39 scalars, 0 mismatch
-python -m pytest week2/tests week3/tests week4/tests week5/tests -q             # full suite: 135 tests
+# --- Days 28-30 ---
+python week5/scripts/table_b_final.py    --datasets CICIoT2023 BoT-IoT UNSW-NB15 --alpha 0.05   # Day 28
+python week5/scripts/table_a_effects.py  --datasets CICIoT2023 BoT-IoT UNSW-NB15 --alpha 0.05   # Day 29
+python week5/scripts/ablation_rq5.py     --alpha 0.05 --sweep 0.01 0.20 0.01                    # Day 29
+python week5/scripts/cross_audit.py                                             # Day 30: audit vs raw logs
+python week5/scripts/handover_teamB.py                                          # Day 30: Team-B package
+python week5/scripts/handover_teamB.py --verify                                 # re-hash, expect 0 mismatch
+python -m pytest week2/tests week3/tests week4/tests week5/tests -q             # full suite: 162 tests
 ```
 
 ## For Team B (QML) — what unblocks the "final" numbers

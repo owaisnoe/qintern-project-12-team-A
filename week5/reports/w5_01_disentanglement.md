@@ -16,6 +16,26 @@ Score: the Day-15 novelty score **s = 1 − max_c F(ρ_x, ρ_c)** (higher ⇒ mo
 
 mean s — clean_known 0.1205 · true_zeroday 0.7714 · adv_known 0.7712.
 
+## BoT-IoT
+
+| Panel | positive | negative | n₊ | n₋ | **AUROC** | 95% CI |
+|---|---|---|---:|---:|---:|---|
+| **separation** | true_zeroday | adv_known | 341 | 341 | **0.4763**‡ | [0.4335, 0.5181] |
+| zeroday_vs_clean | true_zeroday | clean_known | 341 | 18,591 | **0.5881** | [0.5591, 0.6159] |
+| adv_vs_clean | adv_known | clean_known | 341 | 18,591 | **0.6083** | [0.5779, 0.6369] |
+
+mean s — clean_known 0.1006 · true_zeroday 0.1238 · adv_known 0.1330.
+
+## UNSW-NB15
+
+| Panel | positive | negative | n₊ | n₋ | **AUROC** | 95% CI |
+|---|---|---|---:|---:|---:|---|
+| **separation** | true_zeroday | adv_known | 608 | 608 | **0.5104**‡ | [0.4796, 0.5416] |
+| zeroday_vs_clean | true_zeroday | clean_known | 608 | 10,086 | **0.8477** | [0.8330, 0.8626] |
+| adv_vs_clean | adv_known | clean_known | 608 | 10,086 | **0.8405** | [0.8254, 0.8555] |
+
+mean s — clean_known 0.1791 · true_zeroday 0.3518 · adv_known 0.3473.
+
 ## Reading the table (dummy interface)
 
 ‡ **Provisional — the separation column rides the Day-14 dummy interface.** Team B's real FGSM/PGD adversarial-known scores are not in yet, so `adv_known` is a seeded second half of the zero-day pool: an independent draw from the **same** distribution as `true_zeroday`. That makes the separation AUROC ≈ 0.5 **by construction** — a deliberate honest null, not a result, and not a synthesised easy separation. It cannot be read as evidence that the score can (or cannot) truly disentangle the two.

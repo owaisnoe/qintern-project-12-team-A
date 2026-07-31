@@ -1,0 +1,452 @@
+{
+ "schema_version": "1.0",
+ "day": 29,
+ "research_question": "conformal ablation (guarantee's value) + RQ5 honesty",
+ "seed": 42,
+ "alpha": 0.05,
+ "source_kind": "dummy",
+ "scores_root": "week2/interface/dummy_scores",
+ "datasets": [
+  "CICIoT2023",
+  "BoT-IoT",
+  "UNSW-NB15"
+ ],
+ "fixed_cutoff": 0.5,
+ "small_ns": [
+  20,
+  50,
+  100,
+  200,
+  500
+ ],
+ "sweep_grid": [
+  0.01,
+  0.02,
+  0.03,
+  0.04,
+  0.05,
+  0.06,
+  0.07,
+  0.08,
+  0.09,
+  0.1,
+  0.11,
+  0.12,
+  0.13,
+  0.14,
+  0.15,
+  0.16,
+  0.17,
+  0.18,
+  0.19,
+  0.2
+ ],
+ "status_legend": {
+  "final": "structural (rule contrast, certificate) \u2014 repricing-invariant",
+  "provisional": "rides the Day-14 dummy fidelity interface"
+ },
+ "ablation": [
+  {
+   "dataset": "CICIoT2023",
+   "alpha": 0.05,
+   "n_cal": 18883,
+   "k": 17940,
+   "insample_source": "calibration_proxy(dummy)",
+   "band_lo_rate": 0.044326,
+   "band_hi_rate": 0.055923,
+   "conformal": {
+    "method": "conformal (q=s_(k), +1, held-out)",
+    "tau": 0.300551,
+    "false_flags": 918,
+    "false_zeroday_rate": 0.048615,
+    "zeroday_recall": 0.9998,
+    "in_band": true
+   },
+   "heuristic": {
+    "method": "heuristic in-sample percentile (no +1; source=calibration_proxy(dummy))",
+    "tau": 0.300489,
+    "false_flags": 920,
+    "false_zeroday_rate": 0.048721,
+    "zeroday_recall": 0.9998,
+    "in_band": true
+   },
+   "fixed": {
+    "method": "fixed cutoff \u03c4=0.5",
+    "tau": 0.5,
+    "false_flags": 24,
+    "false_zeroday_rate": 0.001271,
+    "zeroday_recall": 0.979,
+    "in_band": false
+   }
+  },
+  {
+   "dataset": "BoT-IoT",
+   "alpha": 0.05,
+   "n_cal": 18591,
+   "k": 17663,
+   "insample_source": "calibration_proxy(dummy)",
+   "band_lo_rate": 0.044269,
+   "band_hi_rate": 0.055941,
+   "conformal": {
+    "method": "conformal (q=s_(k), +1, held-out)",
+    "tau": 0.262934,
+    "false_flags": 986,
+    "false_zeroday_rate": 0.053036,
+    "zeroday_recall": 0.0952,
+    "in_band": true
+   },
+   "heuristic": {
+    "method": "heuristic in-sample percentile (no +1; source=calibration_proxy(dummy))",
+    "tau": 0.262872,
+    "false_flags": 988,
+    "false_zeroday_rate": 0.053144,
+    "zeroday_recall": 0.0952,
+    "in_band": true
+   },
+   "fixed": {
+    "method": "fixed cutoff \u03c4=0.5",
+    "tau": 0.5,
+    "false_flags": 16,
+    "false_zeroday_rate": 0.000861,
+    "zeroday_recall": 0.0029,
+    "in_band": false
+   }
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "alpha": 0.05,
+   "n_cal": 10112,
+   "k": 9608,
+   "insample_source": "calibration_proxy(dummy)",
+   "band_lo_rate": 0.042336,
+   "band_hi_rate": 0.0581,
+   "conformal": {
+    "method": "conformal (q=s_(k), +1, held-out)",
+    "tau": 0.38338,
+    "false_flags": 467,
+    "false_zeroday_rate": 0.046302,
+    "zeroday_recall": 0.3857,
+    "in_band": true
+   },
+   "heuristic": {
+    "method": "heuristic in-sample percentile (no +1; source=calibration_proxy(dummy))",
+    "tau": 0.382977,
+    "false_flags": 469,
+    "false_zeroday_rate": 0.0465,
+    "zeroday_recall": 0.3865,
+    "in_band": true
+   },
+   "fixed": {
+    "method": "fixed cutoff \u03c4=0.5",
+    "tau": 0.5,
+    "false_flags": 76,
+    "false_zeroday_rate": 0.007535,
+    "zeroday_recall": 0.1398,
+    "in_band": false
+   }
+  }
+ ],
+ "small_n": [
+  {
+   "dataset": "CICIoT2023",
+   "n_sub": 20,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.051425,
+   "heuristic_mean_fzr": 0.096671,
+   "conformal_le_alpha": false,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "CICIoT2023",
+   "n_sub": 50,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.036279,
+   "heuristic_mean_fzr": 0.073334,
+   "conformal_le_alpha": true,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "CICIoT2023",
+   "n_sub": 100,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.049482,
+   "heuristic_mean_fzr": 0.059024,
+   "conformal_le_alpha": true,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "CICIoT2023",
+   "n_sub": 200,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.048817,
+   "heuristic_mean_fzr": 0.053584,
+   "conformal_le_alpha": true,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "CICIoT2023",
+   "n_sub": 500,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.047208,
+   "heuristic_mean_fzr": 0.049361,
+   "conformal_le_alpha": true,
+   "heuristic_exceeds_alpha": false
+  },
+  {
+   "dataset": "BoT-IoT",
+   "n_sub": 20,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.047618,
+   "heuristic_mean_fzr": 0.095277,
+   "conformal_le_alpha": true,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "BoT-IoT",
+   "n_sub": 50,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.038645,
+   "heuristic_mean_fzr": 0.08094,
+   "conformal_le_alpha": true,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "BoT-IoT",
+   "n_sub": 100,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.052083,
+   "heuristic_mean_fzr": 0.062865,
+   "conformal_le_alpha": false,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "BoT-IoT",
+   "n_sub": 200,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.053236,
+   "heuristic_mean_fzr": 0.058413,
+   "conformal_le_alpha": false,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "BoT-IoT",
+   "n_sub": 500,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.051805,
+   "heuristic_mean_fzr": 0.05384,
+   "conformal_le_alpha": false,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "n_sub": 20,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.040833,
+   "heuristic_mean_fzr": 0.088079,
+   "conformal_le_alpha": true,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "n_sub": 50,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.036714,
+   "heuristic_mean_fzr": 0.074309,
+   "conformal_le_alpha": true,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "n_sub": 100,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.046436,
+   "heuristic_mean_fzr": 0.055555,
+   "conformal_le_alpha": true,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "n_sub": 200,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.046431,
+   "heuristic_mean_fzr": 0.05096,
+   "conformal_le_alpha": true,
+   "heuristic_exceeds_alpha": true
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "n_sub": 500,
+   "n_rep": 300,
+   "target_alpha": 0.05,
+   "conformal_mean_fzr": 0.046326,
+   "heuristic_mean_fzr": 0.048004,
+   "conformal_le_alpha": true,
+   "heuristic_exceeds_alpha": false
+  }
+ ],
+ "rq5": {
+  "counts": {
+   "n_quantum_ahead": 4,
+   "n_quantum_behind": 3,
+   "n_equivalent": 1,
+   "n_unresolved": 0
+  },
+  "margin": 0.05,
+  "source_kind": "dummy",
+  "headline_metric": "true_zeroday_recall"
+ },
+ "rq5_verdicts": [
+  {
+   "dataset": "BoT-IoT",
+   "baseline": "Autoencoder",
+   "quantum_helps": false,
+   "verdict": "quantum behind (McNemar sig. + CI excludes 0)",
+   "delta_recall": -0.530015,
+   "ci95": [
+    -0.57101,
+    -0.487555
+   ],
+   "equivalence_margin": 0.05,
+   "cohens_h": -1.1966,
+   "mcnemar_zeroday_p_holm": 1.3320301931920693e-84,
+   "mcnemar_zeroday_significant": true,
+   "n01_baseline_only": 386,
+   "n10_qsnet_only": 24
+  },
+  {
+   "dataset": "BoT-IoT",
+   "baseline": "Isolation Forest",
+   "quantum_helps": false,
+   "verdict": "quantum behind (McNemar sig. + CI excludes 0)",
+   "delta_recall": -0.628111,
+   "ci95": [
+    -0.670571,
+    -0.58858
+   ],
+   "equivalence_margin": 0.05,
+   "cohens_h": -1.4065,
+   "mcnemar_zeroday_p_holm": 9.719956243050705e-107,
+   "mcnemar_zeroday_significant": true,
+   "n01_baseline_only": 448,
+   "n10_qsnet_only": 19
+  },
+  {
+   "dataset": "BoT-IoT",
+   "baseline": "OC-SVM",
+   "quantum_helps": false,
+   "verdict": "quantum behind (McNemar sig. + CI excludes 0)",
+   "delta_recall": -0.63836,
+   "ci95": [
+    -0.677928,
+    -0.598829
+   ],
+   "equivalence_margin": 0.05,
+   "cohens_h": -1.4295,
+   "mcnemar_zeroday_p_holm": 1.181103070117535e-108,
+   "mcnemar_zeroday_significant": true,
+   "n01_baseline_only": 455,
+   "n10_qsnet_only": 19
+  },
+  {
+   "dataset": "CICIoT2023",
+   "baseline": "Autoencoder",
+   "quantum_helps": true,
+   "verdict": "quantum ahead (McNemar sig. + CI excludes 0)",
+   "delta_recall": 0.338765,
+   "ci95": [
+    0.329843,
+    0.347597
+   ],
+   "equivalence_margin": 0.05,
+   "cohens_h": 1.2159,
+   "mcnemar_zeroday_p_holm": 0.0,
+   "mcnemar_zeroday_significant": true,
+   "n01_baseline_only": 1,
+   "n10_qsnet_only": 3722
+  },
+  {
+   "dataset": "CICIoT2023",
+   "baseline": "Isolation Forest",
+   "quantum_helps": "equivalent",
+   "verdict": "equivalent (95% CI inside \u00b10.05 recall)",
+   "delta_recall": 0.0,
+   "ci95": [
+    -0.000364,
+    0.000364
+   ],
+   "equivalence_margin": 0.05,
+   "cohens_h": 0.0,
+   "mcnemar_zeroday_p_holm": 1.0,
+   "mcnemar_zeroday_significant": false,
+   "n01_baseline_only": 2,
+   "n10_qsnet_only": 2
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "baseline": "Autoencoder",
+   "quantum_helps": true,
+   "verdict": "quantum ahead (McNemar sig. + CI excludes 0)",
+   "delta_recall": 0.117599,
+   "ci95": [
+    0.083059,
+    0.153783
+   ],
+   "equivalence_margin": 0.05,
+   "cohens_h": 0.2516,
+   "mcnemar_zeroday_p_holm": 6.57863455565394e-10,
+   "mcnemar_zeroday_significant": true,
+   "n01_baseline_only": 187,
+   "n10_qsnet_only": 330
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "baseline": "Isolation Forest",
+   "quantum_helps": true,
+   "verdict": "quantum ahead (McNemar sig. + CI excludes 0)",
+   "delta_recall": 0.319079,
+   "ci95": [
+    0.287829,
+    0.349507
+   ],
+   "equivalence_margin": 0.05,
+   "cohens_h": 0.818,
+   "mcnemar_zeroday_p_holm": 5.454413980648683e-78,
+   "mcnemar_zeroday_significant": true,
+   "n01_baseline_only": 50,
+   "n10_qsnet_only": 438
+  },
+  {
+   "dataset": "UNSW-NB15",
+   "baseline": "OC-SVM",
+   "quantum_helps": true,
+   "verdict": "quantum ahead (McNemar sig. + CI excludes 0)",
+   "delta_recall": 0.347039,
+   "ci95": [
+    0.318257,
+    0.376645
+   ],
+   "equivalence_margin": 0.05,
+   "cohens_h": 0.9444,
+   "mcnemar_zeroday_p_holm": 1.5032698034118638e-102,
+   "mcnemar_zeroday_significant": true,
+   "n01_baseline_only": 22,
+   "n10_qsnet_only": 444
+  }
+ ],
+ "heuristic_anticonservative_cells": 13,
+ "conformal_le_alpha_cells": 11
+}

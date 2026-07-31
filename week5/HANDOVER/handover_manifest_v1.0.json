@@ -1,0 +1,349 @@
+{
+ "package": "QS-Net / QuantumSentinel \u2014 Team A \u2192 Team B manuscript hand-off",
+ "version": "1.0",
+ "day": 30,
+ "seed": 42,
+ "frozen_utc": "2026-07-31T15:50:43Z",
+ "primary_alpha": 0.05,
+ "source_kind": "dummy",
+ "benchmark_trio": [
+  "CICIoT2023",
+  "BoT-IoT",
+  "UNSW-NB15"
+ ],
+ "audit": "90 PASS / 0 FAIL / 1 WARN",
+ "scope": "Every statistic and coverage asset the manuscript cites (Tables A/B + effects + 5-seed CIs, Figure 2, RQ3 panel, ablation asset, RQ5 honesty, coverage diagnostics, the Day-30 audit) with per-deliverable status. frozen_utc is metadata, NOT part of --verify.",
+ "reprice": "re-run the week-5 mains with --source real --scores-root <dir>, re-run cross_audit.py, then re-cut this package as v1.1",
+ "n_files": 41,
+ "total_bytes": 587269,
+ "files": [
+  {
+   "deliverable": "Table A (RQ1) \u2014 skeleton + final with effects",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_02_table_a.md",
+   "sha256": "d175d7352ad9cff63cc91388f7eb863dac1799fe48d1a2c033ebd4ad167f4b8a",
+   "bytes": 1792,
+   "rows": null
+  },
+  {
+   "deliverable": "Table A (RQ1) \u2014 skeleton + final with effects",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_02_table_a.tex",
+   "sha256": "c7aae2f75260770c7ff334f10cef80c5bf35b3d5e7b00284544b3943e2335775",
+   "bytes": 1075,
+   "rows": null
+  },
+  {
+   "deliverable": "Table A (RQ1) \u2014 skeleton + final with effects",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_02_table_a.json",
+   "sha256": "5cf8ed35168d4e42c7228d88553646e6c9af5c82ce4cb194dccaa01f199cbd80",
+   "bytes": 20274,
+   "rows": null
+  },
+  {
+   "deliverable": "Table A (RQ1) \u2014 skeleton + final with effects",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_02_table_a.csv",
+   "sha256": "6cca894e51942bdfb6e8b27ad94cd4c93ccdd51478541ba31d9b08b3b3dd6b20",
+   "bytes": 873,
+   "rows": 6
+  },
+  {
+   "deliverable": "Table A (RQ1) \u2014 skeleton + final with effects",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_05_table_a.md",
+   "sha256": "1cae29ae2abb2f6722a8058e17de9cc05a88175804430d4006db85fddee1b415",
+   "bytes": 1630,
+   "rows": null
+  },
+  {
+   "deliverable": "Table A (RQ1) \u2014 skeleton + final with effects",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_05_table_a.tex",
+   "sha256": "6998fd6f7d21ae37803cf7b513da7b1d71088577f530d9094fb380815a24f04f",
+   "bytes": 1412,
+   "rows": null
+  },
+  {
+   "deliverable": "Table A (RQ1) \u2014 skeleton + final with effects",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_05_table_a_effects.json",
+   "sha256": "ab67eff9d8d074da03f0dbf418800e4cbab96276912290069c1bd5532df0b9cb",
+   "bytes": 13267,
+   "rows": null
+  },
+  {
+   "deliverable": "Table A (RQ1) \u2014 skeleton + final with effects",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_05_table_a_effects.csv",
+   "sha256": "210349fde577cfc3cdf429fd63f9f596c7030981f05ec8098a16a2cb16d57b27",
+   "bytes": 728,
+   "rows": 3
+  },
+  {
+   "deliverable": "Table A (RQ1) \u2014 skeleton + final with effects",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_05_known_fa.csv",
+   "sha256": "7cbb336a3750c162e15778243292037c4dc70316d8bdade77959eb297377dce9",
+   "bytes": 1873,
+   "rows": 8
+  },
+  {
+   "deliverable": "Table B (RQ2) \u2014 skeleton + final with 5-seed CIs",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week4/reports/_generated/w4_05_table_b.md",
+   "sha256": "fc5622d55a0c9df76cf96f31dbd61920217005dd7b23aac74d962f86a16b2326",
+   "bytes": 2098,
+   "rows": null
+  },
+  {
+   "deliverable": "Table B (RQ2) \u2014 skeleton + final with 5-seed CIs",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week4/reports/_generated/w4_05_table_b.tex",
+   "sha256": "3ba58343e8da7e5e91abff5a82196b770cebd5c8c788089fb409b96765101a17",
+   "bytes": 1236,
+   "rows": null
+  },
+  {
+   "deliverable": "Table B (RQ2) \u2014 skeleton + final with 5-seed CIs",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week4/reports/_generated/w4_05_rq2_results.json",
+   "sha256": "76605dcdffc9d0d20cb93f3aeed895ac1beecbb2d44bb1773abcafeec833e36e",
+   "bytes": 10513,
+   "rows": null
+  },
+  {
+   "deliverable": "Table B (RQ2) \u2014 skeleton + final with 5-seed CIs",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week4/reports/_generated/w4_05_rq2_results.csv",
+   "sha256": "f52237d6ce131bda478e2a10ddec57a7c3e0b1cc3ef37ce8a9346188e2572af8",
+   "bytes": 2793,
+   "rows": 11
+  },
+  {
+   "deliverable": "Table B (RQ2) \u2014 skeleton + final with 5-seed CIs",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_04_table_b.md",
+   "sha256": "b378fc2bedd1a80257ed9bdb518c18b430c31e7ccd694d2b09f5821dfefcfd17",
+   "bytes": 2274,
+   "rows": null
+  },
+  {
+   "deliverable": "Table B (RQ2) \u2014 skeleton + final with 5-seed CIs",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_04_table_b.tex",
+   "sha256": "556b6abcb9ab1a3642e8638c99c0fb0235ee0f11e0ddbd9ce53c7f595d182bee",
+   "bytes": 1543,
+   "rows": null
+  },
+  {
+   "deliverable": "Table B (RQ2) \u2014 skeleton + final with 5-seed CIs",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_04_table_b.json",
+   "sha256": "ca6e8fe35bf7c339926af94815b4a65a5d05be606a5df2f435e952109aacd15e",
+   "bytes": 12584,
+   "rows": null
+  },
+  {
+   "deliverable": "Table B (RQ2) \u2014 skeleton + final with 5-seed CIs",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_04_table_b.csv",
+   "sha256": "dce99ebe9736179b527218b7a6da3b1d5df97bf4cd81818b1e8668664921809e",
+   "bytes": 992,
+   "rows": 3
+  },
+  {
+   "deliverable": "Table B (RQ2) \u2014 skeleton + final with 5-seed CIs",
+   "status": "\u2021 quantum cells provisional",
+   "path": "week5/reports/_generated/w5_04_allseed_ci.csv",
+   "sha256": "a5a378fb6ceda2b2ca2c6d2998dd0d4e13c059b7c3931ad2dddb379186c31410",
+   "bytes": 1661,
+   "rows": 15
+  },
+  {
+   "deliverable": "Figure 2 \u2014 coverage headline",
+   "status": "\u2021 provisional (dummy scores)",
+   "path": "week5/reports/figures/w5_fig2_coverage.png",
+   "sha256": "00065ef05849585120a4ff4318e630b6f11cd16a2583013e1a420e4136118485",
+   "bytes": 159629,
+   "rows": null
+  },
+  {
+   "deliverable": "Figure 2 \u2014 coverage headline",
+   "status": "\u2021 provisional (dummy scores)",
+   "path": "week5/reports/_generated/w5_03_figure2.json",
+   "sha256": "e1114bc1a8dfc6fc14ce61a4fab8c3c6b6be2a4b72d8844e8f0056d9fac9fd39",
+   "bytes": 3094,
+   "rows": null
+  },
+  {
+   "deliverable": "Figure 2 \u2014 coverage headline",
+   "status": "\u2021 provisional (dummy scores)",
+   "path": "week5/reports/_generated/w5_03_figure2_data.csv",
+   "sha256": "9e6e4725aa978653ea624214fe6d14290e4d1513cbc4fa1ab49bd4b35cd724d6",
+   "bytes": 8930,
+   "rows": 60
+  },
+  {
+   "deliverable": "RQ3 \u2014 disentanglement AUROC panel",
+   "status": "\u2021 honest null on dummy; reprices on rq3_scores.parquet",
+   "path": "week5/reports/_generated/w5_01_disentanglement.json",
+   "sha256": "013d4b759a4b946fb6369e14fec3cff8abbb347bc196a30e6ad751f993aca9b8",
+   "bytes": 3324,
+   "rows": null
+  },
+  {
+   "deliverable": "RQ3 \u2014 disentanglement AUROC panel",
+   "status": "\u2021 honest null on dummy; reprices on rq3_scores.parquet",
+   "path": "week5/reports/_generated/w5_01_disentanglement.csv",
+   "sha256": "414433a654dfe3a554cec77b639614f93b320485cb5794019bac291be2369c1b",
+   "bytes": 831,
+   "rows": 9
+  },
+  {
+   "deliverable": "Conformal-vs-heuristic ablation asset",
+   "status": "rule contrast structural/final; rates \u2021",
+   "path": "week5/reports/_generated/w5_06_ablation.md",
+   "sha256": "cf520c42259437bfaed609b243e8b575f734a64cec6bc591e7e54e62ea9beda9",
+   "bytes": 1644,
+   "rows": null
+  },
+  {
+   "deliverable": "Conformal-vs-heuristic ablation asset",
+   "status": "rule contrast structural/final; rates \u2021",
+   "path": "week5/reports/_generated/w5_06_ablation.tex",
+   "sha256": "d1784c726d86a0efeadc059e65027c66894f4b630cb3fc8875078a8a817dd418",
+   "bytes": 1626,
+   "rows": null
+  },
+  {
+   "deliverable": "Conformal-vs-heuristic ablation asset",
+   "status": "rule contrast structural/final; rates \u2021",
+   "path": "week5/reports/_generated/w5_06_ablation.csv",
+   "sha256": "c8179028af58a477b33b65cda314352c7260ebe1d89f461a972b1b7a0499a565",
+   "bytes": 1025,
+   "rows": 9
+  },
+  {
+   "deliverable": "Conformal-vs-heuristic ablation asset",
+   "status": "rule contrast structural/final; rates \u2021",
+   "path": "week5/reports/_generated/w5_06_small_n.csv",
+   "sha256": "38d9402a90a3934baa03c83ce9faee4385fe1e2d9a9addd5a5a3b202b0f02663",
+   "bytes": 871,
+   "rows": 15
+  },
+  {
+   "deliverable": "Conformal-vs-heuristic ablation asset",
+   "status": "rule contrast structural/final; rates \u2021",
+   "path": "week5/reports/figures/w5_fig3_ablation.png",
+   "sha256": "138613e9d64b8eed94571b4fc58a4471d9a043df65e233a3128c3200324b7e88",
+   "bytes": 217045,
+   "rows": null
+  },
+  {
+   "deliverable": "RQ5 honesty summary + Day-25 significance suite",
+   "status": "\u2021 verdicts reprice on real scores",
+   "path": "week5/reports/_generated/w5_06_rq5_honesty.md",
+   "sha256": "1fbc9436b0ded8157099f196b14ad7d066408fdd8d99de346d801b9dfee7d6a3",
+   "bytes": 2512,
+   "rows": null
+  },
+  {
+   "deliverable": "RQ5 honesty summary + Day-25 significance suite",
+   "status": "\u2021 verdicts reprice on real scores",
+   "path": "week4/reports/_generated/w4_06_significance.json",
+   "sha256": "7006c8b597c812da260ea93e567d9542c6900867864dda194405a3ef3a6ef760",
+   "bytes": 22022,
+   "rows": null
+  },
+  {
+   "deliverable": "RQ5 honesty summary + Day-25 significance suite",
+   "status": "\u2021 verdicts reprice on real scores",
+   "path": "week4/reports/_generated/w4_06_significance.csv",
+   "sha256": "fc0237c275c6986e7fa9abb5f373bd9ceefb176878143f6b04ed7ecec472a50f",
+   "bytes": 2920,
+   "rows": 16
+  },
+  {
+   "deliverable": "RQ5 honesty summary + Day-25 significance suite",
+   "status": "\u2021 verdicts reprice on real scores",
+   "path": "week4/reports/_generated/w4_06_rq5_honesty.md",
+   "sha256": "fb0afafe8eb0c36bfc754d1e2fef20058050ff29ba6a509daf157563d756c0d4",
+   "bytes": 4533,
+   "rows": null
+  },
+  {
+   "deliverable": "Coverage diagnostics (per-class, exchangeability)",
+   "status": "bands final; rates \u2021",
+   "path": "week5/reports/_generated/w5_02_per_class_fzr.csv",
+   "sha256": "ffa0bd19f10095994bda80ac3c5107c7b7af396cc5d510142cbafb40cf6dd48c",
+   "bytes": 3314,
+   "rows": 43
+  },
+  {
+   "deliverable": "Coverage diagnostics (per-class, exchangeability)",
+   "status": "bands final; rates \u2021",
+   "path": "week4/reports/_generated/w4_04_live_coverage.json",
+   "sha256": "d78123a191da0de8ab54494e3fa18deea394db3bb0d0557a850a10408bd776e4",
+   "bytes": 29725,
+   "rows": null
+  },
+  {
+   "deliverable": "Audited statistics (Day-30 cross-audit, all green)",
+   "status": "audit of the above",
+   "path": "week5/reports/_generated/w5_07_cross_audit.json",
+   "sha256": "1da37bc9a692d51eee07888fdc3fb2e62754715fca0802ee2a16ce8f2b5ffaf5",
+   "bytes": 20191,
+   "rows": null
+  },
+  {
+   "deliverable": "Audited statistics (Day-30 cross-audit, all green)",
+   "status": "audit of the above",
+   "path": "week5/reports/_generated/w5_07_cross_audit.csv",
+   "sha256": "fd82c5b4aaba2c192a9732d0cff53eb386ba3c032672589f287da534a76b4437",
+   "bytes": 8365,
+   "rows": 91
+  },
+  {
+   "deliverable": "Upstream freeze manifests (state pinned by reference)",
+   "status": "final",
+   "path": "week5/RESULTS_FROZEN/results_manifest_v1.0.json",
+   "sha256": "53c1d5fee14fb753a5d9ca822ce01d1f3bf77ce1e36b8c4838f8ecdeddbf8418",
+   "bytes": 3644,
+   "rows": null
+  },
+  {
+   "deliverable": "Upstream freeze manifests (state pinned by reference)",
+   "status": "final",
+   "path": "week5/RESULTS_FROZEN/results_frozen_scalars.json",
+   "sha256": "52c766b630b27b2d9562f4bdc4e0416afe7ec95340180148b9a0cf54cd097922",
+   "bytes": 1895,
+   "rows": null
+  },
+  {
+   "deliverable": "Upstream freeze manifests (state pinned by reference)",
+   "status": "final",
+   "path": "week4/INTEGRATION/integration_manifest_v1.0.json",
+   "sha256": "b8383f3b49d4c3dc0f9dfa8b038e1f0e92b36679a9ae3716cb5ffd7cb7acda29",
+   "bytes": 7259,
+   "rows": null
+  },
+  {
+   "deliverable": "Upstream freeze manifests (state pinned by reference)",
+   "status": "final",
+   "path": "week4/INTEGRATION/frozen_thresholds.json",
+   "sha256": "cd97dacb0a41579a4b90a618ef3ebb685ebdfb248ca394d8bc4af8cde4796960",
+   "bytes": 2467,
+   "rows": null
+  },
+  {
+   "deliverable": "Upstream freeze manifests (state pinned by reference)",
+   "status": "final",
+   "path": "week4/INTEGRATION/interface_contract.json",
+   "sha256": "910fbf7361725e3d2201b52033fcd039dcb444c69a278f7391fbf525f8aae145",
+   "bytes": 1785,
+   "rows": null
+  }
+ ]
+}

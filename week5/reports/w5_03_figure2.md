@@ -16,6 +16,8 @@ Figure: `figures/w5_fig2_coverage.png` (written).
 | Dataset | mean FZR | min | max | std | exact 99% band |
 |---|---:|---:|---:|---:|---|
 | CICIoT2023 | 0.0517 | 0.0497 | 0.0539 | 0.0016 | [0.0443, 0.0559] |
+| BoT-IoT | 0.0501 | 0.0470 | 0.0524 | 0.0020 | [0.0443, 0.0559] |
+| UNSW-NB15 | 0.0508 | 0.0471 | 0.0539 | 0.0028 | [0.0423, 0.0581] |
 
 The mean achieved rate sits at ≈ α with a spread comfortably inside the exact band on every dataset — the picture of a calibrated detector. On the Day-14 **dummy** interface these series are placeholders (plumbing, not a result); the identical command reprices them on Team B's real prototypes (`--source real --scores-root <dir>`), and that rerun is the figure that goes in the manuscript.
 

@@ -1,0 +1,9 @@
+family,dataset,comparison,baseline,scope,n_pairs,fa_rate_qsnet,fa_rate_baseline,fa_diff,qsnet_only_right,baseline_only_right,cohens_h,cohens_dz,p_raw,note,p_holm,significant
+known_split_false_alarm,CICIoT2023,QS-Net (CQ-ZDR) vs Isolation Forest,Isolation Forest,"KNOWN test split, flag-vs-keep",18883,0.0486,0.1012,-0.0526,1814,821,-0.2029,0.1422,3.061194298119685e-85,,2.448955438495748e-84,True
+known_split_false_alarm,CICIoT2023,QS-Net (CQ-ZDR) vs Autoencoder,Autoencoder,"KNOWN test split, flag-vs-keep",18883,0.0486,0.1014,-0.0527,1826,830,-0.2034,0.142,4.6248056373815953e-85,,3.237363946167117e-84,True
+known_split_false_alarm,BoT-IoT,QS-Net (CQ-ZDR) vs Isolation Forest,Isolation Forest,"KNOWN test split, flag-vs-keep",18591,0.053,0.0978,-0.0448,1708,875,-0.1715,0.1211,2.766968481088724e-61,,1.6601810886532344e-60,True
+known_split_false_alarm,BoT-IoT,QS-Net (CQ-ZDR) vs Autoencoder,Autoencoder,"KNOWN test split, flag-vs-keep",18591,0.053,0.0968,-0.0437,1690,877,-0.1679,0.1185,8.929938236525279e-59,,3.5719752946101114e-58,True
+known_split_false_alarm,BoT-IoT,QS-Net (CQ-ZDR) vs OC-SVM,OC-SVM,"KNOWN test split, flag-vs-keep",18591,0.053,0.0971,-0.0441,1710,890,-0.1692,0.1188,5.11082792334003e-59,,2.555413961670015e-58,True
+known_split_false_alarm,UNSW-NB15,QS-Net (CQ-ZDR) vs Isolation Forest,Isolation Forest,"KNOWN test split, flag-vs-keep",10086,0.0463,0.0993,-0.053,955,420,-0.2076,0.1452,3.175430528873132e-48,,3.175430528873132e-48,True
+known_split_false_alarm,UNSW-NB15,QS-Net (CQ-ZDR) vs Autoencoder,Autoencoder,"KNOWN test split, flag-vs-keep",10086,0.0463,0.1023,-0.056,985,420,-0.2174,0.1518,1.4005520449471856e-52,,2.8011040898943712e-52,True
+known_split_false_alarm,UNSW-NB15,QS-Net (CQ-ZDR) vs OC-SVM,OC-SVM,"KNOWN test split, flag-vs-keep",10086,0.0463,0.1039,-0.0576,1008,427,-0.2227,0.1545,2.1136820900716512e-54,,6.341046270214953e-54,True

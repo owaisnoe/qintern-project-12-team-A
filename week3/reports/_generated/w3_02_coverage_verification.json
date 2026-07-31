@@ -3,7 +3,7 @@
  "day": 16,
  "seed": 42,
  "source_kind": "dummy",
- "scores_root": "C:\\Users\\OwaisNoe\\Downloads\\Team A-20260719T195741Z-1-001\\Team A\\week2\\interface\\dummy_scores",
+ "scores_root": "week2/interface/dummy_scores",
  "band_level": 0.99,
  "fail_p": 0.005,
  "law": "E ~ BetaBinomial(m, n+1-k, k)  [coverage|cal ~ Beta(k, n+1-k); Vovk 2012, A&B 2023 s3.2]",

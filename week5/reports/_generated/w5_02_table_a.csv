@@ -1,3 +1,7 @@
 dataset,system,arm,source_kind,accuracy,macro_f1,auroc_ovr_macro,n_classes,provenance
 CICIoT2023,XGBoost (detector),classical,real,0.9896,0.8043,0.999,31,week2/baselines/<ds>/results.json (detector.multiclass)
 CICIoT2023,QS-Net (CQ-ZDR),quantum,dummy,0.9034,0.6598,0.9438,31,week2/interface/.../test_scores.parquet (pred_correct / pred_class / fid__*)
+BoT-IoT,XGBoost (detector),classical,real,0.9515,0.9727,0.9955,4,week2/baselines/<ds>/results.json (detector.multiclass)
+BoT-IoT,QS-Net (CQ-ZDR),quantum,dummy,0.9396,0.8339,0.9509,4,week2/interface/.../test_scores.parquet (pred_correct / pred_class / fid__*)
+UNSW-NB15,XGBoost (detector),classical,real,0.802,0.6016,0.9695,8,week2/baselines/<ds>/results.json (detector.multiclass)
+UNSW-NB15,QS-Net (CQ-ZDR),quantum,dummy,0.7966,0.5513,0.8711,8,week2/interface/.../test_scores.parquet (pred_correct / pred_class / fid__*)
