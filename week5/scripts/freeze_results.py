@@ -36,8 +36,13 @@ Reprice on real prototypes: `--source real --scores-root <team-B dir>` freezes t
 package; the schema is identical, so nothing downstream changes.
 
 Run (freeze):     python week5/scripts/freeze_results.py
+Freeze as-is:     python week5/scripts/freeze_results.py --no-regenerate # pin on-disk artefacts, no re-run
 Verify:           python week5/scripts/freeze_results.py --verify      # re-hash, expect 0 mismatch
 Reproduce-check:  python week5/scripts/freeze_results.py --reproduce   # re-run mains, expect 0 mismatch
+
+`freeze(..., regenerate=False)` (CLI `--no-regenerate`) pins the already-committed full-trio artefacts
+without re-running the mains, so a partial-dataset call can never overwrite the committed 3-dataset
+reports/figure on disk (the CIC-only clobber guard — belt-and-braces with the tests' output sandboxing).
 """
 from __future__ import annotations
 
@@ -143,10 +148,29 @@ def key_scalars(d, t, f):
 
 # ---------------------------------------------------------------- freeze / verify / reproduce
 
-def freeze(datasets, alpha, scores_root, source):
+def _load_ondisk_results():
+    """Load the three mains' JSON outputs from disk — for regenerate=False. Lets freeze() pin the
+    already-committed full-trio artefacts WITHOUT re-running the mains, so a partial-dataset call (e.g. a
+    test freezing CIC only) can never overwrite the committed 3-dataset reports/figure on disk. The main
+    JSONs ARE the mains' return dicts (each is `json.dump(out)`), so key_scalars reads them unchanged."""
+    out = []
+    for rel in ("w5_01_disentanglement.json", "w5_02_table_a.json", "w5_03_figure2.json"):
+        p = BASE / "week5" / "reports" / "_generated" / rel
+        if not p.exists():
+            raise SystemExit(f"regenerate=False but {rel} is absent — run the mains first "
+                             f"(or freeze with regenerate=True).")
+        out.append(json.loads(p.read_text(encoding="utf-8")))
+    return tuple(out)
+
+
+def freeze(datasets, alpha, scores_root, source, regenerate=True):
     RESULTS.mkdir(parents=True, exist_ok=True)
-    log("running the three Day-26/27 result mains (deterministic, seed 42) ...")
-    d, t, f = run_all(datasets, alpha, scores_root, source)
+    if regenerate:
+        log("running the three Day-26/27 result mains (deterministic, seed 42) ...")
+        d, t, f = run_all(datasets, alpha, scores_root, source)
+    else:
+        log("regenerate=False — pinning the existing on-disk artefacts (mains NOT re-run)")
+        d, t, f = _load_ondisk_results()
     scalars = key_scalars(d, t, f)
 
     missing = [rel for rel in PINNED if not (BASE / rel).exists()]
@@ -285,12 +309,15 @@ def main(argv=None):
     ap.add_argument("--verify", action="store_true", help="re-hash and diff against the freeze manifest")
     ap.add_argument("--reproduce", action="store_true",
                     help="re-run the three mains and assert every frozen scalar reproduces to 1e-9")
+    ap.add_argument("--no-regenerate", action="store_true",
+                    help="pin the existing on-disk artefacts without re-running the mains — freeze then "
+                         "cannot overwrite the committed full-trio outputs with a partial run")
     args = ap.parse_args(argv)
     if args.verify:
         sys.exit(verify())
     if args.reproduce:
         sys.exit(reproduce_check(args.datasets, args.alpha, args.scores_root, args.source))
-    freeze(args.datasets, args.alpha, args.scores_root, args.source)
+    freeze(args.datasets, args.alpha, args.scores_root, args.source, regenerate=not args.no_regenerate)
 
 
 if __name__ == "__main__":
