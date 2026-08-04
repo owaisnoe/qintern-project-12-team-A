@@ -55,9 +55,17 @@ the reference environment: the integration freeze (34 files, calibration rule, s
 $\alpha$, per-dataset thresholds), the results freeze (16 files, the reported result surface plus the three
 result modules) and the handover package (41 files) each verify with \textbf{zero mismatches}.
 
-Two stronger gates run beyond hashing. First, a reproducibility check re-runs the three deterministic result
-modules and asserts that all \textbf{39 pinned headline scalars} return to within $10^{-9}$; measured, 39
-scalars and zero mismatches. Second, a cross-audit re-derives every headline quantity from the raw inputs
+Three stronger gates run beyond hashing. First, a single sign-off entry point re-runs the five result
+modules with their outputs sandboxed and compares every scalar the committed artifacts quote --- spanning
+all research questions and the headline coverage figure --- then re-verifies the manifests, checks
+deliverable completeness, and asserts it modified no pinned artifact while running; measured, 324 checks and
+zero failures. That gate distinguishes the \textbf{204} scalars it recomputes from raw inputs on the run
+from the \textbf{85} it can only check as pass-throughs, where the emitting module reads the value from an
+upstream frozen artifact; for those, the check establishes that the assembly path is stable rather than that
+the numeric re-derives, and the re-derivation is supplied by the cross-audit below. Second, a narrower
+reproducibility check re-runs three of the modules and asserts that all \textbf{39 pinned headline scalars}
+return to within $10^{-9}$; measured, 39 scalars and zero mismatches. Third, a cross-audit re-derives every
+headline quantity from the raw inputs
 with an \emph{independent} implementation --- order-statistic threshold, hand-counted flags, AUROC
 cross-checked against the Mann--Whitney statistic, argmax-re-derived predictions, recounted McNemar cells,
 and a raw Beta-Binomial probability mass function --- and compares it against every artifact that quotes it,
@@ -70,7 +78,7 @@ development. A line-ending gate refuses to pin any text file containing a CRLF, 
 repository-level \texttt{.gitattributes} makes a fresh clone byte-identical on any operating system. A
 test-isolation gate redirects the result modules to a temporary directory during testing; without it,
 running the test suite silently rewrote the committed artifacts with whichever dataset list the last test
-passed. The full suite (162 tests) passes and leaves the working tree unmodified.
+passed. The full suite (182 tests) passes and leaves the working tree unmodified.
 
 \subsection{Reproducibility is numerical, not byte-level}
 \label{sec:appendix-determinism}

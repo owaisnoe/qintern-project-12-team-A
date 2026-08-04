@@ -44,7 +44,9 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import tempfile
 import time
+from contextlib import contextmanager
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[2]
@@ -118,6 +120,35 @@ def run_all(datasets, alpha, scores_root, source):
     t = ta.main(common)
     f = fig2.main(common)
     return d, t, f
+
+
+@contextmanager
+def sandboxed_outputs():
+    """Redirect the three result mains' output dirs to a throwaway tree for the duration of the block.
+
+    `--reproduce` re-runs the mains only to re-derive the scalars, which it reads from the in-memory return
+    values — but the mains also *write*, so without this the check rewrites the very artefacts the manifest
+    pins and leaves the working tree dirty, so a following `--verify` reports CHANGED. That is the same
+    class of bug the Day-30 fix removed from the test suite (`test_freeze_results.py` monkeypatches these
+    identical attributes); Day 32 closes it for `--reproduce` itself. Sandboxing the writes changes nothing
+    about what is compared.
+    """
+    saved = []
+    with tempfile.TemporaryDirectory(prefix="qsnet-reproduce-") as td:
+        root = Path(td)
+        gen, reports, fig = root / "_generated", root / "reports", root / "figures"
+        for d in (gen, reports, fig):
+            d.mkdir(parents=True, exist_ok=True)
+        for mod, attr, dest in ((dis, "GEN", gen), (dis, "REPORTS", reports),
+                                (ta, "GEN", gen), (ta, "REPORTS", reports),
+                                (fig2, "GEN", gen), (fig2, "REPORTS", reports), (fig2, "FIG", fig)):
+            saved.append((mod, attr, getattr(mod, attr)))
+            setattr(mod, attr, dest)
+        try:
+            yield root
+        finally:
+            for mod, attr, orig in saved:
+                setattr(mod, attr, orig)
 
 
 def key_scalars(d, t, f):
@@ -219,8 +250,9 @@ def reproduce_check(datasets, alpha, scores_root, source, tol=1e-9):
         print(f"NO FROZEN SCALARS at {SCALARS.relative_to(BASE)} — run the freeze first.")
         return 2
     frozen = json.loads(SCALARS.read_text())["scalars"]
-    log("re-running the three mains for the reproducibility check ...")
-    d, t, f = run_all(datasets, alpha, scores_root, source)
+    log("re-running the three mains for the reproducibility check (outputs sandboxed) ...")
+    with sandboxed_outputs():
+        d, t, f = run_all(datasets, alpha, scores_root, source)
     now = key_scalars(d, t, f)
 
     mism = []
