@@ -24,7 +24,9 @@ significance-tested result tables. Trio **CIC-IoT2023 + BoT-IoT + UNSW-NB15**; q
 | **29** (b) | **Conformal-vs-heuristic ablation asset + RQ5 honesty summary** — DONE | [`reports/w5_06_ablation_rq5.md`](reports/w5_06_ablation_rq5.md) · figure: [`reports/figures/w5_fig3_ablation.png`](reports/figures/w5_fig3_ablation.png) · RQ5: [`_generated/w5_06_rq5_honesty.md`](reports/_generated/w5_06_rq5_honesty.md) | [`scripts/ablation_rq5.py`](scripts/ablation_rq5.py) → `reports/_generated/w5_06_*` |
 | **30** (a) | **Cross-audit: every Team-A number vs the raw logs (independent re-derivations)** — DONE, 90/91 PASS + 1 documented WARN | [`reports/w5_07_cross_audit.md`](reports/w5_07_cross_audit.md) | [`scripts/cross_audit.py`](scripts/cross_audit.py) → `reports/_generated/w5_07_*` |
 | **30** (b) | **Handover to manuscript — Team B package (audit-gated, SHA-256-pinned)** — DONE | [`reports/w5_08_handover.md`](reports/w5_08_handover.md) · package: [`HANDOVER/HANDOVER.md`](HANDOVER/HANDOVER.md) | [`scripts/handover_teamB.py`](scripts/handover_teamB.py) → `HANDOVER/` |
-| **31–32** | Methods subsections (data + conformal statistics) + repro appendix; final sign-off | pending | pending |
+| **31** (a) | **Methods subsections — Data + Conformal Statistics** (partition protocol, calibration, coverage) — DONE | [`reports/w5_09_methods_data_stats.md`](reports/w5_09_methods_data_stats.md) · LaTeX: [`_generated/w5_09_methods.tex`](reports/_generated/w5_09_methods.tex) | *(prose — no new code; consolidates Days 8–9, 15–17, 23, 26–30)* |
+| **31** (b) | **Reproducibility appendix — the statistics pipeline** — DONE | [`reports/w5_10_repro_appendix.md`](reports/w5_10_repro_appendix.md) · LaTeX: [`_generated/w5_10_repro_appendix.tex`](reports/_generated/w5_10_repro_appendix.tex) | *(verification log measured against the existing freeze/audit gates)* |
+| **32** | Final sign-off: every RQ2/RQ5 number + Figure 2 reproducible from one script | pending | pending |
 
 **Day-26 disentanglement (RQ3, dummy):** the separation AUROC — true-zero-day (+) vs adversarial-known (−) —
 is **0.4994 / 0.4763 / 0.5104** (CIC / BoT / UNSW), every CI bracketing 0.5. That is the **honest null**: with
@@ -50,6 +52,20 @@ scalars return to **1e-9**. An `_assert_lf` gate refuses to freeze any CRLF text
 inside the exact **Beta-Binomial** validity band (not Clopper–Pearson) across the 0.01–0.20 sweep on all
 three datasets, with the 5-seed points at α = 0.05 (mean ≈ 0.050) sitting inside the band — the picture of a
 calibrated detector.
+
+**Day-31 methods + repro appendix:** the two manuscript subsections (Data — partition protocol, leakage
+controls, exchangeability verification; Conformal Statistics — nonconformity score, `q = s_(k)`, the
+marginal-vs-Mondrian choice, the exact Beta-Binomial acceptance gate, 5-seed stability, the exchangeability
+audit, and the significance protocol) ship as prose plus a LaTeX drop-in for Team B's Article-1 assembly.
+The repro appendix is backed by a **measured** verification run rather than inherited claims: all three
+freezes `--verify` at **0 mismatch** (34 + 16 + 41 files), `--reproduce` returns **39/39 scalars to 1e-9**,
+the cross-audit holds at **90 PASS / 0 FAIL / 1 WARN**, and the full suite passes **162 tests in 87 s**
+leaving the tree clean. It also records the one honest limit: the pipeline reproduces every *number* to
+1e-9 across Python 3.10–3.12, but not every *byte* — a full re-run drifts 9 files by 1–2 ULP in the
+scipy exact-binomial McNemar tail (2.1e-20 absolute) plus PNG rasterization, while **every rendered
+`.md`/`.tex` table stays byte-identical**. One open item for Day 32 is logged there: `--reproduce` writes
+into the real tree, so it dirties the surface a subsequent `--verify` checks (one-line fix, same pattern
+the Day-30 pytest guard already uses).
 
 **Repo hygiene this week:** a repo-root [`../.gitattributes`](../.gitattributes) (`* text=auto eol=lf`,
 binaries pinned) makes a fresh clone byte-identical on any OS, so the SHA-256 freeze manifests
