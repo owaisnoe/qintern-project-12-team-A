@@ -1,0 +1,325 @@
+gate,check,scope,provenance,expected,observed,delta,tol,verdict
+G1 REPRODUCE,FIG2/BoT-IoT/band_hi_rate,FIG2,recomputed,0.055941,0.055941,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/BoT-IoT/band_lo_rate,FIG2,recomputed,0.044269,0.044269,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/BoT-IoT/max_fzr,FIG2,recomputed,0.052445,0.052445,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/BoT-IoT/mean_fzr,FIG2,recomputed,0.050143,0.050143,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/BoT-IoT/min_fzr,FIG2,recomputed,0.046958,0.046958,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/BoT-IoT/per_seed/42/fzr,FIG2,recomputed,0.046958,0.046958,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/BoT-IoT/per_seed/43/fzr,FIG2,recomputed,0.052445,0.052445,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/BoT-IoT/per_seed/44/fzr,FIG2,recomputed,0.049594,0.049594,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/BoT-IoT/per_seed/45/fzr,FIG2,recomputed,0.050777,0.050777,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/BoT-IoT/per_seed/46/fzr,FIG2,recomputed,0.050939,0.050939,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/BoT-IoT/std_fzr,FIG2,recomputed,0.002048,0.002048,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/CICIoT2023/band_hi_rate,FIG2,recomputed,0.055923,0.055923,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/CICIoT2023/band_lo_rate,FIG2,recomputed,0.044326,0.044326,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/CICIoT2023/max_fzr,FIG2,recomputed,0.053911,0.053911,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/CICIoT2023/mean_fzr,FIG2,recomputed,0.05175,0.05175,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/CICIoT2023/min_fzr,FIG2,recomputed,0.049727,0.049727,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/CICIoT2023/per_seed/42/fzr,FIG2,recomputed,0.051263,0.051263,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/CICIoT2023/per_seed/43/fzr,FIG2,recomputed,0.052587,0.052587,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/CICIoT2023/per_seed/44/fzr,FIG2,recomputed,0.051263,0.051263,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/CICIoT2023/per_seed/45/fzr,FIG2,recomputed,0.053911,0.053911,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/CICIoT2023/per_seed/46/fzr,FIG2,recomputed,0.049727,0.049727,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/CICIoT2023/std_fzr,FIG2,recomputed,0.001576,0.001576,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/UNSW-NB15/band_hi_rate,FIG2,recomputed,0.0581,0.0581,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/UNSW-NB15/band_lo_rate,FIG2,recomputed,0.042336,0.042336,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/UNSW-NB15/max_fzr,FIG2,recomputed,0.053936,0.053936,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/UNSW-NB15/mean_fzr,FIG2,recomputed,0.050783,0.050783,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/UNSW-NB15/min_fzr,FIG2,recomputed,0.047095,0.047095,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/UNSW-NB15/per_seed/42/fzr,FIG2,recomputed,0.051854,0.051854,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/UNSW-NB15/per_seed/43/fzr,FIG2,recomputed,0.052251,0.052251,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/UNSW-NB15/per_seed/44/fzr,FIG2,recomputed,0.047095,0.047095,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/UNSW-NB15/per_seed/45/fzr,FIG2,recomputed,0.053936,0.053936,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/UNSW-NB15/per_seed/46/fzr,FIG2,recomputed,0.04878,0.04878,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/UNSW-NB15/std_fzr,FIG2,recomputed,0.002777,0.002777,0.0,1e-09,PASS
+G1 REPRODUCE,FIG2/figure_written,FIG2,recomputed,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/allseed/mean_fzr,RQ1,recomputed,0.050143,0.050143,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/allseed/n_in_band,RQ1,recomputed,5,5,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/mcnemar/n01,RQ1,recomputed,1089,1089,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/mcnemar/n10,RQ1,recomputed,869,869,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/mcnemar/p_holm,RQ1,recomputed,1.452546824399946e-06,1.452546824399904e-06,4.1928130889087867e-20,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/perclass/n_classes,RQ1,recomputed,4,4,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/perclass/n_out_of_band,RQ1,recomputed,0,0,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/qsnet/accuracy,RQ1,recomputed,0.9396,0.9396,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/qsnet/auroc_ovr_macro,RQ1,recomputed,0.9509,0.9509,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/qsnet/macro_f1,RQ1,recomputed,0.8339,0.8339,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/xgboost/accuracy,RQ1,passthrough,0.9515,0.9515,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/xgboost/auroc_ovr_macro,RQ1,passthrough,0.9955,0.9955,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/BoT-IoT/xgboost/macro_f1,RQ1,passthrough,0.9727,0.9727,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/allseed/mean_fzr,RQ1,recomputed,0.05175,0.05175,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/allseed/n_in_band,RQ1,recomputed,5,5,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/mcnemar/n01,RQ1,recomputed,1803,1803,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/mcnemar/n10,RQ1,recomputed,176,176,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/mcnemar/p_holm,RQ1,recomputed,0.0,0.0,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/perclass/n_classes,RQ1,recomputed,31,31,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/perclass/n_out_of_band,RQ1,recomputed,0,0,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/qsnet/accuracy,RQ1,recomputed,0.9034,0.9034,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/qsnet/auroc_ovr_macro,RQ1,recomputed,0.9438,0.9438,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/qsnet/macro_f1,RQ1,recomputed,0.6598,0.6598,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/xgboost/accuracy,RQ1,passthrough,0.9896,0.9896,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/xgboost/auroc_ovr_macro,RQ1,passthrough,0.999,0.999,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/CICIoT2023/xgboost/macro_f1,RQ1,passthrough,0.8043,0.8043,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/allseed/mean_fzr,RQ1,recomputed,0.050783,0.050783,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/allseed/n_in_band,RQ1,recomputed,5,5,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/mcnemar/n01,RQ1,recomputed,1656,1656,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/mcnemar/n10,RQ1,recomputed,1602,1602,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/mcnemar/p_holm,RQ1,recomputed,0.3531295497640803,0.3531295497640802,1.1102230246251565e-16,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/perclass/n_classes,RQ1,recomputed,8,8,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/perclass/n_out_of_band,RQ1,recomputed,0,0,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/qsnet/accuracy,RQ1,recomputed,0.7966,0.7966,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/qsnet/auroc_ovr_macro,RQ1,recomputed,0.8711,0.8711,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/qsnet/macro_f1,RQ1,recomputed,0.5513,0.5513,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/xgboost/accuracy,RQ1,passthrough,0.802,0.802,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/xgboost/auroc_ovr_macro,RQ1,passthrough,0.9695,0.9695,0.0,1e-09,PASS
+G1 REPRODUCE,RQ1/UNSW-NB15/xgboost/macro_f1,RQ1,passthrough,0.6016,0.6016,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/achieved_alpha,RQ2,passthrough,0.053036,0.053036,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/band_hi,RQ2,passthrough,0.055941,0.055941,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/band_lo,RQ2,passthrough,0.044269,0.044269,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/best_classical_recall,RQ2,passthrough,0.7233,0.7233,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/ci_covers_alpha,RQ2,recomputed,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/fzr_5seed/ci95_high,RQ2,recomputed,0.052686,0.052686,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/fzr_5seed/ci95_low,RQ2,recomputed,0.047599,0.047599,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/fzr_5seed/mean,RQ2,recomputed,0.050143,0.050143,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/fzr_5seed/std,RQ2,recomputed,0.002048,0.002048,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/guarantee_held,RQ2,passthrough,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/k,RQ2,passthrough,17663,17663,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/m_test,RQ2,passthrough,18591,18591,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/n_cal,RQ2,passthrough,18591,18591,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/n_in_band,RQ2,recomputed,5,5,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/n_zeroday,RQ2,passthrough,683,683,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/per_seed/42/fzr,RQ2,recomputed,0.046958,0.046958,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/per_seed/43/fzr,RQ2,recomputed,0.052445,0.052445,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/per_seed/44/fzr,RQ2,recomputed,0.049594,0.049594,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/per_seed/45/fzr,RQ2,recomputed,0.050777,0.050777,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/per_seed/46/fzr,RQ2,recomputed,0.050939,0.050939,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/qsnet_recall,RQ2,passthrough,0.095168,0.095168,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/recall_5seed/ci95_high,RQ2,recomputed,0.094451,0.094451,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/recall_5seed/ci95_low,RQ2,recomputed,0.0912,0.0912,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/recall_5seed/mean,RQ2,recomputed,0.092826,0.092826,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/recall_5seed/std,RQ2,recomputed,0.001309,0.001309,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/recall_delta,RQ2,passthrough,-0.628132,-0.628132,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/BoT-IoT/threshold_q,RQ2,passthrough,0.262934,0.262934,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/achieved_alpha,RQ2,passthrough,0.048615,0.048615,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/band_hi,RQ2,passthrough,0.055923,0.055923,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/band_lo,RQ2,passthrough,0.044326,0.044326,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/best_classical_recall,RQ2,passthrough,0.9978,0.9978,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/ci_covers_alpha,RQ2,recomputed,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/fzr_5seed/ci95_high,RQ2,recomputed,0.053707,0.053707,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/fzr_5seed/ci95_low,RQ2,recomputed,0.049793,0.049793,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/fzr_5seed/mean,RQ2,recomputed,0.05175,0.05175,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/fzr_5seed/std,RQ2,recomputed,0.001576,0.001576,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/guarantee_held,RQ2,passthrough,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/k,RQ2,passthrough,17940,17940,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/m_test,RQ2,passthrough,18883,18883,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/n_cal,RQ2,passthrough,18883,18883,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/n_in_band,RQ2,recomputed,5,5,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/n_zeroday,RQ2,passthrough,10984,10984,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/per_seed/42/fzr,RQ2,recomputed,0.051263,0.051263,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/per_seed/43/fzr,RQ2,recomputed,0.052587,0.052587,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/per_seed/44/fzr,RQ2,recomputed,0.051263,0.051263,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/per_seed/45/fzr,RQ2,recomputed,0.053911,0.053911,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/per_seed/46/fzr,RQ2,recomputed,0.049727,0.049727,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/qsnet_recall,RQ2,passthrough,0.999818,0.999818,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/recall_5seed/ci95_high,RQ2,recomputed,0.999818,0.999818,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/recall_5seed/ci95_low,RQ2,recomputed,0.999818,0.999818,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/recall_5seed/mean,RQ2,recomputed,0.999818,0.999818,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/recall_5seed/std,RQ2,recomputed,0.0,0.0,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/recall_delta,RQ2,passthrough,0.002018,0.002018,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/CICIoT2023/threshold_q,RQ2,passthrough,0.300551,0.300551,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/achieved_alpha,RQ2,passthrough,0.046302,0.046302,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/band_hi,RQ2,passthrough,0.0581,0.0581,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/band_lo,RQ2,passthrough,0.042336,0.042336,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/best_classical_recall,RQ2,passthrough,0.2656,0.2656,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/ci_covers_alpha,RQ2,recomputed,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/fzr_5seed/ci95_high,RQ2,recomputed,0.054232,0.054232,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/fzr_5seed/ci95_low,RQ2,recomputed,0.047335,0.047335,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/fzr_5seed/mean,RQ2,recomputed,0.050783,0.050783,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/fzr_5seed/std,RQ2,recomputed,0.002777,0.002777,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/guarantee_held,RQ2,passthrough,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/k,RQ2,passthrough,9608,9608,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/m_test,RQ2,passthrough,10086,10086,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/n_cal,RQ2,passthrough,10112,10112,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/n_in_band,RQ2,recomputed,5,5,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/n_zeroday,RQ2,passthrough,1216,1216,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/per_seed/42/fzr,RQ2,recomputed,0.051854,0.051854,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/per_seed/43/fzr,RQ2,recomputed,0.052251,0.052251,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/per_seed/44/fzr,RQ2,recomputed,0.047095,0.047095,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/per_seed/45/fzr,RQ2,recomputed,0.053936,0.053936,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/per_seed/46/fzr,RQ2,recomputed,0.04878,0.04878,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/qsnet_recall,RQ2,passthrough,0.385691,0.385691,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/recall_5seed/ci95_high,RQ2,recomputed,0.397459,0.397459,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/recall_5seed/ci95_low,RQ2,recomputed,0.388395,0.388395,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/recall_5seed/mean,RQ2,recomputed,0.392927,0.392927,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/recall_5seed/std,RQ2,recomputed,0.00365,0.00365,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/recall_delta,RQ2,passthrough,0.120091,0.120091,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/UNSW-NB15/threshold_q,RQ2,passthrough,0.38338,0.38338,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/all_ci_cover_alpha,RQ2,recomputed,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/all_guarantees_held,RQ2,recomputed,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ2/all_seeds_in_band,RQ2,recomputed,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/BoT-IoT/adv_vs_clean/auroc,RQ3,recomputed,0.6083,0.6083,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/BoT-IoT/adv_vs_clean/ci95_high,RQ3,recomputed,0.6369,0.6369,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/BoT-IoT/adv_vs_clean/ci95_low,RQ3,recomputed,0.5779,0.5779,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/BoT-IoT/separation/auroc,RQ3,recomputed,0.4763,0.4763,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/BoT-IoT/separation/ci95_high,RQ3,recomputed,0.5181,0.5181,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/BoT-IoT/separation/ci95_low,RQ3,recomputed,0.4335,0.4335,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/BoT-IoT/zeroday_vs_clean/auroc,RQ3,recomputed,0.5881,0.5881,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/BoT-IoT/zeroday_vs_clean/ci95_high,RQ3,recomputed,0.6159,0.6159,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/BoT-IoT/zeroday_vs_clean/ci95_low,RQ3,recomputed,0.5591,0.5591,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/CICIoT2023/adv_vs_clean/auroc,RQ3,recomputed,0.9998,0.9998,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/CICIoT2023/adv_vs_clean/ci95_high,RQ3,recomputed,0.9999,0.9999,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/CICIoT2023/adv_vs_clean/ci95_low,RQ3,recomputed,0.9998,0.9998,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/CICIoT2023/separation/auroc,RQ3,recomputed,0.4994,0.4994,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/CICIoT2023/separation/ci95_high,RQ3,recomputed,0.5106,0.5106,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/CICIoT2023/separation/ci95_low,RQ3,recomputed,0.4886,0.4886,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/CICIoT2023/zeroday_vs_clean/auroc,RQ3,recomputed,0.9998,0.9998,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/CICIoT2023/zeroday_vs_clean/ci95_high,RQ3,recomputed,0.9999,0.9999,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/CICIoT2023/zeroday_vs_clean/ci95_low,RQ3,recomputed,0.9998,0.9998,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/UNSW-NB15/adv_vs_clean/auroc,RQ3,recomputed,0.8405,0.8405,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/UNSW-NB15/adv_vs_clean/ci95_high,RQ3,recomputed,0.8555,0.8555,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/UNSW-NB15/adv_vs_clean/ci95_low,RQ3,recomputed,0.8254,0.8254,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/UNSW-NB15/separation/auroc,RQ3,recomputed,0.5104,0.5104,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/UNSW-NB15/separation/ci95_high,RQ3,recomputed,0.5416,0.5416,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/UNSW-NB15/separation/ci95_low,RQ3,recomputed,0.4796,0.4796,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/UNSW-NB15/zeroday_vs_clean/auroc,RQ3,recomputed,0.8477,0.8477,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/UNSW-NB15/zeroday_vs_clean/ci95_high,RQ3,recomputed,0.8626,0.8626,0.0,1e-09,PASS
+G1 REPRODUCE,RQ3/UNSW-NB15/zeroday_vs_clean/ci95_low,RQ3,recomputed,0.833,0.833,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/Autoencoder/cohens_h,RQ5,passthrough,-1.1966,-1.1966,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/Autoencoder/delta_recall,RQ5,passthrough,-0.530015,-0.530015,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/Autoencoder/mcnemar_p_holm,RQ5,passthrough,1.3320301931920693e-84,1.3320301931920693e-84,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/Autoencoder/quantum_helps,RQ5,passthrough,False,False,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/Autoencoder/verdict,RQ5,passthrough,quantum behind (McNemar sig. + CI excludes 0),quantum behind (McNemar sig. + CI excludes 0),0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/Isolation_Forest/cohens_h,RQ5,passthrough,-1.4065,-1.4065,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/Isolation_Forest/delta_recall,RQ5,passthrough,-0.628111,-0.628111,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/Isolation_Forest/mcnemar_p_holm,RQ5,passthrough,9.719956243050705e-107,9.719956243050705e-107,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/Isolation_Forest/quantum_helps,RQ5,passthrough,False,False,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/Isolation_Forest/verdict,RQ5,passthrough,quantum behind (McNemar sig. + CI excludes 0),quantum behind (McNemar sig. + CI excludes 0),0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/OC-SVM/cohens_h,RQ5,passthrough,-1.4295,-1.4295,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/OC-SVM/delta_recall,RQ5,passthrough,-0.63836,-0.63836,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/OC-SVM/mcnemar_p_holm,RQ5,passthrough,1.181103070117535e-108,1.181103070117535e-108,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/OC-SVM/quantum_helps,RQ5,passthrough,False,False,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/OC-SVM/verdict,RQ5,passthrough,quantum behind (McNemar sig. + CI excludes 0),quantum behind (McNemar sig. + CI excludes 0),0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/band_hi_rate,RQ5,recomputed,0.055941,0.055941,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/band_lo_rate,RQ5,recomputed,0.044269,0.044269,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/conformal/false_flags,RQ5,recomputed,986,986,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/conformal/false_zeroday_rate,RQ5,recomputed,0.053036,0.053036,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/conformal/tau,RQ5,recomputed,0.262934,0.262934,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/fixed/false_flags,RQ5,recomputed,16,16,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/fixed/false_zeroday_rate,RQ5,recomputed,0.000861,0.000861,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/fixed/tau,RQ5,recomputed,0.5,0.5,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/heuristic/false_flags,RQ5,recomputed,988,988,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/heuristic/false_zeroday_rate,RQ5,recomputed,0.053144,0.053144,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/heuristic/tau,RQ5,recomputed,0.262872,0.262872,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/small_n/100/conformal_mean_fzr,RQ5,recomputed,0.052083,0.052083,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/small_n/100/heuristic_mean_fzr,RQ5,recomputed,0.062865,0.062865,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/small_n/20/conformal_mean_fzr,RQ5,recomputed,0.047618,0.047618,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/small_n/20/heuristic_mean_fzr,RQ5,recomputed,0.095277,0.095277,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/small_n/200/conformal_mean_fzr,RQ5,recomputed,0.053236,0.053236,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/small_n/200/heuristic_mean_fzr,RQ5,recomputed,0.058413,0.058413,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/small_n/50/conformal_mean_fzr,RQ5,recomputed,0.038645,0.038645,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/small_n/50/heuristic_mean_fzr,RQ5,recomputed,0.08094,0.08094,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/small_n/500/conformal_mean_fzr,RQ5,recomputed,0.051805,0.051805,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/BoT-IoT/small_n/500/heuristic_mean_fzr,RQ5,recomputed,0.05384,0.05384,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/Autoencoder/cohens_h,RQ5,passthrough,1.2159,1.2159,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/Autoencoder/delta_recall,RQ5,passthrough,0.338765,0.338765,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/Autoencoder/mcnemar_p_holm,RQ5,passthrough,0.0,0.0,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/Autoencoder/quantum_helps,RQ5,passthrough,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/Autoencoder/verdict,RQ5,passthrough,quantum ahead (McNemar sig. + CI excludes 0),quantum ahead (McNemar sig. + CI excludes 0),0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/Isolation_Forest/cohens_h,RQ5,passthrough,0.0,0.0,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/Isolation_Forest/delta_recall,RQ5,passthrough,0.0,0.0,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/Isolation_Forest/mcnemar_p_holm,RQ5,passthrough,1.0,1.0,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/Isolation_Forest/quantum_helps,RQ5,passthrough,equivalent,equivalent,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/Isolation_Forest/verdict,RQ5,passthrough,equivalent (95% CI inside ±0.05 recall),equivalent (95% CI inside ±0.05 recall),0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/band_hi_rate,RQ5,recomputed,0.055923,0.055923,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/band_lo_rate,RQ5,recomputed,0.044326,0.044326,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/conformal/false_flags,RQ5,recomputed,918,918,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/conformal/false_zeroday_rate,RQ5,recomputed,0.048615,0.048615,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/conformal/tau,RQ5,recomputed,0.300551,0.300551,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/fixed/false_flags,RQ5,recomputed,24,24,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/fixed/false_zeroday_rate,RQ5,recomputed,0.001271,0.001271,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/fixed/tau,RQ5,recomputed,0.5,0.5,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/heuristic/false_flags,RQ5,recomputed,920,920,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/heuristic/false_zeroday_rate,RQ5,recomputed,0.048721,0.048721,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/heuristic/tau,RQ5,recomputed,0.300489,0.300489,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/small_n/100/conformal_mean_fzr,RQ5,recomputed,0.049482,0.049482,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/small_n/100/heuristic_mean_fzr,RQ5,recomputed,0.059024,0.059024,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/small_n/20/conformal_mean_fzr,RQ5,recomputed,0.051425,0.051425,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/small_n/20/heuristic_mean_fzr,RQ5,recomputed,0.096671,0.096671,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/small_n/200/conformal_mean_fzr,RQ5,recomputed,0.048817,0.048817,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/small_n/200/heuristic_mean_fzr,RQ5,recomputed,0.053584,0.053584,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/small_n/50/conformal_mean_fzr,RQ5,recomputed,0.036279,0.036279,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/small_n/50/heuristic_mean_fzr,RQ5,recomputed,0.073334,0.073334,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/small_n/500/conformal_mean_fzr,RQ5,recomputed,0.047208,0.047208,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/CICIoT2023/small_n/500/heuristic_mean_fzr,RQ5,recomputed,0.049361,0.049361,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/Autoencoder/cohens_h,RQ5,passthrough,0.2516,0.2516,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/Autoencoder/delta_recall,RQ5,passthrough,0.117599,0.117599,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/Autoencoder/mcnemar_p_holm,RQ5,passthrough,6.57863455565394e-10,6.57863455565394e-10,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/Autoencoder/quantum_helps,RQ5,passthrough,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/Autoencoder/verdict,RQ5,passthrough,quantum ahead (McNemar sig. + CI excludes 0),quantum ahead (McNemar sig. + CI excludes 0),0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/Isolation_Forest/cohens_h,RQ5,passthrough,0.818,0.818,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/Isolation_Forest/delta_recall,RQ5,passthrough,0.319079,0.319079,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/Isolation_Forest/mcnemar_p_holm,RQ5,passthrough,5.454413980648683e-78,5.454413980648683e-78,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/Isolation_Forest/quantum_helps,RQ5,passthrough,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/Isolation_Forest/verdict,RQ5,passthrough,quantum ahead (McNemar sig. + CI excludes 0),quantum ahead (McNemar sig. + CI excludes 0),0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/OC-SVM/cohens_h,RQ5,passthrough,0.9444,0.9444,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/OC-SVM/delta_recall,RQ5,passthrough,0.347039,0.347039,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/OC-SVM/mcnemar_p_holm,RQ5,passthrough,1.5032698034118638e-102,1.5032698034118638e-102,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/OC-SVM/quantum_helps,RQ5,passthrough,True,True,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/OC-SVM/verdict,RQ5,passthrough,quantum ahead (McNemar sig. + CI excludes 0),quantum ahead (McNemar sig. + CI excludes 0),0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/band_hi_rate,RQ5,recomputed,0.0581,0.0581,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/band_lo_rate,RQ5,recomputed,0.042336,0.042336,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/conformal/false_flags,RQ5,recomputed,467,467,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/conformal/false_zeroday_rate,RQ5,recomputed,0.046302,0.046302,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/conformal/tau,RQ5,recomputed,0.38338,0.38338,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/fixed/false_flags,RQ5,recomputed,76,76,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/fixed/false_zeroday_rate,RQ5,recomputed,0.007535,0.007535,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/fixed/tau,RQ5,recomputed,0.5,0.5,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/heuristic/false_flags,RQ5,recomputed,469,469,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/heuristic/false_zeroday_rate,RQ5,recomputed,0.0465,0.0465,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/heuristic/tau,RQ5,recomputed,0.382977,0.382977,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/small_n/100/conformal_mean_fzr,RQ5,recomputed,0.046436,0.046436,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/small_n/100/heuristic_mean_fzr,RQ5,recomputed,0.055555,0.055555,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/small_n/20/conformal_mean_fzr,RQ5,recomputed,0.040833,0.040833,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/small_n/20/heuristic_mean_fzr,RQ5,recomputed,0.088079,0.088079,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/small_n/200/conformal_mean_fzr,RQ5,recomputed,0.046431,0.046431,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/small_n/200/heuristic_mean_fzr,RQ5,recomputed,0.05096,0.05096,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/small_n/50/conformal_mean_fzr,RQ5,recomputed,0.036714,0.036714,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/small_n/50/heuristic_mean_fzr,RQ5,recomputed,0.074309,0.074309,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/small_n/500/conformal_mean_fzr,RQ5,recomputed,0.046326,0.046326,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/UNSW-NB15/small_n/500/heuristic_mean_fzr,RQ5,recomputed,0.048004,0.048004,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/conformal_le_alpha_cells,RQ5,recomputed,11,11,0.0,1e-09,PASS
+G1 REPRODUCE,RQ5/heuristic_anticonservative_cells,RQ5,recomputed,13,13,0.0,1e-09,PASS
+G2 FREEZE,manifest verify: week4/INTEGRATION,week4/INTEGRATION,,0 mismatch,rc=0,,,PASS
+G2 FREEZE,manifest verify: week5/RESULTS_FROZEN,week5/RESULTS_FROZEN,,0 mismatch,rc=0,,,PASS
+G2 FREEZE,manifest verify: week5/HANDOVER,week5/HANDOVER,,0 mismatch,rc=0,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_02_table_a.md,Table A (RQ1),,"present, non-empty",1792 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_02_table_a.tex,Table A (RQ1),,"present, non-empty",1075 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_05_table_a.md,Table A (RQ1),,"present, non-empty",1630 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_05_table_a.tex,Table A (RQ1),,"present, non-empty",1412 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_05_table_a_effects.csv,Table A (RQ1),,"present, non-empty",728 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_05_known_fa.csv,Table A (RQ1),,"present, non-empty",1873 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_04_table_b.md,Table B (RQ2),,"present, non-empty",2274 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_04_table_b.tex,Table B (RQ2),,"present, non-empty",1543 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_04_allseed_ci.csv,Table B (RQ2),,"present, non-empty",1661 B,,,PASS
+G3 COMPLETE,week4/reports/_generated/w4_05_table_b.md,Table B (RQ2),,"present, non-empty",2098 B,,,PASS
+G3 COMPLETE,week5/reports/figures/w5_fig2_coverage.png,Figure 2 (coverage),,"present, non-empty",159629 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_03_figure2_data.csv,Figure 2 (coverage),,"present, non-empty",8930 B,,,PASS
+G3 COMPLETE,week5/reports/figures/w5_fig3_ablation.png,Figure 3 (ablation),,"present, non-empty",217045 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_06_ablation.md,Figure 3 (ablation),,"present, non-empty",1644 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_06_ablation.tex,Figure 3 (ablation),,"present, non-empty",1626 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_01_disentanglement.csv,RQ3 disentanglement,,"present, non-empty",831 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_06_rq5_honesty.md,RQ5 honesty,,"present, non-empty",2512 B,,,PASS
+G3 COMPLETE,week4/reports/_generated/w4_06_rq5_honesty.md,RQ5 honesty,,"present, non-empty",4533 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_02_per_class_fzr.csv,Coverage diagnostics,,"present, non-empty",3314 B,,,PASS
+G3 COMPLETE,week4/reports/_generated/w4_04_live_coverage.json,Coverage diagnostics,,"present, non-empty",29725 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_07_cross_audit.csv,Cross-audit (Day 30),,"present, non-empty",8365 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_07_cross_audit.json,Cross-audit (Day 30),,"present, non-empty",20191 B,,,PASS
+G3 COMPLETE,week5/reports/w5_09_methods_data_stats.md,Methods + repro appendix (Day 31),,"present, non-empty",21372 B,,,PASS
+G3 COMPLETE,week5/reports/w5_10_repro_appendix.md,Methods + repro appendix (Day 31),,"present, non-empty",19265 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_09_methods.tex,Methods + repro appendix (Day 31),,"present, non-empty",15601 B,,,PASS
+G3 COMPLETE,week5/reports/_generated/w5_10_repro_appendix.tex,Methods + repro appendix (Day 31),,"present, non-empty",9966 B,,,PASS
+G3 COMPLETE,week4/INTEGRATION/frozen_thresholds.json,Freeze packages,,"present, non-empty",2467 B,,,PASS
+G3 COMPLETE,week4/INTEGRATION/interface_contract.json,Freeze packages,,"present, non-empty",1785 B,,,PASS
+G3 COMPLETE,week5/RESULTS_FROZEN/results_frozen_scalars.json,Freeze packages,,"present, non-empty",1895 B,,,PASS
+G3 COMPLETE,week5/HANDOVER/HANDOVER.md,Freeze packages,,"present, non-empty",7792 B,,,PASS
+G5 AUDIT,cross-audit independent re-derivation (0 FAIL required),passthrough cells,independent,0 FAIL,90 PASS / 0 FAIL / 1 WARN over 91 checks,,,PASS
+G4 NEUTRAL,pinned artifacts unchanged during sign-off,79 pinned files,,0 changed,"0 changed, 0 missing",,,PASS

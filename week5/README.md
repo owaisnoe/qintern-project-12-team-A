@@ -24,7 +24,9 @@ significance-tested result tables. Trio **CIC-IoT2023 + BoT-IoT + UNSW-NB15**; q
 | **29** (b) | **Conformal-vs-heuristic ablation asset + RQ5 honesty summary** — DONE | [`reports/w5_06_ablation_rq5.md`](reports/w5_06_ablation_rq5.md) · figure: [`reports/figures/w5_fig3_ablation.png`](reports/figures/w5_fig3_ablation.png) · RQ5: [`_generated/w5_06_rq5_honesty.md`](reports/_generated/w5_06_rq5_honesty.md) | [`scripts/ablation_rq5.py`](scripts/ablation_rq5.py) → `reports/_generated/w5_06_*` |
 | **30** (a) | **Cross-audit: every Team-A number vs the raw logs (independent re-derivations)** — DONE, 90/91 PASS + 1 documented WARN | [`reports/w5_07_cross_audit.md`](reports/w5_07_cross_audit.md) | [`scripts/cross_audit.py`](scripts/cross_audit.py) → `reports/_generated/w5_07_*` |
 | **30** (b) | **Handover to manuscript — Team B package (audit-gated, SHA-256-pinned)** — DONE | [`reports/w5_08_handover.md`](reports/w5_08_handover.md) · package: [`HANDOVER/HANDOVER.md`](HANDOVER/HANDOVER.md) | [`scripts/handover_teamB.py`](scripts/handover_teamB.py) → `HANDOVER/` |
-| **31–32** | Methods subsections (data + conformal statistics) + repro appendix; final sign-off | pending | pending |
+| **31** (a) | **Methods subsections — Data + Conformal Statistics** (partition protocol, calibration, coverage) — DONE | [`reports/w5_09_methods_data_stats.md`](reports/w5_09_methods_data_stats.md) · LaTeX: [`_generated/w5_09_methods.tex`](reports/_generated/w5_09_methods.tex) | *(prose — no new code; consolidates Days 8–9, 15–17, 23, 26–30)* |
+| **31** (b) | **Reproducibility appendix — the statistics pipeline** — DONE | [`reports/w5_10_repro_appendix.md`](reports/w5_10_repro_appendix.md) · LaTeX: [`_generated/w5_10_repro_appendix.tex`](reports/_generated/w5_10_repro_appendix.tex) | *(verification log measured against the existing freeze/audit gates)* |
+| **32** | **Final sign-off — one script re-derives every RQ2/RQ5 number + Figure 2; all deliverables frozen** — DONE, 324/324 checks | [`reports/w5_11_signoff.md`](reports/w5_11_signoff.md) | [`scripts/signoff.py`](scripts/signoff.py) → `reports/_generated/w5_11_signoff.{json,csv}` |
 
 **Day-26 disentanglement (RQ3, dummy):** the separation AUROC — true-zero-day (+) vs adversarial-known (−) —
 is **0.4994 / 0.4763 / 0.5104** (CIC / BoT / UNSW), every CI bracketing 0.5. That is the **honest null**: with
@@ -51,6 +53,36 @@ inside the exact **Beta-Binomial** validity band (not Clopper–Pearson) across 
 three datasets, with the 5-seed points at α = 0.05 (mean ≈ 0.050) sitting inside the band — the picture of a
 calibrated detector.
 
+**Day-31 methods + repro appendix:** the two manuscript subsections (Data — partition protocol, leakage
+controls, exchangeability verification; Conformal Statistics — nonconformity score, `q = s_(k)`, the
+marginal-vs-Mondrian choice, the exact Beta-Binomial acceptance gate, 5-seed stability, the exchangeability
+audit, and the significance protocol) ship as prose plus a LaTeX drop-in for Team B's Article-1 assembly.
+The repro appendix is backed by a **measured** verification run rather than inherited claims: all three
+freezes `--verify` at **0 mismatch** (34 + 16 + 41 files), `--reproduce` returns **39/39 scalars to 1e-9**,
+the cross-audit holds at **90 PASS / 0 FAIL / 1 WARN**, and the full suite passes **182 tests in 73 s**
+leaving the tree clean. It also records the one honest limit: the pipeline reproduces every *number* to
+1e-9 across Python 3.10–3.12, but not every *byte* — a full re-run drifts 9 files by 1–2 ULP in the
+scipy exact-binomial McNemar tail (2.1e-20 absolute) plus PNG rasterization, while **every rendered
+`.md`/`.tex` table stays byte-identical**. One open item for Day 32 is logged there: `--reproduce` writes
+into the real tree, so it dirties the surface a subsequent `--verify` checks (one-line fix, same pattern
+the Day-30 pytest guard already uses).
+
+**Day-32 final sign-off:** [`scripts/signoff.py`](scripts/signoff.py) is the *one script* the task asks
+for — **324 checks, 324 PASS / 0 FAIL**. It re-runs the five result mains with outputs sandboxed and diffs
+**289 scalars** against the committed artefacts that quote them, spanning RQ1, **RQ2**, RQ3, **RQ5** and
+Figure 2 — **204 recomputed** from the raw scores on the run, **85 pass-through** cells the emitting module
+reads from an upstream frozen artefact (Table B's canonical cells from the Day-21/22/19 arms, the RQ5
+verdicts from Day-25, Table A's classical arm from Day-12). That split is reported, not pooled: for a
+pass-through, G1 proves the assembly path is stable, and the numeric is re-derived instead by **G5**, which
+runs the Day-30 cross-audit's separate implementation (90 PASS / 0 FAIL / 1 WARN). That scope matters: `freeze_results.py --reproduce` pins 39 scalars covering RQ1/RQ3/Figure 2
+only, so **RQ2 and RQ5 — the two the task names — were never in a reproducibility gate until now**. The other gates: the three SHA-256 manifests re-hash clean (34 + 16 + 41), all 30 declared deliverables are
+present across 9 groups, and **no pinned artefact changed while the sign-off ran** (hashes taken before and
+after), which is what makes the check non-circular. `--tol 0` reproduces the Day-31 ULP finding from a
+second code path: exactly 2 of 289 scalars fail bit-exact, both McNemar Holm p-values, at 4.2e-20 and
+1.1e-16 — every RQ2 and RQ5 scalar is bit-identical. Day 32 also **closed the Day-31 open item**:
+`freeze_results.sandboxed_outputs()` makes `--reproduce` tree-neutral, so it no longer rewrites the
+artefacts `--verify` pins.
+
 **Repo hygiene this week:** a repo-root [`../.gitattributes`](../.gitattributes) (`* text=auto eol=lf`,
 binaries pinned) makes a fresh clone byte-identical on any OS, so the SHA-256 freeze manifests
 (`week4/INTEGRATION`, `week5/RESULTS_FROZEN`) `--verify` clean off a Windows checkout too. Absolute
@@ -73,7 +105,9 @@ python week5/scripts/ablation_rq5.py     --alpha 0.05 --sweep 0.01 0.20 0.01    
 python week5/scripts/cross_audit.py                                             # Day 30: audit vs raw logs
 python week5/scripts/handover_teamB.py                                          # Day 30: Team-B package
 python week5/scripts/handover_teamB.py --verify                                 # re-hash, expect 0 mismatch
-python -m pytest week2/tests week3/tests week4/tests week5/tests -q             # full suite: 162 tests
+python week5/scripts/signoff.py                                                 # Day 32: 324/324, exit 0
+python week5/scripts/signoff.py --tol 0                                         # bit-exact variant (2 ULP fails)
+python -m pytest week2/tests week3/tests week4/tests week5/tests -q             # full suite: 182 tests
 ```
 
 ## For Team B (QML) — what unblocks the "final" numbers

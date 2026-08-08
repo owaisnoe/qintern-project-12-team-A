@@ -1,0 +1,202 @@
+% Methods subsections --- Data + Conformal Statistics (Article 1).
+% Team A, Week 5 Day 31. Source of record: week5/reports/w5_09_methods_data_stats.md
+% Drop into the Methods section with \input{w5_09_methods}.
+% Requires: \usepackage{booktabs}, \usepackage{amssymb}, \usepackage{amsmath}.
+% Cells marked \ddag are provisional (Day-14 dummy fidelity interface) and reprice on real prototypes.
+
+\subsection{Data}
+\label{sec:methods-data}
+
+\paragraph{Datasets and unified representation.}
+We evaluate on three public IoT/network intrusion-detection corpora: CIC-IoT2023, BoT-IoT and UNSW-NB15.
+Two further corpora (TON\_IoT, Edge-IIoTset) were curated under the same pipeline but excluded, because
+their held-out zero-day split does not survive the shared schema: projecting onto the common feature set
+maps many distinct attack flows onto \emph{identical} vectors, and the cross-split de-duplication that
+follows resolves collisions with training-split priority, so the surviving zero-day copies are dropped. The
+held-out families end at one and two rows respectively, which cannot support a rejection-rate estimate; the
+three retained datasets keep their zero-day splits intact. Since the three corpora publish incompatible
+column vocabularies,
+each is projected onto a shared \textbf{17-feature unified flow schema} (flow duration; total, source and
+destination packet and byte counts; overall, source and destination rates; four packet-size statistics;
+inter-arrival time; and harmonized \texttt{protocol} and \texttt{conn\_state} categoricals), together with a
+fine multiclass label, a binary label, and a ten-family attack-ontology label.
+
+\paragraph{Curation and leakage controls.}
+Curation runs through a quantum-aware curation pipeline whose defining property is that it is
+\emph{split-first}: every data-dependent parameter is fit on the training split alone and only applied to
+the others. This departs deliberately from the conventional ordering, in which scaling or balancing precedes
+splitting and thereby leaks evaluation data into fitted parameters. Concretely, the correlation prune
+(dropping one of each $|r| \geq 0.95$ pair), the median/IQR robust scalers, the angle-encoding ranges
+(mapping features to $[0, \pi]$ for angle embedding; the published benchmark uses the qubit budget of $8$
+from the nested $4/8/12/16$ rankings), and the feature ranking are all fit on the training split and applied
+unchanged to calibration, test and zero-day. Class balancing is applied to
+training only; evaluation splits are never resampled.
+
+Two further controls underpin the guarantee developed in Section~\ref{sec:methods-conformal}. First,
+de-duplication is performed on the feature columns \emph{before} splitting, so one feature vector can land
+in exactly one split; cross-split disjointness is then asserted on feature-content hashes rather than row
+indices, which is what detects a repeated flow shared across splits. This is the relevant control for
+CIC-IoT2023, whose leakage vector is repeated and near-duplicate flows rather than identifier columns.
+Measured cross-split flow overlap is zero for every pair on every dataset, and within-split duplication is
+zero. Second, the conformal threshold is calibrated on held-out \emph{known-class} data and never on the
+unknown class: calibrating on the held-out family would leak precisely the signal the detector is meant to
+discover.
+
+\paragraph{Partition protocol.}
+Each dataset is partitioned four ways --- Train / Calibration / Test / Zero-Day --- under a fixed seed
+($42$), so the partitions are deterministic and reproduce exactly on re-run. The zero-day split is a
+\emph{held-out attack family} rather than a random subsample: one or more entire attack classes are removed
+from training, calibration and test and appear only at evaluation time. The remaining classes are stratified
+$70/10/10/10$ into train/validation/calibration/test, with validation folded into train to give the
+four-way conformal layout. Calibration contains known classes only, by construction. Three invariants are
+asserted in the partitioner rather than merely documented: the zero-day family has zero rows outside the
+zero-day split; calibration is a subset of the known classes; and the assignment is deterministic under the
+seed.
+
+\begin{table}[t]
+\centering
+\caption{Partition protocol. Row counts per split, number of known classes, and the held-out zero-day
+family. Seed 42; deterministic on re-run.}
+\label{tab:partitions}
+\begin{tabular}{lrrrrrl}
+\toprule
+Dataset & Train & Calib. & Test & Zero-day & \#known & Held-out family \\
+\midrule
+CIC-IoT2023 & 151,049 & 18,883 & 18,883 & 10,984 & 31 & Mirai ($\times 3$) \\
+BoT-IoT     & 148,729 & 18,591 & 18,591 &    683 &  4 & Theft \\
+UNSW-NB15   &  81,215 & 10,112 & 10,086 &  1,216 &  8 & Shellcode, Worms \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Verifying exchangeability.}
+Split-conformal validity requires \emph{exchangeability} between the calibration set and each test point ---
+strictly weaker than i.i.d., and a condition that cannot be proven, only falsified. We therefore treat it as
+an empirical claim and attempt to falsify it with a classifier two-sample test: a random forest is trained
+to separate calibration rows from test rows and scored by five-fold cross-validated AUROC, where chance
+performance means the two sets are indistinguishable on the features. We obtain AUROC $0.4999$, $0.5038$ and
+$0.5035$ on CIC-IoT2023, BoT-IoT and UNSW-NB15 respectively, with cal-vs-test total-variation distances of
+$0.0000$, $0.0000$ and $0.0019$; exchangeability is not rejected on any dataset. This claim is scoped to the
+\emph{known-class} calibration--test split. The held-out zero-day split is deliberately non-exchangeable
+with calibration --- that non-exchangeability is the detection signal --- so the guarantee below covers the
+known-class portion of the test stream, and zero-day detection is reported separately.
+
+\subsection{Conformal Statistics}
+\label{sec:methods-conformal}
+
+\paragraph{Nonconformity score and calibration.}
+For a sample $x$ encoded as a density matrix $\rho_x$, the model supplies the Uhlmann fidelity
+$F(\rho_x, \rho_c)$ to every known-class prototype $\rho_c$ (non-squared $F$). The nonconformity score is
+\begin{equation}
+s(x) \;=\; 1 - \max_{c} F(\rho_x, \rho_c),
+\end{equation}
+so a sample with low fidelity to every known prototype scores high and is more novel. Prototypes are built
+from the training split only; were calibration rows to contribute to $\rho_c$, calibration scores would be
+in-sample and the threshold optimistic. The threshold is the split-conformal order statistic of $s$ over the
+known-class calibration set of size $n$,
+\begin{equation}
+k = \left\lceil (1-\alpha)(n+1) \right\rceil, \qquad q = s_{(k)},
+\end{equation}
+the $k$-th smallest calibration score. A test point is flagged zero-day iff $s > q$. Under exchangeability
+of the known-class calibration and test points this yields the finite-sample marginal guarantee
+\begin{equation}
+1 - \alpha \;\leq\; \mathbb{P}(s_{\mathrm{test}} \leq q) \;\leq\; 1 - \alpha + \frac{1}{n+1},
+\label{eq:coverage}
+\end{equation}
+i.e.\ the false-zero-day rate on known traffic is at most $\alpha$, with granularity $1/(n+1)$. Validity is
+\emph{score-agnostic}: it does not require the fidelity score to be a good novelty signal. Detection
+\emph{power} does, and is therefore reported as an empirical result rather than inherited from
+Eq.~\eqref{eq:coverage} --- a coverage curve is not a power curve. We use one primary $\alpha = 0.05$ for
+the quantum and classical arms alike, giving $k = 17{,}940$, $17{,}663$ and $9{,}608$ and thresholds
+$q = 0.3006^{\ddag}$, $0.2629^{\ddag}$ and $0.3834^{\ddag}$ on the three datasets.
+
+\paragraph{Marginal rather than class-conditional calibration.}
+Class-conditional (Mondrian) thresholds are degenerate when a class holds fewer than
+$\lceil 1/\alpha \rceil - 1$ calibration points, a floor of $19$ per class at $\alpha = 0.05$. CIC-IoT2023
+has four known classes with at most nine calibration rows, so we calibrate marginally on all three datasets
+for comparability and report class-conditional behaviour as a diagnostic. The scope of the marginal
+guarantee is stated precisely, because it is easy to overclaim: marginal conformal controls the false-alarm
+rate over the known-class \emph{mixture} and carries \emph{no per-class guarantee}. Rare classes contribute
+few pooled calibration points and so do not skew $q$ --- the mixture guarantee is unaffected by class
+imbalance --- but an individual class may still be over- or under-covered. Each known class's test flag
+count is therefore judged against its own exact band; on the present interface, $0$ of $31$, $0$ of $4$ and
+$0$ of $8$ classes fall outside their own band. Should a class fall outside on real prototypes, the
+appropriate remedy is clustered conformal --- grouping rare classes until each cluster clears the
+calibration floor --- rather than fully class-conditional conformal, which several classes cannot support.
+
+\paragraph{Coverage verification.}
+A bare $\mathrm{FZR} \leq \alpha$ assertion is the wrong acceptance test. Split conformal guarantees the
+\emph{expectation}, marginally over the calibration and test draws; on a finite test set the empirical rate
+fluctuates around $(n+1-k)/(n+1)$, so a naive threshold check rejects sound systems by luck roughly half the
+time. We instead judge each observation against the exact finite-sample law: conditional on the calibration
+draw, coverage is Beta-distributed, so the number of false flags $E$ on $m$ known test rows follows a
+Beta-Binomial,
+\begin{equation}
+\mathrm{coverage} \mid \mathrm{cal} \sim \mathrm{Beta}(k,\, n{+}1{-}k)
+\quad \Longrightarrow \quad
+E \sim \mathrm{BetaBin}(m,\, n{+}1{-}k,\, k).
+\end{equation}
+For each (dataset, $\alpha$) we report the observed rate, its exact central $99\%$ band, and a one-sided
+tail $p$-value $\mathbb{P}(E \geq e_{\mathrm{obs}})$. The band, not the point comparison against $\alpha$,
+is the acceptance gate: a failure means the guarantee is genuinely violated rather than unlucky. Below-band
+excursions are reported as conservativeness --- ties and score discreteness make the band conservative ---
+not as failures. This is also the correct band for a calibration-draw plot; Clopper--Pearson describes a
+fixed-threshold proportion and is the wrong object here. BoT-IoT illustrates the distinction: its achieved
+rate $0.0530^{\ddag}$ exceeds $\alpha$ outright, yet sits comfortably inside the exact band
+$[0.0443, 0.0559]$ at $p = 0.090$, which is ordinary sampling noise on $18{,}591$ test rows. Coverage is
+verified across the full sweep $\alpha \in [0.01, 0.20]$ ($20$ values $\times$ $3$ datasets $=60$
+verifications, all passing), and the achieved rate tracks the diagonal $y = \alpha$ inside the band across
+the whole range.
+
+\paragraph{Stability across seeds.}
+Because the guarantee is marginal over the calibration/test draw, it must hold across draws rather than on
+one split. We pool the known-class calibration and test scores, re-draw them at the original sizes under
+seeds $42$--$46$, re-calibrate each re-split and judge it against its own exact band, holding the zero-day
+pool fixed and scoring it at each re-split's $q$. All three datasets hold the exact band on all five
+re-splits, and every $95\%$ confidence interval covers the target $\alpha = 0.05$ (mean achieved rates
+$0.0517^{\ddag}$, $0.0501^{\ddag}$, $0.0508^{\ddag}$). The accompanying recall intervals quantify how little
+the power number moves with the calibration draw.
+
+\paragraph{Auditing the assumption at deployment.}
+Coverage arithmetic is meaningful only if the assumption underneath it holds, so the deployed pipeline is
+audited with six inferential tests per dataset --- two-sample Kolmogorov--Smirnov and Mann--Whitney on
+calibration versus test scores, a class-mix $\chi^2$, a flag-rate-by-class $\chi^2$, and two index-drift
+Spearman tests --- with Holm step-down over the declared family of $18$ cells. No violations are detected.
+Two choices deserve statement. First, the textbook conformal $p$-value uniformity check is reported
+descriptively and \emph{excluded} from the inferential family: every $p_i$ is computed against the same
+calibration set, so the $p$-values are exchangeable rather than independent and the one-sample uniformity
+null is far too tight (measured on this interface it rejects on approximately $37\%$ of genuinely
+exchangeable re-splits); it is also redundant with the two-sample statistic up to $1/(n+1)$. Second, the
+audit's power is demonstrated by injected-violation drills rather than assumed: trimming the calibration
+tail, shifting test scores, and skewing the test class mix are each injected and each detected. The
+class-mix injection is instructive --- the audit flags it decisively while the \emph{marginal} false-alarm
+rate stays inside the band, which is exactly the failure a coverage-only check cannot see. A caveat travels
+with the remedy: re-splitting repairs \emph{split-induced} non-exchangeability, and also makes a
+\emph{deployment shift} look repaired, because calibration and test become exchangeable draws from the
+shifted mixture --- but that mixture is not the deployment distribution. A genuine deployment shift is
+answered by recalibrating on fresh data, never by re-splitting.
+
+\paragraph{Significance protocol.}
+All comparative claims pass through one pre-declared protocol, chosen so the test matches the object being
+claimed. We report mean $\pm$ sample standard deviation (ddof $=1$) with $t$-based $95\%$ confidence
+intervals. Seed-level comparisons use a two-sided paired $t$-test with pairs matched by seed over seeds
+$42$--$46$; row-level comparisons use an exact two-sided binomial McNemar test on discordant pairs matched
+by test row. Effect sizes accompany every $p$-value: paired $d_z = \mathrm{mean}(\Delta)/\mathrm{sd}(\Delta)$
+for seed-level tests and Cohen's $h$ for proportions. Multiplicity is controlled by Holm--Bonferroni
+step-down over a family declared \emph{before} testing, and a zero-variance guard forces $t = 0$, $p = 1$,
+$d = 0$ so a self-comparison cannot fake significance. Seed-paired and row-paired tests answer different
+questions and are reported separately rather than pooled: threshold-free ranking metrics speak to ordering,
+whereas McNemar tests the flags a system actually deploys. A dry run on classical baselines showed the
+correction earning its keep, with a raw $p = 0.011$ in a nine-test family correctly losing significance
+under Holm at $p = 0.056$.
+
+Families are declared per comparison surface: closed-set correctness against the classical multiclass
+detector ($m = 3$, one comparison per dataset) and known-split false-alarm rate against every novelty head
+($m = 8$; one dataset publishes no one-class SVM model, a real absence rather than a missing value),
+corrected separately. We note explicitly that the false-alarm family compares systems at their
+\emph{shipped operating points} --- the conformal detector at its guaranteed $\alpha = 0.05$, each
+heuristic head at its own frozen threshold, which targeted a $2\alpha$ known-FPR budget --- so it supports a
+deployed-behaviour statement rather than a matched-budget superiority claim; the like-for-like comparison at
+one shared $\alpha$ is reported with the zero-day results. Finally, the seed-level power floor is stated
+rather than left implicit: with $n = 5$ seeds the smallest detectable paired effect is $d_z \approx 1.24$,
+and $\approx 1.68$ at $80\%$ power, which is why an effect size accompanies every reported $p$-value.

@@ -1,0 +1,141 @@
+% Reproducibility appendix --- statistics pipeline (Article 1).
+% Team A, Week 5 Day 31. Source of record: week5/reports/w5_10_repro_appendix.md
+% Drop in with \appendix ... \input{w5_10_repro_appendix}.
+% Requires: \usepackage{booktabs}, \usepackage{amssymb}, \usepackage{listings} (or verbatim).
+% Measured 2026-08-01 on main @ c5e40e9 in the reference environment described in Table~\ref{tab:env}.
+
+\section{Reproducibility: the Statistics Pipeline}
+\label{sec:appendix-repro}
+
+This appendix documents how the coverage, calibration and significance results are produced, verified and
+re-run. It states what is fixed by seed, what is pinned by hash, what is verified by independent
+re-derivation, and --- deliberately --- where byte-level reproducibility ends and numerical reproducibility
+takes over.
+
+\subsection{Scope}
+
+The statistics pipeline runs from the frozen data partitions to the reported tables and figures: conformal
+calibration ($s = 1 - \max_c F$, $q = s_{(k)}$), the exact Beta-Binomial coverage harness, the significance
+protocol (paired $t$, exact McNemar, Holm--Bonferroni, Cohen's $d_z$ and $h$), and the assembly modules that
+render the tables, the coverage figure, the disentanglement panel and the conformal-versus-heuristic
+ablation. Model training and feature selection are outside this scope and enter through a fixed score
+interface (Section~\ref{sec:appendix-repricing}).
+
+\subsection{Environment and determinism}
+
+\begin{table}[t]
+\centering
+\caption{Reference environment (the environment of record). All results additionally reproduced under
+Python 3.10.12 / scikit-learn 1.7.2, to within the tolerances of Section~\ref{sec:appendix-determinism}.}
+\label{tab:env}
+\begin{tabular}{ll@{\qquad}ll}
+\toprule
+Component & Version & Component & Version \\
+\midrule
+Python       & 3.12.12 & matplotlib & 3.9.2  \\
+numpy        & 2.1.3   & xgboost    & 3.2.0  \\
+pandas       & 2.2.3   & pyarrow    & 18.1.0 \\
+scipy        & 1.14.1  & joblib     & 1.5.3  \\
+scikit-learn & 1.8.0   & pytest     & 9.1.1  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The pipeline fixes: partition seed $42$; primary $\alpha = 0.05$; the multi-seed convention $42$--$46$; the
+sweep $\alpha \in [0.01, 0.20]$ in steps of $0.01$; the benchmark trio; a qubit budget of $8$; non-squared
+Uhlmann fidelity; and marginal (not class-conditional) conformal calibration. There is no stochastic element
+in the statistics pipeline itself --- given the partitions and a score file, the threshold, band, coverage
+and every test statistic are deterministic functions of the inputs. The seeds index \emph{re-splits} of the
+calibration/test boundary, used to test stability, not model initialisations.
+
+\subsection{Verification gates}
+
+Three independent SHA-256 manifests pin the pipeline's state, each with a re-hashing verifier. Measured on
+the reference environment: the integration freeze (34 files, calibration rule, score schema, primary
+$\alpha$, per-dataset thresholds), the results freeze (16 files, the reported result surface plus the three
+result modules) and the handover package (41 files) each verify with \textbf{zero mismatches}.
+
+Three stronger gates run beyond hashing. First, a single sign-off entry point re-runs the five result
+modules with their outputs sandboxed and compares every scalar the committed artifacts quote --- spanning
+all research questions and the headline coverage figure --- then re-verifies the manifests, checks
+deliverable completeness, and asserts it modified no pinned artifact while running; measured, 324 checks and
+zero failures. That gate distinguishes the \textbf{204} scalars it recomputes from raw inputs on the run
+from the \textbf{85} it can only check as pass-throughs, where the emitting module reads the value from an
+upstream frozen artifact; for those, the check establishes that the assembly path is stable rather than that
+the numeric re-derives, and the re-derivation is supplied by the cross-audit below. Second, a narrower
+reproducibility check re-runs three of the modules and asserts that all \textbf{39 pinned headline scalars}
+return to within $10^{-9}$; measured, 39 scalars and zero mismatches. Third, a cross-audit re-derives every
+headline quantity from the raw inputs
+with an \emph{independent} implementation --- order-statistic threshold, hand-counted flags, AUROC
+cross-checked against the Mann--Whitney statistic, argmax-re-derived predictions, recounted McNemar cells,
+and a raw Beta-Binomial probability mass function --- and compares it against every artifact that quotes it,
+including the numbers printed in the rendered tables. Measured: \textbf{90 pass, 0 fail, 1 documented
+warning} across 91 checks, with exact-copy scalars held to $10^{-9}$ and independently re-implemented
+estimators to $5 \times 10^{-5}$ at the four-decimal reporting precision.
+
+Two structural gates are also recorded, because both correspond to failures caught and fixed during
+development. A line-ending gate refuses to pin any text file containing a CRLF, which together with a
+repository-level \texttt{.gitattributes} makes a fresh clone byte-identical on any operating system. A
+test-isolation gate redirects the result modules to a temporary directory during testing; without it,
+running the test suite silently rewrote the committed artifacts with whichever dataset list the last test
+passed. The full suite (182 tests) passes and leaves the working tree unmodified.
+
+\subsection{Reproducibility is numerical, not byte-level}
+\label{sec:appendix-determinism}
+
+Re-running the pipeline reproduces every reported number, but not every byte. A full re-run in the reference
+environment leaves nine files modified relative to the committed artifacts: four machine-readable result
+files differing in the last one or two units in the last place of the exact-binomial McNemar tail, the
+cross-audit outputs (same, plus an embedded environment string), and the two figure PNGs. As an example, the
+BoT-IoT McNemar doubled exact tail is $7.26273412199973 \times 10^{-7}$ as committed and
+$7.26273412199952 \times 10^{-7}$ when recomputed --- an absolute difference of $2.1 \times 10^{-20}$ and a
+relative difference of order $10^{-14}$, arising from summation order in the binomial CDF across library
+builds. Every verdict, significance marker and reported digit is unchanged, and the cross-audit passes all
+91 checks, because its tolerances are set at the reporting precision rather than at bit-equality.
+
+Two consequences follow. First, \emph{no rendered table changes}: every table emitted for the manuscript is
+byte-identical after a full re-run, because tables are rendered at two to four significant figures; only the
+full-precision machine-readable mirrors drift. Second, the figure PNGs are \emph{not} byte-reproducible
+across machines --- both re-render at a different byte length under the same matplotlib version, because
+glyph rasterization depends on the platform FreeType build --- while the underlying plotted data is
+byte-for-byte unchanged, confirming this is a rendering rather than a result difference.
+
+The accurate statement is therefore: the statistics pipeline is deterministic and reproduces every reported
+quantity to $10^{-9}$ across Python 3.10--3.12 and scikit-learn 1.7--1.8; the SHA-256 manifests pin the exact
+artifact bytes produced by the reference environment and are the correct gate for detecting unintended
+change, not a claim that an arbitrary machine will re-emit identical bytes.
+
+\subsection{Repricing on real prototypes}
+\label{sec:appendix-repricing}
+
+Every module is source-agnostic: it recomputes $s = 1 - \max_c F$ from the fidelity vector, so real
+prototype scores substitute at the same schema with no code change, selected by a single command-line flag.
+The interface requires one row per partition row with per-class fidelity columns carrying \emph{non-squared}
+Uhlmann $F$, prototypes built from the training split only, and, for the disentanglement analysis, a
+separate score file tagging each row as clean-known, adversarial-known or true-zero-day. Expected behaviour
+after the substitution is that \emph{validity holds} --- the band is score-agnostic, so a coverage failure
+indicates that exchangeability was broken in the pipeline, most plausibly by fitting prototypes on
+calibration rows, rather than that fidelity is a poor score --- while \emph{power changes}, which is the
+open empirical question the substitution answers.
+
+\subsection{Known limitations}
+
+\begin{enumerate}
+\item The reproducibility check re-runs the result modules into the working tree, so it perturbs the
+      artifacts it verifies; the scalar comparison is unaffected, but a hash verification run afterwards
+      will report the drift of Section~\ref{sec:appendix-determinism}. The fix is to redirect its output to
+      a temporary root, as the test suite already does.
+\item The cross-audit report embeds the environment it ran under, so it cannot be pinned by hash across
+      environments.
+\item One upstream freeze carries 13 documented deviations, from evaluation files regenerated after that
+      freeze was cut and from subsequent documentation reorganisation; re-cutting it is a scope decision
+      deferred rather than made silently.
+\item All quantum-side quantities are provisional on a placeholder fidelity interface and validate the
+      machinery rather than detection quality.
+\item With $n = 5$ seeds, paired $t$-tests are exact only under normally distributed seed differences; this
+      is why an effect size accompanies every $p$-value, why the exact McNemar test provides a second
+      row-level axis over thousands of pairs, and why the $d_z \approx 1.24$ detection floor is stated.
+\item The exact Beta-Binomial band assumes continuous scores; ties make the decision rule conservative.
+      Measured tie fractions are at most $2.7 \times 10^{-4}$ and do not break the band, and below-band
+      excursions are reported rather than treated as failures.
+\end{enumerate}
