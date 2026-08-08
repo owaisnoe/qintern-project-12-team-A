@@ -21,18 +21,18 @@ needs_data = pytest.mark.skipif(not (IFACE_OK and BASE_OK),
                                 reason="Day-14 interface / Day-12 baselines not present")
 
 
-def _redirect_mains_to_tmp(monkeypatch, tmp_path):
-    """Point the three result mains' output dirs at a tmp dir so freeze()'s `run_all` does NOT overwrite
-    the committed full-trio artefacts with the CIC-only test run. `freeze` still hashes the REAL pinned
-    files (they exist in the checkout) and captures scalars from the in-memory return values, so the
-    freeze/verify/reproduce logic is exercised unchanged — only the destructive side effect is removed."""
-    gen, reports, fig = tmp_path / "_generated", tmp_path / "reports", tmp_path / "figures"
-    for d in (gen, reports, fig):
+@pytest.fixture
+def _sandbox_mains(tmp_path, monkeypatch):
+    """Redirect the three result mains' output dirs to tmp so a test that RUNS them (reproduce) never
+    overwrites the committed full-trio artefacts. The freeze round-trip no longer needs this — it uses
+    freeze(regenerate=False), so freeze() does not run the mains at all."""
+    gen, rep, fig = tmp_path / "_generated", tmp_path / "reports", tmp_path / "figures"
+    for d in (gen, rep, fig):
         d.mkdir(parents=True, exist_ok=True)
-    for mod, attr, dest in ((fr.dis, "GEN", gen), (fr.dis, "REPORTS", reports),
-                            (fr.ta, "GEN", gen), (fr.ta, "REPORTS", reports),
-                            (fr.fig2, "GEN", gen), (fr.fig2, "REPORTS", reports), (fr.fig2, "FIG", fig)):
-        monkeypatch.setattr(mod, attr, dest)
+    for m in (fr.dis, fr.ta, fr.fig2):
+        monkeypatch.setattr(m, "GEN", gen)
+        monkeypatch.setattr(m, "REPORTS", rep)
+    monkeypatch.setattr(fr.fig2, "FIG", fig)
 
 
 def test_assert_lf_rejects_crlf(tmp_path):
@@ -65,11 +65,12 @@ def test_freeze_roundtrip_verify_ok_then_tamper_fails(tmp_path, monkeypatch):
     monkeypatch.setattr(fr, "RESULTS", results_dir)
     monkeypatch.setattr(fr, "MANIFEST", manifest)
     monkeypatch.setattr(fr, "SCALARS", scalars)
-    _redirect_mains_to_tmp(monkeypatch, tmp_path)      # don't overwrite the committed full-trio artefacts
 
-    fr.freeze(["CICIoT2023"], 0.05, IFACE, "dummy")   # runs the 3 mains, pins real artefacts into tmp manifest
+    # regenerate=False pins the on-disk full-trio artefacts WITHOUT re-running the mains, so the test
+    # cannot clobber the committed outputs; manifest/scalars go to tmp.
+    fr.freeze(fr.TRIO, 0.05, IFACE, "dummy", regenerate=False)
     assert manifest.exists() and scalars.exists()
-    assert fr.verify() == 0                            # fresh freeze re-hashes clean
+    assert fr.verify() == 0                            # pinned real artefacts re-hash clean
 
     # tamper the tmp manifest's stored hash for one file -> verify must report CHANGED (returns 1).
     # (only the tmp manifest is edited; the real pinned artefacts are untouched.)
@@ -80,12 +81,30 @@ def test_freeze_roundtrip_verify_ok_then_tamper_fails(tmp_path, monkeypatch):
 
 
 @needs_data
-def test_reproduce_check_passes_after_freeze(tmp_path, monkeypatch):
+def test_reproduce_check_passes_after_freeze(tmp_path, monkeypatch, _sandbox_mains):
     results_dir = tmp_path / "RESULTS_FROZEN"
     monkeypatch.setattr(fr, "RESULTS", results_dir)
     monkeypatch.setattr(fr, "MANIFEST", results_dir / "results_manifest_v1.0.json")
     monkeypatch.setattr(fr, "SCALARS", results_dir / "results_frozen_scalars.json")
-    _redirect_mains_to_tmp(monkeypatch, tmp_path)      # don't overwrite the committed full-trio artefacts
-    fr.freeze(["CICIoT2023"], 0.05, IFACE, "dummy")
-    # deterministic mains (seed 42) -> every frozen scalar reproduces to 1e-9
-    assert fr.reproduce_check(["CICIoT2023"], 0.05, IFACE, "dummy") == 0
+    # pin the on-disk full-trio scalars (regenerate=False, no clobber), then reproduce_check re-runs the
+    # mains — sandboxed to tmp by _sandbox_mains — and must match every frozen scalar to 1e-9.
+    fr.freeze(fr.TRIO, 0.05, IFACE, "dummy", regenerate=False)
+    assert fr.reproduce_check(fr.TRIO, 0.05, IFACE, "dummy") == 0
+
+
+@needs_data
+def test_regenerate_false_never_runs_the_mains(tmp_path, monkeypatch):
+    """The CIC-only clobber guard: freeze(regenerate=False) must NOT invoke the mains even when handed a
+    single dataset, so it can never overwrite the committed full-trio reports/figure on disk."""
+    monkeypatch.setattr(fr, "RESULTS", tmp_path / "RESULTS_FROZEN")
+    monkeypatch.setattr(fr, "MANIFEST", tmp_path / "m.json")
+    monkeypatch.setattr(fr, "SCALARS", tmp_path / "s.json")
+
+    def _boom(*a, **k):
+        raise AssertionError("regenerate=False must not run the mains")
+    monkeypatch.setattr(fr, "run_all", _boom)
+
+    fr.freeze(["CICIoT2023"], 0.05, IFACE, "dummy", regenerate=False)   # no raise => mains not run
+    # and it pinned the real committed full-trio figure (3 datasets), not a CIC-only run
+    fig = json.loads((BASE / "week5" / "reports" / "_generated" / "w5_03_figure2.json").read_text())
+    assert [p["dataset"] for p in fig["points"]] == ["CICIoT2023", "BoT-IoT", "UNSW-NB15"]
